@@ -1,0 +1,11 @@
+url: ""
+
+proofer:
+  href_ignore:
+    - !ruby/regexp '/https?:\/\/(www)?\.youtube\.com\/watch\?v=.*/i'
+  check_html: true
+  disable_external: true
+
+github:
+  repository_nwo: "fulcrumapp/developer.fulcrumapp.com"
+  owner_url: "https://github.com/fulcrumapp"

@@ -1,0 +1,25 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
+        <a href="/">Home</a>
+      </li>
+      <h3>API</h3>
+      <ul>
+      {% assign pages = site.api | sort: "order" %}
+      {% for node in pages %}
+        <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+          <a href="{{ node.url }}">{{ node.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </ul>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>

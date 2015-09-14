@@ -1,0 +1,40 @@
+# Setup
+title: Fulcrum Developers
+name: Fulcrum Developers
+url: http://developer.fulcrumapp.com
+relative_permalinks: false
+port: 4010
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-feed
+
+feed:
+  path: atom.xml
+
+# Dependencies
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: pygments
+
+# Permalinks
+permalink: /:categories/:title/
+
+
+collections:
+  api:
+    output: true
+    permalink: /api/:path/
+
+#files to exclude, array
+exclude:
+  - CONTRIBUTING.md
+  - README.md
+  - bundle
+  - script
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - ".bundle"
+  - vendor
