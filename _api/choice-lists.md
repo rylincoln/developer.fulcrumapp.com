@@ -16,7 +16,7 @@ menu:
   - "Examples": examples
 ---
 
-The Choice Lists API gives you access to the [choice lists](/help/choice-lists/) within your Fulcrum account. Choice lists can be shared between multiple apps.
+The Choice Lists API gives you access to the [choice lists](http://www.fulcrumapp.com/help/choice-lists/) within your Fulcrum account. Choice lists can be shared between multiple apps.
 
 ## Endpoints
 

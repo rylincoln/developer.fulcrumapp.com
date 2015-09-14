@@ -65,7 +65,7 @@ The following properties must be included in order to create/update a photo obje
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | photo[access_key] | string | The UUID of the photo. | `"7A8ABC73-A41B-4F1E-BA16-F7C03DAE1E22"` |
-| photo[file] | multipart/form-data | The photo file. | See [example](/developers/api/photos/#upload-a-new-photo) below. |
+| photo[file] | multipart/form-data | The photo file. | See [example](#upload-a-new-photo) below. |
 
 Example validation response if `access_key` is not included:
 

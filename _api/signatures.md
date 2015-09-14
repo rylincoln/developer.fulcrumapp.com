@@ -60,7 +60,7 @@ The following properties must be included in order to create/update a photo obje
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | signature[access_key] | string | The UUID of the signature. | `"9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"` |
-| signature[file] | multipart/form-data | The signature file. | See [example](/developers/api/signatures/#upload-a-new-signature) below. |
+| signature[file] | multipart/form-data | The signature file. | See [example](#upload-a-new-signature) below. |
 
 Example validation response if `access_key` is not included:
 

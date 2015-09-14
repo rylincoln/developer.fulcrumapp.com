@@ -17,7 +17,7 @@ menu:
 
 The Webhooks API gives you access to manage your organization's webhooks programmatically.
 
-For more general information about webhooks, or details of responsibilities your webhook endpoint must meet, see the [Webhooks Overview](/developers/overview/webhooks/).
+For more general information about webhooks, or details of responsibilities your webhook endpoint must meet, see the [Webhooks Overview](/api/webhooks/).
 
 ## Endpoints
 
@@ -65,7 +65,7 @@ Example validation response if `url` is not included:
 
 ## Notes
 
-* Your [plan must enable webhooks](/guides/webhooks/webhooks-plans/) and you must also have an account with the [right role/permission](/guides/webhooks/webhooks-roles-and-permissions/) to manage webhooks.
+* Your [plan must enable webhooks](http://www.fulcrumapp.com/guides/webhooks/webhooks-plans/) and you must also have an account with the [right role/permission](http://www.fulcrumapp.com/guides/webhooks/webhooks-roles-and-permissions/) to manage webhooks.
 
 ## Examples
 
