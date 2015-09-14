@@ -87,7 +87,7 @@ The following properties must be included in order to create/update a photo obje
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | video[access_key] | string | The UUID of the video. | `"2d956eb0-bc2a-747f-fc56-1100936ce515"` |
-| video[file] | multipart/form-data | The video file. | See [example](/developers/api/videos/#upload-a-new-video) below. |
+| video[file] | multipart/form-data | The video file. | See [example](#upload-a-new-video) below. |
 
 Example validation response if `access_key` is not included:
 
