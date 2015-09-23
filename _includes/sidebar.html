@@ -9,6 +9,15 @@
       <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
         <a href="/">Home</a>
       </li>
+      <h3>General Usage</h3>
+      <ul>
+      {% assign general_pages = site.general | sort: "order" %}
+      {% for node in general_pages %}
+      <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+        <a href="{{ node.url }}">{{ node.title }}</a>
+      </li>
+      {% endfor %}
+      </ul>
       <h3>API</h3>
       <ul>
       {% assign pages = site.api | sort: "order" %}
@@ -18,8 +27,23 @@
         </li>
       {% endfor %}
       </ul>
+      <h3>Libraries</h3>
+      <ul>
+      {% assign libraries = site.libraries | sort: "order" %}
+      {% for node in libraries %}
+        <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+          <a href="{{ node.url }}">{{ node.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
     </ul>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <div class="ref">
+      <ul>
+        <li><a href="https://github.com/fulcrumapp/">GitHub</a> &bull; </li>
+        <li><a href="https://github.com/fulcrumapp/developer.fulcrumapp.com/issues">Open an Issue</a></li>
+      </ul>
+    </div>
+    <p class="copy">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>
