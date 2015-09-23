@@ -26,6 +26,12 @@ collections:
   api:
     output: true
     permalink: /api/:path/
+  general:
+    output: true
+    permalink: /usage/:path/
+  libraries:
+    output: true
+    permalink: /libraries/:path/
 
 #files to exclude, array
 exclude:
