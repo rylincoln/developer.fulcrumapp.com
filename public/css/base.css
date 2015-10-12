@@ -42,6 +42,8 @@ body {
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Body text */
@@ -82,12 +84,13 @@ h2 {
 }
 h3 {
   margin-top: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 h4, h5, h6 {
   margin-top: 1rem;
   font-size: 1rem;
 }
+h1 img { width: 130px; height: 65px; }
 
 /* Lists */
 ul, ol, dl {
@@ -209,12 +212,12 @@ img {
  */
 
 .sidebar {
+  border-top: 7px solid #ff0000;
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
-  background-color: #202020;
+  background-color: #eee;
 }
-.sidebar h2, .sidebar h3 { color: #ccc; }
+.sidebar h2, .sidebar h3 { color: #000; }
 .sidebar .ref ul {
   list-style-type: none;
   margin: 0 0 10px 0;
@@ -224,7 +227,7 @@ img {
   display: inline;
 }
 .sidebar .ref a {
-  font-size: 16px;
+  font-size: .75rem;
 }
 .sidebar .copy {
   font-size: 12px;
@@ -236,15 +239,17 @@ img {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 17rem;
+    width: 11rem;
     text-align: left;
   }
 }
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #3a98c3;
 }
+.sidebar a:hover, .sidebar .active a { color: #ff0000; }
+
 
 /* About section */
 .sidebar-about h1 {
@@ -252,6 +257,7 @@ img {
   margin-top: 0;
   font-family: Lato, sans-serif;
   font-size: 2rem;
+  width: 130px;
 }
 
 /* Sidebar nav */
@@ -259,7 +265,10 @@ img {
   padding-left: 0;
   list-style: none;
 }
+.sidebar-nav ul { padding-left: 10px; }
+
 .sidebar-nav-item {
+  font-size: .75em;
   display: block;
 }
 a.sidebar-nav-item:hover,
@@ -279,9 +288,12 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48rem) {
   .sidebar-sticky {
     position: absolute;
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
+    right: 0;
+    top: 0;
+    left: 1rem;
+    overflow-y: scroll;
+    height: 100%;
+    padding-top: 1rem;
   }
 }
 
@@ -293,22 +305,21 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
-  padding-bottom: 4rem;
+  border-top: 7px solid #eee;
+  padding:    2rem;
 }
 
 @media (min-width: 48rem) {
   .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
+    padding-left: 14rem;
+    padding-right: 2rem;
   }
 }
 
 @media (min-width: 64rem) {
   .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
+    padding-left: 14rem;
+    padding-right: 2rem;
   }
 }
 
