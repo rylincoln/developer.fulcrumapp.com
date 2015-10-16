@@ -22,7 +22,7 @@ The Forms API gives you access to your form fields, or app schema.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /api/v2/forms.json | Fetch a list of all available forms. There is an optional param of `schema=false` which only returns the form metadata. |
+| GET | /api/v2/forms.json | Fetch a list of all available forms. |
 | GET | /api/v2/forms/**:id**.json | Fetch a single form from the API. |
 | POST | /api/v2/forms.json | Create a new form. Validation is required for this action. |
 | PUT | /api/v2/forms/**:id**.json | Update a single form. The entire form representation must be included in the request. Validation is required for this action. |
