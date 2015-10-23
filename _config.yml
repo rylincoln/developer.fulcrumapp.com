@@ -29,9 +29,6 @@ collections:
   general:
     output: true
     permalink: /usage/:path/
-  libraries:
-    output: true
-    permalink: /libraries/:path/
   expressions:
     output: true
     permalink: /expressions/:path/
