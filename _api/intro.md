@@ -45,7 +45,7 @@ If you have at least one API Key, you can use it to retrieve the keys for your o
 
 `curl -H "X-ApiToken: myapikey" https://api.fulcrumapp.com/api/v2/users.json`
 
-**Note:** The API Key can be used to access and modify all data which you have permission to access within that organization, so be sure to keep the API key private. Only share it with others if you want them to have that access. It is bad practice to put API Keys in source code, especially if it’s publicly available. If you think your API Key has been compromised, you can generate a new one from your Fulcrum account API settings page.
+**Note:** The API Key can be used to access and modify all data which you have permission to access within that organization, so be sure to keep the API key private. Only share it with others if you want them to have that access. It is bad practice to put API Keys in source code, especially if it’s publicly available. If you think your API key has been compromised, you can generate a new one from your Fulcrum account API settings page.
 
 ### HTTP Request Header
 
