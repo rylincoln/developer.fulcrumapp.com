@@ -7,4 +7,4 @@ description: "fulcrum-ruby library for Ruby"
 category: section
 ---
 
-https://github.com/fulcrumapp/fulcrum-ruby
+[fulcrum-ruby](https://github.com/fulcrumapp/fulcrum-ruby)

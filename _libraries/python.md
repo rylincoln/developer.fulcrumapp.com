@@ -7,4 +7,4 @@ description: "fulcrum-python library for Python"
 category: section
 ---
 
-https://github.com/fulcrumapp/fulcrum-python
+[fulcrum-python](https://github.com/fulcrumapp/fulcrum-python)

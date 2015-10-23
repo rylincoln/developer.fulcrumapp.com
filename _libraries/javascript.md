@@ -7,4 +7,4 @@ description: "fulcrum-node library for JavaScript"
 category: section
 ---
 
-https://github.com/fulcrumapp/fulcrum-node
+[fulcrum-node](https://github.com/fulcrumapp/fulcrum-node)
