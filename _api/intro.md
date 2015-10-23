@@ -85,6 +85,18 @@ Time.parse("2012-04-20T20:35:45Z")
 => 2012-04-20 20:35:45 UTC
 ```
 
+## Pagination
+
+All of the index views use pagination. The following information will be returned in the root object to help you determine where you are in the query:
+
+```
+{
+  "current_page": 1,
+  "total_pages": 1,
+  "per_page": 50
+}
+```
+
 ## Notes
 
 * API calls are limited to 5,000 calls an hour per user.
@@ -92,13 +104,3 @@ Time.parse("2012-04-20T20:35:45Z")
 * The `/api/v2/users` endpoint is the _only one_ that supports HTTP Basic authentication. All other endpoints require the API Key as either an HTTP request header or query string parameter.
 
 * Using an HTTP header of `Accept: application/json` is required, otherwise you’ll receive a `406: Not Acceptable` response from the API.
-
-* All of the index views use pagination. The following information will be returned in the root object to help you determine where you are in the query:
-
-  ```
-  {
-    "current_page": 1,
-    "total_pages": 1,
-    "per_page": 50
-  }
-  ```

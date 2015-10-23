@@ -2,8 +2,8 @@
 layout: default
 section: libs
 order: 1
-title: "node.js"
-description: "fulcrum-node library for node.js"
+title: "JavaScript"
+description: "fulcrum-node library for JavaScript"
 category: section
 ---
 
