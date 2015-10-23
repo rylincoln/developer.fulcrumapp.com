@@ -29,12 +29,15 @@
       </ul>
       <h3>Libraries</h3>
       <ul>
-      {% assign libraries = site.libraries | sort: "order" %}
-      {% for node in libraries %}
-        <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
-          <a href="{{ node.url }}">{{ node.title }}</a>
+        <li class="sidebar-nav-item">
+          <a href="https://github.com/fulcrumapp/fulcrum-node">JavaScript</a>
         </li>
-      {% endfor %}
+        <li class="sidebar-nav-item">
+          <a href="https://github.com/fulcrumapp/fulcrum-python">Python</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="https://github.com/fulcrumapp/fulcrum-ruby">Ruby</a>
+        </li>
       </ul>
     </ul>
 
