@@ -27,6 +27,17 @@
         </li>
       {% endfor %}
       </ul>
+      <h3>Expressions</h3>
+      <ul>
+      {% assign expressions = site.expressions | sort: "order" %}
+      {% for node in expressions %}
+      {% if node.order > 0 %}
+        <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+          <a href="{{ node.url }}">{{ node.title }}</a>
+        </li>
+      {% endif %}
+      {% endfor %}
+      </ul>
       <h3>Libraries</h3>
       <ul>
       {% assign libraries = site.libraries | sort: "order" %}
