@@ -10,6 +10,6 @@ Use this in a calculation field to add a full timestamp for when the record was 
 
 {% highlight  js %}
 var d = new Date();
-var ts = d.getFullYear() + '-' + (d.getMonth()+1) + '-' + ((d.getDate() < 10)?'0':'') + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+var ts = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + ((d.getDate() < 10) ? '0' : '') + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
 SETRESULT(ts);
 {% endhighlight %}
