@@ -9,7 +9,7 @@ category: section
 
 ## Getting Ready
 
-We assume you've read the general [webhooks overview](/guides/webhooks/webhooks-for-push-notifications/), and will build on top of that knowledge here.
+We assume you've read the general [webhooks overview](http://www.fulcrumapp.com/guides/webhooks/webhooks-for-push-notifications/), and will build on top of that knowledge here.
 
 ## Introduction
 
@@ -21,19 +21,19 @@ This is only a single use case. One could build webhook endpoints for other uses
 
 ## Authorization
 
-Your [plan must enable webhooks](/guides/webhooks/webhooks-plans/). You must also have an account with the [right role/permission](/guides/webhooks/webhooks-roles-and-permissions/) to manage webhooks.
+Your [plan must enable webhooks](http://www.fulcrumapp.com/guides/webhooks/webhooks-plans/). You must also have an account with the [right role/permission](http://www.fulcrumapp.com/guides/webhooks/webhooks-roles-and-permissions/) to manage webhooks.
 
 Now that you know your plan enables webhooks, and you have the right role/permission, you can use your API token to manage webhooks through the API.
 
 **Note:** Accessing the webhooks API without a valid API token will result in a `401 Unauthorized` error. Using an API token without the proper subscription or role/permission will result in a `403 Forbidden` error.
 
-See [Developers Authentication](/developers/overview/authentication/) on how to use this API token to access the API.
+See [Developers Authentication](/usage/authentication/) on how to use this API token to access the API.
 
 ## Manage Webhooks In Fulcrum
 
-Webhooks can be managed programmatically through the [Webhook API](/developers/api/webhooks/).
+Webhooks can be managed programmatically through the [Webhook API](http://www.fulcrumapp.com/developers/api/webhooks/).
 
-One can also manage webhooks through [the Fulcrum site](/guides/webhooks/webhooks-getting-started/).
+One can also manage webhooks through [the Fulcrum site](http://www.fulcrumapp.com/guides/webhooks/webhooks-getting-started/).
 
 ## Choose an Endpoint
 
@@ -47,7 +47,7 @@ It's likely you will want to write your own endpoint to implement functionality 
 
 ### Use an Existing Endpoint
 
-In the process of adding the webhooks functionality to Fulcrum, we built several applications that are webhook endpoints. You can refer to the list of guides and applications on our [Getting Started](/guides/webhooks/webhooks-getting-started/) page.
+In the process of adding the webhooks functionality to Fulcrum, we built several applications that are webhook endpoints. You can refer to the list of guides and applications on our [Getting Started](http://www.fulcrumapp.com/guides/webhooks/webhooks-getting-started/) page.
 
 ## Details
 
