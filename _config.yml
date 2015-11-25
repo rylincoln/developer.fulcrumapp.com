@@ -32,6 +32,9 @@ collections:
   expressions:
     output: true
     permalink: /expressions/:path/
+  expression-examples:
+    output: true
+    permalink: /expressions/examples/:path/
 
 #files to exclude, array
 exclude:
