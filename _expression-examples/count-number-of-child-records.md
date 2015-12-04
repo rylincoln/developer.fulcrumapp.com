@@ -8,8 +8,6 @@ category: section
 
 Will provide you with the number of child records that have been created inside a repeatable section.
 
-% highlight  js %}
-
+{% highlight  js %}
 $repeatable.length
-
 {% endhighlight %}
