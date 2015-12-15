@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 7
 title: "Photos"
 description: "Fetch and upload photos"

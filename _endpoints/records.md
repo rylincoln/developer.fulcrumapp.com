@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 3
 title: "Records"
 description: "Create, read, update, or delete data records"

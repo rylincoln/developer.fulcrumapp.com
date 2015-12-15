@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 6
 title: "Projects"
 description: "Create, read, update, or delete projects"

@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 4
 title: "Choice Lists"
 description: "Create, read, update, or delete choice lists"

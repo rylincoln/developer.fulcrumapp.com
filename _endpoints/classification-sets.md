@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 5
 title: "Classification Sets"
 description: "Create, read, update, or delete classification sets"

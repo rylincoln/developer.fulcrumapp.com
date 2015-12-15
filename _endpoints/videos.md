@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 9
 title: "Videos"
 description: "Fetch and upload videos and their GPS tracks"

@@ -26,9 +26,12 @@ collections:
   api:
     output: true
     permalink: /api/:path/
+  endpoints:
+    output: true
+    permalink: /endpoints/:path/
   general:
     output: true
-    permalink: /usage/:path/
+    permalink: /general/:path/
   expressions:
     output: true
     permalink: /expressions/:path/

@@ -1,15 +1,12 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1><img src="http://www.fulcrumapp.com/assets/img/fulcrum-logo.svg" alt="fulcrum logo" /></h1>
+      <h1><a href="/"><img src="http://www.fulcrumapp.com/assets/img/fulcrum-logo.svg" alt="fulcrum logo" /></a></h1>
       <p class="lead">{{ site.description }}</p>
     </div>
 
     <ul class="sidebar-nav">
-      <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
-        <a href="/">Home</a>
-      </li>
-      <h3>General Usage</h3>
+      <h3>General</h3>
       <ul>
       {% assign general_pages = site.general | sort: "order" %}
       {% for node in general_pages %}
@@ -21,6 +18,15 @@
       <h3>API</h3>
       <ul>
       {% assign pages = site.api | sort: "order" %}
+      {% for node in pages %}
+        <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+          <a href="{{ node.url }}">{{ node.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+      <h3>Endpoints</h3>
+      <ul>
+      {% assign pages = site.endpoints | sort: "order" %}
       {% for node in pages %}
         <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
           <a href="{{ node.url }}">{{ node.title }}</a>

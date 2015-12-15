@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 11
 title: "Webhooks"
 description: "Create, read, update, or delete webhooks"

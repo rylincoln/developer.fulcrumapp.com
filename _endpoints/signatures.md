@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 8
 title: "Signatures"
 description: "Fetch and upload signatures"

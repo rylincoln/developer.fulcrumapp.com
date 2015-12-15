@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 1
 title: "Users"
 description: "Access the metadata for a user account, including API Keys"

@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 10
 title: "Changesets"
 description: "Create, read, update, or close changesets"

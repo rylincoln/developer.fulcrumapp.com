@@ -1,6 +1,6 @@
 ---
 layout: default
-section: api
+section: endpoints
 order: 2
 title: "Forms"
 description: "Create, read, update, or delete forms (apps)"

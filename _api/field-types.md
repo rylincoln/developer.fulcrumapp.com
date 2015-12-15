@@ -1,6 +1,6 @@
 ---
 layout: default
-section: general
+section: api
 order: 4
 title: "Field Types"
 description: "Field Types Overview - Sets, Choices, and Other Fields"

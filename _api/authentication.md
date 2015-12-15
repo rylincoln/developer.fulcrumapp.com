@@ -1,6 +1,6 @@
 ---
 layout: default
-section: general
+section: api
 order: 2
 title: "Authentication"
 description: "Help with authentication when using the Fulcrum API."
