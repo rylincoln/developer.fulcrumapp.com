@@ -27,11 +27,11 @@ Now that you know your plan enables webhooks, and you have the right role/permis
 
 **Note:** Accessing the webhooks API without a valid API token will result in a `401 Unauthorized` error. Using an API token without the proper subscription or role/permission will result in a `403 Forbidden` error.
 
-See [Developers Authentication](/usage/authentication/) on how to use this API token to access the API.
+See [Developers Authentication](/api/authentication/) on how to use this API token to access the API.
 
 ## Manage Webhooks In Fulcrum
 
-Webhooks can be managed programmatically through the [Webhook API](http://www.fulcrumapp.com/developers/api/webhooks/).
+Webhooks can be managed programmatically through the [Webhook API](/endpoints/webhooks/).
 
 One can also manage webhooks through [the Fulcrum site](http://www.fulcrumapp.com/guides/webhooks/webhooks-getting-started/).
 

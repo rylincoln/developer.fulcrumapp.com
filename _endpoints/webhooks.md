@@ -17,7 +17,7 @@ menu:
 
 The Webhooks API gives you access to manage your organization's webhooks programmatically.
 
-For more general information about webhooks, or details of responsibilities your webhook endpoint must meet, see the [Webhooks Overview](/api/webhooks/).
+For more general information about webhooks, or details of responsibilities your webhook endpoint must meet, see the [Webhooks Overview](/general/webhooks/).
 
 ## Endpoints
 
