@@ -1,0 +1,52 @@
+body {
+  padding-top: 70px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  border-radius: 6px;
+  top: 93%;
+}
+
+.navbar-nav > li {
+  padding: 10px;
+}
+
+.navbar-nav > li > a {
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.navbar {
+  min-height: 65px !important;
+}
+
+.navbar-brand {
+  padding: 6px 4px 4px 15px;
+  margin-right: 20px;
+}
+
+.navbar-brand img {
+  height: 59px;
+}
+
+.jumbotron.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.jumbotron.header h1, .jumbotron.header p {
+  text-align: center;
+  color: #fff;
+}
+
+.jumbotron.header h1 {
+  font-size: 50px;
+}
+
+body.endpoints .header {
+  background: #cc3e00;
+}
+
+body.expressions .header {
+  background: #7c736f;
+}

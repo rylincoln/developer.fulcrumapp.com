@@ -20,35 +20,133 @@ The Records API gives you access to the data records that have been collected or
 
 ## Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /api/v2/records.json | Fetch all records. Additional parameters may be supplied (see query parameters table below). |
-| GET | /api/v2/records/**:id**.json | Fetch a single record. |
-| GET | /api/v2/records/**:id**/history.json | Fetch a single record's history. |
-| POST | /api/v2/records.json | Create a single record. |
-| PUT | /api/v2/records/**:id**.json | Update a single record. |
-| DELETE | /api/v2/records/**:id**.json | Delete a single record. |
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Endpoint</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET</td>
+      <td>/api/v2/records.json</td>
+      <td>Fetch all records. Additional parameters may be supplied (see query parameters table below).</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/v2/records/<strong>:id</strong>.json</td>
+      <td>Fetch a single record.</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/api/v2/records/<strong>:id</strong>/history.json</td>
+      <td>Fetch a single record’s history.</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>/api/v2/records.json</td>
+      <td>Create a single record.</td>
+    </tr>
+    <tr>
+      <td>PUT</td>
+      <td>/api/v2/records/<strong>:id</strong>.json</td>
+      <td>Update a single record.</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>/api/v2/records/<strong>:id</strong>.json</td>
+      <td>Delete a single record.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Query Parameters
 
 Available parameters to query the records associated with your account. All of the parameters may be used together to filter your data for more accurate results.
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| bounding_box | string | Bounding box of the records requested. Format should be: lat,long,lat,long (bottom, left, top, right). |
-| client_created_before | integer | Return only records which were created by the client before the given time. |
-| client_created_since  | integer | Return only records which were created by the client after the given time. |
-| client_updated_before | integer | Return only records which were updated by the client before the given time. |
-| client_updated_since  | integer | Return only records which were updated by the client after the given time. |
-| created_before | integer | Return only records which were created before the given time. |
-| created_since  | integer | Return only records which were created after the given time. |
-| form_id | string | The UUID of the form with which the record is associated. Leaving this blank will query against all of your records. |
-| newest_first | integer | If present, records will be sorted by `updated_at` date.
-| page | integer | The page number requested. |
-| per_page | integer | Number of records per page. By default, all requests are paginated to the maximum value of 20,000 items per request. |
-| project_id | string | The UUID of the project with which the record is associated. Leaving this blank will query against all of your records. |
-| updated_before | integer | Return only records which were updated before the given time. |
-| updated_since  | integer | Return only records which were updated after the given time. |
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bounding_box</td>
+      <td>string</td>
+      <td>Bounding box of the records requested. Format should be: lat,long,lat,long (bottom, left, top, right).</td>
+    </tr>
+    <tr>
+      <td>client_created_before</td>
+      <td>integer</td>
+      <td>Return only records which were created by the client before the given time.</td>
+    </tr>
+    <tr>
+      <td>client_created_since</td>
+      <td>integer</td>
+      <td>Return only records which were created by the client after the given time.</td>
+    </tr>
+    <tr>
+      <td>client_updated_before</td>
+      <td>integer</td>
+      <td>Return only records which were updated by the client before the given time.</td>
+    </tr>
+    <tr>
+      <td>client_updated_since</td>
+      <td>integer</td>
+      <td>Return only records which were updated by the client after the given time.</td>
+    </tr>
+    <tr>
+      <td>created_before</td>
+      <td>integer</td>
+      <td>Return only records which were created before the given time.</td>
+    </tr>
+    <tr>
+      <td>created_since</td>
+      <td>integer</td>
+      <td>Return only records which were created after the given time.</td>
+    </tr>
+    <tr>
+      <td>form_id</td>
+      <td>string</td>
+      <td>The UUID of the form with which the record is associated. Leaving this blank will query against all of your records.</td>
+    </tr>
+    <tr>
+      <td>newest_first</td>
+      <td>integer</td>
+      <td>If present, records will be sorted by <code>updated_at</code> date.</td>
+    </tr>
+    <tr>
+      <td>page</td>
+      <td>integer</td>
+      <td>The page number requested.</td>
+    </tr>
+    <tr>
+      <td>per_page</td>
+      <td>integer</td>
+      <td>Number of records per page. By default, all requests are paginated to the maximum value of 20,000 items per request.</td>
+    </tr>
+    <tr>
+      <td>project_id</td>
+      <td>string</td>
+      <td>The UUID of the project with which the record is associated. Leaving this blank will query against all of your records.</td>
+    </tr>
+    <tr>
+      <td>updated_before</td>
+      <td>integer</td>
+      <td>Return only records which were updated before the given time.</td>
+    </tr>
+    <tr>
+      <td>updated_since</td>
+      <td>integer</td>
+      <td>Return only records which were updated after the given time.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Filtering Between Dates
 
@@ -62,66 +160,322 @@ Records will still be ordered according to the `updated_at` column, even when fi
 
 ## Record Properties
 
-| Property | Type | Required | Readonly | Description |
-|----------|------|----------|----------|-------------|
-| form_id | string | yes | yes | The unique form ID (UUID). |
-| latitude | number | yes | no | The record latitude in WGS 84 decimal degrees. |
-| longitude | number | yes | no | The record longitude in WGS 84 decimal degrees. |
-| form_values | object | yes | no | Must be present and an object. The keys of this object must reflect the keys in the form schema. Different form types require different values (see table below). |
-| status | string | no | no | Sets the color of the marker. |
-| version | number | no | yes | Autoincremented version of the record for history tracking. |
-| id | string | no | yes | The UUID of the record. |
-| created_at | string | no | yes | Timestamp when the record was synced to the cloud. |
-| updated_at | string | no | yes | Timestamp when the record was last synced to or processed while in the cloud. |
-| client_created_at | string | no | no | Timestamp when the user first created the record. |
-| client_updated_at | string | no | no | Timestamp when the record was last modified by the user. |
-| created_by | string | no | yes | The name of user who created the record. |
-| created_by_id | string | no | yes | The UUID of user who created the record. |
-| updated_by | string | no | yes | The name of user who last updated the record. |
-| updated_by_id | string | no | yes | The UUID of user who last updated the record. |
-| project_id | string | no | no | The UUID of the [project](http://www.fulcrumapp.com/help/projects/) tagged to the record. |
-| assigned_to | string | no | no | The name of the user the record is assigned to. |
-| assigned_to_id | string | no | no | The UUID of the user the record is assigned to. |
-| altitude | number | no | yes | Meters above/below (+/-) sea level. |
-| speed | number | no | yes | Meters per second. |
-| course | number | no | yes | Only recorded if the device is moving and has no relation to how the device is oriented; course is in degrees (0.0-360); if no course can be determined then 0.0 will be returned. |
-| horizontal_accuracy | number | no | yes | Accuracy of the latitude and longitude in meters. |
-| vertical_accuracy | number | no | yes | Accuracy of the altitude value in meters. |
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Readonly</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>form_id</td>
+      <td>string</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>The unique form ID (UUID).</td>
+    </tr>
+    <tr>
+      <td>latitude</td>
+      <td>number</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>The record latitude in WGS 84 decimal degrees.</td>
+    </tr>
+    <tr>
+      <td>longitude</td>
+      <td>number</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>The record longitude in WGS 84 decimal degrees.</td>
+    </tr>
+    <tr>
+      <td>form_values</td>
+      <td>object</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>Must be present and an object. The keys of this object must reflect the keys in the form schema. Different form types require different values (see table below).</td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>string</td>
+      <td>no</td>
+      <td>no</td>
+      <td>Sets the color of the marker.</td>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>number</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>Autoincremented version of the record for history tracking.</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>string</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>The UUID of the record.</td>
+    </tr>
+    <tr>
+      <td>created_at</td>
+      <td>string</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>Timestamp when the record was synced to the cloud.</td>
+    </tr>
+    <tr>
+      <td>updated_at</td>
+      <td>string</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>Timestamp when the record was last synced to or processed while in the cloud.</td>
+    </tr>
+    <tr>
+      <td>client_created_at</td>
+      <td>string</td>
+      <td>no</td>
+      <td>no</td>
+      <td>Timestamp when the user first created the record.</td>
+    </tr>
+    <tr>
+      <td>client_updated_at</td>
+      <td>string</td>
+      <td>no</td>
+      <td>no</td>
+      <td>Timestamp when the record was last modified by the user.</td>
+    </tr>
+    <tr>
+      <td>created_by</td>
+      <td>string</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>The name of user who created the record.</td>
+    </tr>
+    <tr>
+      <td>created_by_id</td>
+      <td>string</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>The UUID of user who created the record.</td>
+    </tr>
+    <tr>
+      <td>updated_by</td>
+      <td>string</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>The name of user who last updated the record.</td>
+    </tr>
+    <tr>
+      <td>updated_by_id</td>
+      <td>string</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>The UUID of user who last updated the record.</td>
+    </tr>
+    <tr>
+      <td>project_id</td>
+      <td>string</td>
+      <td>no</td>
+      <td>no</td>
+      <td>The UUID of the <a href="http://www.fulcrumapp.com/help/projects/">project</a> tagged to the record.</td>
+    </tr>
+    <tr>
+      <td>assigned_to</td>
+      <td>string</td>
+      <td>no</td>
+      <td>no</td>
+      <td>The name of the user the record is assigned to.</td>
+    </tr>
+    <tr>
+      <td>assigned_to_id</td>
+      <td>string</td>
+      <td>no</td>
+      <td>no</td>
+      <td>The UUID of the user the record is assigned to.</td>
+    </tr>
+    <tr>
+      <td>altitude</td>
+      <td>number</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>Meters above/below (+/-) sea level.</td>
+    </tr>
+    <tr>
+      <td>speed</td>
+      <td>number</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>Meters per second.</td>
+    </tr>
+    <tr>
+      <td>course</td>
+      <td>number</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>Only recorded if the device is moving and has no relation to how the device is oriented; course is in degrees (0.0-360); if no course can be determined then 0.0 will be returned.</td>
+    </tr>
+    <tr>
+      <td>horizontal_accuracy</td>
+      <td>number</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>Accuracy of the latitude and longitude in meters.</td>
+    </tr>
+    <tr>
+      <td>vertical_accuracy</td>
+      <td>number</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>Accuracy of the altitude value in meters.</td>
+    </tr>
+  </tbody>
+</table>
 
-**Form Value Field Types**
+### Form Value Field Types
 
-| Field | Type | Example |
-|-------|------|---------|
-| Text | string | `"Hello world!"` |
-| Numeric | string | `"50"` |
-| Yes/No | string | `"yes"` |
-| Date | string | `"2015"` |
-| Time | string | `"13:50"` |
-| Barcode | string | `"123456789"` |
-| Hyperlink | string | `"http://www.fulcrumapp.com"` |
-| Calculation | string | `"6"` |
-| Single Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Red"],other_values: []}` |
-| Multiple Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Red","White"],other_values: []}` |
-| Classification | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Ford","Mustang"],other_values: []}` |
-| Address | address object | `{sub_thoroughfare: "360",thoroughfare: "Central Ave",suite: "",locality: "St. Petersburg",sub_admin_area: "",admin_area: "FL",postal_code: "33701",country: "United States"}` |
-| Photo | array of photo objects | `[{photo_id:"a8d1df96-44e5-75e9-7312-7e2c5e902496,caption: ""}]` |
-| Video | array of video objects | `[{video_id:"712850b4-4de2-4d66-a6cc-034201245b52,caption: ""}]` |
-| Audio | array of audio objects | `[{audio_id:"f81d51b5-1ce9-465b-be0b-27f1eca41e2c,caption: ""}]` |
-| Signature | signature object | `{timestamp: "2015-07-09T14:54:04Z",signature_id: "9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"}` |
-| Repeatable | array of repeatable objects | `[{id:"d67801a0-adc1-6f60-4b0d-ec3a7191b34b",geometry:{type:"Point",coordinates:[-73.123456,42.123456]},form_values: {0129: "Hello world"}}]` |
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Text</td>
+      <td>string</td>
+      <td><code>"Hello world!"</code></td>
+    </tr>
+    <tr>
+      <td>Numeric</td>
+      <td>string</td>
+      <td><code>"50"</code></td>
+    </tr>
+    <tr>
+      <td>Yes/No</td>
+      <td>string</td>
+      <td><code>"yes"</code></td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td>string</td>
+      <td><code>"2015"</code></td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td>string</td>
+      <td><code>"13:50"</code></td>
+    </tr>
+    <tr>
+      <td>Barcode</td>
+      <td>string</td>
+      <td><code>"123456789"</code></td>
+    </tr>
+    <tr>
+      <td>Hyperlink</td>
+      <td>string</td>
+      <td><code>"http://www.fulcrumapp.com"</code></td>
+    </tr>
+    <tr>
+      <td>Calculation</td>
+      <td>string</td>
+      <td><code>"6"</code></td>
+    </tr>
+    <tr>
+      <td>Single Choice</td>
+      <td>object with the following keys: <code>choice_values</code> (array of selected options) <code>other values</code> (array, empty or with values)</td>
+      <td><code>{choice_values: ["Red"],other_values: []}</code></td>
+    </tr>
+    <tr>
+      <td>Multiple Choice</td>
+      <td>object with the following keys: <code>choice_values</code> (array of selected options) <code>other values</code> (array, empty or with values)</td>
+      <td><code>{choice_values: ["Red","White"],other_values: []}</code></td>
+    </tr>
+    <tr>
+      <td>Classification</td>
+      <td>object with the following keys: <code>choice_values</code> (array of selected options) <code>other values</code> (array, empty or with values)</td>
+      <td><code>{choice_values: ["Ford","Mustang"],other_values: []}</code></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>address object</td>
+      <td><code>{sub_thoroughfare: "360",thoroughfare: "Central Ave",suite: "",locality: "St. Petersburg",sub_admin_area: "",admin_area: "FL",postal_code: "33701",country: "United States"}</code></td>
+    </tr>
+    <tr>
+      <td>Photo</td>
+      <td>array of photo objects</td>
+      <td><code>[{photo_id:"a8d1df96-44e5-75e9-7312-7e2c5e902496,caption: ""}]</code></td>
+    </tr>
+    <tr>
+      <td>Video</td>
+      <td>array of video objects</td>
+      <td><code>[{video_id:"712850b4-4de2-4d66-a6cc-034201245b52,caption: ""}]</code></td>
+    </tr>
+    <tr>
+      <td>Audio</td>
+      <td>array of audio objects</td>
+      <td><code>[{audio_id:"f81d51b5-1ce9-465b-be0b-27f1eca41e2c,caption: ""}]</code></td>
+    </tr>
+    <tr>
+      <td>Signature</td>
+      <td>signature object</td>
+      <td><code>{timestamp: "2015-07-09T14:54:04Z",signature_id: "9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"}</code></td>
+    </tr>
+    <tr>
+      <td>Repeatable</td>
+      <td>array of repeatable objects</td>
+      <td><code>[{id:"d67801a0-adc1-6f60-4b0d-ec3a7191b34b",geometry:{type:"Point",coordinates:[-73.123456,42.123456]},form_values: {0129: "Hello world"}}]</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Validations
 
 The following properties must be included in order to create/update a record object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
-| Property | Type | Description | Example |
-|----------|------|-------------|---------|
-| form_id | string | The unique form ID (UUID). | `"7a0c3378-b63a-4707-b459-df499698f23c"` |
-| latitude | number | The record latitude in WGS 84 decimal degrees. | `27.770787` |
-| longitude | number | The record longitude in WGS 84 decimal degrees. | `-82.638039` |
-| form_values | object | Must be present and an object. The keys of this object must reflect the keys in the form schema. Different form types require different values (see table above).| `{"2832": "My string value","8373": {"choice_values": ["My choice value"]}}`
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>form_id</td>
+      <td>string</td>
+      <td>The unique form ID (UUID).</td>
+      <td><code>"7a0c3378-b63a-4707-b459-df499698f23c"</code></td>
+    </tr>
+    <tr>
+      <td>latitude</td>
+      <td>number</td>
+      <td>The record latitude in WGS 84 decimal degrees.</td>
+      <td><code>27.770787</code></td>
+    </tr>
+    <tr>
+      <td>longitude</td>
+      <td>number</td>
+      <td>The record longitude in WGS 84 decimal degrees.</td>
+      <td><code>-82.638039</code></td>
+    </tr>
+    <tr>
+      <td>form_values</td>
+      <td>object</td>
+      <td>Must be present and an object. The keys of this object must reflect the keys in the form schema. Different form types require different values (see table above).</td>
+      <td><code>{"2832": "My string value","8373": {"choice_values": ["My choice value"]}}</code></td>
+    </tr>
+  </tbody>
+</table>
 
 Example validation response if the `form_id` is not included:
 
