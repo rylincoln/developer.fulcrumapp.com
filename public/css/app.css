@@ -8,12 +8,16 @@ body {
 }
 
 .navbar-nav > li {
-  padding: 10px;
+  padding: 10px 2px;
 }
 
 .navbar-nav > li > a {
-  padding: 15px;
+  padding: 15px 11px;
   border-radius: 8px;
+}
+
+.navbar-nav > li > a caret {
+  margin-left: 0;
 }
 
 .navbar {
@@ -26,7 +30,7 @@ body {
 
 .navbar-brand {
   padding: 6px 4px 4px 15px;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .navbar-toggle {
@@ -66,46 +70,16 @@ body {
   }
 }
 
-body.endpoints .header {
-  background-color: #cc3e00;
-  background-image: -webkit-linear-gradient(287deg,#cc3e00 10%,#f61082 36%,#fff 70%);
-  background-image: -moz-linear-gradient(287deg,#cc3e00 10%,#f61082 36%,#fff 70%);
-  background-image: -o-linear-gradient(287deg,#cc3e00 10%,#f61082 36%,#fff 70%);
-  background-image: -ms-linear-gradient(287deg,#cc3e00 10%,#f61082 36%,#fff 70%);
-  background-image: linear-gradient(163deg,#cc3e00 10%,#f61082 36%,#fff 70%);
-}
-
-body.expressions .header {
-  background-color: #7c736f;
-  background-image: -webkit-linear-gradient(287deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
-  background-image: -moz-linear-gradient(287deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
-  background-image: -o-linear-gradient(287deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
-  background-image: -ms-linear-gradient(287deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
-  background-image: linear-gradient(163deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
-}
-
-body.general .header {
-  background-color: #008ebd;
-  background-image: -webkit-linear-gradient(287deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
-  background-image: -moz-linear-gradient(287deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
-  background-image: -o-linear-gradient(287deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
-  background-image: -ms-linear-gradient(287deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
-  background-image: linear-gradient(163deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
-}
-
-body.overview .header {
-  background-color: #006680;
+.jumbotron.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  background: #006680;
   background-image: -webkit-linear-gradient(287deg,#006680 10%,#0093b9 36%,#fff 70%);
   background-image: -moz-linear-gradient(287deg,#006680 10%,#0093b9 36%,#fff 70%);
   background-image: -o-linear-gradient(287deg,#006680 10%,#0093b9 36%,#fff 70%);
   background-image: -ms-linear-gradient(287deg,#006680 10%,#0093b9 36%,#fff 70%);
   background-image: linear-gradient(163deg,#006680 10%,#0093b9 36%,#fff 70%);
-}
-
-.jumbotron.header {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 10px;
   -webkit-background-size: 100% 1100px;
   -moz-background-size: 100% 1100px;
   background-size: 100% 1100px;
