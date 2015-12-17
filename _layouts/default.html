@@ -6,22 +6,18 @@
   <body>
     {% include nav.html %}
 
-    {% if page.section == 'endpoints' or page.section == 'expressions' or page.section == 'general' or page.section == 'overview' %}
     <div class="jumbotron header">
       <div class="container">
         <h1 class="page-title">{{ page.title }}</h1>
         <p class="description">{{ page.description }}</p>
       </div>
     </div>
-    {% else %}
-    <div class="container">
-      <h1 class="page-title">{{ page.title }}</h1>
-    </div>
-    {% endif %}
 
     <div class="content container">
       {{ content }}
     </div>
+
+    {% include footer.html %}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

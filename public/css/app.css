@@ -85,3 +85,39 @@ body {
   background-size: 100% 1100px;
   background-repeat: no-repeat;
 }
+
+.footer {
+  border-top: 1px solid #e7e7e7;
+  padding: 15px 0;
+  margin-top: 15px;
+  background-color: #f8f8f8;
+}
+
+.footer .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.footer ul.footer-column {
+  /* WhyTF do I need to add this? */
+  padding-start: 0;
+  -webkit-padding-start: 0;
+
+  float: left;
+  list-style: none;
+}
+
+.footer ul.footer-column:first-child {
+  margin-left: 0;
+}
+
+.footer ul.footer-column li a {
+  color: #b4b4b4;
+  font-weight: 200;
+}
+
+.footer ul.footer-column li.title {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 4px;
+}
