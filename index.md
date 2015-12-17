@@ -1,8 +1,8 @@
 ---
 layout: default
 section: overview
-title: "Introduction To The Fulcrum Platform"
-description: "Fulcrum is a platform for building dynamic data collection forms to deploy for on field surveys and mapping applications"
+title: "Fulcrum Developer Tools"
+description: "Advanced information and documentation for power users and developers."
 category: section
 ---
 
