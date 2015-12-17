@@ -9,7 +9,6 @@ category: section
 Use this in a calculation field to compare multiple values and return a specific value based on the values entered.
 
 {% highlight  js %}
-
 // Define the variables that you wish to use
 var firstField = $field_one;
 var secondField = $field_two;
@@ -28,7 +27,7 @@ function compare (choice1, choice2) {
   }
 }
 
-//Runs the compare function using the variables defined above and creates a 'result' variable with the value returned from the compare funcation.
+//Runs the compare function using the variables defined above and creates a 'result' variable with the value returned from the compare function.
 var result = compare(firstField, secondField);
 
 
