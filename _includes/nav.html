@@ -17,10 +17,18 @@
         <!-- Endpoints -->
         <li class="dropdown{% if page.section == 'endpoints' %} active{% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            API Endpoints
+            API
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
+            {% assign api_pages = site.api | sort: "order" %}
+            {% for node in api_pages %}
+              <li class="{% if page.url == node.url %} active{% endif %}">
+                <a href="{{ node.url }}">{{ node.title }}</a>
+              </li>
+            {% endfor %}
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Endpoints</a>
             {% assign endpoint_pages = site.endpoints | sort: "order" %}
             {% for node in endpoint_pages %}
               <li class="{% if page.url == node.url %} active{% endif %}">

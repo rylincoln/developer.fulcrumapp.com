@@ -3,7 +3,7 @@ layout: default
 section: api
 order: 0
 title: "Introduction"
-description: "Basic concepts of working with the Fulcrum REST API to access, create, and modify data"
+description: "Basic concepts of working with the Fulcrum API to access, create, and modify data"
 category: section
 img: /assets/img/guides/
 difficulty: advanced

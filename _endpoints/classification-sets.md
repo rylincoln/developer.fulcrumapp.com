@@ -8,12 +8,12 @@ category: section
 img: /assets/img/guides/
 difficulty: advanced
 menu:
-- "Endpoints": endpoints
-- "Query Parameters": query-parameters
-- "Properties": classification-set-properties
-- "Validations": validations
-- "Notes": notes
-- "Examples": examples
+  - "Endpoints": endpoints
+  - "Query Parameters": query-parameters
+  - "Properties": classification-set-properties
+  - "Validations": validations
+  - "Notes": notes
+  - "Examples": examples
 ---
 
 The Classification Sets API gives you access to the [classification sets](http://www.fulcrumapp.com/help/classification-sets/) within your Fulcrum account. Classification sets are hierarchical lists of descriptors, allowing nested sets of options, which can be shared between multiple apps.
