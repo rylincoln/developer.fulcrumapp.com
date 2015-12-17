@@ -20,6 +20,7 @@ The Classification Sets API gives you access to the [classification sets](http:/
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET  | /api/v2/classification_sets.json | Fetch all classification sets. |
@@ -30,6 +31,7 @@ The Classification Sets API gives you access to the [classification sets](http:/
 
 ## Query Parameters
 
+{:.table.table-striped}
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | page | integer | The page number requested. |
@@ -37,6 +39,7 @@ The Classification Sets API gives you access to the [classification sets](http:/
 
 ## Classification Set Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | name | string | yes | no | The name of the classification set. |
@@ -51,15 +54,17 @@ The Classification Sets API gives you access to the [classification sets](http:/
 
 The following properties must be included in order to create/update a classification_set object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | name | string | The name of the choice list. | `"Inspection Conditions"`
 | items | array of classification set objects | The classification set options. | See classification sets properties table below.
 
-**Classification Sets Properties**
+### Classification Sets Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | label | string | yes | no | Choice label. |

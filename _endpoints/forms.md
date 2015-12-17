@@ -20,6 +20,7 @@ The Forms API gives you access to your form fields, or app schema.
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/forms.json | Fetch a list of all available forms. |
@@ -30,6 +31,7 @@ The Forms API gives you access to your form fields, or app schema.
 
 ## Query Parameters
 
+{:.table.table-striped}
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | page | integer | The page number requested. |
@@ -38,6 +40,7 @@ The Forms API gives you access to your form fields, or app schema.
 
 ## Form Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|-------------|
 | name | string | yes | no | The name you've given this form. |
@@ -56,8 +59,9 @@ The Forms API gives you access to your form fields, or app schema.
 | image_small | string | no | yes | The URL to the small-sized image which was uploaded as this app's icon. 320x320 px |
 | image_large | string | no | yes | The URL to the large-sized image which was uploaded as this app's icon. 640x640 px |
 
-**Status Field Properties**
+### Status Field Properties
 
+{:.table.table-striped}
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | type | string | `"StatusField"` | The type of field. |
@@ -71,16 +75,18 @@ The Forms API gives you access to your form fields, or app schema.
 | description | string | `""` | The description for this field. |
 | choices | array | `[]` | See status field choices below. |
 
-**Status Field Choice Properties**
+### Status Field Choice Properties
 
+{:.table.table-striped}
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
 | label | string | `""` | What's shown to the user in the web and mobile apps when they select a status for records in this app. |
 | value | string | `""` | What's stored in the record. |
 | color | string | `"#CB0D0C"` | The hexadecimal value for the color used for the status and the marker color on the map. |
 
-**Form Element Properties (all field types)**
+### Form Element Properties (all field types)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | type | string | yes | Must be one of the valid element types: `"TextField"`, `"YesNoField"`, `"Label"`, `"Section"`, `"ChoiceField"`, `"ClassificationField"`, `"PhotoField"`, `"VideoField"`, `"AudioField"`, `"BarcodeField"`, `"DateTimeField"`, `"TimeField"`, `"Section"`, `"Repeatable"`, `"AddressField"`, `"SignatureField"`, `"HyperlinkField"`, `"CalculatedField"`. |
@@ -97,8 +103,9 @@ The Forms API gives you access to your form fields, or app schema.
 | required_conditions_type | string | no | Match all or any of the conditions to make this field required. (`"all"` or `"any"`) |
 | required_conditions | array | no | Array of objects containing requirement conditions (see conditions table below). |
 
-**Additional Form Element Properties (TextField)**
+### Additional Form Element Properties (TextField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | numeric | boolean | no | Is it a numeric field? |
@@ -108,8 +115,9 @@ The Forms API gives you access to your form fields, or app schema.
 | min | number | no | Minimum number (when numeric=true). |
 | max | number | no | Maximum number (when numeric=true). |
 
-**Additional Form Element Properties (YesNoField)**
+### Additional Form Element Properties (YesNoField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | neutral_enabled | boolean | yes | Enable N/A choice? |
@@ -117,29 +125,33 @@ The Forms API gives you access to your form fields, or app schema.
 | positive | object | yes | Label/Value for positive choice (`{label: "Yes",value: "yes"}`). |
 | negative | object | yes | Label/Value for positive choice (`{label: "No",value: "no"}`). |
 
-**Additional Form Element Properties (ChoiceField)**
+### Additional Form Element Properties (ChoiceField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | choices | array | yes | Array of choice objects. |
 | multiple | boolean | no | Multiple choice field? |
 | allow_other | boolean | no | Allow other values? |
 
-**Additional Form Element Properties (ClassificationField)**
+### Additional Form Element Properties (ClassificationField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | classification_set_id | string | yes | The UUID of the classification set to reference. |
 
-**Additional Form Element Properties (PhotoField)**
+### Additional Form Element Properties (PhotoField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | min_length | number | no | Minimum number of photos. |
 | max_length | number | no | Maximum number of photos. |
 
-**Additional Form Element Properties (VideoField)**
+### Additional Form Element Properties (VideoField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | track_enabled | boolean | no | GPS track enabled? |
@@ -147,48 +159,55 @@ The Forms API gives you access to your form fields, or app schema.
 | min_length | number | no | Minimum number of videos. |
 | max_length | number | no | Maximum number of videos. |
 
-**Additional Form Element Properties (AudioField)**
+### Additional Form Element Properties (AudioField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | track_enabled | boolean | no | GPS track enabled? |
 | min_length | number | no | Minimum number of audio recordings. |
 | max_length | number | no | Maximum number of audio recordings. |
 
-**Additional Form Element Properties (Section)**
+### Additional Form Element Properties (Section)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | display | string | yes | Display type (`"inline"`, `"drilldown"`) |
 | elements | array | yes | Array of field elements nested within the section. |
 
-**Additional Form Element Properties (AddressField)**
+### Additional Form Element Properties (AddressField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | auto_populate | boolean | no | Automatically reverse geocode to determine address? |
 
-**Additional Form Element Properties (SignatureField)**
+### Additional Form Element Properties (SignatureField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | agreement_text | string | no | The text that appears below the signature line. |
 
-**Additional Form Element Properties (HyperlinkField)**
+### Additional Form Element Properties (HyperlinkField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | default_url | string | no | Optional default URL. |
 
-**Additional Form Element Properties (CalculatedField)**
+### Additional Form Element Properties (CalculatedField)
 
+{:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | display | object | yes | Calculation display object (`{style: "number",currency: null}`). |
 | expression | string | no | Calculation expression. |
 
-**Conditions**
+### Conditions
 
+{:.table.table-striped}
 | Property | Type | Description |
 |----------|------|-------------|
 | field_key | string | The key of the field to match. |
@@ -199,8 +218,9 @@ The Forms API gives you access to your form fields, or app schema.
 
 The following properties must be included in order to create/update a form object in our system. Any validation errors will return a `422: Unprocessable Entity` and an object with a list of validation errors.
 
-**Required Form Properties**
+### Required Form Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | name | string | The name you've given this form. | `"Fire Hydrant Inventory"` |

@@ -20,9 +20,17 @@ body {
   min-height: 65px !important;
 }
 
+.navbar-collapse.in, .navbar-collapse.collapsing {
+  margin-top: 10px;
+}
+
 .navbar-brand {
   padding: 6px 4px 4px 15px;
   margin-right: 20px;
+}
+
+.navbar-toggle {
+  margin-top: 14px;
 }
 
 .navbar-brand img {

@@ -17,6 +17,7 @@ The Users API provides access to user metadata (including API Keys) and can be c
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/users.json | Fetch the metadata for your user account. |

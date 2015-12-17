@@ -19,6 +19,7 @@ The Videos API gives you access to a record's videos, including the GPS track. I
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/videos.json | Fetch the metadata for all videos. |
@@ -48,6 +49,7 @@ The Videos API gives you access to a record's videos, including the GPS track. I
 
 ## Video Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | access_key | string | yes | no | The UUID of the video. |
@@ -82,8 +84,9 @@ The Videos API gives you access to a record's videos, including the GPS track. I
 
 The following properties must be included in order to create/update a photo object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | video[access_key] | string | The UUID of the video. | `"2d956eb0-bc2a-747f-fc56-1100936ce515"` |

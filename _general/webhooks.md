@@ -61,83 +61,24 @@ Your webhook endpoint is free to do anything with the response, as long as it co
 
 The following table describes all the events that can be raised and the data that will be sent to your webhook.
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Event Type</th>
-      <th>Event Data</th>
-      <th>Examples</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>form.create</td>
-      <td>Data of the form just created.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597024">Example payload</a></td>
-    </tr>
-    <tr>
-      <td>form.update</td>
-      <td>Data of the form just updated.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597137">Example payload</a></td>
-    </tr>
-    <tr>
-      <td>form.delete</td>
-      <td>Data of the form just deleted.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597307">Example payload</a></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>record.create</td>
-      <td>Data of the record just created.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597187">Example payload</a></td>
-    </tr>
-    <tr>
-      <td>record.update</td>
-      <td>Data of the record just updated.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597221">Example payload</a></td>
-    </tr>
-    <tr>
-      <td>record.delete</td>
-      <td>Data of the record just deleted.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597279">Example payload</a></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>choice_list.create</td>
-      <td>Data of the choice list just created.</td>
-      <td><a href="https://gist.github.com/kyletolle/6598016">Example payload</a></td>
-    </tr>
-    <tr>
-      <td>choice_list.update</td>
-      <td>Data of the choice list just updated.</td>
-      <td><a href="https://gist.github.com/kyletolle/6598075">Example payload</a></td>
-    </tr>
-    <tr>
-      <td>choice_list.delete</td>
-      <td>Data of the choice list just deleted.</td>
-      <td><a href="https://gist.github.com/kyletolle/6598114">Example payload</a></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>classification_set.create</td>
-      <td>Data of the classification set just created.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597717">Example payload</a></td>
-    </tr>
-    <tr>
-      <td>classification_set.update</td>
-      <td>Data of the classification set just updated.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597806">Example payload</a></td>
-    </tr>
-    <tr>
-      <td>classification_set.delete</td>
-      <td>Data of the classification set just deleted.</td>
-      <td><a href="https://gist.github.com/kyletolle/6597894">Example payload</a></td>
-    </tr>
-  </tbody>
-</table>
+{:.table.table-striped}
+| Event Type                | Event Data                                   | Examples                                                     |
+|---------------------------|----------------------------------------------|--------------------------------------------------------------|
+| form.create               | Data of the form just created.               | [Example payload](https://gist.github.com/kyletolle/6597024) |
+| form.update               | Data of the form just updated.               | [Example payload](https://gist.github.com/kyletolle/6597137) |
+| form.delete               | Data of the form just deleted.               | [Example payload](https://gist.github.com/kyletolle/6597307) |
+|---------------------------|----------------------------------------------|--------------------------------------------------------------|
+| record.create             | Data of the record just created.             | [Example payload](https://gist.github.com/kyletolle/6597187) |
+| record.update             | Data of the record just updated.             | [Example payload](https://gist.github.com/kyletolle/6597221) |
+| record.delete             | Data of the record just deleted.             | [Example payload](https://gist.github.com/kyletolle/6597279) |
+|---------------------------|----------------------------------------------|--------------------------------------------------------------|
+| choice_list.create        | Data of the choice list just created.        | [Example payload](https://gist.github.com/kyletolle/6598016) |
+| choice_list.update        | Data of the choice list just updated.        | [Example payload](https://gist.github.com/kyletolle/6598075) |
+| choice_list.delete        | Data of the choice list just deleted.        | [Example payload](https://gist.github.com/kyletolle/6598114) |
+|---------------------------|----------------------------------------------|--------------------------------------------------------------|
+| classification_set.create | Data of the classification set just created. | [Example payload](https://gist.github.com/kyletolle/6597717) |
+| classification_set.update | Data of the classification set just updated. | [Example payload](https://gist.github.com/kyletolle/6597806) |
+| classification_set.delete | Data of the classification set just deleted. | [Example payload](https://gist.github.com/kyletolle/6597894) |
 
 Notice that each resource type is singular. The event type itself is present tense.
 
