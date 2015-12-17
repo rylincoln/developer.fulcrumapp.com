@@ -20,6 +20,7 @@ The Projects API gives you access to the [projects](http://www.fulcrumapp.com/he
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/projects.json | Fetch all projects. |
@@ -30,6 +31,7 @@ The Projects API gives you access to the [projects](http://www.fulcrumapp.com/he
 
 ## Query Parameters
 
+{:.table.table-striped}
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | page | integer | The page number requested. |
@@ -37,6 +39,7 @@ The Projects API gives you access to the [projects](http://www.fulcrumapp.com/he
 
 ## Project Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | name | string | yes | no | The name of the project. |
@@ -49,8 +52,9 @@ The Projects API gives you access to the [projects](http://www.fulcrumapp.com/he
 
 The following properties must be included in order to create/update a project object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | name | string | The name of the project. | `"Pinellas County"` |

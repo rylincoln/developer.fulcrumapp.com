@@ -1,0 +1,113 @@
+body {
+  padding-top: 65px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  border-radius: 6px;
+  top: 93%;
+}
+
+.navbar-nav > li {
+  padding: 10px;
+}
+
+.navbar-nav > li > a {
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.navbar {
+  min-height: 65px !important;
+}
+
+.navbar-collapse.in, .navbar-collapse.collapsing {
+  margin-top: 10px;
+}
+
+.navbar-brand {
+  padding: 6px 4px 4px 15px;
+  margin-right: 20px;
+}
+
+.navbar-toggle {
+  margin-top: 14px;
+}
+
+.navbar-brand img {
+  height: 59px;
+}
+
+.jumbotron.header h1, .jumbotron.header p {
+  text-align: center;
+  color: #fff;
+}
+
+.jumbotron.header h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .navbar-brand {
+    padding: 4px 4px 4px 15px;
+  }
+
+  .jumbotron.header {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .jumbotron.header h1 {
+    font-size: 35px;
+  }
+
+  .jumbotron.header p {
+    font-size: 17px;
+  }
+}
+
+body.endpoints .header {
+  background-color: #cc3e00;
+  background-image: -webkit-linear-gradient(287deg,#cc3e00 10%,#f61082 36%,#fff 70%);
+  background-image: -moz-linear-gradient(287deg,#cc3e00 10%,#f61082 36%,#fff 70%);
+  background-image: -o-linear-gradient(287deg,#cc3e00 10%,#f61082 36%,#fff 70%);
+  background-image: -ms-linear-gradient(287deg,#cc3e00 10%,#f61082 36%,#fff 70%);
+  background-image: linear-gradient(163deg,#cc3e00 10%,#f61082 36%,#fff 70%);
+}
+
+body.expressions .header {
+  background-color: #7c736f;
+  background-image: -webkit-linear-gradient(287deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
+  background-image: -moz-linear-gradient(287deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
+  background-image: -o-linear-gradient(287deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
+  background-image: -ms-linear-gradient(287deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
+  background-image: linear-gradient(163deg,#7c736f 10%,#a09e9a 36%,#fff 70%);
+}
+
+body.general .header {
+  background-color: #008ebd;
+  background-image: -webkit-linear-gradient(287deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
+  background-image: -moz-linear-gradient(287deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
+  background-image: -o-linear-gradient(287deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
+  background-image: -ms-linear-gradient(287deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
+  background-image: linear-gradient(163deg,#008ebd 10%,#6dc0ff 36%,#fff 70%);
+}
+
+body.overview .header {
+  background-color: #006680;
+  background-image: -webkit-linear-gradient(287deg,#006680 10%,#0093b9 36%,#fff 70%);
+  background-image: -moz-linear-gradient(287deg,#006680 10%,#0093b9 36%,#fff 70%);
+  background-image: -o-linear-gradient(287deg,#006680 10%,#0093b9 36%,#fff 70%);
+  background-image: -ms-linear-gradient(287deg,#006680 10%,#0093b9 36%,#fff 70%);
+  background-image: linear-gradient(163deg,#006680 10%,#0093b9 36%,#fff 70%);
+}
+
+.jumbotron.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  -webkit-background-size: 100% 1100px;
+  -moz-background-size: 100% 1100px;
+  background-size: 100% 1100px;
+  background-repeat: no-repeat;
+}

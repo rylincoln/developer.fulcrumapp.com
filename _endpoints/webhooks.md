@@ -21,6 +21,7 @@ For more general information about webhooks, or details of responsibilities your
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/webhooks.json | Fetch all webhooks. |
@@ -31,6 +32,7 @@ For more general information about webhooks, or details of responsibilities your
 
 ## Webhook Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | name | string | yes | no | The name of the webhook. |
@@ -44,8 +46,9 @@ For more general information about webhooks, or details of responsibilities your
 
 The following properties must be included in order to create/update a webhook object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | name | string | The name of the choice webhook. | `"Fire Hydrant Inventory Emails"`

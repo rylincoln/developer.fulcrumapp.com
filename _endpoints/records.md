@@ -20,6 +20,7 @@ The Records API gives you access to the data records that have been collected or
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/records.json | Fetch all records. Additional parameters may be supplied (see query parameters table below). |
@@ -33,6 +34,7 @@ The Records API gives you access to the data records that have been collected or
 
 Available parameters to query the records associated with your account. All of the parameters may be used together to filter your data for more accurate results.
 
+{:.table.table-striped}
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | bounding_box | string | Bounding box of the records requested. Format should be: lat,long,lat,long (bottom, left, top, right). |
@@ -62,6 +64,7 @@ Records will still be ordered according to the `updated_at` column, even when fi
 
 ## Record Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | form_id | string | yes | yes | The unique form ID (UUID). |
@@ -88,8 +91,9 @@ Records will still be ordered according to the `updated_at` column, even when fi
 | horizontal_accuracy | number | no | yes | Accuracy of the latitude and longitude in meters. |
 | vertical_accuracy | number | no | yes | Accuracy of the altitude value in meters. |
 
-**Form Value Field Types**
+### Form Value Field Types
 
+{:.table.table-striped}
 | Field | Type | Example |
 |-------|------|---------|
 | Text | string | `"Hello world!"` |
@@ -114,8 +118,9 @@ Records will still be ordered according to the `updated_at` column, even when fi
 
 The following properties must be included in order to create/update a record object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | form_id | string | The unique form ID (UUID). | `"7a0c3378-b63a-4707-b459-df499698f23c"` |

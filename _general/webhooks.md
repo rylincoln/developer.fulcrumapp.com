@@ -61,6 +61,7 @@ Your webhook endpoint is free to do anything with the response, as long as it co
 
 The following table describes all the events that can be raised and the data that will be sent to your webhook.
 
+{:.table.table-striped}
 | Event Type                | Event Data                                   | Examples                                                     |
 |---------------------------|----------------------------------------------|--------------------------------------------------------------|
 | form.create               | Data of the form just created.               | [Example payload](https://gist.github.com/kyletolle/6597024) |

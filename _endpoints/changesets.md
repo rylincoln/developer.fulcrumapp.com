@@ -19,6 +19,7 @@ Changesets are used to group sets of changes to any number of records. Changeset
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/changesets.json | Fetch all changesets. |
@@ -29,6 +30,7 @@ Changesets are used to group sets of changes to any number of records. Changeset
 
 ## Changeset Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | form_id | string | yes | no | The UUID of the form associated with the changeset. |

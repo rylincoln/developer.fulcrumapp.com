@@ -19,6 +19,7 @@ The Photos API gives you access to a record's photos, including thumbnails, and 
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/photos.json | Fetch the metadata for all photos. |
@@ -32,6 +33,7 @@ The Photos API gives you access to a record's photos, including thumbnails, and 
 
 ## Photo Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | access_key | string | yes | no | The UUID of the photo. |
@@ -60,8 +62,9 @@ The Photos API gives you access to a record's photos, including thumbnails, and 
 
 The following properties must be included in order to create/update a photo object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | photo[access_key] | string | The UUID of the photo. | `"7A8ABC73-A41B-4F1E-BA16-F7C03DAE1E22"` |

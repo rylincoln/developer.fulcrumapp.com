@@ -20,6 +20,7 @@ The Choice Lists API gives you access to the [choice lists](http://www.fulcrumap
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/choice_lists.json | Fetch all choice lists. |
@@ -30,6 +31,7 @@ The Choice Lists API gives you access to the [choice lists](http://www.fulcrumap
 
 ## Query Parameters
 
+{:.table.table-striped}
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | page | integer | The page number requested. |
@@ -37,6 +39,7 @@ The Choice Lists API gives you access to the [choice lists](http://www.fulcrumap
 
 ## Choice List Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | name | string | yes | no | The name of the choice list. |
@@ -51,15 +54,17 @@ The Choice Lists API gives you access to the [choice lists](http://www.fulcrumap
 
 The following properties must be included in order to create/update a choice_list object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | name | string | The name of the choice list. | `"Inspection Conditions"`
 | choices | array of choice objects | The choice list options. | See choices properties table below.
 
-**Choices Properties**
+### Choices Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | label | string | yes | no | Choice label. |

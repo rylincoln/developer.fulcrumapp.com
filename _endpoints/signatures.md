@@ -19,6 +19,7 @@ The Signatures API gives you access to a record's signatures. In order to upload
 
 ## Endpoints
 
+{:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v2/signatures/.json | Fetch the metadata for all signatures. |
@@ -30,6 +31,7 @@ The Signatures API gives you access to a record's signatures. In order to upload
 
 ## Signature Properties
 
+{:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
 | access_key | string | yes | no | The UUID of the signature. |
@@ -55,8 +57,9 @@ The Signatures API gives you access to a record's signatures. In order to upload
 
 The following properties must be included in order to create/update a photo object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
-**Required Properties**
+### Required Properties
 
+{:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
 | signature[access_key] | string | The UUID of the signature. | `"9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"` |
