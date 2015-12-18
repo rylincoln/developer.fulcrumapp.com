@@ -14,7 +14,7 @@
     </div>
 
     {% if page.menu %}
-    <div class="sticky-menu-container">
+    <div class="sticky-menu-container hidden-xs">
       <div class="container sticky-menu">
         <ul class="nav nav-pills">
           {% for items in page.menu %}
@@ -28,7 +28,9 @@
       </div>
       <script src="/public/js/sticky.js"></script>
       <script>
-      $('.sticky-menu-container').stick_in_parent({spacer: '.navbar', offset_top: 71});
+      if ($('.sticky-menu-container').is(':visible')) {
+        $('.sticky-menu-container').stick_in_parent({spacer: '.navbar', offset_top: 71});
+      }
       </script>
     </div>
     {% endif %}
