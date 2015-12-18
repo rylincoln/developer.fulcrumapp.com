@@ -99,10 +99,7 @@ body {
 }
 
 .footer ul.footer-column {
-  /* WhyTF do I need to add this? */
-  padding-start: 0;
-  -webkit-padding-start: 0;
-
+  padding: 0;
   float: left;
   list-style: none;
 }
