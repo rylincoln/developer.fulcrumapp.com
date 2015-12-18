@@ -28,7 +28,7 @@
               </li>
             {% endfor %}
             <li role="separator" class="divider"></li>
-            <li class="dropdown-header">Endpoints</a>
+            <li class="dropdown-header">Endpoints</li>
             {% assign endpoint_pages = site.endpoints | sort: "order" %}
             {% for node in endpoint_pages %}
               <li class="{% if page.url == node.url %} active{% endif %}">
