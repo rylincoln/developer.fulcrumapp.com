@@ -28,7 +28,7 @@ The Users API provides access to user metadata (including API Keys) and can be c
 
 * The Users API only allows GET requests. You must create new users or modify existing users via the web admin console.
 
-## Example
+## Examples
 
 Using Basic authentication to fetch your API Key allows you to build client-side applications that do not expose your API Key in the source code. Once retrieved, the API Key can be stored in `sessionStorage` or `localStorage` for additional API calls.
 

@@ -9,7 +9,7 @@ img: /assets/img/guides/
 difficulty: advanced
 menu:
   - "Endpoints": endpoints
-  - "Properties": photo-properties
+  - "Properties": video-properties
   - "Validations": validations
   - "Notes": notes
   - "Examples": examples
