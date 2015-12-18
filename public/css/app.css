@@ -132,11 +132,3 @@ body {
   color: #000;
   margin-bottom: 4px;
 }
-
-/* <hack>Because of the fixed nav, we want to make sure the h tags are visible when linked to. */
-.content h1:before, .content h2:before, .content h3:before, .content h4:before, .content h5:before {
-  content: "";
-  display: block;
-  height: 120px;
-  margin: -120px 0 0;
-}
