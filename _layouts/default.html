@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body data-spy="scroll" data-target=".sticky-menu" data-offset="120">
     {% include nav.html %}
 
     <div class="jumbotron header">
@@ -12,6 +12,26 @@
         <p class="description">{{ page.description }}</p>
       </div>
     </div>
+
+    {% if page.menu %}
+    <div class="sticky-menu-container">
+      <div class="container sticky-menu">
+        <ul class="nav nav-pills">
+          {% for items in page.menu %}
+            {% for item in items %}
+            <li>
+              <a href="#{{ item[1] }}">{{ item[0] }}</a>
+            </li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+      <script src="/public/js/sticky.js"></script>
+      <script>
+      $('.sticky-menu-container').stick_in_parent({spacer: '.navbar', offset_top: 71});
+      </script>
+    </div>
+    {% endif %}
 
     <div class="content container">
       {{ content }}
