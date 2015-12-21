@@ -2,7 +2,7 @@
 layout: default
 section: expressions
 order: 1
-title: "Introduction"
+title: "Expressions Introduction"
 description: "Introduction to Fulcrum Calculation Fields"
 category: section
 ---
