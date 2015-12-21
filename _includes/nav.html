@@ -46,14 +46,15 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            {% assign expression_pages = site.expressions | sort: "order" %}
-            {% for node in expression_pages %}
-              {% if node.order > 0 %}
-                <li class="{% if page.url == node.url %} active{% endif %}">
-                  <a href="{{ node.url }}">{{ node.title }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
+            <li>
+              <a href="/expressions/intro/">Introduction</a>
+            </li>
+            <li>
+              <a href="/expressions/reference/">Reference</a>
+            </li>
+            <li>
+              <a href="/expressions/examples/">Examples</a>
+            </li>
           </ul>
         </li>
         <!-- End Expressions -->
