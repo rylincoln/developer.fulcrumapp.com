@@ -8,6 +8,12 @@
   <meta name="apple-itunes-app" content="app-id=467758260" />
   <meta name="google-site-verification" content="9SqqRgUhyMQ5WW76u6EylWFDW11k4nXUnkqeFUoAFaI" />
 
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% else %}
+  <meta name="description" content="Fulcrum Developer Tools">
+  {% endif %}
+
   <title>
     {% if page.title %}
       {{ page.title }} &middot; {{ site.title }}
