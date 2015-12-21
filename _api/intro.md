@@ -35,7 +35,7 @@ API calls are authenticated with a simple API Key (token) that is provided with 
 
 The API Key is unique for each organization you have a membership with.
 
-You can find the API Key through the Settings menu on your profile page (it is the second to last option on the right-side tabs in the Settings menu).
+You can find the API key by browsing to the **Settings** page and selecting the **API** tab. You can generate separate API keys for different purposes. Keep in mind that when generating keys, you'll only get one shot at storing it somewhere, so copy and keep them in a safe place.
 
 Alternatively, you can retrieve the API token for any organization you are a member of by using the `/api/v2/users` endpoint and HTTP Basic authentication in your terminal.
 
