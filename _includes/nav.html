@@ -15,7 +15,7 @@
       <ul class="nav navbar-nav">
 
         <!-- Endpoints -->
-        <li class="dropdown{% if page.section == 'endpoints' %} active{% endif %}">
+        <li class="dropdown{% if page.section == 'endpoints' or page.section == 'api' %} active{% endif %}">
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             API
             <span class="caret"></span>
@@ -73,7 +73,7 @@
         </li>
         <!-- End Libraries -->
 
-        <li class="{% if page.section == 'general' and page.title == 'Webhooks'  %} active{% endif %}">
+        <li class="{% if page.section == 'general' and page.title == 'Webhooks Overview'  %} active{% endif %}">
           <a href="/general/webhooks/">Webhooks</a>
         </li>
 
