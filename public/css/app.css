@@ -73,6 +73,13 @@ body {
   margin-top: 15px;
 }
 
+.content h2:before {
+  content: "";
+  display: block;
+  height: 120px;
+  margin: -120px 0 0;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .navbar-brand {
     padding: 4px 4px 4px 15px;
