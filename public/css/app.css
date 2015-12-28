@@ -71,6 +71,11 @@ body {
 
 .content {
   margin-top: 15px;
+  overflow: auto;
+}
+
+.content > table {
+  table-layout: fixed;
 }
 
 .content h2:before {

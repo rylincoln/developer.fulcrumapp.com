@@ -64,8 +64,8 @@ The Videos API gives you access to a record's videos, including the GPS track. I
 | processed | boolean | no | yes | The additional versions of the media are available for download. (thumbnails or small versions). |
 | record_id | string | no | yes | The UUID of the record the photo is associated with. |
 | form_id | string | no | yes | The UUID of the form the photo is associated with. |
-| file_size | number | no | yes | The size of the photo file in bytes. |
-| content_type | string | no | yes | The content type of the photo file. |
+| file_size | number | no | yes | The size of the video file in bytes. |
+| content_type | string | no | yes | The content type of the video file. |
 | url | string | no | yes | The URL to access the video. |
 | thumbnail_small | string | no | yes | The URL to access the small thumbnail version of the video. |
 | thumbnail_medium | string | no | yes | The URL to access the medium thumbnail version of the video. |
