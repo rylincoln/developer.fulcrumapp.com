@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {% include head.html %}
+
+  <body data-spy="scroll" data-target=".sticky-menu" data-offset="120">
+    {% include nav.html %}
+
+    <div class="jumbotron header">
+      <div class="container">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <p class="description">{{ page.description }}</p>
+      </div>
+    </div>
+
+    <script>
+    $(document).ready(function() {
+      jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function(arg) {
+        return function(elem) {
+          return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+        };
+      });
+      $(".search").keyup(function() {
+        var val = $(".search").val();
+        if (val.length > 0) {
+          $("h3").hide();
+          $("p").hide();
+          $(".search").parent().show();
+          // label matches
+          $("h3").filter($("h3:Contains('" + val + "')")).show();
+          $("h3").filter($("h3:Contains('" + val + "')")).next().show();
+          // description matches
+          $("p").filter($("p:Contains('" + val + "')")).show();
+          $("p").filter($("p:Contains('" + val + "')")).prev().show();
+        } else {
+          $("h3").show();
+          $("p").show();
+        }
+      });
+    });
+    </script>
+
+    <div class="content container">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

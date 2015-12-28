@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: reference
 section: expressions
 order: 2
 title: "Reference"
@@ -8,6 +8,12 @@ category: section
 ---
 
 # Calculation Expressions
+
+<div class="row">
+  <div class="col-xs-12 col-md-4">
+    <input type="search" class="form-control search" placeholder="Search expressions" />
+  </div>
+</div>
 
 ### [ABS](/expressions/reference/abs/)
 
