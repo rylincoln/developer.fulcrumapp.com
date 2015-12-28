@@ -17,7 +17,7 @@
         <!-- Endpoints -->
         <li class="dropdown{% if page.section == 'endpoints' or page.section == 'api' %} active{% endif %}">
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            API
+            <i class="fa fa-gears"></i>&nbsp;&nbsp;API
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
@@ -42,7 +42,7 @@
         <!-- Expressions -->
         <li class="dropdown{% if page.section == 'expressions' %} active{% endif %}">
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Expressions
+            <i class="fa fa-calculator"></i>&nbsp;&nbsp;Expressions
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
@@ -62,7 +62,7 @@
         <!-- Libraries -->
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Libraries
+            <i class="fa fa-github-alt"></i>&nbsp;&nbsp;Libraries
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
@@ -74,11 +74,11 @@
         <!-- End Libraries -->
 
         <li class="{% if page.section == 'general' and page.title == 'Webhooks Overview'  %} active{% endif %}">
-          <a href="/general/webhooks/">Webhooks</a>
+          <a href="/general/webhooks/"><i class="fa fa-code"></i>&nbsp;&nbsp;Webhooks</a>
         </li>
 
         <li class="{% if page.section == 'general' and page.title == 'Mobile URL Actions'  %} active{% endif %}">
-          <a href="/general/mobile-url-actions/">Mobile URL Actions</a>
+          <a href="/general/mobile-url-actions/"><i class="fa fa-mobile"></i>&nbsp;&nbsp;Mobile URL Actions</a>
         </li>
 
       </ul>
