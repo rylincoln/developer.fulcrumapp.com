@@ -35,6 +35,10 @@
     </div>
     {% endif %}
 
+    {% if page.search %}
+    {% include search.html %}
+    {% endif %}
+
     <div class="content container">
       {{ content }}
     </div>

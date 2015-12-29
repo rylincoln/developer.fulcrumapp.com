@@ -1,13 +1,14 @@
 ---
-layout: reference
+layout: default
 section: expressions
 order: 2
-title: "Reference"
+title: "Function Reference"
 description: "Function reference for calculation fields"
 category: section
+search: true
 ---
 
-# Calculation Expressions
+## Calculation Expressions
 
 <div class="row">
   <div class="col-xs-12 col-md-4">
