@@ -152,3 +152,8 @@ body {
   color: #000;
   margin-bottom: 4px;
 }
+
+/* Page-specific things */
+.expression-examples .panel .panel-body {
+  min-height: 100px;
+}
