@@ -2,7 +2,7 @@
 layout: default
 section: overview
 title: "Fulcrum Developer Tools"
-description: "Advanced information and documentation for power users and developers."
+description: "Advanced information and documentation for power users and developers"
 category: section
 ---
 
