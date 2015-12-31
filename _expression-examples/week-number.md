@@ -2,11 +2,9 @@
 layout: default
 section: expressions
 title: "Generate the week number"
-description: "How to generate the week number."
+description: "Use this in a calculation field to return the week number from the current date or from a date field."
 category: section
 ---
-
-Use this in a calculation field to return the week number from the current date or from a date field.
 
 {% highlight  js %}
 function weekNum ( d ) {

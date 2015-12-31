@@ -6,9 +6,6 @@ description: "Pulls the address from the address field."
 category: section
 ---
 
-Pulls the address from an address field.
-
-
 {% highlight  js %}
 var address = '';
 if ($address.sub_thoroughfare) {

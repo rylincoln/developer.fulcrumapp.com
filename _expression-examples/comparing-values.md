@@ -2,11 +2,9 @@
 layout: default
 section: expressions
 title: "Compare Values"
-description: "How to compare to values and return a result."
+description: "Use this in a calculation field to compare multiple values and return a specific value based on the values entered."
 category: section
 ---
-
-Use this in a calculation field to compare multiple values and return a specific value based on the values entered.
 
 {% highlight  js %}
 // Define the variables that you wish to use

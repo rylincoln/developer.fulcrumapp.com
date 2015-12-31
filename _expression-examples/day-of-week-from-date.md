@@ -2,11 +2,9 @@
 layout: default
 section: expressions
 title: "Generate the day of the week from a date"
-description: "How to generate the day of the week from a date in calculation expressions."
+description: "Use this in a calculation field to return the day of the week from a date."
 category: section
 ---
-
-Use this in a calculation field to return the day of the week from a date.
 
 {% highlight  js %}
 var valueLookup = {

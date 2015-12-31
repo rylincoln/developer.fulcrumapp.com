@@ -2,11 +2,9 @@
 layout: default
 section: expressions
 title: "Get last item in classification set"
-description: "How to pull the last item from a classification set field."
+description: "Use this in a calculation field to pull the last item capture in a classification set field."
 category: section
 ---
-
-Use this in a calculation field to pull the last item capture in a classification set field.
 
 {% highlight  js %}
 if ($my_classification.other_values.length > 0) {
