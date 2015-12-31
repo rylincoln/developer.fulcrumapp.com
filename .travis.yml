@@ -5,6 +5,9 @@ before_script:
 
 script: "./script/cibuild"
 
+branches:
+  only:
+    - gh-pages
 language: ruby
 rvm:
   - 2.1.4
