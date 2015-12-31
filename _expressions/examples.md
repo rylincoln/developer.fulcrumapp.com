@@ -10,7 +10,7 @@ category: section
 <div class="row expression-examples">
   {% assign examples = site.expression-examples | sort: "order" %}
   {% for node in examples %}
-  <div class="col-md-12 col-md-4">
+  <div class="col-xs-12 col-md-4">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title"><a href="{{ node.url }}">{{ node.title }}</a></h3>
