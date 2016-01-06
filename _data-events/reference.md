@@ -11,6 +11,10 @@ category: section
 
 Display a message as an alert in the mobile app.
 
+### [OPENURL](/data-events/reference/openurl/)
+
+Open a URL for a website or mobile app.
+
 ### [PROGRESS](/data-events/reference/progress/)
 
 Display a non-dismissible progress message in the mobile app.
