@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/radians/
 ---
 
-## RADIANS
-
-Converts a number of degrees to radians.
-
 ### Parameters
 
 `value` Number (__required__) - The number of degrees to be converted.

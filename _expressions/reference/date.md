@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/date/
 ---
 
-## DATE
-
-Converts a provided year, month, and day into a date.
-
 ### Parameters
 
 `year` Number (__required__) - year

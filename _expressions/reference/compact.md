@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/compact/
 ---
 
-## COMPACT
-
-Removes empty items from an array
-
 ### Parameters
 
 `value` Array (__required__) - an array of items

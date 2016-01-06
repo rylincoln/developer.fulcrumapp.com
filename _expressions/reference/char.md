@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/char/
 ---
 
-## CHAR
-
-Convert a number into a character according to the current Unicode table.
-
 ### Parameters
 
 `number` Number (__required__) - The number of the character to look up from the current Unicode table in decimal format.

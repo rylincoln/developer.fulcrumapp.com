@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/rounddown/
 ---
 
-## ROUNDDOWN
-
-Rounds a number down to a desired number of decimal places.
-
 ### Parameters
 
 `value` Number (__required__) - The value to round down.

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/status/
 ---
 
-## STATUS
-
-Returns the current record status value.
-
 ### Parameters
 
 No parameters

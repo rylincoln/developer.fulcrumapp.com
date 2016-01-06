@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/upper/
 ---
 
-## UPPER
-
-Converts a specified string to uppercase.
-
 ### Parameters
 
 `value` String (__required__) - The string to convert to uppercase.

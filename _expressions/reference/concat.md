@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/concat/
 ---
 
-## CONCAT
-
-Returns the concatenation of multiple values. Alias for CONCATENATE()
-
 ### Parameters
 
 `var_args_values` String (__required__) - Strings to append in sequence.

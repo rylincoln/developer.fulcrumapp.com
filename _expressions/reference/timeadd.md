@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/timeadd/
 ---
 
-## TIMEADD
-
-Adds an amount of time to a given time
-
 ### Parameters
 
 `startTimeField` String (__required__) - The time field containing the start time

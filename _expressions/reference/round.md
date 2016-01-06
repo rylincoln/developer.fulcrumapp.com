@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/round/
 ---
 
-## ROUND
-
-Rounds a number to a specified number of decimal places according to standard rounding rules.
-
 ### Parameters
 
 `value` Number (__required__) - The value to be rounded to `places`.

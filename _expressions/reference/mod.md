@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/mod/
 ---
 
-## MOD
-
-Returns the result of the modulo operator, the remainder after a division operation.
-
 ### Parameters
 
 `dividend` Number (__required__) - The number to be divided to find the remainder.

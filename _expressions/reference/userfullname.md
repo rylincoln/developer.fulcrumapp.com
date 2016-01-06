@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/userfullname/
 ---
 
-## USERFULLNAME
-
-Returns the full name of the current user
-
 ### Parameters
 
 No parameters

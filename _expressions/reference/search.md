@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/search/
 ---
 
-## SEARCH
-
-Returns the position at which a specified string is first found within a block of text. Ignores case.
-
 ### Parameters
 
 `search_for` String (__required__) - String to search for within `text_to_search`.

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/longitude/
 ---
 
-## LONGITUDE
-
-Returns the longitude of the current feature (record or repeatable item)
-
 ### Parameters
 
 No parameters

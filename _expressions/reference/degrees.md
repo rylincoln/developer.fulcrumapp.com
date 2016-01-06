@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/degrees/
 ---
 
-## DEGREES
-
-Converts an angle value in radians to degrees.
-
 ### Parameters
 
 `value` Number (__required__) - Number in radians.

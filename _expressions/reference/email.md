@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/email/
 ---
 
-## EMAIL
-
-Returns the email address of the current user
-
 ### Parameters
 
 No parameters

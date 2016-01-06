@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/year/
 ---
 
-## YEAR
-
-Returns the year of a given date.
-
 ### Parameters
 
 `date` Date (__required__) - a date

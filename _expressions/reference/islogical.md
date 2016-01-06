@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/islogical/
 ---
 
-## ISLOGICAL
-
-Checks whether a value is `true` or `false`.
-
 ### Parameters
 
 `value` String (__required__) - The value to be verified as `true` or `false`.

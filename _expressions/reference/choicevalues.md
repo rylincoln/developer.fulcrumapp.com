@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/choicevalues/
 ---
 
-## CHOICEVALUES
-
-Returns the selected values for a choice field or classification field
-
 ### Parameters
 
 `field` Object (__required__) - The choice field or classification field

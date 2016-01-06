@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/randbetween/
 ---
 
-## RANDBETWEEN
-
-Returns a random integer between two values.
-
 ### Parameters
 
 `value` Number (__required__) - Low value of the range.

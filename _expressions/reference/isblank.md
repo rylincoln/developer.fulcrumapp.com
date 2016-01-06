@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/isblank/
 ---
 
-## ISBLANK
-
-Checks whether the field's value is empty.
-
 ### Parameters
 
 `value` String (__required__) - Field value to check.

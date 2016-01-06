@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/versioninfo/
 ---
 
-## VERSIONINFO
-
-Returns version information about the app.
-
 ### Parameters
 
 No parameters

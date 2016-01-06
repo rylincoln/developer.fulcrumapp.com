@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/if/
 ---
 
-## IF
-
-Returns one value if a logical expression is true and another if it is false.
-
 ### Parameters
 
 `value` * (__required__) - logical expression

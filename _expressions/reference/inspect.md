@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/inspect/
 ---
 
-## INSPECT
-
-Returns the string representation of a value. This function is useful for troubleshooting expressions.
-
 ### Parameters
 
 `value` Number (__required__) - The value to inspect

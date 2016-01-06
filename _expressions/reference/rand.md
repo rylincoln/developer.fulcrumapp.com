@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/rand/
 ---
 
-## RAND
-
-Returns a random number between 0 and 1.
-
 ### Parameters
 
 No parameters

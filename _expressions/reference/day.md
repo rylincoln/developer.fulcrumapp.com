@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/day/
 ---
 
-## DAY
-
-Returns the day of the month that a specific date falls on, in numeric format.
-
 ### Parameters
 
 `value` Date (__required__) - a date to extract the day from

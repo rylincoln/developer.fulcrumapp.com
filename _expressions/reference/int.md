@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/int/
 ---
 
-## INT
-
-Rounds a number down to the nearest integer that is less than or equal to it.
-
 ### Parameters
 
 `value` Number (__required__) - Value to round down to the nearest integer.

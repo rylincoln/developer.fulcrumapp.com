@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/abs/
 ---
 
-## ABS
-
-Returns the absolute value of a number.
-
 ### Parameters
 
 `value` Number (__required__) - The number of which to return the absolute value.

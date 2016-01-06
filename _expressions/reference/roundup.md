@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/roundup/
 ---
 
-## ROUNDUP
-
-Rounds a number up to a desired number of decimal places.
-
 ### Parameters
 
 `value` Number (__required__) - The value to round up.

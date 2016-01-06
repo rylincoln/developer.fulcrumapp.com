@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/repeatablenumber/
 ---
 
-## REPEATABLENUMBER
-
-Returns the sequential number of a repeatable item.
-
 ### Parameters
 
 No parameters

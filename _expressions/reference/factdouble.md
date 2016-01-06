@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/factdouble/
 ---
 
-## FACTDOUBLE
-
-Returns the double factorial of a number.
-
 ### Parameters
 
 `value` Number (__required__) - The value for which to calculate the double factorial.

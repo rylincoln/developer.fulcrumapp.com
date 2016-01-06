@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/typeof/
 ---
 
-## TYPEOF
-
-Returns the type of a value
-
 ### Parameters
 
 `value` * (__required__) - A value to get the type of

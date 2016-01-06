@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/trim/
 ---
 
-## TRIM
-
-Strips the leading and trailing spaces from a string.
-
 ### Parameters
 
 `value` String (__required__) - argument

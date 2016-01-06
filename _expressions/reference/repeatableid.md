@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/repeatableid/
 ---
 
-## REPEATABLEID
-
-Returns the ID of the current repeatable item.
-
 ### Parameters
 
 No parameters

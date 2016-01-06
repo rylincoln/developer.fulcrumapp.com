@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/not/
 ---
 
-## NOT
-
-Returns the opposite of a logical value - `NOT(true)` returns `false`; `NOT(false)` returns `true`.
-
 ### Parameters
 
 `value` Boolean (__required__) - The expression or value representing a logical value (`true` or `false`).

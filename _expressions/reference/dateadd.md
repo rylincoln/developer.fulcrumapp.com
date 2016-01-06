@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/dateadd/
 ---
 
-## DATEADD
-
-Adds a number of days to a given date
-
 ### Parameters
 
 `date` Date (__required__) - date

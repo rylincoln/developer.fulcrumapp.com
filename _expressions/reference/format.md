@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/format/
 ---
 
-## FORMAT
-
-Formats a string
-
 ### Parameters
 
 `value` String (__required__) - string format. Use %s for strings and %d for numbers.

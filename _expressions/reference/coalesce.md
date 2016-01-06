@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/coalesce/
 ---
 
-## COALESCE
-
-Returns the first parameter whose value exists
-
 ### Parameters
 
 `parameters` * (__required__) - The value to return if it exists

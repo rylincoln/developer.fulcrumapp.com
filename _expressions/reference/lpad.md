@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/lpad/
 ---
 
-## LPAD
-
-Pads a string on the left side
-
 ### Parameters
 
 `value` String (__required__) - The string to pad

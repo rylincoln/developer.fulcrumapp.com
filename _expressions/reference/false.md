@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/false/
 ---
 
-## FALSE
-
-Returns the boolean value `false`.
-
 ### Parameters
 
 No parameters

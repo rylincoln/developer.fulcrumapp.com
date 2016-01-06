@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/median/
 ---
 
-## MEDIAN
-
-Returns the median value in a set of numeric values.
-
 ### Parameters
 
 `var_args_values` Number (__required__) - Values in which to find the median value.

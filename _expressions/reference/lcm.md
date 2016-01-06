@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/lcm/
 ---
 
-## LCM
-
-Returns the least common multiple of one or more integers.
-
 ### Parameters
 
 `var_args_values` Number (__required__) - Value(s) to consider to calculate the least common multiple.

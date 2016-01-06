@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/recordid/
 ---
 
-## RECORDID
-
-Returns the ID of the current record. This function will always return the top level record ID even when used inside a repeatable. To get the repeatable item ID, use the `REPEATABLEID` function.
-
 ### Parameters
 
 No parameters

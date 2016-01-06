@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/true/
 ---
 
-## TRUE
-
-Returns the boolean value `true`.
-
 ### Parameters
 
 No parameters

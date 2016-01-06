@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/substitute/
 ---
 
-## SUBSTITUTE
-
-Replaces existing text with new text in a string.
-
 ### Parameters
 
 `text` String (__required__) - A text value to look in

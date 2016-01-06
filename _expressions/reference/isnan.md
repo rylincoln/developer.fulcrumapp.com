@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/isnan/
 ---
 
-## ISNAN
-
-Test whether a value is not a number
-
 ### Parameters
 
 `value` Number (__required__) - a value

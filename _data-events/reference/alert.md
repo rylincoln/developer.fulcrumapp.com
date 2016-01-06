@@ -7,10 +7,6 @@ category: section
 permalink: /data-events/reference/alert/
 ---
 
-## ALERT
-
-Display a message as an alert in the mobile app.
-
 ### Parameters
 
 `title` String (__required__) - A short title for the alert.
@@ -20,6 +16,8 @@ Display a message as an alert in the mobile app.
 ### Examples
 
 ~~~
+ALERT('Warning!', 'A depth of 98 feet is high. Are you sure?')
+
 // Displays an alert that looks like
 // +-------------------------------------------+
 // | Warning!                                  |
@@ -28,7 +26,5 @@ Display a message as an alert in the mobile app.
 // | A depth of 98 feet is high. Are you sure? |
 // |                                           |
 // +-------------------------------------------+
-
-ALERT('Warning!', 'A depth of 98 feet is high. Are you sure?')
 ~~~
 {: .language-js}

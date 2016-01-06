@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/power/
 ---
 
-## POWER
-
-Returns a number raised to a power.
-
 ### Parameters
 
 `base` Number (__required__) - The number to be raised to the `exponent` power.

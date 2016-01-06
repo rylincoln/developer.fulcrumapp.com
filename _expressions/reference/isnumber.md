@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/isnumber/
 ---
 
-## ISNUMBER
-
-Tests whether a value is a number.
-
 ### Parameters
 
 `value` Number (__required__) - The value to be verified as a number.

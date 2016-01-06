@@ -10,3 +10,11 @@ category: section
 ### [ALERT](/data-events/reference/alert/)
 
 Display a message as an alert in the mobile app.
+
+### [PROGRESS](/data-events/reference/progress/)
+
+Display a non-dismissible progress message in the mobile app.
+
+### [REQUEST](/data-events/reference/request/)
+
+Performs an HTTP request and executes the callback on completion.

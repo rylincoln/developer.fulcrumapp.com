@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/ln/
 ---
 
-## LN
-
-Returns the the logarithm of a number, base `e` (Euler's number).
-
 ### Parameters
 
 `value` Number (__required__) - The value for which to calculate the logarithm, base `e`. Must be a positive number.

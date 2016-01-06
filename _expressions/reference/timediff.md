@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/timediff/
 ---
 
-## TIMEDIFF
-
-Returns the difference between 2 time fields
-
 ### Parameters
 
 `startTimeField` String (__required__) - The time field containing the start time

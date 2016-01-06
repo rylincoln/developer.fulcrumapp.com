@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/sum/
 ---
 
-## SUM
-
-Calculates the sum of a range of values.
-
 ### Parameters
 
 `var_args_values` Number (__required__) - Values to add together.

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/log10/
 ---
 
-## LOG10
-
-Returns the the logarithm of a number, base 10.
-
 ### Parameters
 
 `value` Number (__required__) - The value for which to calculate the logarithm, base 10.

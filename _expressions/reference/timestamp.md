@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/timestamp/
 ---
 
-## TIMESTAMP
-
-Returns a formatted timestamp
-
 ### Parameters
 
 No parameters

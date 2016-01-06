@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/average/
 ---
 
-## AVERAGE
-
-Returns the numerical average value in a dataset, ignoring text.
-
 ### Parameters
 
 `var_args_values` Number (__required__) - values to use when calculating the average value.

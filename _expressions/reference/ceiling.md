@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/ceiling/
 ---
 
-## CEILING
-
-Rounds a number up to the nearest integer multiple of specified significance.
-
 ### Parameters
 
 `value` Number (__required__) - The value to round up to the nearest integer multiple of factor.

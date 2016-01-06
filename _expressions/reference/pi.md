@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/pi/
 ---
 
-## PI
-
-Returns the value of Pi to 15 decimal places.
-
 ### Parameters
 
 No parameters

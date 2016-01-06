@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/projectname/
 ---
 
-## PROJECTNAME
-
-Returns the project name of the record
-
 ### Parameters
 
 No parameters

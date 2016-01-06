@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/or/
 ---
 
-## OR
-
-Returns `true` if any of the provided arguments are logically true, and `false` if all of the provided arguments are logically false.
-
 ### Parameters
 
 `var_args_expressions` * (__required__) - An expression or reference that represents some logical value, i.e. `true` or `false`, or an expression that can be converted to a logical value.

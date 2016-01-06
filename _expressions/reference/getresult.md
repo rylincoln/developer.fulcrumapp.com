@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/getresult/
 ---
 
-## GETRESULT
-
-Returns the current result value for the current expression
-
 ### Parameters
 
 No parameters

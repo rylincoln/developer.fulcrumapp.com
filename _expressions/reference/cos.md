@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/cos/
 ---
 
-## COS
-
-Returns the cosine of a value, in radians.
-
 ### Parameters
 
 `value` Number (__required__) - The value for which to calculate the cosine.

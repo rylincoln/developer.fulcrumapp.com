@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/projectid/
 ---
 
-## PROJECTID
-
-Returns the project ID of the record
-
 ### Parameters
 
 No parameters

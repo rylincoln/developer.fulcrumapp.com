@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/isselected/
 ---
 
-## ISSELECTED
-
-Checks whether a given choice is selected for a choice field or classification field
-
 ### Parameters
 
 `value` * (__required__) - The choice field, classification field to check for a value being selected

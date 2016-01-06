@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/precision/
 ---
 
-## PRECISION
-
-Returns the precision of a number
-
 ### Parameters
 
 `value` Number (__required__) - a number

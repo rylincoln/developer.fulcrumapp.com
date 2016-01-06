@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/odd/
 ---
 
-## ODD
-
-Rounds a number up to the nearest odd integer.
-
 ### Parameters
 
 `value` Number (__required__) - The number to round to the nearest odd integer.

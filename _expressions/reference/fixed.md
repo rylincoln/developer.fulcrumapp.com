@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/fixed/
 ---
 
-## FIXED
-
-Formats a number with a fixed number of decimal places.
-
 ### Parameters
 
 `value` Number (__required__) - Number to format.

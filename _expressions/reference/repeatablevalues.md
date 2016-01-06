@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/repeatablevalues/
 ---
 
-## REPEATABLEVALUES
-
-Return a specific field from multiple repeatable items
-
 ### Parameters
 
 `repeatableVariable` Object (__required__) - The repeatable field variable

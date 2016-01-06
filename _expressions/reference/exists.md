@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/exists/
 ---
 
-## EXISTS
-
-Tests whether a value exists
-
 ### Parameters
 
 `var_args_values` Object (__required__) - The value(s) to check for existence

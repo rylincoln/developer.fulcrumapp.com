@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/counta/
 ---
 
-## COUNTA
-
-Returns a count of values in a dataset.
-
 ### Parameters
 
 `value` Array (__required__) - an array of values

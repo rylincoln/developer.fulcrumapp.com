@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/quotient/
 ---
 
-## QUOTIENT
-
-Returns the result of dividing one number by another.
-
 ### Parameters
 
 `dividend` Number (__required__) - The number to divide.

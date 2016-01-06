@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/countblank/
 ---
 
-## COUNTBLANK
-
-Returns the number of blank values in a dataset.
-
 ### Parameters
 
 `value` Array (__required__) - an array of items

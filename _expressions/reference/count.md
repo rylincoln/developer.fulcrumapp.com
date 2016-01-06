@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/count/
 ---
 
-## COUNT
-
-Returns a count of the number of *numeric* values in a dataset.
-
 ### Parameters
 
 `values` Array (__required__) - an array of numbers

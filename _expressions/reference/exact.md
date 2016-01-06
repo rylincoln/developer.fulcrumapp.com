@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/exact/
 ---
 
-## EXACT
-
-Tests whether two strings are identical.
-
 ### Parameters
 
 `value` String (__required__) - First string to compare.

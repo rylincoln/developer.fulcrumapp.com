@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/role/
 ---
 
-## ROLE
-
-Returns the role name of the current user
-
 ### Parameters
 
 No parameters

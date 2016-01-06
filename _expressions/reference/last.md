@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/last/
 ---
 
-## LAST
-
-Returns the last N items from an array or string
-
 ### Parameters
 
 `array` Array (__required__) - an array object

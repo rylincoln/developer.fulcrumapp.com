@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/even/
 ---
 
-## EVEN
-
-Returns number rounded up to the nearest even integer.
-
 ### Parameters
 
 `value` Number (__required__) - Number to round.

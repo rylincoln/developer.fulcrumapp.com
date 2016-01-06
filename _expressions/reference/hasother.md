@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/hasother/
 ---
 
-## HASOTHER
-
-Tests whether a choice field or classification field has an 'Other' value entered
-
 ### Parameters
 
 `field` Object (__required__) - the choice field or classification to test

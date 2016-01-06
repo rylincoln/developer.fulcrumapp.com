@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/replace/
 ---
 
-## REPLACE
-
-Replaces a piece of a text string with a different string.
-
 ### Parameters
 
 `text` String (__required__) - A piece of text to be searched.

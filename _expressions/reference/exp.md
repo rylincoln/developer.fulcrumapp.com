@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/exp/
 ---
 
-## EXP
-
-Returns Euler's number, e (~2.718) raised to a power.
-
 ### Parameters
 
 `value` Number (__required__) - Power to which to raise `e`.
