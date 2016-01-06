@@ -38,6 +38,9 @@ collections:
   expression-examples:
     output: true
     permalink: /expressions/examples/:path/
+  data-events:
+    output: true
+    permalink: /data-events/:path/
 
 #files to exclude, array
 exclude:
