@@ -17,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 LOG10(100)
 
 // returns 2
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LOG10(50)
 
 // returns 1.6989700043360185
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SIN(30)
 
 // returns -0.9880316240928618
-~~~
-{: .language-js}
+{% endhighlight %}

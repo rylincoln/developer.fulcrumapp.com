@@ -17,17 +17,15 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 NOT(false)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 NOT(5)
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

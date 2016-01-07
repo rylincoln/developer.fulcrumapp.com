@@ -17,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 PROJECTNAME()
 
 // returns Project X
-~~~
-{: .language-js}
+{% endhighlight %}

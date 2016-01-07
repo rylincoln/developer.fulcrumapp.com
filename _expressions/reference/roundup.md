@@ -19,17 +19,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 ROUNDUP(156.826, 2)
 
 // returns 156.83
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ROUNDUP(156.826, 0)
 
 // returns 157
-~~~
-{: .language-js}
+{% endhighlight %}

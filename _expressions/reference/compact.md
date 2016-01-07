@@ -17,9 +17,8 @@ Array
 
 ### Examples
 
-~~~
+{% highlight js %}
 COMPACT([null, 1, undefined, null, 2, 3])
 
 // returns [1,2,3]
-~~~
-{: .language-js}
+{% endhighlight %}

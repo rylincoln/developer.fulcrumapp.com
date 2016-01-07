@@ -17,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 GCD(5, 9)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 GCD(14, 21, 42)
 
 // returns 7
-~~~
-{: .language-js}
+{% endhighlight %}

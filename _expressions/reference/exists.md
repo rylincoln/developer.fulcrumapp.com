@@ -17,25 +17,22 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 EXISTS(1)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 EXISTS(null)
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 EXISTS([])
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

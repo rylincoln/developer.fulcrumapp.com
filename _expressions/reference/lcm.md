@@ -17,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 LCM(2, 5)
 
 // returns 10
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LCM(5, 22, 12)
 
 // returns 660
-~~~
-{: .language-js}
+{% endhighlight %}

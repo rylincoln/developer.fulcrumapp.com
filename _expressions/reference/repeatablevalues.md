@@ -19,9 +19,8 @@ Array - An array of values of the `dataName` field from each item
 
 ### Examples
 
-~~~
+{% highlight js %}
 REPEATABLEVALUES($repeatable_field, 'cost')
 
 // returns [1,2,3]
-~~~
-{: .language-js}
+{% endhighlight %}

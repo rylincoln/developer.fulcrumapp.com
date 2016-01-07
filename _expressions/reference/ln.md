@@ -17,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 LN(5)
 
 // returns 1.6094379124341003
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LN("Test")
 
 // returns NaN
-~~~
-{: .language-js}
+{% endhighlight %}

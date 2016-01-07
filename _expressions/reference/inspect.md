@@ -17,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 INSPECT([1, 2, 3])
 
 // returns [ 1, 2, 3 ]
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -17,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 UPPER("Empire State Building")
 
 // returns EMPIRE STATE BUILDING
-~~~
-{: .language-js}
+{% endhighlight %}

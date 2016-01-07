@@ -17,25 +17,22 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 ISODD(4)
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISODD(5)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISODD(3.12)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}

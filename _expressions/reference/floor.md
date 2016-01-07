@@ -19,17 +19,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 FLOOR(126.25, 1)
 
 // returns 126
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 FLOOR(126.25, 10)
 
 // returns 120
-~~~
-{: .language-js}
+{% endhighlight %}

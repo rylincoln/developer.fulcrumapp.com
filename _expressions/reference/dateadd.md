@@ -19,17 +19,15 @@ Date
 
 ### Examples
 
-~~~
+{% highlight js %}
 DATEADD('2015-01-01', 10)
 
 // returns 2015-01-11
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 DATEADD('2015-01-31', 90)
 
 // returns 2015-05-01
-~~~
-{: .language-js}
+{% endhighlight %}

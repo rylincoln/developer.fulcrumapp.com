@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 EXP(3)
 
 // returns 20.085536923187668
-~~~
-{: .language-js}
+{% endhighlight %}

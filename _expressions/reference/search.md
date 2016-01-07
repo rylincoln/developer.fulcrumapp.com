@@ -21,9 +21,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SEARCH("collect", "Data analysts love Fulcrum for data collection needs", 12)
 
 // returns 37
-~~~
-{: .language-js}
+{% endhighlight %}

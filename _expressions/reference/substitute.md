@@ -23,36 +23,32 @@ String - the new text string
 
 ### Examples
 
-~~~
+{% highlight js %}
 // replaces all occurrences
 SUBSTITUTE('The data is stored in a database', 'data', 'record data')
 
 // returns The record data is stored in a record database
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 // replaces the first occurrence
 SUBSTITUTE('The data is stored in a database', 'data', 'record data', 1)
 
 // returns The record data is stored in a database
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 // replaces the 2nd occurrence
 SUBSTITUTE('The data is stored in a database', 'data', 'record data', 2)
 
 // returns The data is stored in a record database
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 SUBSTITUTE('The data is stored in a database', 'a', 'A')
 
 // returns The dAtA is stored in A dAtAbAse
-~~~
-{: .language-js}
+{% endhighlight %}

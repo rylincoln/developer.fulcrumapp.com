@@ -17,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 NUMS('1' ,'2', '3')
 
 // returns [1,2,3]
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 NUMS('1' ,'2', 'a')
 
 // returns [1,2,NaN]
-~~~
-{: .language-js}
+{% endhighlight %}

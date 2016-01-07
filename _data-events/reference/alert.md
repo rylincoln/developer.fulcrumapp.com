@@ -9,13 +9,13 @@ permalink: /data-events/reference/alert/
 
 ### Parameters
 
-`title` String (__required__) - A short title for the alert.
+`title` String (__required__) - A short title for the alert
 
-`message` String (__required__) - The message content for the alert.
+`message` String (__required__) - The message content for the alert
 
 ### Examples
 
-~~~
+{% highlight js %}
 ALERT('Warning!', 'A depth of 98 feet is high. Are you sure?')
 
 // Displays an alert that looks like
@@ -26,5 +26,4 @@ ALERT('Warning!', 'A depth of 98 feet is high. Are you sure?')
 // | A depth of 98 feet is high. Are you sure? |
 // |                                           |
 // +-------------------------------------------+
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -19,17 +19,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 ROUND(179.848, 1)
 
 // returns 179.8
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ROUND(918.268, -2)
 
 // returns 900
-~~~
-{: .language-js}
+{% endhighlight %}

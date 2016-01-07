@@ -17,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 CLEAN('Test' + CHAR(31))
 
 // returns Test
-~~~
-{: .language-js}
+{% endhighlight %}

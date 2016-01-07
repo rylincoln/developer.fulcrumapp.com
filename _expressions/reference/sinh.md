@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SINH(1)
 
 // returns 1.1752011936438014
-~~~
-{: .language-js}
+{% endhighlight %}

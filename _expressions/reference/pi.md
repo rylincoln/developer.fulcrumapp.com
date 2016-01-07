@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 PI()
 
 // returns 3.141592653589793
-~~~
-{: .language-js}
+{% endhighlight %}

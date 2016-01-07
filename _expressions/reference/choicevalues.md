@@ -17,9 +17,8 @@ String - the selected value
 
 ### Examples
 
-~~~
+{% highlight js %}
 CHOICEVALUES($choice_field)
 
 // returns [Red,Green,Blue]
-~~~
-{: .language-js}
+{% endhighlight %}

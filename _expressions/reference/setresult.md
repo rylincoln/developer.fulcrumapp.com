@@ -17,9 +17,8 @@ permalink: /expressions/reference/setresult/
 
 ### Examples
 
-~~~
+{% highlight js %}
 SETRESULT(1)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}

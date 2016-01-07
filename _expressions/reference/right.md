@@ -19,17 +19,15 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 RIGHT("ABCDEFG", 4)
 
 // returns DEFG
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 RIGHT("000001")
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}

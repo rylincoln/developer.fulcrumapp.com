@@ -17,17 +17,15 @@ Number - the absolute value of the `value` parameter
 
 ### Examples
 
-~~~
+{% highlight js %}
 ABS(-1)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ABS(42)
 
 // returns 42
-~~~
-{: .language-js}
+{% endhighlight %}

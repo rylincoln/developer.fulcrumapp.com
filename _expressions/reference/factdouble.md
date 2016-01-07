@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 FACTDOUBLE(5)
 
 // returns 15
-~~~
-{: .language-js}
+{% endhighlight %}

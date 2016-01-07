@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 ACOS(0.8)
 
 // returns 0.6435011087932843
-~~~
-{: .language-js}
+{% endhighlight %}

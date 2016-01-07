@@ -19,17 +19,15 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 LEFT("Fulcrum", 3)
 
 // returns Ful
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LEFT("Fulcrum")
 
 // returns F
-~~~
-{: .language-js}
+{% endhighlight %}

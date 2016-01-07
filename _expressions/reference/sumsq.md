@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SUMSQ(3, 4, 5)
 
 // returns 50
-~~~
-{: .language-js}
+{% endhighlight %}

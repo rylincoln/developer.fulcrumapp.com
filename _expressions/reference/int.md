@@ -17,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 INT(34.24)
 
 // returns 34
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 INT(-10.49)
 
 // returns -11
-~~~
-{: .language-js}
+{% endhighlight %}

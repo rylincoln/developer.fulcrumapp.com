@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 MIN(3, 1, 322, 76)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -17,17 +17,15 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 OR(true, true, false)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 OR(ISEVEN(5),ISODD(6))
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -21,17 +21,15 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 FIXED(3000.141592, 2, true)
 
 // returns 3000.14
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 FIXED(6276.22241, 3, false)
 
 // returns 6,276.222
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -19,33 +19,29 @@ Object
 
 ### Examples
 
-~~~
+{% highlight js %}
 LAST([1, 2, 3])
 
 // returns 3
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LAST(['a', 'b', 'c'], 2)
 
 // returns [b,c]
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LAST('abc')
 
 // returns c
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LAST('abc', 2)
 
 // returns [b,c]
-~~~
-{: .language-js}
+{% endhighlight %}

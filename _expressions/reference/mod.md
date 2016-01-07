@@ -19,17 +19,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 MOD(10, 3)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 MOD(10, 10)
 
 // returns 0
-~~~
-{: .language-js}
+{% endhighlight %}

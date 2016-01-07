@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 COS(30)
 
 // returns 0.15425144988758405
-~~~
-{: .language-js}
+{% endhighlight %}

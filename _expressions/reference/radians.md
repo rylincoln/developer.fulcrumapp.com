@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 RADIANS(30)
 
 // returns 0.5235987755982988
-~~~
-{: .language-js}
+{% endhighlight %}

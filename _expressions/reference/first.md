@@ -19,33 +19,29 @@ Object
 
 ### Examples
 
-~~~
+{% highlight js %}
 FIRST([1, 2, 3])
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 FIRST(['a', 'b', 'c'], 2)
 
 // returns [a,b]
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 FIRST('abc')
 
 // returns a
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 FIRST('abc', 2)
 
 // returns [a,b]
-~~~
-{: .language-js}
+{% endhighlight %}

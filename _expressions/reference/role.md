@@ -17,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 ROLE()
 
 // returns Owner
-~~~
-{: .language-js}
+{% endhighlight %}

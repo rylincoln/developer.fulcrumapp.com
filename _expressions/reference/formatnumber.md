@@ -19,25 +19,22 @@ String - formatted number as text
 
 ### Examples
 
-~~~
+{% highlight js %}
 FORMATNUMBER(1234.56789999)
 
 // returns 1,234.568
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 FORMATNUMBER(1234.56789999, 'fr-FR')
 
 // returns 1 234,568
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 FORMATNUMBER(1234.56789999, 'pt-BR')
 
 // returns 1.234,568
-~~~
-{: .language-js}
+{% endhighlight %}

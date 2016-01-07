@@ -19,17 +19,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 CEILING(139.85, 0.1)
 
 // returns 139.9
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 CEILING(139.001)
 
 // returns 140
-~~~
-{: .language-js}
+{% endhighlight %}

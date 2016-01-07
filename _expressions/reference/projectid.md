@@ -17,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 PROJECTID()
 
 // returns 88eb3511-13d8-4666-b188-8108019d0984
-~~~
-{: .language-js}
+{% endhighlight %}

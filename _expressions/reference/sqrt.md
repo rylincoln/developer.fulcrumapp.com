@@ -17,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SQRT(5)
 
 // returns 2.23606797749979
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 SQRT(-9)
 
 // returns NaN
-~~~
-{: .language-js}
+{% endhighlight %}

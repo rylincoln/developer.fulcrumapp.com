@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 MAX(3, 1, 322, 76)
 
 // returns 322
-~~~
-{: .language-js}
+{% endhighlight %}

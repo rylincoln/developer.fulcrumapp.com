@@ -21,9 +21,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 MID("Fulcrum for iOS", 13, 3)
 
 // returns iOS
-~~~
-{: .language-js}
+{% endhighlight %}

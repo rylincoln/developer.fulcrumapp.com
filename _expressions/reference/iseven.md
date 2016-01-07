@@ -17,25 +17,22 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 ISEVEN(4)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISEVEN(5)
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISEVEN(4.12)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}

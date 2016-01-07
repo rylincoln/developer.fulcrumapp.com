@@ -17,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SIGN(43)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 SIGN(-3)
 
 // returns -1
-~~~
-{: .language-js}
+{% endhighlight %}

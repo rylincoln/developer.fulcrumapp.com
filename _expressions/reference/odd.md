@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 ODD(4.22)
 
 // returns 5
-~~~
-{: .language-js}
+{% endhighlight %}

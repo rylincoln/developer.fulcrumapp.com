@@ -17,17 +17,15 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 ISBLANK("")
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISBLANK("Test")
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

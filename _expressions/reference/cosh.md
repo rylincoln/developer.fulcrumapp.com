@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 COSH(1)
 
 // returns 1.5430806348152437
-~~~
-{: .language-js}
+{% endhighlight %}

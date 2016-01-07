@@ -21,17 +21,15 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 LPAD('2', 4, '0')
 
 // returns 0002
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LPAD('2', 6, '0')
 
 // returns 000002
-~~~
-{: .language-js}
+{% endhighlight %}

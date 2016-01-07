@@ -17,25 +17,22 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 CONCAT("This ", "is ", "a ", "sentence.")
 
 // returns This is a sentence.
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 CONCAT(42, 31, 1)
 
 // returns 42311
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 CONCAT("Age ", "is ", 42)
 
 // returns Age is 42
-~~~
-{: .language-js}
+{% endhighlight %}

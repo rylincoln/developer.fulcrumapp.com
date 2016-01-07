@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 MAXA([3, 4, -6, '10'])
 
 // returns 10
-~~~
-{: .language-js}
+{% endhighlight %}

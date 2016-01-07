@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SUM(4, 10, 22, 183)
 
 // returns 219
-~~~
-{: .language-js}
+{% endhighlight %}

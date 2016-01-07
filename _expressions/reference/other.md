@@ -17,9 +17,8 @@ String - the current 'Other' value
 
 ### Examples
 
-~~~
+{% highlight js %}
 OTHER($choice_field)
 
 // returns undefined
-~~~
-{: .language-js}
+{% endhighlight %}

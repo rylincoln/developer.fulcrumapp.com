@@ -21,49 +21,43 @@ String - the new time value
 
 ### Examples
 
-~~~
+{% highlight js %}
 TIMEADD('09:00', 8)
 
 // returns 17:00
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 TIMEADD('17:00', -8)
 
 // returns 09:00
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 TIMEADD('09:00', 48)
 
 // returns 09:00
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 TIMEADD('16:00', 1.5)
 
 // returns 17:30
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 TIMEADD('16:00', 90, 'minutes')
 
 // returns 17:30
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 TIMEADD('16:00', -90, 'minutes')
 
 // returns 14:30
-~~~
-{: .language-js}
+{% endhighlight %}

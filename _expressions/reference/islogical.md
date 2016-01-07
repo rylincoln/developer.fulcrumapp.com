@@ -17,17 +17,15 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 ISLOGICAL(true)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISLOGICAL("Text")
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

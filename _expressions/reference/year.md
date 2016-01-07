@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 YEAR("2015/1/1")
 
 // returns 2015
-~~~
-{: .language-js}
+{% endhighlight %}

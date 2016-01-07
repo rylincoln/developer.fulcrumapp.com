@@ -17,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 RAND() > 0
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
