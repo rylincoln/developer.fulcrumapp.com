@@ -27,6 +27,42 @@ Display a non-dismissible progress message in the mobile app.
 
 Performs an HTTP request and executes the callback on completion.
 
+### [SETCHOICEFILTER](/data-events/reference/setchoicefilter/)
+
+Filter the choices in a choice field.
+
+### [SETCHOICES](/data-events/reference/setchoices/)
+
+Set the available choices for a choice field.
+
+### [SETDESCRIPTION](/data-events/reference/setdescription/)
+
+Set the description of a field.
+
+### [SETHIDDEN](/data-events/reference/sethidden/)
+
+Set the visibility of a field.
+
+### [SETLABEL](/data-events/reference/setlabel/)
+
+Set the label of a field.
+
+### [SETMAXLENGTH](/data-events/reference/setmaxlength/)
+
+Set the maximum length for a field.
+
+### [SETMINLENGTH](/data-events/reference/setminlength/)
+
+Set the minimum length for a field.
+
+### [SETREQUIRED](/data-events/reference/setrequired/)
+
+Set whether or not a field is required.
+
 ### [SETVALUE](/data-events/reference/setvalue/)
 
 Set the value of a field.
+
+### [SETREADONLY](/data-events/reference/setreadonly/)
+
+Sets a field to be read-only or editable.
