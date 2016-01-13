@@ -13,4 +13,4 @@ Check out the full documentation on available events and functions by browsing t
 
 ## Examples
 
-Nope. Not yet.
+We have a [library of examples](/data-events/examples/) available for learning what you can do with data events.
