@@ -34,22 +34,7 @@ ON('change-geometry', getWeather)
 If you only want to fetch weather when explicitly requested by the end user, you can listen for the `'click'` event for a hyperlink field. Just add a new [hyperlink field](http://www.fulcrumapp.com/help/hyperlink-fields/) to your app and give it a descriptive label, "Tap to Add Weather Data" for example. Leave the default url blank and set up your data event like so.
 
 {% highlight  js %}
-function getWeather() {
-  forecastApiKey = 'your_api_key'
-
-  options = {
-    url: 'https://api.forecast.io/forecast/' + forecastApiKey + '/' + LATITUDE() + ',' + LONGITUDE()
-  }
-
-  REQUEST(options, function(error, response, body) {
-    if (error) {
-      ALERT('Error with request: ' + error)
-    } else {
-      weather = JSON.parse(body)
-      SETVALUE('weather_summary', weather.currently.summary)
-    }
-  })
-}
+// This assumes you've still got the getWeather function defined from the example above
 
 ON('click', 'your_hyperlink_field', getWeather)
 {% endhighlight %}
