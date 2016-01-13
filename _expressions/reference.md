@@ -444,6 +444,10 @@ Sets the current result value for the current expression. This is useful in mult
 
 Enable verbose errors to displays in the app. This is useful for troubleshooting complex expressions.
 
+### [SHUFFLE](/expressions/reference/shuffle/)
+
+Randomizes an array of items
+
 ### [SIGN](/expressions/reference/sign/)
 
 Returns the sign of a given input number. `-1` if negative, `1` if positive, `0` if zero.

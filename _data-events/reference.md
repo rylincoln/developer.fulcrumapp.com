@@ -15,6 +15,14 @@ Display a message as an alert in the mobile app.
 
 Display a validation error message and stop the record, or repeatable item, from being saved.
 
+### [OFF](/data-events/reference/off/)
+
+Detaches an event handler set by ON.
+
+### [ON](/data-events/reference/on/)
+
+Attaches an event handler that listens for record, repeatable, or field events.
+
 ### [OPENURL](/data-events/reference/openurl/)
 
 Open a URL for a website or mobile app.
