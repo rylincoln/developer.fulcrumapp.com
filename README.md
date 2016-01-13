@@ -9,7 +9,7 @@ Developer documentation for the Fulcrum API, with guides and examples.
 
 ## Usage
 
-Running the site locally:
+To run the site locally at http://localhost:4010, run this from the shell (this will generate the site pages, then autogenerate any updated pages as you save them):
 
 ```shell
 bundle install --path .bundle
