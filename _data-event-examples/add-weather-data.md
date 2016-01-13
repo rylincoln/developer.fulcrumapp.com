@@ -1,6 +1,6 @@
 ---
 layout: default
-section: expressions
+section: data_events
 title: "Add current weather to a record"
 description: "Use this to fetch weather data from the forecast.io API and add it to the record."
 category: section
