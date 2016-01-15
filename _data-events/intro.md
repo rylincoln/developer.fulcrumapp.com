@@ -37,6 +37,8 @@ ON('validate-record', function (event) {
 })
 {% endhighlight %}
 
+<hr>
+
 ## Repeatable Events
 
 {:.table.table-striped.event-table}
@@ -59,6 +61,8 @@ ON('validate-repeatable', 'repeatable_field', function (event) {
 })
 {% endhighlight %}
 
+<hr>
+
 ## Field Events
 
 {:.table.table-striped.event-table}
@@ -77,9 +81,13 @@ ON('change', 'cover_type', function (event) {
 })
 {% endhighlight %}
 
+<hr>
+
 ## Reference
 
 Check out the full documentation on available events and functions by browsing the [complete list](/data-events/reference/).
+
+<hr>
 
 ## Functional Examples
 
