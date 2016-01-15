@@ -10,7 +10,7 @@ search: true
 
 <div class="row">
   <div class="col-xs-12 col-md-4">
-    <input type="search" class="form-control search" placeholder="Search expressions" />
+    <input type="search" class="form-control search" placeholder="Search data event functions" />
   </div>
 </div>
 
@@ -54,6 +54,10 @@ Set the available choices for a choice field.
 
 Set the description of a field.
 
+### [SETGEOMETRY](/data-events/reference/setgeometry/)
+
+Set the geometry of a record.
+
 ### [SETHIDDEN](/data-events/reference/sethidden/)
 
 Set the visibility of a field.
@@ -70,9 +74,17 @@ Set the maximum length for a field.
 
 Set the minimum length for a field.
 
+### [SETPROJECT](/data-events/reference/setproject/)
+
+Set the project of a record.
+
 ### [SETREQUIRED](/data-events/reference/setrequired/)
 
 Set whether or not a field is required.
+
+### [SETSTATUS](/data-events/reference/setstatus/)
+
+Set the status of a record.
 
 ### [SETVALUE](/data-events/reference/setvalue/)
 

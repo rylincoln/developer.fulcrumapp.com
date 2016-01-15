@@ -31,7 +31,7 @@ permalink: /data-events/reference/request/
 
 {% highlight js %}
 options = {
-  url: 'https://api.forecast.io/forecast/your_api_key/40,-100
+  url: 'https://api.forecast.io/forecast/your_api_key/40,-100'
 }
 
 function callback(error, response, body) {
