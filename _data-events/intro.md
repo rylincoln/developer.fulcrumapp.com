@@ -37,6 +37,31 @@ ON('validate-record', function (event) {
 })
 {% endhighlight %}
 
+### The `event` Object
+
+The callback for record events is passed an event parameter with a `name`, so you can use the same callback for multiple events.
+
+{% highlight  js %}
+{
+  "name": "change-geometry"
+}
+{% endhighlight %}
+
+Below we're using the same callback to handle events from both `edit-record` and `new-record`.
+
+{% highlight  js %}
+function callback(event) {
+  if (event.name === 'edit-record') {
+    // Do something.
+  } else if (event.name === 'new-record') {
+    // Do something else.
+  }
+}
+
+ON('edit-record', callback)
+ON('new-record', callback)
+{% endhighlight %}
+
 <hr>
 
 ## Repeatable Events
