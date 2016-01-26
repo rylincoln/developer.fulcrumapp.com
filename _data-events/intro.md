@@ -7,8 +7,8 @@ description: "Introduction to Fulcrum Data Events"
 category: section
 menu:
   - "Record Events": record-events
-  - "Repeatable Events": repeatable-events
   - "Field Events": field-events
+  - "Repeatable Events": repeatable-events
 ---
 
 Data events are a powerful feature that allows users to perform actions on the mobile device when certain events are triggered. Go on ...
@@ -39,7 +39,7 @@ ON('validate-record', function (event) {
 
 ### The `event` Object
 
-The callback for record events is passed an event parameter with a `name`, so you can use the same callback for multiple events.
+The callback for record events is passed an event parameter with a `name` attribute, so you can use the same callback for multiple events.
 
 {% highlight  js %}
 {
@@ -60,6 +60,38 @@ function callback(event) {
 
 ON('edit-record', callback)
 ON('new-record', callback)
+{% endhighlight %}
+
+<hr>
+
+## Field Events
+
+{:.table.table-striped.event-table}
+| Event | Description | Listener Function Signature |
+|--------|----------|-------------|-------------|
+| `'click'` | Fires when a field is clicked (tapped) - mostly useful for hyperlink fields | `ON('click', 'field', callback)` |
+| `'change'` | Fires when a field's value changes | `ON('change', 'field', callback)` |
+
+### Example
+
+When setting up listeners for field events, be sure to add the field as the second parameter.
+
+{% highlight  js %}
+ON('change', 'cover_type', function (event) {
+  // Do something interesting when the cover_type field changes.
+})
+{% endhighlight %}
+
+### The `event` Object
+
+The callback for field events is passed an event parameter with `name`, `field`, and `value` attributes.
+
+{% highlight  js %}
+{
+  "name": "change",
+  "field": "weather_summary",
+  "value": "Partly Cloudy"
+}
 {% endhighlight %}
 
 <hr>
@@ -86,24 +118,14 @@ ON('validate-repeatable', 'repeatable_field', function (event) {
 })
 {% endhighlight %}
 
-<hr>
+### The `event` Object
 
-## Field Events
-
-{:.table.table-striped.event-table}
-| Event | Description | Listener Function Signature |
-|--------|----------|-------------|-------------|
-| `'click'` | Fires when a field is clicked (tapped) - mostly useful for hyperlink fields | `ON('click', 'field', callback)` |
-| `'change'` | Fires when a field's value changes | `ON('change', 'field', callback)` |
-
-### Example
-
-When setting up listeners for field events, be sure to add the field as the second parameter.
+The callback for repeatable events is passed an event parameter with a `name` attribute.
 
 {% highlight  js %}
-ON('change', 'cover_type', function (event) {
-  // Do something interesting when the cover_type field changes.
-})
+{
+  "name": "save-repeatable"
+}
 {% endhighlight %}
 
 <hr>
