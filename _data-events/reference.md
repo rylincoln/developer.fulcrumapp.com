@@ -93,3 +93,7 @@ Set the value of a field.
 ### [SETREADONLY](/data-events/reference/setreadonly/)
 
 Sets a field to be read-only or editable.
+
+### [STORAGE](/data-events/reference/storage/)
+
+Instantiates a storage object for setting and getting local storage items.
