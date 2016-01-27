@@ -12,11 +12,11 @@ This example listens for changes to the `inspection_date` field and updates the 
 function changeStatus(event) {
   if (event.value) {
     // There is a value, so set the status
-  	SETSTATUS('inspected')
+    SETSTATUS('inspected')
   } else {
     // There is no value. It could have been cleared from the field.
     // Revert status to 'created'.
-  	SETSTATUS('created')
+    SETSTATUS('created')
   }
 }
 
