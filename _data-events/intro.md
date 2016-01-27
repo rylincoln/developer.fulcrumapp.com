@@ -120,11 +120,12 @@ ON('validate-repeatable', 'repeatable_field', function (event) {
 
 ### The `event` Object
 
-The callback for repeatable events is passed an event parameter with a `name` attribute.
+The callback for repeatable events is passed an event parameter with a `name` and `field` attributes.
 
 {% highlight  js %}
 {
-  "name": "save-repeatable"
+  "name": "save-repeatable",
+  "field": "the_repeatable_field"
 }
 {% endhighlight %}
 
