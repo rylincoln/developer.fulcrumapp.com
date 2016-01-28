@@ -9,6 +9,7 @@ menu:
   - "Record Events": record-events
   - "Field Events": field-events
   - "Repeatable Events": repeatable-events
+  - "Media Events": media-events
 ---
 
 Data events are a powerful feature that allows users to perform actions on the mobile device when certain events are triggered. Go on ...
@@ -126,6 +127,86 @@ The callback for repeatable events is passed an event parameter with a `name` an
 {
   "name": "save-repeatable",
   "field": "the_repeatable_field"
+}
+{% endhighlight %}
+
+<hr>
+
+## Media Events
+
+{:.table.table-striped.event-table}
+| Event | Description | Listener Function Signature |
+|--------|----------|-------------|-------------|
+| `'add-photo'` | Fires when a photo is added | `ON('add-photo', 'photo_field', callback)` |
+| `'add-video'` | Fires when a video is added | `ON('add-video', 'video_field', callback)` |
+| `'add-audio'` | Fires when an audio clip is added | `ON('add-audio', 'audio_field', callback)` |
+
+### Example
+
+{% highlight  js %}
+ON('add-photo', 'photo_field', function (event) {
+  // Do something with the photo metadata
+})
+{% endhighlight %}
+
+### The `add-photo` `event` Object
+
+The callback for `add-photo` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing photo metadata.
+
+{% highlight  js %}
+{
+  "name": "add-photo",
+  "field": "hydrant_photos",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071",
+    "size": 834597,
+    "latitude": 27.23235235,
+    "longitude": -82.09875135,
+    "altitude": 10.3,
+    "accuracy": 5.0,
+    "direction": 347.232355,
+    "orientation": 1,
+    "width": 4160,
+    "height": 3120,
+    "timestamp": "2016-01-27 11:13:45"
+  }
+}
+{% endhighlight %}
+
+### The `add-video` `event` Object
+
+The callback for `add-video` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing video metadata.
+
+{% highlight  js %}
+{
+  "name": "add-video",
+  "field": "hydrant_videos",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071",
+    "size": 9034597,
+    "width": 1920,
+    "height": 1080,
+    "track": {},
+    "duration": 20.111,
+    "orientation": 0
+  }
+}
+{% endhighlight %}
+
+### The `add-audio` `event` Object
+
+The callback for `add-audio` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing audio clip metadata.
+
+{% highlight  js %}
+{
+  "name": "add-audio",
+  "field": "hydrant_audio_notes",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071",
+    "size": 203246,
+    "track": {},
+    "duration": 20.111
+  }
 }
 {% endhighlight %}
 
