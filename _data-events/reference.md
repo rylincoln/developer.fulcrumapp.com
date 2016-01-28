@@ -18,6 +18,10 @@ search: true
 
 Display a message as an alert in the mobile app.
 
+### [CURRENTLOCATION](/data-events/reference/currentlocation/)
+
+Returns a location object containing metadata about the user's current location, not the record's location.
+
 ### [INVALID](/data-events/reference/invalid/)
 
 Display a validation error message and stop the record, or repeatable item, from being saved.
@@ -96,4 +100,4 @@ Sets a field to be read-only or editable.
 
 ### [STORAGE](/data-events/reference/storage/)
 
-Instantiates a storage object for setting and getting local storage items.
+Returns a storage object for setting and getting local storage items.

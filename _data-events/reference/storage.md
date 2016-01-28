@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "STORAGE"
-description: "Instantiates a storage object for setting and getting local storage items."
+description: "Returns a storage object for setting and getting local storage items."
 category: section
 permalink: /data-events/reference/storage/
 ---
