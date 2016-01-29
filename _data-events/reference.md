@@ -58,10 +58,6 @@ Set the available choices for a choice field.
 
 Set the description of a field.
 
-### [SETGEOMETRY](/data-events/reference/setgeometry/)
-
-Set the geometry of a record.
-
 ### [SETHIDDEN](/data-events/reference/sethidden/)
 
 Set the visibility of a field.
@@ -69,6 +65,10 @@ Set the visibility of a field.
 ### [SETLABEL](/data-events/reference/setlabel/)
 
 Set the label of a field.
+
+### [SETLOCATION](/data-events/reference/setlocation/)
+
+Set the location of a record.
 
 ### [SETMAXLENGTH](/data-events/reference/setmaxlength/)
 
