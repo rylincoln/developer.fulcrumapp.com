@@ -90,6 +90,10 @@ Set whether or not a field is required.
 
 Set the status of a record.
 
+### [SETSTATUSFILTER](/data-events/reference/setstatusfilter/)
+
+Set the allowable status values for a record.
+
 ### [SETVALUE](/data-events/reference/setvalue/)
 
 Set the value of a field.
