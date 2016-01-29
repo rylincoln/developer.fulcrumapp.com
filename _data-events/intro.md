@@ -12,7 +12,7 @@ menu:
   - "Media Events": media-events
 ---
 
-Data events are a powerful feature that allows users to perform actions on the mobile device when certain events are triggered. Go on ...
+Data Events allow users to perform ​_actions_​ on the mobile device when certain ​_events_​ are triggered. Actions include custom alerts and validation messages, setting field values, choices, labels, descriptions, requirement & visibility settings, HTTP requests and more. Event triggers include record loading, editing, validating, saving, value changing, and more. This enables listening for record changes, programmatically changing values (including status, project, and geometry), as well as building dynamic hyperlinks, writing custom quality assurance logic and much more!
 
 ## Record Events
 
