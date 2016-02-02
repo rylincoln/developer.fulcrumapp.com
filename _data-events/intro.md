@@ -190,7 +190,6 @@ The callback for `add-video` events is passed an event parameter with `name`, `f
     "size": 9034597,
     "width": 1920,
     "height": 1080,
-    "track": {},
     "duration": 20.111,
     "orientation": 0
   }
@@ -208,7 +207,6 @@ The callback for `add-audio` events is passed an event parameter with `name`, `f
   "value": {
     "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071",
     "size": 203246,
-    "track": {},
     "duration": 20.111
   }
 }
