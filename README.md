@@ -13,7 +13,7 @@ Running the site locally:
 
 ```shell
 bundle install --path .bundle
-bundle exec jekyll serve --watch
+bundle exec jekyll serve --watch --incremental
 ```
 
 ## License
