@@ -22,8 +22,8 @@ Data Events allow users to perform ​_actions_​ on the mobile device when cer
 | `'load-record'` | Fires when the record editor is displayed | `ON('load-record', callback)` |
 | `'new-record'` | Fires when a new record is created, after `'load-record'` | `ON('new-record', callback)` |
 | `'edit-record'` | Fires when a record is edited, after `'load-record'` | `ON('edit-record', callback)` |
-| `'save-record'` | Fires when a record is saved | `ON('save-record', callback)` |
-| `'validate-record'` | Fires right before the record is saved to check any validations | `ON('validate-record', callback)` |
+| `'save-record'` | Fires immediately before a record is saved and after it's been validated | `ON('save-record', callback)` |
+| `'validate-record'` | Fires right before the record is saved to check any validations. Custom validations done in this callback will be displayed in the app alongside normal built-in validations. | `ON('validate-record', callback)` |
 | `'change-geometry'` | Fires when a record's geometry changes | `ON('change-geometry', callback)` |
 | `'change-project'` | Fires when a record's project changes | `ON('change-project', callback)` |
 | `'change-status'` | Fires when a record's status changes | `ON('change-status', callback)` |
@@ -40,11 +40,12 @@ ON('validate-record', function (event) {
 
 ### The `event` Object
 
-The callback for record events is passed an event parameter with a `name` attribute, so you can use the same callback for multiple events.
+The callback for record events is passed an event parameter with a `name` attribute, so you can use the same callback for multiple events. If the event has an associated value, it's passed in the `value` property of the event. If the event is associated with a form field, it also contains a `field` property that contains the data name of the field.
 
 {% highlight  js %}
 {
-  "name": "change-geometry"
+  "name": "change-status",
+  "value": "complete"
 }
 {% endhighlight %}
 
@@ -70,8 +71,11 @@ ON('new-record', callback)
 {:.table.table-striped.event-table}
 | Event | Description | Listener Function Signature |
 |--------|----------|-------------|-------------|
-| `'click'` | Fires when a field is clicked (tapped) - mostly useful for hyperlink fields | `ON('click', 'field', callback)` |
 | `'change'` | Fires when a field's value changes | `ON('change', 'field', callback)` |
+| `'click'` | Fires when a hyperlink field is tapped | `ON('click', 'my_hyperlink_field', callback)` |
+
+There are some cases where the `change` event is not fired. Default values do not trigger a `change` event when
+creating a new record. Also, `change` events are not triggered after manually setting a value with `SETVALUE`.
 
 ### Example
 
@@ -105,7 +109,7 @@ The callback for field events is passed an event parameter with `name`, `field`,
 | `'load-repeatable'` | Fires when a repeatable editor is displayed | `ON('load-repeatable', 'repeatable_field', callback)` |
 | `'new-repeatable'` | Fires when a new repeatable is created, after `'load-repeatable'` | `ON('new-repeatable', 'repeatable_field', callback)` |
 | `'edit-repeatable'` | Fires when a repeatable is edited, after `'load-repeatable'` | `ON('edit-repeatable', 'repeatable_field', callback)` |
-| `'save-repeatable'` | Fires when a repeatable is saved | `ON('save-repeatable', 'repeatable_field', callback)` |
+| `'save-repeatable'` | Fires immediately before repeatable is saved, and after it's been validated | `ON('save-repeatable', 'repeatable_field', callback)` |
 | `'validate-repeatable'` | Fires right before the repeatable is saved to check any validations | `ON('validate-repeatable', 'repeatable_field', callback)` |
 | `'change-geometry'` | Fires when a repeatable's geometry changes | `ON('change-geometry', 'repeatable_field', callback)` |
 
