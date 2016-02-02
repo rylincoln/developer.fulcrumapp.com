@@ -6,7 +6,6 @@ relative_permalinks: false
 port: 4010
 gems:
   - jekyll-sitemap
-  - jekyll-redirect-from
   - jekyll-feed
 
 feed:
@@ -16,7 +15,7 @@ feed:
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: pygments
+highlighter: rouge
 
 # Permalinks
 permalink: /:categories/:title/
