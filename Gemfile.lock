@@ -12,12 +12,6 @@ GIT
       yell (~> 2.0)
 
 GIT
-  remote: git://github.com/jekyll/jekyll-feed.git
-  revision: 7f20a19dd86ddb5daef8f2ee10b4e1f830b66c19
-  specs:
-    jekyll-feed (0.4.0)
-
-GIT
   remote: git://github.com/jekyll/jekyll-sitemap.git
   revision: 8ea5c6e5ef2f123bd4c652d7af69016c3aaa3ad3
   specs:
@@ -72,6 +66,5 @@ PLATFORMS
 DEPENDENCIES
   html-proofer!
   jekyll (= 3.1.1)
-  jekyll-feed!
   jekyll-sitemap!
   rake
