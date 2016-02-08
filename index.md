@@ -16,7 +16,7 @@ Well, here are a few examples:
 * Pull data from your Fulcrum account into your own visualization, analysis, or database systems, then keep it up to date by using Webhooks
 * Build a custom mobile app that uses Fulcrum forms and includes your own content and workflow
 * Create web mapping applications that display data as it’s collected from Fulcrum mobile in real time
-* And more…
+* And more ...
 
 ## Develop Apps
 
