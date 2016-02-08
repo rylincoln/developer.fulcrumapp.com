@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/repeatablevalues/
 ---
 
-## REPEATABLEVALUES
-
-Return a specific field from multiple repeatable items
-
 ### Parameters
 
 `repeatableVariable` Object (__required__) - The repeatable field variable
@@ -23,9 +19,8 @@ Array - An array of values of the `dataName` field from each item
 
 ### Examples
 
-~~~
+{% highlight js %}
 REPEATABLEVALUES($repeatable_field, 'cost')
 
 // returns [1,2,3]
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/showerrors/
 ---
 
-## SHOWERRORS
-
-Enable verbose errors to displays in the app. This is useful for troubleshooting complex expressions.
-
 ### Parameters
 
 `show` Boolean (optional)  [default = true] - Show full error messages. This can help diagnose problems in expressions on the mobile device.
@@ -21,9 +17,8 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 SHOWERRORS()
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}

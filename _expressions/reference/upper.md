@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/upper/
 ---
 
-## UPPER
-
-Converts a specified string to uppercase.
-
 ### Parameters
 
 `value` String (__required__) - The string to convert to uppercase.
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 UPPER("Empire State Building")
 
 // returns EMPIRE STATE BUILDING
-~~~
-{: .language-js}
+{% endhighlight %}

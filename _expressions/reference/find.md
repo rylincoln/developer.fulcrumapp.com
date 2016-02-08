@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/find/
 ---
 
-## FIND
-
-Returns the position at which a string is first found within text, case-sensitive.
-
 ### Parameters
 
 `search_for` String (__required__) - String to search for within `text_to_search`.
@@ -25,9 +21,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 FIND("needle", "the needle is in the haystack")
 
 // returns 5
-~~~
-{: .language-js}
+{% endhighlight %}

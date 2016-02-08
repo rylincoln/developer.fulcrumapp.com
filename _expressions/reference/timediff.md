@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/timediff/
 ---
 
-## TIMEDIFF
-
-Returns the difference between 2 time fields
-
 ### Parameters
 
 `startTimeField` String (__required__) - The time field containing the start time
@@ -25,31 +21,28 @@ Number - The number of hours (default) or the number of minutes between the 2 sp
 
 ### Examples
 
-~~~
+{% highlight js %}
 TIMEDIFF('09:00', '17:00')
 
 // returns 8
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 TIMEDIFF('09:00', '11:00', 'minutes')
 
 // returns 120
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 TIMEDIFF('02:00', '01:00')
 
 // returns 23
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 // This returns the time elapsed in the format '__ hours __ minutes'
 // (or '__ hours', '1 hour __ minutes', etc.)
 // Other tests:
@@ -93,5 +86,4 @@ else {
 }
 
 // returns 47 minutes
-~~~
-{: .language-js}
+{% endhighlight %}

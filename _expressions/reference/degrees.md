@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/degrees/
 ---
 
-## DEGREES
-
-Converts an angle value in radians to degrees.
-
 ### Parameters
 
 `value` Number (__required__) - Number in radians.
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 DEGREES(1)
 
 // returns 57.29577951308232
-~~~
-{: .language-js}
+{% endhighlight %}

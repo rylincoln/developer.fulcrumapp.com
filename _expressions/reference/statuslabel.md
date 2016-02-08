@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/statuslabel/
 ---
 
-## STATUSLABEL
-
-Returns the current record status label.
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 STATUSLABEL()
 
 // returns Approved
-~~~
-{: .language-js}
+{% endhighlight %}

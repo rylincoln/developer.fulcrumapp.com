@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/year/
 ---
 
-## YEAR
-
-Returns the year of a given date.
-
 ### Parameters
 
 `date` Date (__required__) - a date
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 YEAR("2015/1/1")
 
 // returns 2015
-~~~
-{: .language-js}
+{% endhighlight %}

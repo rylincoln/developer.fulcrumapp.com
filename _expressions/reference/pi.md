@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/pi/
 ---
 
-## PI
-
-Returns the value of Pi to 15 decimal places.
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 PI()
 
 // returns 3.141592653589793
-~~~
-{: .language-js}
+{% endhighlight %}

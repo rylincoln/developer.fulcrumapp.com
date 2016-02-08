@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/isnontext/
 ---
 
-## ISNONTEXT
-
-Tests whether a value is non-textual.
-
 ### Parameters
 
 `value` String (__required__) - The value to test as non-text.
@@ -21,17 +17,15 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 ISNONTEXT(4)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISNONTEXT("Some text")
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

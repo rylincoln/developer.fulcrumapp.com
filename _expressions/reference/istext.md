@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/istext/
 ---
 
-## ISTEXT
-
-Checks whether a value is text.
-
 ### Parameters
 
 `value` String (__required__) - The value to test as text.
@@ -21,17 +17,15 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 ISTEXT("Text")
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISTEXT(4)
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

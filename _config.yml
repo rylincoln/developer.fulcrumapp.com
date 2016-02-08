@@ -6,7 +6,6 @@ relative_permalinks: false
 port: 4010
 gems:
   - jekyll-sitemap
-  - jekyll-redirect-from
   - jekyll-feed
 
 feed:
@@ -16,7 +15,7 @@ feed:
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: pygments
+highlighter: rouge
 
 # Permalinks
 permalink: /:categories/:title/
@@ -38,6 +37,12 @@ collections:
   expression-examples:
     output: true
     permalink: /expressions/examples/:path/
+  data-events:
+    output: true
+    permalink: /data-events/:path/
+  data-event-examples:
+    output: true
+    permalink: /data-events/examples/:path/
 
 #files to exclude, array
 exclude:

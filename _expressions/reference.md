@@ -72,6 +72,10 @@ Removes empty items from an array
 
 Returns the concatenation of multiple values.
 
+### [CONCAT](/expressions/reference/concat/)
+
+Returns the concatenation of multiple values. Alias for CONCATENATE()
+
 ### [COS](/expressions/reference/cos/)
 
 Returns the cosine of a value, in radians.
@@ -128,6 +132,10 @@ Returns number rounded up to the nearest even integer.
 
 Tests whether two strings are identical.
 
+### [EXISTS](/expressions/reference/exists/)
+
+Tests whether a value exists
+
 ### [EXP](/expressions/reference/exp/)
 
 Returns Euler's number, e (~2.718) raised to a power.
@@ -148,6 +156,10 @@ Returns the boolean value `false`.
 
 Returns the position at which a string is first found within text, case-sensitive.
 
+### [FIRST](/expressions/reference/first/)
+
+Returns the first N items from an array or string
+
 ### [FIXED](/expressions/reference/fixed/)
 
 Formats a number with a fixed number of decimal places.
@@ -155,6 +167,10 @@ Formats a number with a fixed number of decimal places.
 ### [FLOOR](/expressions/reference/floor/)
 
 Rounds a number down to the nearest integer multiple of specified significance.
+
+### [FORMAT](/expressions/reference/format/)
+
+Formats a string
 
 ### [FORMATNUMBER](/expressions/reference/formatnumber/)
 
@@ -220,6 +236,10 @@ Checks whether a given choice is selected for a choice field or classification f
 
 Checks whether a value is text.
 
+### [LAST](/expressions/reference/last/)
+
+Returns the last N items from an array or string
+
 ### [LATITUDE](/expressions/reference/latitude/)
 
 Returns the latitude of the current feature (record or repeatable item).
@@ -255,6 +275,10 @@ Returns the longitude of the current feature (record or repeatable item)
 ### [LOWER](/expressions/reference/lower/)
 
 Converts a specified string to lowercase.
+
+### [LPAD](/expressions/reference/lpad/)
+
+Pads a string on the left side
 
 ### [MAX](/expressions/reference/max/)
 
@@ -332,6 +356,14 @@ Returns the precision of a number
 
 Returns the result of multiplying a series of numbers together.
 
+### [PROJECTID](/expressions/reference/projectid/)
+
+Returns the project ID of the record
+
+### [PROJECTNAME](/expressions/reference/projectname/)
+
+Returns the project name of the record
+
 ### [PROPER](/expressions/reference/proper/)
 
 Capitalizes each word in a string (title case).
@@ -396,6 +428,10 @@ Rounds a number down to a desired number of decimal places.
 
 Rounds a number up to a desired number of decimal places.
 
+### [RPAD](/expressions/reference/rpad/)
+
+Pads a string on the right side
+
 ### [SEARCH](/expressions/reference/search/)
 
 Returns the position at which a specified string is first found within a block of text. Ignores case.
@@ -407,6 +443,10 @@ Sets the current result value for the current expression. This is useful in mult
 ### [SHOWERRORS](/expressions/reference/showerrors/)
 
 Enable verbose errors to displays in the app. This is useful for troubleshooting complex expressions.
+
+### [SHUFFLE](/expressions/reference/shuffle/)
+
+Randomizes an array of items
 
 ### [SIGN](/expressions/reference/sign/)
 
@@ -448,9 +488,17 @@ Calculates the sum of a range of values.
 
 Calculates the sum of the squares of a range of values.
 
+### [TIMEADD](/expressions/reference/timeadd/)
+
+Adds an amount of time to a given time
+
 ### [TIMEDIFF](/expressions/reference/timediff/)
 
 Returns the difference between 2 time fields
+
+### [TIMESTAMP](/expressions/reference/timestamp/)
+
+Returns a formatted timestamp
 
 ### [TRIM](/expressions/reference/trim/)
 

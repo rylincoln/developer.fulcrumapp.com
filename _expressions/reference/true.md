@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/true/
 ---
 
-## TRUE
-
-Returns the boolean value `true`.
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 TRUE()
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}

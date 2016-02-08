@@ -13,7 +13,7 @@ To run the site locally at http://localhost:4010, run this from the shell (this 
 
 ```shell
 bundle install --path .bundle
-bundle exec jekyll serve --watch
+bundle exec jekyll serve --watch --incremental
 ```
 
 ## License

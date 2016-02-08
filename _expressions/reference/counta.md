@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/counta/
 ---
 
-## COUNTA
-
-Returns a count of values in a dataset.
-
 ### Parameters
 
 `value` Array (__required__) - an array of values
@@ -21,18 +17,16 @@ Number - the count of items in the array
 
 ### Examples
 
-~~~
+{% highlight js %}
 COUNTA([11, 22, 33, 44, 55])
 
 // returns 5
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 // since it counts all arguments
 COUNTA(['a', 'b', 'c', 'd', 'e'])
 
 // returns 5
-~~~
-{: .language-js}
+{% endhighlight %}

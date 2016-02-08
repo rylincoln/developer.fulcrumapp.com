@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/even/
 ---
 
-## EVEN
-
-Returns number rounded up to the nearest even integer.
-
 ### Parameters
 
 `value` Number (__required__) - Number to round.
@@ -21,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 EVEN(5.2)
 
 // returns 6
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 EVEN(528.2172814)
 
 // returns 530
-~~~
-{: .language-js}
+{% endhighlight %}

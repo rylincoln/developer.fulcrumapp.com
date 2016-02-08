@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/quotient/
 ---
 
-## QUOTIENT
-
-Returns the result of dividing one number by another.
-
 ### Parameters
 
 `dividend` Number (__required__) - The number to divide.
@@ -23,25 +19,22 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 QUOTIENT(30, 5)
 
 // returns 6
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 QUOTIENT(0, 10)
 
 // returns 0
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 QUOTIENT(45, 0)
 
 // returns NaN
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/cosh/
 ---
 
-## COSH
-
-Returns the hyperbolic cosine of a number.
-
 ### Parameters
 
 `value` Number (__required__) - The real number for which to calculate the hyperbolic cosine.
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 COSH(1)
 
 // returns 1.5430806348152437
-~~~
-{: .language-js}
+{% endhighlight %}

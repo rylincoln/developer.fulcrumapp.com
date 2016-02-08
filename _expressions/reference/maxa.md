@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/maxa/
 ---
 
-## MAXA
-
-Returns the maximum numeric value in a given set of values.
-
 ### Parameters
 
 `var_args_values` Number (__required__) - Values in which to find the maximum numeric value.
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 MAXA([3, 4, -6, '10'])
 
 // returns 10
-~~~
-{: .language-js}
+{% endhighlight %}

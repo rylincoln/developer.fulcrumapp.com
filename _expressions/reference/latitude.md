@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/latitude/
 ---
 
-## LATITUDE
-
-Returns the latitude of the current feature (record or repeatable item).
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 LATITUDE()
 
 // returns 27.770756908186286
-~~~
-{: .language-js}
+{% endhighlight %}

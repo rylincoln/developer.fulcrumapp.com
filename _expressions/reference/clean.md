@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/clean/
 ---
 
-## CLEAN
-
-Returns the text with the non-printable ASCII characters removed.
-
 ### Parameters
 
 `text` String (__required__) - The text whose non-printable characters are to be removed.
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 CLEAN('Test' + CHAR(31))
 
 // returns Test
-~~~
-{: .language-js}
+{% endhighlight %}

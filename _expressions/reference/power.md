@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/power/
 ---
 
-## POWER
-
-Returns a number raised to a power.
-
 ### Parameters
 
 `base` Number (__required__) - The number to be raised to the `exponent` power.
@@ -23,17 +19,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 POWER(5, 8)
 
 // returns 390625
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 POWER(10, 0.5)
 
 // returns 3.1622776601683795
-~~~
-{: .language-js}
+{% endhighlight %}

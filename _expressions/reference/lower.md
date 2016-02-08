@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/lower/
 ---
 
-## LOWER
-
-Converts a specified string to lowercase.
-
 ### Parameters
 
 `value` String (__required__) - The string to convert to lowercase.
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 LOWER("Empire State Building")
 
 // returns empire state building
-~~~
-{: .language-js}
+{% endhighlight %}

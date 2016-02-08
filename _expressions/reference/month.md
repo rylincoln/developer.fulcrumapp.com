@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/month/
 ---
 
-## MONTH
-
-Returns the month of a given date.
-
 ### Parameters
 
 `date` Date (__required__) - a date
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 MONTH("2015/12/16")
 
 // returns 12
-~~~
-{: .language-js}
+{% endhighlight %}

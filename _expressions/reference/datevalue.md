@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/datevalue/
 ---
 
-## DATEVALUE
-
-Converts a provided date string in a known format to a date value.
-
 ### Parameters
 
 `value` String (__required__) - a string containing a date
@@ -21,9 +17,8 @@ Date
 
 ### Examples
 
-~~~
+{% highlight js %}
 DATEVALUE('2015-01-01')
 
 // returns 2015-01-01
-~~~
-{: .language-js}
+{% endhighlight %}

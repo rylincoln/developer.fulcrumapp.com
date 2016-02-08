@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/email/
 ---
 
-## EMAIL
-
-Returns the email address of the current user
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 EMAIL()
 
 // returns test@example.com
-~~~
-{: .language-js}
+{% endhighlight %}

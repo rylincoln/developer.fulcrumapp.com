@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/sqrtpi/
 ---
 
-## SQRTPI
-
-Calculates the square root of the product of Pi and a given number.
-
 ### Parameters
 
 `value` Number (__required__) - The value to multiply with Pi and return the square root.
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SQRTPI(6)
 
 // returns 4.3416075273496055
-~~~
-{: .language-js}
+{% endhighlight %}

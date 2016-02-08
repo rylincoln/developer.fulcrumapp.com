@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/randbetween/
 ---
 
-## RANDBETWEEN
-
-Returns a random integer between two values.
-
 ### Parameters
 
 `value` Number (__required__) - Low value of the range.
@@ -23,9 +19,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 4 < RANDBETWEEN(4, 9) < 9
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/status/
 ---
 
-## STATUS
-
-Returns the current record status value.
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 STATUS()
 
 // returns approved
-~~~
-{: .language-js}
+{% endhighlight %}

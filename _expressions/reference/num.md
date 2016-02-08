@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/num/
 ---
 
-## NUM
-
-Converts any value to a number
-
 ### Parameters
 
 `value` * (__required__) - a value to convert to a number
@@ -21,25 +17,22 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 NUM('12')
 
 // returns 12
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 NUM(12)
 
 // returns 12
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 NUM('a')
 
 // returns NaN
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/longitude/
 ---
 
-## LONGITUDE
-
-Returns the longitude of the current feature (record or repeatable item)
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 LONGITUDE()
 
 // returns -82.63814896345139
-~~~
-{: .language-js}
+{% endhighlight %}

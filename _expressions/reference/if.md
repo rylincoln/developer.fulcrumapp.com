@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/if/
 ---
 
-## IF
-
-Returns one value if a logical expression is true and another if it is false.
-
 ### Parameters
 
 `value` * (__required__) - logical expression
@@ -25,17 +21,15 @@ Returns one value if a logical expression is true and another if it is false.
 
 ### Examples
 
-~~~
+{% highlight js %}
 IF(1 > 3, '1 is greater than 3', '1 is less than 3')
 
 // returns 1 is less than 3
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 IF(ISSELECTED($choice_field, 'Red'), 'Red is selected', 'Red is not selected')
 
 // returns Red is selected
-~~~
-{: .language-js}
+{% endhighlight %}

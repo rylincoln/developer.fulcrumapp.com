@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/compact/
 ---
 
-## COMPACT
-
-Removes empty items from an array
-
 ### Parameters
 
 `value` Array (__required__) - an array of items
@@ -21,9 +17,8 @@ Array
 
 ### Examples
 
-~~~
+{% highlight js %}
 COMPACT([null, 1, undefined, null, 2, 3])
 
 // returns [1,2,3]
-~~~
-{: .language-js}
+{% endhighlight %}

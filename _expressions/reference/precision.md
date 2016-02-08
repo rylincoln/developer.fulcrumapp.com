@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/precision/
 ---
 
-## PRECISION
-
-Returns the precision of a number
-
 ### Parameters
 
 `value` Number (__required__) - a number
@@ -21,25 +17,22 @@ Number - the number of decimal places
 
 ### Examples
 
-~~~
+{% highlight js %}
 PRECISION(1.333)
 
 // returns 3
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 PRECISION(1.3)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 PRECISION(1)
 
 // returns 0
-~~~
-{: .language-js}
+{% endhighlight %}

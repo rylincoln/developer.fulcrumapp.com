@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/isselected/
 ---
 
-## ISSELECTED
-
-Checks whether a given choice is selected for a choice field or classification field
-
 ### Parameters
 
 `value` * (__required__) - The choice field, classification field to check for a value being selected
@@ -23,19 +19,17 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 // $choice_field has Red, Green, and Blue selected
 ISSELECTED($choice_field, 'Red')
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 // $choice_field has Red, Green, and Blue selected
 ISSELECTED($choice_field, 'Orange')
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

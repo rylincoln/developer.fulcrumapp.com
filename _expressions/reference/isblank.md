@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/isblank/
 ---
 
-## ISBLANK
-
-Checks whether the field's value is empty.
-
 ### Parameters
 
 `value` String (__required__) - Field value to check.
@@ -21,17 +17,15 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 ISBLANK("")
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISBLANK("Test")
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

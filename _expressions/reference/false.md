@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/false/
 ---
 
-## FALSE
-
-Returns the boolean value `false`.
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 FALSE()
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

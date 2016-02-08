@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/right/
 ---
 
-## RIGHT
-
-Returns a substring from the end of a given string.
-
 ### Parameters
 
 `value` String (__required__) - The string value from which the right portion will be returned.
@@ -23,17 +19,15 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 RIGHT("ABCDEFG", 4)
 
 // returns DEFG
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 RIGHT("000001")
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}

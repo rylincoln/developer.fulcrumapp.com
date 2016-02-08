@@ -1,0 +1,225 @@
+---
+layout: default
+section: data_events
+order: 1
+title: "Data Events Introduction"
+description: "Introduction to Fulcrum Data Events"
+category: section
+menu:
+  - "Record Events": record-events
+  - "Field Events": field-events
+  - "Repeatable Events": repeatable-events
+  - "Media Events": media-events
+---
+
+Data Events allow users to perform ​_actions_​ on the mobile device when certain ​_events_​ are triggered. Actions include custom alerts and validation messages, setting field values, choices, labels, descriptions, requirement & visibility settings, HTTP requests and more. Event triggers include record loading, editing, validating, saving, value changing, and more. This enables listening for record changes, programmatically changing values (including status, project, and geometry), as well as building dynamic hyperlinks, writing custom quality assurance logic and much more!
+
+## Record Events
+
+{:.table.table-striped.event-table}
+| Event | Description | Listener Function Signature |
+|--------|----------|-------------|-------------|
+| `'load-record'` | Fires when the record editor is displayed. This event can be used to perform one-time initialization when the record editor opens. This event is fired when creating new records and editing existing records. | `ON('load-record', callback)` |
+| `'new-record'` | Fires when a new record is created, after `'load-record'`. This event is only fired for new records. It can be used to populate custom default logic or any other custom actions that only need to be performed for new records. | `ON('new-record', callback)` |
+| `'edit-record'` | Fires when a record is edited, after `'load-record'`. This event is only fired when opening existing records. It can be used to perform custom logic when an existing record is opened. | `ON('edit-record', callback)` |
+| `'save-record'` | Fires immediately before a record is saved and after it's been validated. Inside this event it's possible to make last-second updates to records right before the record is saved. You cannot perform asynchronous tasks in this event. Once the callback is finished the record will be saved and the editor will close. If you want to prevent the record from saving, you must use the `validate-record` or `validate-repeatable` events. | `ON('save-record', callback)` |
+| `'validate-record'` | Fires right before the record is saved to check any validations. Custom validations done in this callback will be displayed in the app alongside normal built-in validations. The callback function should contain custom validation logic and usage of `INVALID()` to notify the user with a message of why the record is invalid. This event is similar to `save-record` and `save-repeatable` except it gives you the option to prevent the record from being saved by using the `INVALID()` function. Asynchronous functions like `REQUEST()` are not supported in this event. The callback must perform all validations in a synchronous fashion with `INVALID()`. | `ON('validate-record', callback)` |
+| `'change-geometry'` | Fires when a record's geometry changes. For a new record, this event fires when the device gets a location from the GPS and adds it to the record. Once the record has a location, this event is only fired when the location is manually changed using the 'Set Location' screen. Calling `SETLOCATION(lat, lon)` does not fire a `change-geometry` event. If you need to handle programmatic changes to the location you must explicitly handle it in your code. | `ON('change-geometry', callback)` |
+| `'change-project'` | Fires when a record's project changes. This event does not fire on default values. If you need to handle the project being set when the record is created you can use `new-record`. Setting the project programmatically with `SETPROJECT()` does not fire a `change-project` event. If you need to respond to programmatic changes in the project you must handle it explicitly after `SETPROJECT()` is called. | `ON('change-project', callback)` |
+| `'change-status'` | Fires when a record's status changes. This event does not fire on default values. If you need to handle the status being set when the record is created you can use `new-record`. Setting the status programmatically with `SETSTATUS()` does not fire a `change-status` event. If you need to respond to programmatic changes in the status you must handle it explicitly after `SETSTATUS()` is called. | `ON('change-status', callback)` |
+
+### Example
+
+To set up a listener for a record event, use the [ON](/data-events/reference/on) function.
+
+{% highlight js %}
+ON('validate-record', function (event) {
+  // Do something to validate the record and call INVALID('message') if there is an error.
+})
+{% endhighlight %}
+
+### The `event` Object
+
+The callback for record events is passed an event parameter with a `name` attribute, so you can use the same callback for multiple events. If the event has an associated value, it's passed in the `value` property of the event. If the event is associated with a form field, it also contains a `field` property that contains the data name of the field.
+
+{% highlight js %}
+{
+  "name": "change-status",
+  "value": "complete"
+}
+{% endhighlight %}
+
+Below we're using the same callback to handle events from both `edit-record` and `new-record`.
+
+{% highlight js %}
+function callback(event) {
+  if (event.name === 'edit-record') {
+    // Do something.
+  } else if (event.name === 'new-record') {
+    // Do something else.
+  }
+}
+
+ON('edit-record', callback)
+ON('new-record', callback)
+{% endhighlight %}
+
+<hr>
+
+## Field Events
+
+{:.table.table-striped.event-table}
+| Event | Description | Listener Function Signature |
+|--------|----------|-------------|-------------|
+| `'change'` | Fires when a field's value changes | `ON('change', 'field', callback)` |
+| `'click'` | Fires when a hyperlink field is tapped | `ON('click', 'my_hyperlink_field', callback)` |
+
+There are some cases where the `change` event is not fired. Default values do not trigger a `change` event when
+creating a new record. Also, `change` events are not triggered after manually setting a value with `SETVALUE`.
+
+### Example
+
+When setting up listeners for field events, be sure to add the field as the second parameter.
+
+{% highlight js %}
+ON('change', 'cover_type', function (event) {
+  // Do something interesting when the cover_type field changes.
+})
+{% endhighlight %}
+
+### The `event` Object
+
+The callback for field events is passed an event parameter with `name`, `field`, and `value` attributes.
+
+{% highlight js %}
+{
+  "name": "change",
+  "field": "weather_summary",
+  "value": "Partly Cloudy"
+}
+{% endhighlight %}
+
+<hr>
+
+## Repeatable Events
+
+{:.table.table-striped.event-table}
+| Event | Description | Listener Function Signature |
+|--------|----------|-------------|-------------|
+| `'load-repeatable'` | Fires when a repeatable editor is displayed | `ON('load-repeatable', 'repeatable_field', callback)` |
+| `'new-repeatable'` | Fires when a new repeatable is created, after `'load-repeatable'` | `ON('new-repeatable', 'repeatable_field', callback)` |
+| `'edit-repeatable'` | Fires when a repeatable is edited, after `'load-repeatable'` | `ON('edit-repeatable', 'repeatable_field', callback)` |
+| `'save-repeatable'` | Fires immediately before repeatable is saved, and after it's been validated | `ON('save-repeatable', 'repeatable_field', callback)` |
+| `'validate-repeatable'` | Fires right before the repeatable is saved to check any validations | `ON('validate-repeatable', 'repeatable_field', callback)` |
+| `'change-geometry'` | Fires when a repeatable's geometry changes | `ON('change-geometry', 'repeatable_field', callback)` |
+
+### Example
+
+Setting up listeners for repeatable events looks just like those for record events, except that you'll need to pass an additional parameter, the repeatable field.
+
+{% highlight js %}
+ON('validate-repeatable', 'repeatable_field', function (event) {
+  // Do something to validate the repeatable and call INVALID('message') if there is an error.
+})
+{% endhighlight %}
+
+### The `event` Object
+
+The callback for repeatable events is passed an event parameter with a `name` and `field` attributes.
+
+{% highlight js %}
+{
+  "name": "save-repeatable",
+  "field": "the_repeatable_field"
+}
+{% endhighlight %}
+
+<hr>
+
+## Media Events
+
+{:.table.table-striped.event-table}
+| Event | Description | Listener Function Signature |
+|--------|----------|-------------|-------------|
+| `'add-photo'` | Fires when a photo is added | `ON('add-photo', 'photo_field', callback)` |
+| `'add-video'` | Fires when a video is added | `ON('add-video', 'video_field', callback)` |
+| `'add-audio'` | Fires when an audio clip is added | `ON('add-audio', 'audio_field', callback)` |
+
+### Example
+
+{% highlight js %}
+ON('add-photo', 'photo_field', function (event) {
+  // Do something with the photo metadata
+})
+{% endhighlight %}
+
+### The `add-photo` `event` Object
+
+The callback for `add-photo` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing photo metadata.
+
+{% highlight js %}
+{
+  "name": "add-photo",
+  "field": "hydrant_photos",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071",
+    "size": 834597,
+    "latitude": 27.23235235,
+    "longitude": -82.09875135,
+    "altitude": 10.3,
+    "accuracy": 5.0,
+    "direction": 347.232355,
+    "orientation": 1,
+    "width": 4160,
+    "height": 3120,
+    "timestamp": "2016-01-27 11:13:45"
+  }
+}
+{% endhighlight %}
+
+### The `add-video` `event` Object
+
+The callback for `add-video` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing video metadata.
+
+{% highlight js %}
+{
+  "name": "add-video",
+  "field": "hydrant_videos",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071",
+    "size": 9034597,
+    "width": 1920,
+    "height": 1080,
+    "duration": 20.111,
+    "orientation": 0
+  }
+}
+{% endhighlight %}
+
+### The `add-audio` `event` Object
+
+The callback for `add-audio` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing audio clip metadata.
+
+{% highlight js %}
+{
+  "name": "add-audio",
+  "field": "hydrant_audio_notes",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071",
+    "size": 203246,
+    "duration": 20.111
+  }
+}
+{% endhighlight %}
+
+<hr>
+
+## Reference
+
+Check out the full documentation on available events and functions by browsing the [complete list](/data-events/reference/).
+
+<hr>
+
+## Functional Examples
+
+We have a [library of examples](/data-events/examples/) available for learning what you can do with data events.

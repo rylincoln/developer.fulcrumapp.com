@@ -409,11 +409,11 @@ $(document).ready(function(){
 ```
 <form>
   <input type="file" name="track" id="track" /><br /><br />
-  <input type="button" id="upload" value="upload" />
+  <input type="button" id="upload-existing" value="upload" />
 </form>
 
 $(document).ready(function(){
-  $("#upload").click(function(){
+  $("#upload-existing").click(function(){
     var formData = new FormData();
     formData.append("video[access_key]", "my-video-access-key");
     formData.append("video[track]", $("#track")[0].files[0]);

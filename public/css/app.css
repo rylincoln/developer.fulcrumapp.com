@@ -157,3 +157,7 @@ body {
 .expression-examples .panel .panel-body {
   min-height: 100px;
 }
+
+.event-table tbody tr td:first-child, .event-table thead tr th:first-child {
+  width: 185px;
+}

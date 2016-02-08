@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/userfullname/
 ---
 
-## USERFULLNAME
-
-Returns the full name of the current user
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 USERFULLNAME()
 
 // returns John Smith
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/len/
 ---
 
-## LEN
-
-Returns the length of a string value.
-
 ### Parameters
 
 `value` String (__required__) - The string from which to return the length.
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 LEN("Fulcrum is for data collection")
 
 // returns 30
-~~~
-{: .language-js}
+{% endhighlight %}

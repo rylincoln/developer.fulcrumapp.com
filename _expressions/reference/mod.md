@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/mod/
 ---
 
-## MOD
-
-Returns the result of the modulo operator, the remainder after a division operation.
-
 ### Parameters
 
 `dividend` Number (__required__) - The number to be divided to find the remainder.
@@ -23,17 +19,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 MOD(10, 3)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 MOD(10, 10)
 
 // returns 0
-~~~
-{: .language-js}
+{% endhighlight %}

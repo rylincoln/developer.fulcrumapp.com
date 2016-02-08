@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/dollar/
 ---
 
-## DOLLAR
-
-Formats a number into a locale-specific currency format. This function is useful when including a currency amount in a longer piece of text. To display just a currency in a calculated field, it's recommended to set the display type of the calculated field to 'Currency' and just return a number in the expression. When the display type of the calculated field is set to currency, the number is automatically displayed as a formatted currency.
-
 ### Parameters
 
 `value` Number (__required__) - a dollar amount
@@ -27,27 +23,24 @@ String - formatted currency
 
 ### Examples
 
-~~~
+{% highlight js %}
 DOLLAR(1234.567)
 
 // returns $1,234.57
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 // USD formatted in French
 DOLLAR(1234.567, 2, 'USD', 'fr-FR')
 
 // returns 1 234,57 $US
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 // Euro formatted in Portuguese
 DOLLAR(1234.567, 2, 'EUR', 'pt-BR')
 
 // returns €1.234,57
-~~~
-{: .language-js}
+{% endhighlight %}

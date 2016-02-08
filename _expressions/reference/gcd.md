@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/gcd/
 ---
 
-## GCD
-
-Returns the greatest common divisor of one or more integers.
-
 ### Parameters
 
 `var_args_values` Number (__required__) - Value(s) to consider to calculate the greatest common divisor.
@@ -21,17 +17,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 GCD(5, 9)
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 GCD(14, 21, 42)
 
 // returns 7
-~~~
-{: .language-js}
+{% endhighlight %}

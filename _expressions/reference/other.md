@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/other/
 ---
 
-## OTHER
-
-Returns the current 'Other' value for a choice field or classification field
-
 ### Parameters
 
 `field` Object (__required__) - The choice field or classification field variable
@@ -21,9 +17,8 @@ String - the current 'Other' value
 
 ### Examples
 
-~~~
+{% highlight js %}
 OTHER($choice_field)
 
 // returns undefined
-~~~
-{: .language-js}
+{% endhighlight %}

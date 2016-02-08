@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/inspect/
 ---
 
-## INSPECT
-
-Returns the string representation of a value. This function is useful for troubleshooting expressions.
-
 ### Parameters
 
 `value` Number (__required__) - The value to inspect
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 INSPECT([1, 2, 3])
 
 // returns [ 1, 2, 3 ]
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/mid/
 ---
 
-## MID
-
-Returns a segment of a string value.
-
 ### Parameters
 
 `value` String (__required__) - The string to extract a segment from.
@@ -25,9 +21,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 MID("Fulcrum for iOS", 13, 3)
 
 // returns iOS
-~~~
-{: .language-js}
+{% endhighlight %}

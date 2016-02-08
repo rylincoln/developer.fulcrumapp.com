@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/left/
 ---
 
-## LEFT
-
-Returns a substring from the beginning of a given string.
-
 ### Parameters
 
 `value` String (__required__) - The string value from which the left portion will be returned.
@@ -23,17 +19,15 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 LEFT("Fulcrum", 3)
 
 // returns Ful
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 LEFT("Fulcrum")
 
 // returns F
-~~~
-{: .language-js}
+{% endhighlight %}

@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/repeatablesum/
 ---
 
-## REPEATABLESUM
-
-Return the sum of a specific numeric field across multiple repeatable items
-
 ### Parameters
 
 `repeatableVariable` Object (__required__) - The repeatable field variable
@@ -23,9 +19,8 @@ Number - The sum of the `dataName` field within each repeatable item
 
 ### Examples
 
-~~~
+{% highlight js %}
 REPEATABLESUM($repeatable_field, 'cost')
 
 // returns 6
-~~~
-{: .language-js}
+{% endhighlight %}

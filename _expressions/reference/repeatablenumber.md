@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/repeatablenumber/
 ---
 
-## REPEATABLENUMBER
-
-Returns the sequential number of a repeatable item.
-
 ### Parameters
 
 No parameters
@@ -21,9 +17,8 @@ Number - The ordinal of this repeatable item within the repeatable
 
 ### Examples
 
-~~~
+{% highlight js %}
 REPEATABLENUMBER()
 
 // returns 4
-~~~
-{: .language-js}
+{% endhighlight %}

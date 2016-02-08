@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/choicevalue/
 ---
 
-## CHOICEVALUE
-
-Returns the selected value for a choice field or classification field
-
 ### Parameters
 
 `field` Object (__required__) - The choice field or classification field
@@ -21,9 +17,8 @@ String - the selected value
 
 ### Examples
 
-~~~
+{% highlight js %}
 CHOICEVALUE($choice_field)
 
 // returns Red
-~~~
-{: .language-js}
+{% endhighlight %}

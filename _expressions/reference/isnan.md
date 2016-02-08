@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/isnan/
 ---
 
-## ISNAN
-
-Test whether a value is not a number
-
 ### Parameters
 
 `value` Number (__required__) - a value
@@ -21,25 +17,22 @@ Boolean
 
 ### Examples
 
-~~~
+{% highlight js %}
 ISNAN(NaN)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISNAN('aaa' / 7)
 
 // returns true
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 ISNAN(7)
 
 // returns false
-~~~
-{: .language-js}
+{% endhighlight %}

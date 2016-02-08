@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/proper/
 ---
 
-## PROPER
-
-Capitalizes each word in a string (title case).
-
 ### Parameters
 
 `value` String (__required__) - String to capitalize words within.
@@ -21,9 +17,8 @@ String
 
 ### Examples
 
-~~~
+{% highlight js %}
 PROPER("fulcrum mobile data collection")
 
 // returns Fulcrum Mobile Data Collection
-~~~
-{: .language-js}
+{% endhighlight %}

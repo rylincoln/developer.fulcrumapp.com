@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/getresult/
 ---
 
-## GETRESULT
-
-Returns the current result value for the current expression
-
 ### Parameters
 
 No parameters
@@ -21,10 +17,9 @@ No parameters
 
 ### Examples
 
-~~~
+{% highlight js %}
 SETRESULT(1)
 GETRESULT()
 
 // returns 1
-~~~
-{: .language-js}
+{% endhighlight %}

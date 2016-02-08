@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/sin/
 ---
 
-## SIN
-
-Returns the sine of a value, in radians.
-
 ### Parameters
 
 `value` Number (__required__) - The value for which to calculate the sine.
@@ -21,9 +17,8 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 SIN(30)
 
 // returns -0.9880316240928618
-~~~
-{: .language-js}
+{% endhighlight %}

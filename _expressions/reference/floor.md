@@ -7,10 +7,6 @@ category: section
 permalink: /expressions/reference/floor/
 ---
 
-## FLOOR
-
-Rounds a number down to the nearest integer multiple of specified significance.
-
 ### Parameters
 
 `value` Number (__required__) - Number to round down.
@@ -23,17 +19,15 @@ Number
 
 ### Examples
 
-~~~
+{% highlight js %}
 FLOOR(126.25, 1)
 
 // returns 126
-~~~
-{: .language-js}
+{% endhighlight %}
 
 
-~~~
+{% highlight js %}
 FLOOR(126.25, 10)
 
 // returns 120
-~~~
-{: .language-js}
+{% endhighlight %}
