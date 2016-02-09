@@ -8,7 +8,7 @@ category: section
 
 {% highlight  js %}
 function weekNum ( d ) {
-​
+
   // Create a copy of this date object  
   var target  = new Date(d.valueOf());  
 
@@ -25,13 +25,13 @@ function weekNum ( d ) {
   var jan4    = new Date(target.getFullYear(), 0, 4);  
 ​
   // Number of days between target date and january 4th  
-  var dayDiff = (target - jan4) / 86400000;    
+  var dayDiff = (target - jan4) / 86400000;
 ​
-  // Calculate week number: Week 1 (january 4th) plus the    
-  // number of weeks between target date and january 4th    
-  var weekNr = 1 + Math.ceil(dayDiff / 7);    
+  // Calculate week number: Week 1 (january 4th) plus the
+  // number of weeks between target date and january 4th
+  var weekNr = 1 + Math.ceil(dayDiff / 7);
 ​
-  return weekNr;    
+  return weekNr;
 ​
 }
 

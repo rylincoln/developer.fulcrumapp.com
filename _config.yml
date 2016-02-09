@@ -43,7 +43,7 @@ collections:
     output: true
     permalink: /data-events/examples/:path/
 
-#files to exclude, array
+# files to exclude, array
 exclude:
   - CONTRIBUTING.md
   - README.md
