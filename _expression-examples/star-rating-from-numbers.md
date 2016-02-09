@@ -10,8 +10,8 @@ Assuming `$rating` is a numeric field with a minumum of 1 and a maximum of 5, ge
 
 This will take a numeric field value in `$rating` and convert it into actual star characters.
 
-{% highlight  js %}
+```js
 Array(FLOOR($rating + 1)).join('★') + Array(FLOOR(6 - $rating)).join('☆')
-{% endhighlight %}
+```
 
 Entering "3" gives the output: "★★★☆☆".

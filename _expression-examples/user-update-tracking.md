@@ -6,8 +6,8 @@ description: "Maintain a field for tracking record updates by field technicians 
 category: section
 ---
 
-{% highlight  js %}
+```js
 if (this.platform == 'Android' || this.platform == 'iOS') {
   SETRESULT(USERFULLNAME());
 }
-{% endhighlight %}
+```

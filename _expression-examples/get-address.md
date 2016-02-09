@@ -6,7 +6,7 @@ description: "Pulls the address from the address field."
 category: section
 ---
 
-{% highlight  js %}
+```js
 var address = '';
 if ($address.sub_thoroughfare) {
   address += $address.sub_thoroughfare;
@@ -33,4 +33,4 @@ if ($address.country) {
   address += ', ' + $address.country;
 }
 SETRESULT(address);
-{% endhighlight %}
+```

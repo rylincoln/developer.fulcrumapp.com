@@ -6,7 +6,7 @@ description: "Use this in a calculation field to pull the last item capture in a
 category: section
 ---
 
-{% highlight  js %}
+```js
 if ($my_classification.other_values.length > 0) {
   SETRESULT($my_classification.other_values);
 } else if ($my_classification.choice_values.length > 0) {
@@ -14,4 +14,4 @@ if ($my_classification.other_values.length > 0) {
 } else {
   SETRESULT(null);
 }
-{% endhighlight %}
+```
