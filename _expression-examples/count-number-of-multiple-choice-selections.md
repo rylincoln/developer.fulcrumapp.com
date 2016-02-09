@@ -15,7 +15,7 @@ var selections = CHOICEVALUES($multiple_choice_field) || [];
 // selections.length is the number of selections
 
 if (selections.length >= 3) {
-  SETRESULT('There were at least 3 selections');
+  SETRESULT('There are at least 3 selections');
 } else {
   SETRESULT('There are less than 3 selections');
 }
