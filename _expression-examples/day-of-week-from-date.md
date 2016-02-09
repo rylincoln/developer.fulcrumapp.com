@@ -6,7 +6,7 @@ description: "Use this in a calculation field to return the day of the week from
 category: section
 ---
 
-{% highlight  js %}
+```js
 var valueLookup = {
   0: 'Sunday',
   1: 'Monday',
@@ -25,4 +25,4 @@ var d = DATEVALUE($the_date_field);
 // var d = new Date('4/15/1984');
 
 SETRESULT(valueLookup[d.getDay()]);
-{% endhighlight %}
+```

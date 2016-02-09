@@ -6,7 +6,7 @@ description: "Use this in a calculation field to return the week number from the
 category: section
 ---
 
-{% highlight  js %}
+```js
 function weekNum ( d ) {
 ​
   // Create a copy of this date object  
@@ -42,4 +42,4 @@ function weekNum ( d ) {
 // Pulls date from date field
 var date = DATEVALUE($date);
 weekNum(date);
-{% endhighlight %}
+```

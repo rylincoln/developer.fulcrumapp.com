@@ -6,7 +6,7 @@ description: "Use this in a calculation field to compare multiple values and ret
 category: section
 ---
 
-{% highlight  js %}
+```js
 // Define the variables that you wish to use
 var firstField = $field_one;
 var secondField = $field_two;
@@ -30,5 +30,4 @@ var result = compare(firstField, secondField);
 
 
 SETRESULT(result);
-
-{% endhighlight %}
+```
