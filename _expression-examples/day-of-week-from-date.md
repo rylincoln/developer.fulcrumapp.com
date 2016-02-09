@@ -7,15 +7,16 @@ category: section
 ---
 
 ```js
-var valueLookup = {
-  0: 'Sunday',
-  1: 'Monday',
-  2: 'Tuesday',
-  3: 'Wednesday',
-  4: 'Thursday',
-  5: 'Friday',
-  6: 'Saturday'
-};
+// define an array of the days of the week to use as a lookup structure
+var daysOfWeek = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday'
+]
 
 // This converts a date field in the record to a JavaScript date object
 var d = DATEVALUE($the_date_field);
@@ -24,5 +25,5 @@ var d = DATEVALUE($the_date_field);
 // var d = new Date();
 // var d = new Date('4/15/1984');
 
-SETRESULT(valueLookup[d.getDay()]);
+SETRESULT(daysOfWeek[d.getDay()]);
 ```
