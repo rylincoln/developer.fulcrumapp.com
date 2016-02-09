@@ -12,7 +12,7 @@ var firstField = $field_one;
 var secondField = $field_two;
 
 // Create a function that looks at two or more variables and compares their results.
-// If choice 1 is equal to 'this value' and choice 2 is equal to 'this value' than return 'this value'
+// If choice 1 is equal to 'this value' and choice 2 is equal to 'this value' then return 'this value'
 function compare (choice1, choice2) {
   if (choice1 === 'A value' && choice2 === 'A value') {
     return 'A value';
