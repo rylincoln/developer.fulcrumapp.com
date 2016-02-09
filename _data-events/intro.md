@@ -91,13 +91,13 @@ ON('change', 'cover_type', function (event) {
 
 The callback for field events is passed an event parameter with `name`, `field`, and `value` attributes.
 
-{% highlight js %}
+```json
 {
   "name": "change",
   "field": "weather_summary",
   "value": "Partly Cloudy"
 }
-{% endhighlight %}
+```
 
 <hr>
 
