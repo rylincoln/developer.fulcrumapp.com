@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Count the number of selections in a multiple choice field"
+title: "Count multiple choice field selections"
 description: "How to count the number of selections in a multiple choice field"
 category: section
 ---
