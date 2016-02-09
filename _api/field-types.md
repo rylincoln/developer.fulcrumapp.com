@@ -22,7 +22,7 @@ A section is a logical divider of the form. Sections may contains many form elem
 
 ## Choice Field
 
-A ChoiceField is a form element to allow a list of selectable options. There are two ways to define the options of a ChoiceField. You can define the choices inline with the ChoiceField, or you can use [Choice Lists](/endpoints/choice-lists/) to define a set of choices that can be shared across multiple forms. Both methods of definine the choices are supported by the API. See the API documentation for [Choice Lists](/endpoints/choice-lists/) for information on how to manage Choice Lists.
+A ChoiceField is a form element to allow a list of selectable options. There are two ways to define the options of a ChoiceField. You can define the choices inline with the ChoiceField, or you can use [Choice Lists](/endpoints/choice-lists/) to define a set of choices that can be shared across multiple forms. Both methods of defining the choices are supported by the API. See the API documentation for [Choice Lists](/endpoints/choice-lists/) for information on how to manage Choice Lists.
 
 `ChoiceField` elements *must* have either:
 
