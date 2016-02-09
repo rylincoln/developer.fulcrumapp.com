@@ -8,7 +8,8 @@ category: section
 
 The following expression returns the number of selections in a multiple choice field.
 
-```
+```js
+// the `|| []` at the end accounts for CHOICEVALUES() returning null when the field is blank
 var selections = CHOICEVALUES($multiple_choice_field) || [];
 
 // selections is an Array of the values
