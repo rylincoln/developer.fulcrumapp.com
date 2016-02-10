@@ -631,7 +631,7 @@ $.ajax({
 
 ### Delete a form
 
-{% highlight javascript %}
+```js
 $.ajax({
   type: "DELETE",
   url: "https://api.fulcrumapp.com/api/v2/forms/my-form-id.json",
@@ -645,4 +645,4 @@ $.ajax({
     console.log(data);
   }
 });
-{% endhighlight %}
+```
