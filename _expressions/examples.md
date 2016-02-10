@@ -2,7 +2,7 @@
 layout: default
 section: expressions
 order: 3
-title: "Examples"
+title: "Expression Examples"
 description: "Calculation field expression examples."
 category: section
 ---
