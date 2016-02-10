@@ -8,7 +8,7 @@ category: section
 
 This examples uses the [INVALID](/data-events/reference/invalid), [LATITUDE](/expressions/reference/latitude), and [LONGITUDE](/expressions/reference/longitude) functions to keep records from being saved when their geometry isn't within the state of Colorado, a conveniently rectangular state.
 
-{% highlight  js %}
+```js
 function validateLocation() {
   // The rough bounds of Colorado
   minLatitude = 36.985
@@ -26,4 +26,4 @@ function validateLocation() {
 }
 
 ON('validate-record', validateLocation)
-{% endhighlight %}
+```

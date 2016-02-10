@@ -10,7 +10,7 @@ This example assumes you've signed up for an API key from [forecast.io](https://
 
 Here we're listening for the `'change-geometry'` event for a record, and then using the [REQUEST](/data-events/reference/request) function to make an API call to forecast.io. Once we get the response we parse it as JSON and use [SETVALUE](/data-events/reference/setvalue) to update the form value.
 
-{% highlight  js %}
+```js
 function getWeather() {
   forecastApiKey = 'your_api_key'
 
@@ -29,14 +29,14 @@ function getWeather() {
 }
 
 ON('change-geometry', getWeather)
-{% endhighlight %}
+```
 
 If you only want to fetch weather when explicitly requested by the end user, you can listen for the `'click'` event for a hyperlink field. Just add a new [hyperlink field](http://www.fulcrumapp.com/help/hyperlink-fields/) to your app and give it a descriptive label, "Tap to Add Weather Data" for example. Leave the default url blank and set up your data event like so.
 
-{% highlight  js %}
+```js
 // This assumes you've still got the getWeather function defined from the example above
 
 ON('click', 'your_hyperlink_field', getWeather)
-{% endhighlight %}
+```
 
 These examples add a single weather metric, but many others [are available](https://developer.forecast.io/docs/v2#data-points) and could be added to multiple fields in your app.

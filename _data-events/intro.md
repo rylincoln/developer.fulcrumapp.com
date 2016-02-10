@@ -32,26 +32,26 @@ Data Events allow users to perform ​_actions_​ on the mobile device when cer
 
 To set up a listener for a record event, use the [ON](/data-events/reference/on) function.
 
-{% highlight js %}
+```js
 ON('validate-record', function (event) {
   // Do something to validate the record and call INVALID('message') if there is an error.
 })
-{% endhighlight %}
+```
 
 ### The `event` Object
 
 The callback for record events is passed an event parameter with a `name` attribute, so you can use the same callback for multiple events. If the event has an associated value, it's passed in the `value` property of the event. If the event is associated with a form field, it also contains a `field` property that contains the data name of the field.
 
-{% highlight js %}
+```json
 {
   "name": "change-status",
   "value": "complete"
 }
-{% endhighlight %}
+```
 
 Below we're using the same callback to handle events from both `edit-record` and `new-record`.
 
-{% highlight js %}
+```js
 function callback(event) {
   if (event.name === 'edit-record') {
     // Do something.
@@ -62,7 +62,7 @@ function callback(event) {
 
 ON('edit-record', callback)
 ON('new-record', callback)
-{% endhighlight %}
+```
 
 <hr>
 
@@ -81,11 +81,11 @@ creating a new record. Also, `change` events are not triggered after manually se
 
 When setting up listeners for field events, be sure to add the field as the second parameter.
 
-{% highlight js %}
+```js
 ON('change', 'cover_type', function (event) {
   // Do something interesting when the cover_type field changes.
 })
-{% endhighlight %}
+```
 
 ### The `event` Object
 
@@ -117,22 +117,22 @@ The callback for field events is passed an event parameter with `name`, `field`,
 
 Setting up listeners for repeatable events looks just like those for record events, except that you'll need to pass an additional parameter, the repeatable field.
 
-{% highlight js %}
+```js
 ON('validate-repeatable', 'repeatable_field', function (event) {
   // Do something to validate the repeatable and call INVALID('message') if there is an error.
 })
-{% endhighlight %}
+```
 
 ### The `event` Object
 
 The callback for repeatable events is passed an event parameter with a `name` and `field` attributes.
 
-{% highlight js %}
+```json
 {
   "name": "save-repeatable",
   "field": "the_repeatable_field"
 }
-{% endhighlight %}
+```
 
 <hr>
 
@@ -147,17 +147,17 @@ The callback for repeatable events is passed an event parameter with a `name` an
 
 ### Example
 
-{% highlight js %}
+```js
 ON('add-photo', 'photo_field', function (event) {
   // Do something with the photo metadata
 })
-{% endhighlight %}
+```
 
 ### The `add-photo` `event` Object
 
 The callback for `add-photo` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing photo metadata.
 
-{% highlight js %}
+```json
 {
   "name": "add-photo",
   "field": "hydrant_photos",
@@ -175,13 +175,13 @@ The callback for `add-photo` events is passed an event parameter with `name`, `f
     "timestamp": "2016-01-27 11:13:45"
   }
 }
-{% endhighlight %}
+```
 
 ### The `add-video` `event` Object
 
 The callback for `add-video` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing video metadata.
 
-{% highlight js %}
+```json
 {
   "name": "add-video",
   "field": "hydrant_videos",
@@ -194,13 +194,13 @@ The callback for `add-video` events is passed an event parameter with `name`, `f
     "orientation": 0
   }
 }
-{% endhighlight %}
+```
 
 ### The `add-audio` `event` Object
 
 The callback for `add-audio` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing audio clip metadata.
 
-{% highlight js %}
+```json
 {
   "name": "add-audio",
   "field": "hydrant_audio_notes",
@@ -210,7 +210,7 @@ The callback for `add-audio` events is passed an event parameter with `name`, `f
     "duration": 20.111
   }
 }
-{% endhighlight %}
+```
 
 <hr>
 
