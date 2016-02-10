@@ -17,15 +17,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 EVEN(5.2)
 
 // returns 6
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 EVEN(528.2172814)
 
 // returns 530
-{% endhighlight %}
+```

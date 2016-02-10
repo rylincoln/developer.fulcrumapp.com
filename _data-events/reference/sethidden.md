@@ -15,22 +15,22 @@ permalink: /data-events/reference/sethidden/
 
 ### Examples
 
-{% highlight js %}
+```js
 SETHIDDEN('weather_summary', true)
 
 // Hides the weather summary field
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETHIDDEN('weather_summary', false)
 
 // Shows the weather summary field
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETHIDDEN('weather_summary', null)
 
 // Unsets any override previously set by SETHIDDEN and uses the original setting from the form schema
-{% endhighlight %}
+```

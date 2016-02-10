@@ -13,8 +13,8 @@ permalink: /data-events/reference/setproject/
 
 ### Examples
 
-{% highlight js %}
+```js
 SETPROJECT('Bells Crossing Phase 3')
 
 // Sets the project of a record
-{% endhighlight %}
+```

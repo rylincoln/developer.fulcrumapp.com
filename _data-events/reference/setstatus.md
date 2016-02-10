@@ -13,8 +13,8 @@ permalink: /data-events/reference/setstatus/
 
 ### Examples
 
-{% highlight js %}
+```js
 SETSTATUS('inspection_pending')
 
 // Sets the status of a record
-{% endhighlight %}
+```

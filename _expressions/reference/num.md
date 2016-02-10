@@ -17,22 +17,22 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 NUM('12')
 
 // returns 12
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 NUM(12)
 
 // returns 12
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 NUM('a')
 
 // returns NaN
-{% endhighlight %}
+```

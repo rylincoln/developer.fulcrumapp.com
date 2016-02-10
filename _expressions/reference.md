@@ -164,6 +164,10 @@ Returns the first N items from an array or string
 
 Formats a number with a fixed number of decimal places.
 
+### [FLATTEN](/expressions/reference/flatten/)
+
+Flatten nested arrays into a flat array
+
 ### [FLOOR](/expressions/reference/floor/)
 
 Rounds a number down to the nearest integer multiple of specified significance.

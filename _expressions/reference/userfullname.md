@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 USERFULLNAME()
 
 // returns John Smith
-{% endhighlight %}
+```

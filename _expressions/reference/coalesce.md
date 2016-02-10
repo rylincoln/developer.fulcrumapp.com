@@ -17,22 +17,22 @@ permalink: /expressions/reference/coalesce/
 
 ### Examples
 
-{% highlight js %}
+```js
 COALESCE(null, null, 'Test', 1)
 
 // returns Test
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 COALESCE(1, null, null)
 
 // returns 1
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 COALESCE(null, null, null)
 
 // returns undefined
-{% endhighlight %}
+```

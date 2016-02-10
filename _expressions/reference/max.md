@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 MAX(3, 1, 322, 76)
 
 // returns 322
-{% endhighlight %}
+```

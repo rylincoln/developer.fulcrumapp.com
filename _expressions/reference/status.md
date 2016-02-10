@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 STATUS()
 
 // returns approved
-{% endhighlight %}
+```

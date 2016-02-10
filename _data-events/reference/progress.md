@@ -15,7 +15,7 @@ permalink: /data-events/reference/progress/
 
 ### Examples
 
-{% highlight js %}
+```js
 PROGRESS('Just a sec!', 'Searching for nearby facilities ...')
 
 // Displays an progress message that looks like
@@ -26,11 +26,11 @@ PROGRESS('Just a sec!', 'Searching for nearby facilities ...')
 // | Searching for nearby facilities ...       |
 // |                                           |
 // +-------------------------------------------+
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 PROGRESS()
 
 // Call with no parameters to dismiss the progress message.
-{% endhighlight %}
+```

@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 DEGREES(1)
 
 // returns 57.29577951308232
-{% endhighlight %}
+```

@@ -17,15 +17,15 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 ISTEXT("Text")
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ISTEXT(4)
 
 // returns false
-{% endhighlight %}
+```

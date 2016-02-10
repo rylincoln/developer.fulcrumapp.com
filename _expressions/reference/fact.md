@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 FACT(5)
 
 // returns 120
-{% endhighlight %}
+```

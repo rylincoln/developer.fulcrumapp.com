@@ -13,15 +13,15 @@ permalink: /data-events/reference/setstatusfilter/
 
 ### Examples
 
-{% highlight js %}
+```js
 SETSTATUSFILTER(['inspection_pending', 'in_inspection'])
 
 // Sets the allowable status values for the record to be 'inspection_pending' or 'in_inspection'
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETSTATUSFILTER(null)
 
 // Unsets any previous status filters and allows any status to be selected for the record
-{% endhighlight %}
+```

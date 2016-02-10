@@ -13,41 +13,41 @@ No parameters
 
 ### Examples
 
-{% highlight js %}
+```js
 storage = STORAGE()
 KEY = 'item_key'
 storage.setItem(KEY, 'hello world')
 
 // Sets an item in local storage, must be a string
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 item = storage.getItem(KEY)
 
 // Gets an item from storage if it exists, otherwise returns null
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 geom = { type: 'Point', coordinates: [-100, 40] }
 storage.setItem('geometry', JSON.stringify(geom))
 
 anotherGeom = JSON.parse(storage.getItem('geometry'))
 
 // Use JSON.stringify and JSON.parse to serialize and deserialize objects in local storage
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 storage.removeItem(KEY)
 
 // Removes an item from storage
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 storage.clear()
 
 // Removes all items from storage
-{% endhighlight %}
+```

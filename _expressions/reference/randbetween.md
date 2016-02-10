@@ -19,8 +19,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 4 < RANDBETWEEN(4, 9) < 9
 
 // returns true
-{% endhighlight %}
+```

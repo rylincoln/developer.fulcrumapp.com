@@ -20,11 +20,12 @@ Display a message as an alert in the mobile app.
 
 ### [CURRENTLOCATION](/data-events/reference/currentlocation/)
 
-Returns a location object containing metadata about the user's current location, not the record's location.
+Returns a location object containing metadata about the user's current location. This location may be different
+than the record location.
 
 ### [INVALID](/data-events/reference/invalid/)
 
-Display a validation error message and stop the record, or repeatable item, from being saved.
+Display a validation error message and prevent the record or repeatable item from being saved.
 
 ### [OFF](/data-events/reference/off/)
 

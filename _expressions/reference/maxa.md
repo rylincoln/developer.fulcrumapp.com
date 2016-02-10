@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 MAXA([3, 4, -6, '10'])
 
 // returns 10
-{% endhighlight %}
+```

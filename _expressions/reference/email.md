@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 EMAIL()
 
 // returns test@example.com
-{% endhighlight %}
+```

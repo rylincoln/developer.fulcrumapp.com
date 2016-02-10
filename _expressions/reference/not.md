@@ -17,15 +17,15 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 NOT(false)
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 NOT(5)
 
 // returns false
-{% endhighlight %}
+```

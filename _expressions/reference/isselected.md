@@ -19,17 +19,17 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 // $choice_field has Red, Green, and Blue selected
 ISSELECTED($choice_field, 'Red')
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 // $choice_field has Red, Green, and Blue selected
 ISSELECTED($choice_field, 'Orange')
 
 // returns false
-{% endhighlight %}
+```

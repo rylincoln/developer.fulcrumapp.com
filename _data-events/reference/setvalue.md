@@ -15,8 +15,8 @@ permalink: /data-events/reference/setvalue/
 
 ### Examples
 
-{% highlight js %}
+```js
 SETVALUE('weather_summary', 'Just beautiful')
 
 // Sets the value of a weather summary field
-{% endhighlight %}
+```

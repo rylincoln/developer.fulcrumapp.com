@@ -13,22 +13,22 @@ permalink: /data-events/reference/openurl/
 
 ### Examples
 
-{% highlight js %}
+```js
 OPENURL('https://www.google.com/search?q=Fulcrum+Mobile+Solutions')
 
 // Opens a web browser to the specified address
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 OPENURL('comgooglemaps://?q=Pizza&center=37.759748,-122.427135')
 
 // Opens google maps and searches for Pizza near a location
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 OPENURL('mailto:clark.griswold@gmail.com?subject=turn+those+lights+off!&body=jk,+i+love+them.')
 
 // Opens an email client with a predefined subject and body
-{% endhighlight %}
+```

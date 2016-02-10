@@ -17,15 +17,15 @@ Number - the absolute value of the `value` parameter
 
 ### Examples
 
-{% highlight js %}
+```js
 ABS(-1)
 
 // returns 1
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ABS(42)
 
 // returns 42
-{% endhighlight %}
+```

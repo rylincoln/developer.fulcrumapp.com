@@ -15,15 +15,15 @@ permalink: /data-events/reference/setchoices/
 
 ### Examples
 
-{% highlight js %}
+```js
 choices = ['Rain', 'Hail', 'Snow', 'Graupel']
 SETCHOICES('weather_summary', choices)
 
 // Sets the available choices of the weather summary field to an array of values
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 choices = [
   ['Light Rain', 'light_rain'],
   ['Heavy Rain', 'heavy_rain']
@@ -31,10 +31,10 @@ choices = [
 SETCHOICES('weather_summary', choices)
 
 // Sets the available choices of the weather summary field to an array of labels and values in [<label>, <value>] order
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 choices = [
   { label: 'Light Rain', value: 'light_rain' },
   { label: 'Heavy Rain', value: 'heavy_rain' }
@@ -42,11 +42,11 @@ choices = [
 SETCHOICES('weather_summary', choices)
 
 // Sets the available choices of the weather summary field to an array of labels and values in an object containing "label" and "value" keys
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETCHOICES('weather_summary', null)
 
 // Unsets any override previously set by SETCHOICES and uses the original setting from the form schema
-{% endhighlight %}
+```

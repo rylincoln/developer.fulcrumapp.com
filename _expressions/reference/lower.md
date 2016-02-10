@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 LOWER("Empire State Building")
 
 // returns empire state building
-{% endhighlight %}
+```

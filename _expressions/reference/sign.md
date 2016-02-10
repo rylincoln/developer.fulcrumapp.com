@@ -17,15 +17,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 SIGN(43)
 
 // returns 1
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SIGN(-3)
 
 // returns -1
-{% endhighlight %}
+```

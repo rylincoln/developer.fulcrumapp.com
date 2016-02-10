@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "CURRENTLOCATION"
-description: "Returns a location object containing metadata about the user&#39;s current location, not the record&#39;s location."
+description: "Returns a location object containing metadata about the user&#39;s current location. This location may be different than the record location."
 category: section
 permalink: /data-events/reference/currentlocation/
 ---
@@ -13,7 +13,7 @@ No parameters
 
 ### Examples
 
-{% highlight js %}
+```js
 location = CURRENTLOCATION()
 
 if (!location) {
@@ -21,10 +21,10 @@ if (!location) {
 } else {
   location.latitude  // 35.6443171
   location.longitude // -80.8984504
-  location.altitude  // 213 - meters
-  location.accuracy  // 5 - meters
+  location.altitude  // 213 - meters above sea level. Negative values indicate below sea level.
+  location.accuracy  // 5 - meters, the accuracy of the latitude and longitude values
   location.speed     // 3.4 - meters per second
-  location.course    // 213
-  location.timestamp // 1454015950.013456 - ephoch time, seconds
+  location.course    // 213 - degrees from due north. 0-359, negative values or `null` indicate invalid values.
+  location.timestamp // 1454015950.013456 - epoch time, seconds
 }
-{% endhighlight %}
+```

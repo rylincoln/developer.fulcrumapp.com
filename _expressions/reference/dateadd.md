@@ -19,15 +19,15 @@ Date
 
 ### Examples
 
-{% highlight js %}
+```js
 DATEADD('2015-01-01', 10)
 
 // returns 2015-01-11
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 DATEADD('2015-01-31', 90)
 
 // returns 2015-05-01
-{% endhighlight %}
+```

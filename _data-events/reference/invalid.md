@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "INVALID"
-description: "Display a validation error message and stop the record, or repeatable item, from being saved."
+description: "Display a validation error message and prevent the record or repeatable item from being saved."
 category: section
 permalink: /data-events/reference/invalid/
 ---
@@ -13,14 +13,14 @@ permalink: /data-events/reference/invalid/
 
 ### Examples
 
-{% highlight js %}
+```js
 INVALID('Depth must be less than 20.')
 
 // Displays an alert and stops the record from being saved
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ON('validate-record', function (event) {
    if (NUM($depth) >= 20) {
      INVALID('Depth must be less than 20.')
@@ -28,15 +28,15 @@ ON('validate-record', function (event) {
 });
 
 // Use with the 'validate-record' event to stop a record from being saved
-{% endhighlight %}
+```
 
 
-{% highlight js %}
-ON('validate-repeatable', function (event) {
+```js
+ON('validate-repeatable', 'repeatable_field_name', function (event) {
    if (!ISSELECTED($choice_field, 'Purple')) {
      INVALID('You gotta pick purple!')
    }
 });
 
 // Use with the 'validate-repeatable' event to stop a repeatable from being saved
-{% endhighlight %}
+```

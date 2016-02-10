@@ -15,22 +15,22 @@ permalink: /data-events/reference/setrequired/
 
 ### Examples
 
-{% highlight js %}
+```js
 SETREQUIRED('weather_summary', true)
 
 // Sets the weather summary field as required
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETREQUIRED('weather_summary', false)
 
 // Sets the weather summary field as not required
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETREQUIRED('weather_summary', null)
 
 // Unsets any override previously set by SETREQUIRED and uses the original setting from the form schema
-{% endhighlight %}
+```

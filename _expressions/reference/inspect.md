@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 INSPECT([1, 2, 3])
 
 // returns [ 1, 2, 3 ]
-{% endhighlight %}
+```

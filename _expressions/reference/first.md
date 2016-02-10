@@ -19,29 +19,29 @@ Object
 
 ### Examples
 
-{% highlight js %}
+```js
 FIRST([1, 2, 3])
 
 // returns 1
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 FIRST(['a', 'b', 'c'], 2)
 
 // returns [a,b]
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 FIRST('abc')
 
 // returns a
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 FIRST('abc', 2)
 
 // returns [a,b]
-{% endhighlight %}
+```

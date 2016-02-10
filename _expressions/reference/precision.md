@@ -17,22 +17,22 @@ Number - the number of decimal places
 
 ### Examples
 
-{% highlight js %}
+```js
 PRECISION(1.333)
 
 // returns 3
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 PRECISION(1.3)
 
 // returns 1
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 PRECISION(1)
 
 // returns 0
-{% endhighlight %}
+```

@@ -17,8 +17,8 @@ Number - The ordinal of this repeatable item within the repeatable
 
 ### Examples
 
-{% highlight js %}
+```js
 REPEATABLENUMBER()
 
 // returns 4
-{% endhighlight %}
+```

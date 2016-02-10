@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 CLEAN('Test' + CHAR(31))
 
 // returns Test
-{% endhighlight %}
+```

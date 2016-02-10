@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 ROLE()
 
 // returns Owner
-{% endhighlight %}
+```

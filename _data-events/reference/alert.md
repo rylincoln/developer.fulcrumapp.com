@@ -15,7 +15,7 @@ permalink: /data-events/reference/alert/
 
 ### Examples
 
-{% highlight js %}
+```js
 ALERT('Warning!', 'A depth of 98 feet is high. Are you sure?')
 
 // Displays an alert that looks like
@@ -26,4 +26,4 @@ ALERT('Warning!', 'A depth of 98 feet is high. Are you sure?')
 // | A depth of 98 feet is high. Are you sure? |
 // |                                           |
 // +-------------------------------------------+
-{% endhighlight %}
+```

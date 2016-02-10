@@ -19,22 +19,22 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 EXACT("String 1", "String 1")
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 EXACT("String 1", "Another String")
 
 // returns false
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 EXACT(4,4)
 
 // returns true
-{% endhighlight %}
+```

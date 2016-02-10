@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 PROJECTNAME()
 
 // returns Project X
-{% endhighlight %}
+```

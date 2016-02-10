@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 RAND() > 0
 
 // returns true
-{% endhighlight %}
+```

@@ -19,15 +19,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 POWER(5, 8)
 
 // returns 390625
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 POWER(10, 0.5)
 
 // returns 3.1622776601683795
-{% endhighlight %}
+```

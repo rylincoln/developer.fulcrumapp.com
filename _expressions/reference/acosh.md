@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 ACOSH(7)
 
 // returns 2.6339157938496336
-{% endhighlight %}
+```

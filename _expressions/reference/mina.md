@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 MINA([3, 4, -6, '10'])
 
 // returns -6
-{% endhighlight %}
+```

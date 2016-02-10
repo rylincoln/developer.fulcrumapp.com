@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 LONGITUDE()
 
 // returns -82.63814896345139
-{% endhighlight %}
+```

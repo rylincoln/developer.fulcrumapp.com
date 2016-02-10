@@ -15,15 +15,15 @@ permalink: /data-events/reference/setmaxlength/
 
 ### Examples
 
-{% highlight js %}
+```js
 SETMAXLENGTH('weather_summary', 25)
 
 // Sets the maximum length of the weather summary field to 25
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETMAXLENGTH('weather_summary', null)
 
 // Unsets any override previously set by SETMAXLENGTH and uses the original setting from the form schema
-{% endhighlight %}
+```
