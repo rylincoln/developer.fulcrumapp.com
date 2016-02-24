@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Generate a full timestamp"
+title: "Generate A Full Timestamp"
 description: "Use this in a calculation field to add a full timestamp for when the record was initially generated or edited, automatically."
 category: section
 ---

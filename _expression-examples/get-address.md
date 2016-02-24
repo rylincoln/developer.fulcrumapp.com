@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Get address from address field"
+title: "Get Address From Address Field"
 description: "Pulls the address from the address field."
 category: section
 ---

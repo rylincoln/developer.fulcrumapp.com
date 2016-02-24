@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Track who has updated a record"
+title: "Track Who Has Updated A Record"
 description: "Maintain a field for tracking record updates by field technicians only."
 category: section
 ---

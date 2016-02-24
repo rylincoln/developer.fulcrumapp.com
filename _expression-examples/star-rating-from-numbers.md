@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Star ratings from a numeric range"
+title: "Star Ratings From A Numeric Range"
 description: "How to generate star ratings using numeric range data as input."
 category: section
 ---
