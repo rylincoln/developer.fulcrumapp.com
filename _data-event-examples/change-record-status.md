@@ -32,3 +32,23 @@ function changeStatus(event) {
 
 ON('save-record', changeStatus)
 ```
+
+This example sets the status of a record based upon a choice list. In this example `damage_type` is a single choice field, similar labels and values have been set for the Status Field. On a change to  `damage_type` the status is also changed.  The `damage_type` field is required, the Status Field may be chosen to be hidden.
+
+```js
+function setChoices(event) {
+  var statuses = this.form.status_field.choices;
+  var choices = [];
+  for (var i = 0; i < statuses.length; i++) {
+    choices.push([statuses[i].label, statuses[i].value]);
+  }
+  SETCHOICES('damage_type', choices);
+}
+
+function changeStatus(event) {  
+  SETSTATUS(CHOICEVALUE($damage_type));
+}
+
+ON('load-record', setChoices);
+ON('change', 'damage_type', changeStatus);
+```
