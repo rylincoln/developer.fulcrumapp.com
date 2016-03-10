@@ -51,6 +51,10 @@ The Forms API gives you access to your form fields, or app schema.
 | title_field_keys | array | no | no | Array of strings, where the strings are keys for fields in the elements attribute. |
 | status_field | object | no | no | Status field object (see status field table below). |
 | auto_assign | boolean | no | no | Assigns records to the user who creates them. |
+| hidden_on_dashboard | boolean | no | no | Is the form visible in the mobile dashboard? |
+| geometry_required | boolean | no | no | Requiring the location will force a location to be saved with each record. |
+| geometry_types | array | no | no | Enables/disables record location. `['Point']` or `[]` |
+| script | string | no | no | Custom Data Events script. |
 | record_count | number | no | yes | The number of records in this form. |
 | created_at | string | no | yes | Timestamp when the form was created. |
 | updated_at | string | no | yes | Timestamp when the form was last updated. |
