@@ -42,7 +42,7 @@ ON('validate-record', function (event) {
 
 The callback for record events is passed an event parameter with a `name` attribute, so you can use the same callback for multiple events. If the event has an associated value, it's passed in the `value` property of the event. If the event is associated with a form field, it also contains a `field` property that contains the data name of the field.
 
-{% highlight js %}
+{% highlight json %}
 {
   "name": "change-status",
   "value": "complete"
@@ -91,7 +91,7 @@ ON('change', 'cover_type', function (event) {
 
 The callback for field events is passed an event parameter with `name`, `field`, and `value` attributes.
 
-{% highlight js %}
+{% highlight json %}
 {
   "name": "change",
   "field": "weather_summary",
@@ -127,7 +127,7 @@ ON('validate-repeatable', 'repeatable_field', function (event) {
 
 The callback for repeatable events is passed an event parameter with a `name` and `field` attributes.
 
-{% highlight js %}
+{% highlight json %}
 {
   "name": "save-repeatable",
   "field": "the_repeatable_field"
@@ -157,7 +157,7 @@ ON('add-photo', 'photo_field', function (event) {
 
 The callback for `add-photo` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing photo metadata.
 
-{% highlight js %}
+{% highlight json %}
 {
   "name": "add-photo",
   "field": "hydrant_photos",
@@ -181,7 +181,7 @@ The callback for `add-photo` events is passed an event parameter with `name`, `f
 
 The callback for `add-video` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing video metadata.
 
-{% highlight js %}
+{% highlight json %}
 {
   "name": "add-video",
   "field": "hydrant_videos",
@@ -200,7 +200,7 @@ The callback for `add-video` events is passed an event parameter with `name`, `f
 
 The callback for `add-audio` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing audio clip metadata.
 
-{% highlight js %}
+{% highlight json %}
 {
   "name": "add-audio",
   "field": "hydrant_audio_notes",
