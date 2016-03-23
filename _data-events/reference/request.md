@@ -11,7 +11,7 @@ permalink: /data-events/reference/request/
 
 `options` Object (__required__) - The options to pass for the request
 
-`options.url` string (__required__) - The url for the request
+`options.url` string (__required__) - The url for the request (HTTPS required)
 
 `options.method` string (optional)  [default = GET] - The HTTP method for the request (POST, PUT, DELETE, etc.)
 
