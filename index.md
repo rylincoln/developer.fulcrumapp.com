@@ -35,3 +35,11 @@ The Fulcrum platform’s storage architecture is safe and secure from end-to-end
 ## Import & Export
 
 Data within your Fulcrum account is always available to you, to export in a variety of open formats. By using Fulcrum’s developer tools, you can manage your own imports, schedule how and when imports of data from your own databases happen, and also do the same with export of data through the API.
+
+## API Libraries
+
+There are several open source libraries available for working with the Fulcrum API in your language of choice.
+
+* [Fulcrum JavaScript](https://github.com/fulcrumapp/fulcrum-node)
+* [Fulcrum Python](https://github.com/fulcrumapp/fulcrum-python)
+* [Fulcrum Ruby](https://github.com/fulcrumapp/fulcrum-ruby)
