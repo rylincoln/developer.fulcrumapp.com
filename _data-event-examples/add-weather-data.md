@@ -10,7 +10,7 @@ This example assumes you've signed up for an API key from [forecast.io](https://
 
 Here we're listening for the `'change-geometry'` event for a record, and then using the [REQUEST](/data-events/reference/request) function to make an API call to forecast.io. Once we get the response we parse it as JSON and use [SETVALUE](/data-events/reference/setvalue) to update the form value.
 
-{% highlight  js %}
+```js
 function getWeather() { 
   forecastApiKey = 'your_api_key'
 

@@ -10,6 +10,7 @@ menu:
   - "Field Events": field-events
   - "Repeatable Events": repeatable-events
   - "Media Events": media-events
+  - "Request Calls" : request-calls
 ---
 
 Data Events allow users to perform ​_actions_​ on the mobile device when certain ​_events_​ are triggered. Actions include custom alerts and validation messages, setting field values, choices, labels, descriptions, requirement & visibility settings, HTTP requests and more. Event triggers include record loading, editing, validating, saving, value changing, and more. This enables listening for record changes, programmatically changing values (including status, project, and geometry), as well as building dynamic hyperlinks, writing custom quality assurance logic and much more!
@@ -211,7 +212,41 @@ The callback for `add-audio` events is passed an event parameter with `name`, `f
   }
 }
 ```
+</hr>
 
+## Request Calls
+
+#### Using data from other APIs
+
+If you require pulling in data from an outside source, you can use the [Request](https://github.com/request/request) library. This library supports HTTPS and follows redirects by default.
+
+Request requires two parameters-- an options property, which is where you put the API url, and a callback function that is trigger when the Url is called. 
+
+Tips: You should use the _data name_ of the field that you want to populate. You also will want to make sure that you are returning one value (in the code below we are only grabbing the first row, `row[0]`).
+
+``` js
+function doThis() {
+  options = {
+    url: "https://theURLyouneed.com"
+  }
+
+  REQUEST(options, function(error, response, body) {
+    if (error) {
+      ALERT('Error with request: ' + error)
+    } else {
+      data = JSON.parse(body)
+      SETVALUE('field_you_want_to_populate', data.rows[0].value)
+    }
+  })
+}
+```
+With Request, you can `put`, `post` and `get` data. You can `get` elevation coordinates from the USGS or you can `put` updated features in a CartoDB table. 
+
+For now, REQUEST requires HTTPS & CORS. We are exploring options for working around this limitation. Therefore, if you are trying to use an API that does not meet the CORS requirements we recommend you set up your own proxy or use a hosted site, like https://crossorigin.me/. 
+
+If you are having difficulty determining what the data is on your API you can use something like [http://requestb.in/](http://requestb.in/). This works great for inspecting the raw data.
+
+You can view the [CartoDB](/data-events/examples/geofencing-with-cartodb) example for more insight into using APIs.
 <hr>
 
 ## Reference

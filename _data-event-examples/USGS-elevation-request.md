@@ -10,7 +10,7 @@ Similar to automating weather collection, data events allow you to tap into any 
 
 It assumes you have a field called `elevation`.
 
-{% highlight  js %}
+``` js
 function getElev() {
   options = {
     url: 'http://nationalmap.gov/epqs/pqs.php?x=' + LONGITUDE() + '&y=' + LATITUDE() + '&units=Feet&output=json'
@@ -27,4 +27,4 @@ function getElev() {
 }
 
 ON('change-geometry', getElev);
-{% highlight  js %}
+```
