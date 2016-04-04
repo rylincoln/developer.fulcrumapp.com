@@ -1,21 +1,21 @@
 ---
 layout: default
 section: data_events
-title: "Geofencing with CartoDB API"
-description: "Locate which neighborhood you are working in through geofencing."
+title: "Point-in-polygon with CartoDB API"
+description: "Locate which neighborhood you are working in via point-in-polygon."
 category: section
 ---
 
-Data events allow you to grab information about a point's location, i.e. which polygon the point lies in. 
+Data events allow you to grab information about a point's location, i.e. which polygon the point lies in.
 
-This example illustrates how to set up two data events. Both take advantage of CartoDB's querying ability through the SQL API. The first one uses a nearest neighbor query to find the nearest brewery. The second example pulls in the name of the nieghborhood polygon in which the point is contained. 
+This example illustrates how to set up two data events. Both take advantage of CartoDB's querying ability through the SQL API. The first one uses a nearest neighbor query to find the nearest brewery. The second example pulls in the name of the neighborhood polygon in which the point is contained.
 
 These examples require having data stored in CartoDB tables. If you are unsure of what the query should be returning, we recommend testing out example data:
 
 `https://denverstartup.cartodb.com/api/v2/sql?q=SELECT%20*%20FROM%20sanfran_neighborhoods%20where%20ST_Contains(the_geom,%20ST_GeomFromText(%27POINT(-122.4613380%2037.78048)%27,4326))`
 
 which returns:
-``` json
+{% highlight json %}
 { rows: [
   {
     cartodb_id: 801,
@@ -32,7 +32,7 @@ which returns:
     total: 324
   }
 ]}
-```
+{% endhighlight %}
 
 Tip: To keep data private, you will want to use `&api={secret_api_key}` at the end of the URL
 
