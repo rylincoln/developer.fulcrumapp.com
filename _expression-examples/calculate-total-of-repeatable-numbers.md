@@ -1,8 +1,8 @@
 ---
 layout: default
 section: expressions
-title: "Sum of Numbers in a Repeatable (Total Score or Cost)"
-description: "Calculate the sum of numbers in a repeatable field."
+title: "Sum of Numbers in a Repeatable"
+description: "Calculate the sum of numbers in a repeatable field. Great for total cost or score if when using repeatables."
 category: section
 ---
 
