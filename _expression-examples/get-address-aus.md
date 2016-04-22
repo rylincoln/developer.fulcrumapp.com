@@ -8,7 +8,8 @@ category: section
 
 Addresses in Australia, and other parts of the world, match up differently than in the USA. Here is an example of how to pull out city and state in Australia.
 
-Grabbing the city;
+Grabbing the city:
+
 ```js
 var city = '';
 if ($address.locality && $address.locality != '') {
@@ -18,6 +19,7 @@ SETRESULT(city);
 ```
 
 Grabbing the state:
+
 ```
 var state;
 if ($address.admin_area && $address.admin_area != '') {
