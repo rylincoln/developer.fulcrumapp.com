@@ -6,7 +6,7 @@ description: "Calculate the sum of numbers in a repeatable field."
 category: section
 ---
 
-This example grabs numeric values from a choicefield located in a repeatable. It converts the string values to numbers and then calculates the sum.
+This example grabs numeric values from a choicefield (with options N/A, 0, 1, 2, 3) located in a repeatable. It converts the string values to numbers and then calculates the sum.
 
 ```js
 var array = REPEATABLEVALUES($name_of_repeatable, 'data_name_of_choicefield_score');
@@ -21,7 +21,7 @@ for (var i=0; i < array.length; i++){
   } else {
     score = NUM(array[i]['choice_values']);
   }
-  
+
   total_score += score
 }
 SETRESULT(total_score);
