@@ -2,28 +2,28 @@
 layout: default
 section: data_events
 title: "Add current weather to a record"
-description: "Use this to fetch weather data from the forecast.io API and add it to the record."
+description: "Use this to fetch weather data from the wunderground.com API and add it to the record."
 category: section
 ---
 
-This example assumes you've signed up for an API key from [forecast.io](https://developer.forecast.io/) and have a text field in your app (`weather_summary` below) to store the current weather summary.
+This example assumes you've signed up for an API key from [wunderground.com](https://www.wunderground.com/weather/api) and have a text field in your app (`weather_summary` below) to store the current weather summary.
 
-Here we're listening for the `'change-geometry'` event for a record, and then using the [REQUEST](/data-events/reference/request) function to make an API call to forecast.io. Once we get the response we parse it as JSON and use [SETVALUE](/data-events/reference/setvalue) to update the form value.
+Here we're listening for the `'change-geometry'` event for a record, and then using the [REQUEST](/data-events/reference/request) function to make an API call to wunderground.com. Once we get the response we parse it as JSON and use [SETVALUE](/data-events/reference/setvalue) to update the form value.
 
 ```js
-function getWeather() { 
-  forecastApiKey = 'your_api_key'
+function getWeather() {
+  apiKey = 'your_api_key'
 
   options = {
-    url: 'https://api.forecast.io/forecast/' + forecastApiKey + '/' + LATITUDE() + ',' + LONGITUDE()
+    url: 'https://api.wunderground.com/api/' + apiKey + '/conditions/q/' + LATITUDE() + ',' + LONGITUDE() + '.json'
   }
 
   REQUEST(options, function(error, response, body) {
     if (error) {
       ALERT('Error with request: ' + error)
     } else {
-      weather = JSON.parse(body)
-      SETVALUE('weather_summary', weather.currently.summary)
+      var data = JSON.parse(body).current_observation
+      SETVALUE('weather_summary', data.weather + ', ' + data.wind_string)
     }
   })
 }
@@ -39,4 +39,4 @@ If you only want to fetch weather when explicitly requested by the end user, you
 ON('click', 'your_hyperlink_field', getWeather)
 ```
 
-These examples add a single weather metric, but many others [are available](https://developer.forecast.io/docs/v2#data-points) and could be added to multiple fields in your app.
+These examples add basic weather metrics, but many others [are available](https://www.wunderground.com/weather/api/d/docs?d=data/conditions) and could be added to multiple fields in your app.
