@@ -50,6 +50,6 @@ REQUEST(options, callback);
 
 ### CORS and Web Browser Support
 
-To work in the web browser, URLs fetched using REQUEST require HTTPS & CORS. This is not a limitation of Fulcrum - it’s just the way modern web browsers work. Since Fulcrum is hosted on a secure website, all requests made from the site must also be secure and respond with the proper headers required by the browser. If you encounter CORS errors when trying to use an API with the REQUEST function, we recommend contacting the API provider and asking them to add CORS support to their API. As a last resort, you can use a CORS proxy to proxy requests to URLs that don’t support it. https://crossorigin.me is a freely hosted CORS proxy. Note that crossorigin.me is not a Fulcrum service.
+To work in the web browser, URLs fetched using REQUEST *require* HTTPS & [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). This is not a limitation of Fulcrum - it's just the way modern web browsers work. Since Fulcrum is hosted on a secure website, all requests made from the site must also be secure and respond with the proper headers required by the browser. If you encounter CORS errors when trying to use an API with the REQUEST function, we recommend contacting the API provider and asking them to [add CORS support to their API](http://http://enable-cors.org). As a last resort, you can use a CORS proxy to proxy requests to URLs that don't support it. https://crossorigin.me is a freely hosted CORS proxy. Note that crossorigin.me is not a Fulcrum service.
 
 
