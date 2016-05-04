@@ -9,7 +9,7 @@ permalink: /data-events/reference/invalid/
 
 ### Description
 
-The INVALID function is designed for the sole purpose of doing custom validations when saving records. It's a special purpose function that's intended to only be used within the `validate-record` and `validate-repeatable` events. It's different from `ALERT` in a couple of ways. First, it instructs the editor to halt the saving the record. And second, messages passed to `INVALID` are combined and displayed alongside the rest of the built-in validations like required fields, pattern validations, and min/max constraints. This allows custom validation logic to be displayed in a natural way to the end user as if it were a built-in validation.
+The INVALID function is designed for the sole purpose of doing custom validations when saving records. It's a special purpose function that's intended to only be used within the `validate-record` and `validate-repeatable` events. It's different from `ALERT` in a couple of ways. First, it instructs the editor to halt saving the record. And second, messages passed to `INVALID` are combined and displayed alongside the rest of the built-in validations like required fields, pattern validations, and min/max constraints. This allows custom validation logic to be displayed in a natural way to the end user as if it were a built-in validation.
 
 ### Parameters
 
