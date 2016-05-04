@@ -9,7 +9,7 @@ permalink: /data-events/reference/request/
 
 ### Description
 
-The REQUEST function is for making external HTTP requests. It's one of the powerful data event functions and enables you to retrieve external data while filling out a form. It can be combined with the other functions to create very dynamic forms that populate information on-demand from external sources. It contains the necessary options to perform any HTTP request, including support for PUT, POST, etc and custom headers.
+The REQUEST function is for making external HTTP requests. It's one of the most powerful data event functions and enables you to retrieve external data while filling out a form. It can be combined with the other functions to create very dynamic forms that populate information on-demand from external sources. It contains the necessary options to perform any HTTP request, including support for PUT, POST, etc and custom headers.
 
 ### Parameters
 
