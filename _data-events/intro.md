@@ -219,13 +219,13 @@ The callback for `add-audio` events is passed an event parameter with `name`, `f
 
 #### Using data from other APIs
 
-If you require pulling in data from an outside source, you can use the [Request](https://github.com/request/request) library. This library supports HTTPS and follows redirects by default.
+If you require pulling in data from an outside source, you can use the [REQUEST](/data-events/reference/request/) function. This function has a simple signature and allows you to perform arbitrary HTTP requests.
 
-Request requires two parameters-- an options property, which is where you put the API url, and a callback function that is trigger when the Url is called. 
+`REQUEST` requires two parameters-- an options object containing the url and other request parameters, and a callback function that is called after the request finishes. HTTP requests are performed asynchronously, so code that processes the response needs to be contained within the callback function body.
 
 Tips: You should use the _data name_ of the field that you want to populate. You also will want to make sure that you are returning one value (in the code below we are only grabbing the first row, `row[0]`).
 
-``` js
+```js
 function doThis() {
   options = {
     url: "https://theURLyouneed.com"
@@ -241,13 +241,14 @@ function doThis() {
   })
 }
 ```
-With Request, you can `put`, `post` and `get` data. You can `get` elevation coordinates from the USGS or you can `put` updated features in a CartoDB table. 
 
-For now, REQUEST requires HTTPS & CORS. We are exploring options for working around this limitation. Therefore, if you are trying to use an API that does not meet the CORS requirements we recommend you set up your own proxy or use a hosted site, like https://crossorigin.me/. 
-
-If you are having difficulty determining what the data is on your API you can use something like [http://requestb.in/](http://requestb.in/). This works great for inspecting the raw data.
+With `REQUEST`, you can `put`, `post` and `get` data. You can `get` elevation coordinates from the USGS or you can `put` updated features in a CartoDB table.
 
 You can view the [CartoDB](/data-events/examples/geofencing-with-cartodb) example for more insight into using APIs.
+
+## CORS and Web Browser Support
+
+To work in the web browser, URLs fetched using REQUEST *require* HTTPS & [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). This is not a limitation of Fulcrum - it's just the way modern web browsers work. Since Fulcrum is hosted on a secure website, all requests made from the site must also be secure and respond with the proper headers required by the browser. If you encounter CORS errors when trying to use an API with the REQUEST function, we recommend contacting the API provider and asking them to [add CORS support to their API](http://http://enable-cors.org). As a last resort, you can use a CORS proxy to proxy requests to URLs that don't support it. https://crossorigin.me is a freely hosted CORS proxy. Note that crossorigin.me is not a Fulcrum service.
 <hr>
 
 ## Reference
