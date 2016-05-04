@@ -30,22 +30,26 @@ permalink: /data-events/reference/request/
 ### Examples
 
 ```js
-options = {
-  url: 'https://api.forecast.io/forecast/your_api_key/40,-100'
-}
+// This example looks up the place name from OpenStreetMap when the location changes and fills in a text
+// field with the place name.
 
-function callback(error, response, body) {
-  if (error) {
-    ALERT('Error with request: ' + error)
-  } else {
-    weather = JSON.parse(body)
-    SETVALUE('weather_summary', weather.currently.summary)
+ON('change-geometry', function(event) {
+  var options = {
+    url: 'https://nominatim.openstreetmap.org/search/' + LATITUDE() + ',' + LONGITUDE() + '?format=json&polygon=1&addressdetails=1'
   }
-}
 
-REQUEST(options, callback);
+  REQUEST(options, function(error, response, body) {
+    if (error) {
+      ALERT('Error with request: ' + error)
+    } else {
+      var data = JSON.parse(body)
 
-// Performs a request with options and execute callback on completion
+      if (data.length) {
+        SETVALUE('place_name', data[0].display_name)
+      }
+    }
+  })
+});
 ```
 
 ### CORS and Web Browser Support
