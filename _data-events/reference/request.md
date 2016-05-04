@@ -7,6 +7,10 @@ category: section
 permalink: /data-events/reference/request/
 ---
 
+### Description
+
+The REQUEST function is for making external HTTP requests. It's one of the powerful data event functions and enables you to retrieve external data while filling out a form. It can be combined with the other functions to create very dynamic forms that populate information on-demand from external sources. It contains the necessary options to perform any HTTP request, including support for PUT, POST, etc and custom headers.
+
 ### Parameters
 
 `options` Object (__required__) - The options to pass for the request
@@ -31,7 +35,7 @@ permalink: /data-events/reference/request/
 
 ```js
 // This example looks up the place name from OpenStreetMap when the location changes and fills in a text
-// field with the place name.
+// field with the place name. Replace 'place_name' below with a text field on your form.
 
 ON('change-geometry', function(event) {
   var options = {
