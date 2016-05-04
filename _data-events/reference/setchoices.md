@@ -11,7 +11,7 @@ permalink: /data-events/reference/setchoices/
 
 `field` String (__required__) - The data name for the field
 
-`choices` Array,null (__required__) - The choices for the choice field
+`choices` Array,null (__required__) - The choices for the choice field, or `null` to restore the original choices.
 
 ### Examples
 

@@ -11,7 +11,7 @@ permalink: /data-events/reference/setreadonly/
 
 `field` String (__required__) - The data name
 
-`readOnly` boolean,null (__required__) - Boolean value representing whether the field should be read-only
+`readOnly` boolean,null (__required__) - Boolean value representing whether the field should be read-only, or `null` to restore the original state
 
 ### Examples
 

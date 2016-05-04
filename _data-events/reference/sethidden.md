@@ -11,7 +11,7 @@ permalink: /data-events/reference/sethidden/
 
 `field` String (__required__) - The data name for the field
 
-`hidden` boolean,null (__required__) - Boolean value representing whether the field should be hidden
+`hidden` boolean,null (__required__) - Boolean value representing whether the field should be hidden, or `null` to restore the original value
 
 ### Examples
 

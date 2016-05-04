@@ -11,7 +11,7 @@ permalink: /data-events/reference/setlabel/
 
 `field` String (__required__) - The data name for the field
 
-`hidden` String,null (__required__) - The text for the field label
+`hidden` String,null (__required__) - The text for the field label, or `null` to restore the original label
 
 ### Examples
 

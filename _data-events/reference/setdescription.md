@@ -11,7 +11,7 @@ permalink: /data-events/reference/setdescription/
 
 `field` String (__required__) - The data name for the field
 
-`value` String (__required__) - The value to set for the field's description
+`value` String (__required__) - The value to set for the field's description, or `null` to restore the original description
 
 ### Examples
 

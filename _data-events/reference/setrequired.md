@@ -11,7 +11,7 @@ permalink: /data-events/reference/setrequired/
 
 `field` String (__required__) - The data name for the field
 
-`hidden` boolean,null (__required__) - Boolean value representing whether the field should be required
+`hidden` boolean,null (__required__) - Boolean value representing whether the field should be required, or `null` to restore the original state
 
 ### Examples
 
