@@ -7,9 +7,29 @@ category: section
 permalink: /data-events/reference/currentlocation/
 ---
 
+### Description
+
+Returns the current device location as an object. This can be used for Q/A purposes or other custom processing logic. This is *not* always the same as the record location. For example, if editing an imported record or previously created record, the current location will be different.
+
 ### Parameters
 
 No parameters
+
+### Returns
+
+Object - The current device location
+
+```json
+{
+  "latitude": 27.822209699105304,
+  "longitude": -82.69114932984364,
+  "altitude": 15.030448913574219,
+  "accuracy": 10,
+  "course": 213,
+  "speed": 3.4,
+  "timestamp": 1462414931.9999695
+}
+```
 
 ### Examples
 
