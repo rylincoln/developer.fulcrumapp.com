@@ -2,10 +2,14 @@
 layout: default
 section: data_events
 title: "SETCHOICES"
-description: "Set the available choices for a choice field."
+description: "Set the available choices for a choice field"
 category: section
 permalink: /data-events/reference/setchoices/
 ---
+
+### Description
+
+The SETCHOICES function allows for dynamic modification of the choice options on choice fields. For example, if you want to limit or completely replace the pick list options depending on other data scenarios on the form, you can use SETCHOICES to modify the options. Depending on what's required, it might be easier to use [SETCHOICEFILTER](/data-events/reference/setchoicefilter/), which is a similar function except it doesn't completely redefine the choices, it only applies a filter to them.
 
 ### Parameters
 
