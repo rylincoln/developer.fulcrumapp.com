@@ -18,6 +18,10 @@ search: true
 
 Display a message as an alert in the mobile app.
 
+### [CLEARINTERVAL](/data-events/reference/clearinterval/)
+
+Clears an interval that was previously started with SETINTERVAL.
+
 ### [CLEARTIMEOUT](/data-events/reference/cleartimeout/)
 
 Clears a timeout that was previously started with SETTIMEOUT.
@@ -66,6 +70,10 @@ Set the description of a field.
 ### [SETHIDDEN](/data-events/reference/sethidden/)
 
 Set the visibility of a field.
+
+### [SETINTERVAL](/data-events/reference/setinterval/)
+
+Repeatedly calls a function with a fixed time delay between each call.
 
 ### [SETLABEL](/data-events/reference/setlabel/)
 
