@@ -25,7 +25,7 @@ The SETINTERVAL function can be used to repeatedly call a function at a specifie
 
 ```js
 ON('load-record', function(event) {
-  var fiveSeconds = 1000 * 10;
+  var fiveSeconds = 1000 * 5;
 
   SETINTERVAL(function() {
     if (CURRENTLOCATION()) {
@@ -34,5 +34,5 @@ ON('load-record', function(event) {
   }, fiveSeconds);
 });
 
-// Set a field label to the current GPS accuracy every 10 seconds
+// Set a field label to the current GPS accuracy every 5 seconds
 ```

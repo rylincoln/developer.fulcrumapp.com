@@ -19,7 +19,7 @@ The CLEARINTERVAL function clears an interval that was previously started with [
 
 ```js
 ON('load-record', function(event) {
-  var fiveSeconds = 1000 * 10;
+  var fiveSeconds = 1000 * 5;
   var twoMinutes = 1000 * 60 * 2;
 
   var interval = SETINTERVAL(function() {
