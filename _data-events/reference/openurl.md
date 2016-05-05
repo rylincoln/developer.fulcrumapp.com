@@ -7,6 +7,10 @@ category: section
 permalink: /data-events/reference/openurl/
 ---
 
+### Description
+
+OPENURL is for opening links from within a form. It can be used to open other mobile apps or websites within an event handler. You can use form fields to build the URL to open so the links can be derived from data already entered on the record.
+
 ### Parameters
 
 `url` String (__required__) - The URL to open

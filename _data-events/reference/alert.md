@@ -2,10 +2,14 @@
 layout: default
 section: data_events
 title: "ALERT"
-description: "Display a message as an alert in the mobile app."
+description: "Display a message as an alert."
 category: section
 permalink: /data-events/reference/alert/
 ---
+
+### Description
+
+ALERT displays a message to the user. You can provide both the title and message of the alert box.
 
 ### Parameters
 

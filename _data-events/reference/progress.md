@@ -7,6 +7,10 @@ category: section
 permalink: /data-events/reference/progress/
 ---
 
+### Description
+
+PROGRESS displays a non-dismissible message that can be used to provide feedback when performing an asynchronous function. For example, while fetching data from an API using [REQUEST](/data-events/reference/request/) it might be desirable to let the user know that the request is in progress.
+
 ### Parameters
 
 `title` String (__required__) - A short title for the progress message
@@ -16,21 +20,23 @@ permalink: /data-events/reference/progress/
 ### Examples
 
 ```js
-PROGRESS('Just a sec!', 'Searching for nearby facilities ...')
+var url = 'https://example.com';
 
-// Displays an progress message that looks like
+// show progress message while request is happening
+PROGRESS('Searching for nearby facilities ...');
+
+REQUEST(url, function(error, response, body) {
+  PROGRESS();
+
+  if (error) {
+    ALERT(INSPECT(error));
+  } else {
+    // do something with the API response
+  }
+});
+
+// Displays an progress message that looks like this while the request is in progress
 // +-------------------------------------------+
-// | Just a sec!                               |
-// +-------------------------------------------|
-// |                                           |
 // | Searching for nearby facilities ...       |
-// |                                           |
 // +-------------------------------------------+
-```
-
-
-```js
-PROGRESS()
-
-// Call with no parameters to dismiss the progress message.
 ```

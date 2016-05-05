@@ -17,7 +17,7 @@ No parameters
 
 ### Returns
 
-Object - The current device location
+`Object` - The current device location
 
 ```json
 {
