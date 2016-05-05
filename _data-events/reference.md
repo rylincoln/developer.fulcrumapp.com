@@ -18,6 +18,10 @@ search: true
 
 Display a message as an alert in the mobile app.
 
+### [CLEARTIMEOUT](/data-events/reference/cleartimeout/)
+
+Clears a timeout that was previously started with SETTIMEOUT.
+
 ### [CURRENTLOCATION](/data-events/reference/currentlocation/)
 
 Returns a location object containing metadata about the user's current location. This location may be different
@@ -94,6 +98,10 @@ Set the status of a record.
 ### [SETSTATUSFILTER](/data-events/reference/setstatusfilter/)
 
 Set the allowable status values for a record.
+
+### [SETTIMEOUT](/data-events/reference/settimeout/)
+
+Calls a function after a specified delay.
 
 ### [SETVALUE](/data-events/reference/setvalue/)
 
