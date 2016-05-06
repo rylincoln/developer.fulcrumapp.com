@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Hide fields for based on user role"
+title: "Hide fields based on user role"
 description: "Use this example to conditionally display fields for certain user roles"
 category: section
 ---
