@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Control the status field options based on user role"
+title: "Set the status field options based on user role"
 description: "Use this example to control which status field options are available based on the user role"
 category: section
 ---
