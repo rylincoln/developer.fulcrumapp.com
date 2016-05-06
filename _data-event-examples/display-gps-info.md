@@ -37,8 +37,10 @@ ON('load-record', function(event) {
     SETLABEL('gps_info', message);
   };
 
+  // go ahead and update it now...
   updateLocationInfo();
 
+  // ... and every 3 seconds
   SETINTERVAL(updateLocationInfo, 3000);
 });
 ```
