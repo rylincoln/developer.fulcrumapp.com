@@ -16,14 +16,12 @@ permalink: /data-events/reference/setlabel/
 ### Examples
 
 ```js
-SETLABEL('weather_summary', 'Weather Report')
-
 // Sets the field's label to 'Weather Report'
+SETLABEL('weather_summary', 'Weather Report')
 ```
 
 
 ```js
-SETLABEL('weather_summary', null)
-
 // Unsets any override previously set by SETLABEL and uses the original setting from the form schema
+SETLABEL('weather_summary', null)
 ```

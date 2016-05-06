@@ -18,24 +18,22 @@ The SETSTATUSFILTER function allows for dynamic filtering of the available statu
 ### Examples
 
 ```js
-SETSTATUSFILTER(['inspection_pending', 'in_inspection'])
-
 // Sets the allowable status values for the record to be 'inspection_pending' or 'in_inspection'
+SETSTATUSFILTER(['inspection_pending', 'in_inspection'])
 ```
 
 
 ```js
-SETSTATUSFILTER(null)
-
 // Unsets any previous status filters and allows any status to be selected for the record
+SETSTATUSFILTER(null)
 ```
 
+
 ```js
+// Sets the allowable status values for the record to be 'inspection_pending' or 'in_inspection' for Standard Users
 ON('load-record', function(event) {
   if (ROLE() === 'Standard User') {
     SETSTATUSFILTER(['inspection_pending', 'in_inspection']);
   }
 });
-
-// Sets the allowable status values for the record to be 'inspection_pending' or 'in_inspection' for Standard Users
 ```

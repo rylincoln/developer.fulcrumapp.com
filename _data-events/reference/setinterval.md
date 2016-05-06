@@ -13,13 +13,9 @@ The SETINTERVAL function can be used to repeatedly call a function at a specifie
 
 ### Parameters
 
-`function` Function (__required__) - The function to execute at the interval
+`function` function (__required__) - The function to execute at the interval
 
-`delay` Number (__required__) - The number of milliseconds to delay between each call (e.g. 1000 is 1 second)
-
-### Result
-
-`Number` - interval ID that can be used to clear the interval with [CLEARINTERVAL](/data-events/reference/clearinterval/).
+`interval` Number (__required__) - The number of milliseconds to delay between each call (e.g. 1000 is 1 second)
 
 ### Examples
 

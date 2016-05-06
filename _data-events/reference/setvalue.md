@@ -16,48 +16,49 @@ permalink: /data-events/reference/setvalue/
 ### Examples
 
 ```js
-SETVALUE('weather_summary', 'Just beautiful')
-
 // Sets the value of a weather summary field
+SETVALUE('text_field', 'A Text Value')
 ```
 
-```js
-SETVALUE('time_field', '16:00')
 
+```js
 // Sets the value of a time field
+SETVALUE('time_field', '16:00')
 ```
 
-```js
-SETVALUE('date_field', '2016-04-28')
 
+```js
 // Sets the value of a date field
+SETVALUE('date_field', '2016-04-28')
 ```
 
-```js
-SETVALUE('choice_field', 'red')
 
+```js
 // Sets the value of a single choice field
+SETVALUE('choice_field', 'red')
 ```
 
-```js
-SETVALUE('multiple_choice_field', ['red', 'green', 'blue'])
 
+```js
 // Sets the value of a multiple choice field
+SETVALUE('multiple_choice_field', ['red', 'green', 'blue'])
 ```
 
-```js
-SETVALUE('classification_field', ['level1', 'level2', 'level3'])
 
+```js
 // Sets the value of a classification field to level1 > level2 > level3
+SETVALUE('classification_field', ['level1', 'level2', 'level3'])
 ```
 
-```js
-SETVALUE('yes_no_field', 'yes')
 
+```js
 // Sets the value of a yes/no field
+SETVALUE('yes_no_field', 'yes')
 ```
 
+
 ```js
+// Sets the value of an address field
 var address = {
   sub_thoroughfare: '360',
   thoroughfare: 'Central Avenue',
@@ -70,6 +71,4 @@ var address = {
 };
 
 SETVALUE('address_field', address)
-
-// Sets the value of an address field
 ```

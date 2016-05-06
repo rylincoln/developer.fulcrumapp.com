@@ -18,29 +18,26 @@ The INVALID function is designed for the sole purpose of doing custom validation
 ### Examples
 
 ```js
-INVALID('Depth must be less than 20.')
-
 // Displays an alert and stops the record from being saved
+INVALID('Depth must be less than 20.')
 ```
 
 
 ```js
+// Use with the 'validate-record' event to stop a record from being saved
 ON('validate-record', function (event) {
    if (NUM($depth) >= 20) {
      INVALID('Depth must be less than 20.')
    }
 });
-
-// Use with the 'validate-record' event to stop a record from being saved
 ```
 
 
 ```js
+// Use with the 'validate-repeatable' event to stop a repeatable from being saved
 ON('validate-repeatable', 'repeatable_field_name', function (event) {
    if (!ISSELECTED($choice_field, 'Purple')) {
      INVALID('You gotta pick purple!')
    }
 });
-
-// Use with the 'validate-repeatable' event to stop a repeatable from being saved
 ```

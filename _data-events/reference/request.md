@@ -11,11 +11,15 @@ permalink: /data-events/reference/request/
 
 The REQUEST function is for making external HTTP requests. It's one of the most powerful data event functions and enables you to retrieve external data while filling out a form. It can be combined with the other functions to create very dynamic forms that populate information on-demand from external sources. It contains the necessary options to perform any HTTP request, including support for PUT, POST, etc and custom headers.
 
+### CORS and Web Browser Support
+
+To work in the web browser, URLs fetched using REQUEST *require* HTTPS & [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). This is not a limitation of Fulcrum - it's just the way modern web browsers work. Since Fulcrum is hosted on a secure website, all requests made from the site must also be secure and respond with the proper headers required by the browser. If you encounter CORS errors when trying to use an API with the REQUEST function, we recommend contacting the API provider and asking them to [add CORS support to their API](http://http://enable-cors.org). As a last resort, you can use a CORS proxy to proxy requests to URLs that don't support it. https://crossorigin.me is a freely hosted CORS proxy. Note that crossorigin.me is not a Fulcrum service.
+
 ### Parameters
 
 `options` Object (__required__) - The options to pass for the request
 
-`options.url` string (__required__) - The url for the request (HTTPS required)
+`options.url` string (__required__) - The url for the request
 
 `options.method` string (optional)  [default = GET] - The HTTP method for the request (POST, PUT, DELETE, etc.)
 
@@ -55,9 +59,3 @@ ON('change-geometry', function(event) {
   })
 });
 ```
-
-### CORS and Web Browser Support
-
-To work in the web browser, URLs fetched using REQUEST *require* HTTPS & [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). This is not a limitation of Fulcrum - it's just the way modern web browsers work. Since Fulcrum is hosted on a secure website, all requests made from the site must also be secure and respond with the proper headers required by the browser. If you encounter CORS errors when trying to use an API with the REQUEST function, we recommend contacting the API provider and asking them to [add CORS support to their API](http://http://enable-cors.org). As a last resort, you can use a CORS proxy to proxy requests to URLs that don't support it. https://crossorigin.me is a freely hosted CORS proxy. Note that crossorigin.me is not a Fulcrum service.
-
-

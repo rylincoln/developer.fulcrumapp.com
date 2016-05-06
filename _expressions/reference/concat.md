@@ -7,11 +7,14 @@ category: section
 permalink: /expressions/reference/concat/
 ---
 
+### Description
+
+
+**NOTE:** This can only be used on fields that store the values as a string. Fields like choice fields and classification sets store the values in an array.
+
 ### Parameters
 
 `var_args_values` String (__required__) - Strings to append in sequence.
-
-**NOTE:** This can only be used on fields that store the values as a sting. Fields like choice fields and classification sets store the values in an array.
 
 ### Returns
 

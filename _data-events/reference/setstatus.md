@@ -14,7 +14,6 @@ permalink: /data-events/reference/setstatus/
 ### Examples
 
 ```js
-SETSTATUS('inspection_pending')
-
 // Sets the status of a record
+SETSTATUS('inspection_pending')
 ```

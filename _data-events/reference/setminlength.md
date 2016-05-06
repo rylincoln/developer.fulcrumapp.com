@@ -23,7 +23,6 @@ SETMINLENGTH('weather_summary', 25)
 
 
 ```js
-SETMINLENGTH('weather_summary', null)
-
 // Unsets any override previously set by SETMINLENGTH and uses the original setting from the form schema
+SETMINLENGTH('weather_summary', null)
 ```

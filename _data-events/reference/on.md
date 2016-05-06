@@ -26,9 +26,8 @@ var callback = function () {
   }
 }
 
-ON('validate-record', callback)
-
 // Listens for 'save-record' events and stops the record from being saved unless it's within a latitude range
+ON('validate-record', callback)
 ```
 
 
@@ -37,9 +36,8 @@ var callback = function () {
   // Do something with the new $weather_summary values
 }
 
-ON('change', 'weather_summary', callback)
-
 // Listens for changes to the weather summary field and executes callback
+ON('change', 'weather_summary', callback)
 ```
 
 
@@ -48,9 +46,8 @@ var callback = function () {
   // Do something with the location via LATITUDE() AND LONGITUDE() values
 }
 
-ON('change-geometry', callback)
-
 // Listens for changes to a record's geometry (location) and executes callback
+ON('change-geometry', callback)
 ```
 
 
@@ -59,7 +56,6 @@ var callback = function () {
   // Do something with the repeatable location via LATITUDE() AND LONGITUDE() values
 }
 
-ON('change-geometry', 'repeatable_item', callback)
-
 // Listens for changes to a repeatable item's geometry and executes callback
+ON('change-geometry', 'repeatable_item', callback)
 ```

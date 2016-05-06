@@ -348,6 +348,10 @@ Returns the current 'Other' value for a choice field or classification field
 
 Returns the value of Pi to 15 decimal places.
 
+### [PLUCK](/expressions/reference/pluck/)
+
+Extract property values from an object
+
 ### [POWER](/expressions/reference/power/)
 
 Returns a number raised to a power.

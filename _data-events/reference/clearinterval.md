@@ -18,6 +18,7 @@ The CLEARINTERVAL function clears an interval that was previously started with [
 ### Examples
 
 ```js
+// Starts an interval to update the GPS accuracy every 5 seconds and stops updating after 2 minutes.
 ON('load-record', function(event) {
   var fiveSeconds = 1000 * 5;
   var twoMinutes = 1000 * 60 * 2;
@@ -32,6 +33,4 @@ ON('load-record', function(event) {
     CLEARINTERVAL(interval);
   }, twoMinutes);
 });
-
-// Starts an interval to update the GPS accuracy every 5 seconds and stops updating after 2 minutes.
 ```

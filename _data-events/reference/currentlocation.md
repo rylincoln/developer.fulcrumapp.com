@@ -11,13 +11,7 @@ permalink: /data-events/reference/currentlocation/
 
 Returns the current device location as an object. This can be used for Q/A purposes or other custom processing logic. This is *not* always the same as the record location. For example, if editing an imported record or previously created record, the current location will be different.
 
-### Parameters
-
-No parameters
-
-### Returns
-
-`Object` - The current device location
+Returns data in the following format:
 
 ```json
 {
@@ -30,6 +24,10 @@ No parameters
   "timestamp": 1462414931.9999695
 }
 ```
+
+### Parameters
+
+No parameters
 
 ### Examples
 

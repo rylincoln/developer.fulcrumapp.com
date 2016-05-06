@@ -23,7 +23,6 @@ SETMAXLENGTH('weather_summary', 25)
 
 
 ```js
-SETMAXLENGTH('weather_summary', null)
-
 // Unsets any override previously set by SETMAXLENGTH and uses the original setting from the form schema
+SETMAXLENGTH('weather_summary', null)
 ```

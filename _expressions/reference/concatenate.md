@@ -7,11 +7,14 @@ category: section
 permalink: /expressions/reference/concatenate/
 ---
 
+### Description
+
+
+**NOTE:** This can only be used on fields that store the values as a string. Fields like choice fields and classification sets store the values in an array. Please refer [this example](/expressions/examples/combine-arrays/) for combining arrays.
+
 ### Parameters
 
 `var_args_values` String (__required__) - Strings to append in sequence.
-
-**NOTE:** This can only be used on fields that store the values as a sting. Fields like choice fields and classification sets store the values in an array. Please refer [this example](http://developer.fulcrumapp.com/expressions/examples/combine-arrays/) for combining arrays.
 
 ### Returns
 

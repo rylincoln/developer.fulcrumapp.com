@@ -18,6 +18,8 @@ The CLEARTIMEOUT function clears a timeout that was previously started with [SET
 ### Examples
 
 ```js
+// Starts a timer to alert after five minutes, and another timeout that clears the first one after four minutes.
+// No alert is ever displayed.
 ON('load-record', function(event) {
   var fiveMinutes = 1000 * 60 * 5;
   var fourMinutes = 1000 * 60 * 4;
@@ -30,7 +32,4 @@ ON('load-record', function(event) {
     CLEARTIMEOUT(timer);
   }, fourMinutes);
 });
-
-// Starts a timer to alert after five minutes, and another timeout that clears the first one after four minutes.
-// No alert is ever displayed.
 ```

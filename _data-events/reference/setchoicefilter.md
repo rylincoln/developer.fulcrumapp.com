@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "SETCHOICEFILTER"
-description: "Filter the choices in a choice field or classification field."
+description: "Filter the choices in a choice field or classification field"
 category: section
 permalink: /data-events/reference/setchoicefilter/
 ---
@@ -20,21 +20,18 @@ The SETCHOICEFILTER function allows for dynamic filtering of the choice options 
 ### Examples
 
 ```js
-SETCHOICEFILTER('weather_summary', 'cat')
-
 // Filters the choices in the weather summary field to those that contain 'cat'
+SETCHOICEFILTER('weather_summary', 'cat')
 ```
 
 
 ```js
-SETCHOICEFILTER('weather_summary', ['cat', 'dog'])
-
 // Filters the choices in the weather summary field to those that contain 'cat' or 'dog'
+SETCHOICEFILTER('weather_summary', ['cat', 'dog'])
 ```
 
 
 ```js
-SETCHOICEFILTER('weather_summary', null)
-
 // Unsets any filter previously set by SETCHOICEFILTER and applies no filter
+SETCHOICEFILTER('weather_summary', null)
 ```

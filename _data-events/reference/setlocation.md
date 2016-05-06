@@ -16,7 +16,6 @@ permalink: /data-events/reference/setlocation/
 ### Examples
 
 ```js
-SETLOCATION(35.5946167, -80.8638915)
-
 // Sets the location of a record
+SETLOCATION(35.5946167, -80.8638915)
 ```

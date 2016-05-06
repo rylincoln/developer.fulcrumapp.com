@@ -16,20 +16,19 @@ search: true
 
 ### [ALERT](/data-events/reference/alert/)
 
-Display a message as an alert in the mobile app.
+Display a message as an alert.
 
 ### [CLEARINTERVAL](/data-events/reference/clearinterval/)
 
-Clears an interval that was previously started with SETINTERVAL.
+Clears an interval that was previously started with SETINTERVAL
 
 ### [CLEARTIMEOUT](/data-events/reference/cleartimeout/)
 
-Clears a timeout that was previously started with SETTIMEOUT.
+Clears a timeout that was previously started with SETTIMEOUT
 
 ### [CURRENTLOCATION](/data-events/reference/currentlocation/)
 
-Returns a location object containing metadata about the user's current location. This location may be different
-than the record location.
+Returns a location object containing metadata about the user's current location. This location may be different than the record location.
 
 ### [INVALID](/data-events/reference/invalid/)
 
@@ -57,11 +56,11 @@ Performs an HTTP request and executes the callback on completion.
 
 ### [SETCHOICEFILTER](/data-events/reference/setchoicefilter/)
 
-Filter the choices in a choice field.
+Filter the choices in a choice field or classification field
 
 ### [SETCHOICES](/data-events/reference/setchoices/)
 
-Set the available choices for a choice field.
+Set the available choices for a choice field
 
 ### [SETDESCRIPTION](/data-events/reference/setdescription/)
 
@@ -73,7 +72,7 @@ Set the visibility of a field.
 
 ### [SETINTERVAL](/data-events/reference/setinterval/)
 
-Repeatedly calls a function with a fixed time delay between each call.
+Repeatedly calls a function with a fixed time delay between each call
 
 ### [SETLABEL](/data-events/reference/setlabel/)
 
@@ -95,6 +94,10 @@ Set the minimum length for a field.
 
 Set the project of a record.
 
+### [SETREADONLY](/data-events/reference/setreadonly/)
+
+Sets a field to be read-only or editable.
+
 ### [SETREQUIRED](/data-events/reference/setrequired/)
 
 Set whether or not a field is required.
@@ -109,15 +112,11 @@ Set the allowable status values for a record.
 
 ### [SETTIMEOUT](/data-events/reference/settimeout/)
 
-Calls a function after a specified delay.
+Calls a function after a specified delay
 
 ### [SETVALUE](/data-events/reference/setvalue/)
 
 Set the value of a field.
-
-### [SETREADONLY](/data-events/reference/setreadonly/)
-
-Sets a field to be read-only or editable.
 
 ### [STORAGE](/data-events/reference/storage/)
 
