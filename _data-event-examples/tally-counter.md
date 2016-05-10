@@ -15,6 +15,6 @@ For this to work, you will need a numeric field with the data name `tally_count`
 ```js
 ON('click', 'increment', function(event) {
   // increment the numeric field by 1
-  SETVALUE('tally_count', +$tally_count + 1);
+  SETVALUE('tally_count', ($tally_count || 0) + 1);
 });
 ```
