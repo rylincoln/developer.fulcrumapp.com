@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Prevent changes after a record has been signed"
+title: "Prevent changes after signing"
 description: "Lock down fields so they cannot be changed once a signature has been added to a record."
 category: section
 ---
