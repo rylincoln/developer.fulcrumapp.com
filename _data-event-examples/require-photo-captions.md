@@ -10,10 +10,12 @@ This example uses the `validate-record` event in conjunction with the [INVALID](
 
 ```js
 ON('validate-record', function (event) {
-  // Loop through the $photos objects and test the caption property for null
-  for (var i = 0; i < $photos.length; i++) {
-    if ($photos[i].caption == null) {
-      INVALID('All photos must have captions!');
+  // If there are any photos, loop through the $photos objects and test the caption property for null
+  if ($photos) {
+    for (var i = 0; i < $photos.length; i++) {
+      if ($photos[i].caption == null) {
+        INVALID('All photos must have captions!');
+      }
     }
   }
 })
