@@ -104,15 +104,15 @@ Records will still be ordered according to the `updated_at` column, even when fi
 | Barcode | string | `"123456789"` |
 | Hyperlink | string | `"http://www.fulcrumapp.com"` |
 | Calculation | string | `"6"` |
-| Single Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Red"],other_values: []}` |
-| Multiple Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Red","White"],other_values: []}` |
-| Classification | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Ford","Mustang"],other_values: []}` |
-| Address | address object | `{sub_thoroughfare: "360",thoroughfare: "Central Ave",suite: "",locality: "St. Petersburg",sub_admin_area: "",admin_area: "FL",postal_code: "33701",country: "United States"}` |
-| Photo | array of photo objects | `[{photo_id:"a8d1df96-44e5-75e9-7312-7e2c5e902496,caption: ""}]` |
-| Video | array of video objects | `[{video_id:"712850b4-4de2-4d66-a6cc-034201245b52,caption: ""}]` |
-| Audio | array of audio objects | `[{audio_id:"f81d51b5-1ce9-465b-be0b-27f1eca41e2c,caption: ""}]` |
-| Signature | signature object | `{timestamp: "2015-07-09T14:54:04Z",signature_id: "9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"}` |
-| Repeatable | array of repeatable objects | `[{id:"d67801a0-adc1-6f60-4b0d-ec3a7191b34b",geometry:{type:"Point",coordinates:[-73.123456,42.123456]},form_values: {0129: "Hello world"}}]` |
+| Single Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{"choice_values": ["Red"],"other_values": []}` |
+| Multiple Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{"choice_values": ["Red","White"],"other_values": []}` |
+| Classification | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{"choice_values": ["Ford","Mustang"],"other_values": []}` |
+| Address | address object | `{"sub_thoroughfare": "360","thoroughfare": "Central Ave","suite": "","locality": "St. Petersburg","sub_admin_area": "","admin_area": "FL","postal_code": "33701","country": "United States"}` |
+| Photo | array of photo objects | `[{"photo_id":"a8d1df96-44e5-75e9-7312-7e2c5e902496,"caption": ""}]` |
+| Video | array of video objects | `[{"video_id":"712850b4-4de2-4d66-a6cc-034201245b52,"caption": ""}]` |
+| Audio | array of audio objects | `[{"audio_id":"f81d51b5-1ce9-465b-be0b-27f1eca41e2c,"caption": ""}]` |
+| Signature | signature object | `{"timestamp": "2015-07-09T14:54:04Z","signature_id": "9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"}` |
+| Repeatable | array of repeatable objects | `[{"id":"d67801a0-adc1-6f60-4b0d-ec3a7191b34b","geometry":{"type":"Point","coordinates":[-73.123456,42.123456]},"form_values": {"0129": "Hello world"}}]` |
 
 ## Validations
 
