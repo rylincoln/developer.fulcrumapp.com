@@ -69,17 +69,15 @@ The following properties must be included in order to create/update a classifica
 |----------|------|----------|----------|-------------|
 | label | string | yes | no | Choice label. |
 | value | string | no | no | Choice value, stored in the database. |
-| child_classifications | array of label/value/child_classifications objects | yes | Child classifications associated with this parent. |
+| child_classifications | array of label/value/child_classifications objects | no | Child classifications associated with this parent. |
 
-Example validation response if `child_classifications` is not included:
+Example validation response if `items` array is not included:
 
 ```
 {
-  "classification_sets": {
+  "classification_set": {
     "errors": {
-      {
-        base: ["child_classifications must be an array object"]
-      }
+      "base": ["child_classifications must be an array object"]
     }
   }
 }
