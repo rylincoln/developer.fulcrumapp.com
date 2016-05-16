@@ -82,6 +82,7 @@ Records will still be ordered according to the `updated_at` column, even when fi
 | created_by_id | string | no | yes | The UUID of user who created the record. |
 | updated_by | string | no | yes | The name of user who last updated the record. |
 | updated_by_id | string | no | yes | The UUID of user who last updated the record. |
+| changeset_id | string | no | no | The UUID of the [changeset](/endpoints/changesets/) associated with the record. |
 | project_id | string | no | no | The UUID of the [project](http://www.fulcrumapp.com/help/projects/) tagged to the record. |
 | assigned_to | string | no | no | The name of the user the record is assigned to. |
 | assigned_to_id | string | no | no | The UUID of the user the record is assigned to. |
