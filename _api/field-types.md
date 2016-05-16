@@ -26,7 +26,7 @@ A ChoiceField is a form element to allow a list of selectable options. There are
 
 `ChoiceField` elements *must* have either:
 
-- a `choices` array that contains a non-empty Array of Hashes of `{label:'', value:''}`
+- a `choices` array that contains a non-empty Array of Hashes of `{"label":"", "value":""}`
   - Every choice object within the `choices` array must contain at least a non-blank label
   - The `value` attribute of each choice is optional, and will default to the `label` if not given
 - a `choice_list_id` field that contains a valid `id` of an existing ChoiceList object
