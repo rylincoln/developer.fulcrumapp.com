@@ -125,9 +125,9 @@ The Forms API gives you access to your form fields, or app schema.
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | neutral_enabled | boolean | yes | Enable N/A choice? |
-| neutral | object | if neutral_enabled | Label/Value for neutral choice (`{label: "N/A",value: "n/a"}`). |
-| positive | object | yes | Label/Value for positive choice (`{label: "Yes",value: "yes"}`). |
-| negative | object | yes | Label/Value for positive choice (`{label: "No",value: "no"}`). |
+| neutral | object | if neutral_enabled | Label/Value for neutral choice (`{"label": "N/A","value": "n/a"}`). |
+| positive | object | yes | Label/Value for positive choice (`{"label": "Yes","value": "yes"}`). |
+| negative | object | yes | Label/Value for positive choice (`{"label": "No","value": "no"}`). |
 
 ### Additional Form Element Properties (ChoiceField)
 
@@ -206,7 +206,7 @@ The Forms API gives you access to your form fields, or app schema.
 {:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| display | object | yes | Calculation display object (`{style: "number",currency: null}`). |
+| display | object | yes | Calculation display object (`{"style": "number","currency": null}`). |
 | expression | string | no | Calculation expression. |
 
 ### Conditions
