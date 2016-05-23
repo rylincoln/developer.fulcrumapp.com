@@ -92,7 +92,7 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Valid photo
 
-```
+```json
 {
   "photo": {
     "access_key": "5b8d16c7-4203-487f-862d-bf454f3de6e1",
@@ -168,7 +168,15 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get metadata for all photos
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/photos.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/photos.json",
@@ -186,7 +194,15 @@ $.ajax({
 
 ### Get metadata for a single photo
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/photos/my-photo-access-key.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/photos/my-photo-access-key.json",
@@ -204,12 +220,14 @@ $.ajax({
 
 ### Upload a new photo
 
-```
+```html
 <form>
   <input type="file" name="photo" id="photo" /><br /><br />
   <input type="button" id="upload" value="upload" />
 </form>
+```
 
+```js
 $(document).ready(function(){
   /**
   * Generates a GUID string.
