@@ -154,7 +154,7 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Valid Record Response
 
-```
+```json
 {
   "record": {
     "status": "Red",
@@ -201,7 +201,7 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get all records for a particular form
 
-```
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/records.json",
@@ -220,7 +220,7 @@ $.ajax({
 
 ### Get a single record by ID
 
-```
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/records/my-record-id.json",
@@ -238,7 +238,7 @@ $.ajax({
 
 ### Create a new record
 
-```
+```js
 $.ajax({
   type: "POST",
   url: "https://api.fulcrumapp.com/api/v2/records.json",
@@ -271,7 +271,7 @@ $.ajax({
 
 ### Update a record
 
-```
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/records/my-record-id.json",
@@ -304,7 +304,7 @@ $.ajax({
 
 ### Delete a record
 
-```
+```js
 $.ajax({
   type: "DELETE",
   url: "https://api.fulcrumapp.com/api/v2/records/my-record-id.json",
