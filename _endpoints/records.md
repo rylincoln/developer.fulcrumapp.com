@@ -201,11 +201,21 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get all records for a particular form
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/records.json?form_id=my-form-id' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
+```
+
+#### jQuery
 ```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/records.json",
-  data: {form_id: "my-form-id"},
+  data: {
+    "form_id": "my-form-id"
+  },
   contentType: "application/json",
   dataType: "json",
   headers: {
@@ -220,6 +230,14 @@ $.ajax({
 
 ### Get a single record by ID
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/records/my-record-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
+```
+
+#### jQuery
 ```js
 $.ajax({
   type: "GET",
@@ -238,6 +256,16 @@ $.ajax({
 
 ### Create a new record
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/records.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+-X POST -d '{"record": {"form_id": "my-form-id","latitude": 27.770787,"longitude": -82.638039,"form_values": {"2832": "My string value","8373": {"choice_values": ["My choice value"]}}}}'
+```
+
+#### jQuery
 ```js
 $.ajax({
   type: "POST",
@@ -271,6 +299,16 @@ $.ajax({
 
 ### Update a record
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/records/my-record-id.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+-X POST -d '{"record": {"form_id": "my-form-id","latitude": 27.770787,"longitude": -82.638039,"form_values": {"2832": "My updated string value","8373": {"choice_values": ["My updated choice value"]}}}}'
+```
+
+#### jQuery
 ```js
 $.ajax({
   type: "PUT",
@@ -283,7 +321,7 @@ $.ajax({
       "form_values": {
         "2832": "My updated string value",
         "8373": {
-          choice_values: [
+          "choice_values": [
             "My updated choice value"
           ]
         }
@@ -304,6 +342,14 @@ $.ajax({
 
 ### Delete a record
 
+#### cURL
+```sh
+curl --request DELETE 'https://api.fulcrumapp.com/api/v2/forms/my-record-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
+```
+
+#### jQuery
 ```js
 $.ajax({
   type: "DELETE",

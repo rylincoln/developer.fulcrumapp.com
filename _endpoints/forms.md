@@ -457,7 +457,7 @@ Example validation response if the `name` is not included:
 ```sh
 curl --request GET 'https://api.fulcrumapp.com/api/v2/forms.json' \
 --header 'Accept: application/json' \
---header 'X-ApiToken: {my-api-key}'
+--header 'X-ApiToken: my-api-key'
 ```
 
 #### jQuery
@@ -468,7 +468,7 @@ $.ajax({
   contentType: "application/json",
   dataType: "json",
   headers: {
-    "X-ApiToken": "{my-api-key}"
+    "X-ApiToken": "my-api-key"
   },
   success: function (data) {
     // do something!
@@ -481,20 +481,20 @@ $.ajax({
 
 #### cURL
 ```sh
-curl --request GET 'https://api.fulcrumapp.com/api/v2/forms/{my-form-id}.json' \
+curl --request GET 'https://api.fulcrumapp.com/api/v2/forms/my-form-id.json' \
 --header 'Accept: application/json' \
---header 'X-ApiToken: {my-api-key}'
+--header 'X-ApiToken: my-api-key'
 ```
 
 #### jQuery
 ```js
 $.ajax({
   type: "GET",
-  url: "https://api.fulcrumapp.com/api/v2/forms/{my-form-id}.json",
+  url: "https://api.fulcrumapp.com/api/v2/forms/my-form-id.json",
   contentType: "application/json",
   dataType: "json",
   headers: {
-    "X-ApiToken": "{my-api-key}"
+    "X-ApiToken": "my-api-key"
   },
   success: function (data) {
     // do something!
@@ -510,7 +510,7 @@ $.ajax({
 curl --request POST 'https://api.fulcrumapp.com/api/v2/forms.json' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
---header 'X-ApiToken: {my-api-key}' \
+--header 'X-ApiToken: my-api-key' \
 -X POST -d '{"form": {"name": "A cURL Test","description": "Inventory of fire hydrant structures.","elements": [{"type": "TextField","key": "2832","label": "ID Tag","data_name": "id_tag","description": "Enter the asset tag ID.","required": false,"disabled": false,"hidden": false,"default_value": ""},{"type": "ChoiceField","key": "8373","label": "Hydrant Type","data_name": "hydrant_type","description": "What style of hydrant is it?","required": false,"disabled": false,"hidden": false,"default_value": "","multiple": false,"allow_other": false,"choices": [{"label": "Pillar","value": "pillar"},{"label": "Pond","value": "pond"},{"label": "Standpipe","value": "standpipe"},{"label": "Underground","value": "underground"},{"label": "Wall","value": "wall"}]}]}}'
 ```
 
@@ -572,7 +572,7 @@ $.ajax({
   contentType: "application/json",
   dataType: "json",
   headers: {
-    "X-ApiToken": "{my-api-key}"
+    "X-ApiToken": "my-api-key"
   },
   success: function (data) {
     // do something!
@@ -585,19 +585,18 @@ $.ajax({
 
 #### cURL
 ```sh
-curl --request POST 'https://api.fulcrumapp.com/api/v2/forms/{my-form-id}.json' \
+curl --request POST 'https://api.fulcrumapp.com/api/v2/forms/my-form-id.json' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
---header 'X-ApiToken: {my-api-key}' \
+--header 'X-ApiToken: my-api-key' \
 -X PUT -d '{"form": {"name": "Fire Hydrant Inventory","description": "Inventory of fire hydrant structures.","elements": [{"type": "TextField","key": "2832","label": "ID Tag","data_name": "id_tag","description": "Enter the asset tag ID.","required": false,"disabled": false,"hidden": false,"default_value": ""},{"type": "ChoiceField","key": "8373","label": "Hydrant Type","data_name": "hydrant_type","description": "What style of hydrant is it?","required": false,"disabled": false,"hidden": false,"default_value": "","multiple": false,"allow_other": false,"choices": [{"label": "Pillar","value": "pillar"},{"label": "Pond","value": "pond"},{"label": "Standpipe","value": "standpipe"},{"label": "Underground","value": "underground"},{"label": "Wall","value": "wall"}]},{"type": "PhotoField","key": "193f","label": "Photos","data_name": "photos","required": false,"disabled": false,"hidden": false,"default_value": ""}]}}'
 ```
 
 #### jQuery
-
 ```js
 $.ajax({
   type: "PUT",
-  url: "https://api.fulcrumapp.com/api/v2/forms/{my-form-id}.json",
+  url: "https://api.fulcrumapp.com/api/v2/forms/my-form-id.json",
   data: JSON.stringify({
     "form": {
       "name": "Fire Hydrant Inventory",
@@ -661,7 +660,7 @@ $.ajax({
   contentType: "application/json",
   dataType: "json",
   headers: {
-    "X-ApiToken": "{my-api-key}"
+    "X-ApiToken": "my-api-key"
   },
   success: function (data) {
     // do something!
@@ -673,23 +672,21 @@ $.ajax({
 ### Delete a form
 
 #### cURL
-
 ```sh
-curl --request DELETE 'https://api.fulcrumapp.com/api/v2/forms/{my-form-id}.json' \
+curl --request DELETE 'https://api.fulcrumapp.com/api/v2/forms/my-form-id.json' \
 --header 'Accept: application/json' \
---header 'X-ApiToken: {my-api-key}'
+--header 'X-ApiToken: my-api-key'
 ```
 
 #### jQuery
-
 ```js
 $.ajax({
   type: "DELETE",
-  url: "https://api.fulcrumapp.com/api/v2/forms/{my-form-id}.json",
+  url: "https://api.fulcrumapp.com/api/v2/forms/my-form-id.json",
   contentType: "application/json",
   dataType: "json",
   headers: {
-    "X-ApiToken": "my-record-id"
+    "X-ApiToken": "my-api-key"
   },
   success: function (data) {
     // do something!
