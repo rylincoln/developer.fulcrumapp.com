@@ -73,7 +73,7 @@ The following properties must be included in order to create/update a classifica
 
 Example validation response if `items` array is not included:
 
-```
+```json
 {
   "classification_set": {
     "errors": {
@@ -93,7 +93,7 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Valid classification set
 
-```
+```json
 {
   "classification_set": {
     "name": "Wildlife Types",
@@ -180,7 +180,15 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get all classification sets
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/classification_sets.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/classification_sets.json",
@@ -198,7 +206,15 @@ $.ajax({
 
 ### Get a single classification set by ID
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/classification_sets/my-classification-set-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/classification_sets/my-classification-set-id.json",
@@ -216,7 +232,17 @@ $.ajax({
 
 ### Create a new classification set
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/classification_sets.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"classification_set":{"name":"Wildlife Types","items":[{"label":"Bird","value":"Bird","child_classifications":[{"label":"Cormorant","value":"Cormorant"},{"label":"Egret","value":"Egret"},{"label":"Frigate Bird","value":"Frigate Bird"},{"label":"Heron","value":"Heron"},{"label":"Osprey","value":"Osprey"},{"label":"Pelican","value":"Pelican"},{"label":"Pigeon","value":"Pigeon"},{"label":"Tern","value":"Tern"}]},{"label":"Butterfly","value":"Butterfly"},{"label":"Fish","value":"Fish"},{"label":"Manatee","value":"Manatee"},{"label":"Shellfish","value":"Shellfish","child_classifications":[{"label":"Crab","value":"Crab","child_classifications":[{"label":"Blue Crab","value":"Blue Crab"},{"label":"Fiddler Crab","value":"Fiddler Crab"},{"label":"Hermit Crab","value":"Hermit Crab"}]}]},{"label":"Turtle","value":"Turtle"}]}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "POST",
   url: "https://api.fulcrumapp.com/api/v2/classification_sets.json",
@@ -311,7 +337,17 @@ $.ajax({
 
 ### Update a classification set
 
+#### cURL
+```sh
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/classification_sets/my-classification-set-id.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"classification_set":{"name":"Wildlife Types","items":[{"label":"Bird","value":"Bird","child_classifications":[{"label":"Cormorant","value":"Cormorant"},{"label":"Egret","value":"Egret"},{"label":"Frigate Bird","value":"Frigate Bird"},{"label":"Heron","value":"Heron"},{"label":"Osprey","value":"Osprey"},{"label":"Pelican","value":"Pelican"},{"label":"Pigeon","value":"Pigeon"},{"label":"Tern","value":"Tern"}]},{"label":"Butterfly","value":"Butterfly"},{"label":"Fish","value":"Fish"},{"label":"Manatee","value":"Manatee"},{"label":"Shellfish","value":"Shellfish","child_classifications":[{"label":"Crab","value":"Crab","child_classifications":[{"label":"Blue Crab","value":"Blue Crab"},{"label":"Fiddler Crab","value":"Fiddler Crab"},{"label":"Hermit Crab","value":"Hermit Crab"}]}]},{"label":"Turtle","value":"Turtle"},{"label":"Frog","value":"Frog"}]}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/classification_sets/my-classification-set-id.json",
@@ -410,7 +446,15 @@ $.ajax({
 
 ### Delete a classification set
 
+#### cURL
+```sh
+curl --request DELETE 'https://api.fulcrumapp.com/api/v2/classification_sets/my-classification-set-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "DELETE",
   url: "https://api.fulcrumapp.com/api/v2/classification_sets/my-classification-set-id.json",

@@ -301,6 +301,7 @@ $.ajax({
 
 ### Delete a choice list
 
+#### cURL
 ```sh
 curl --request DELETE 'https://api.fulcrumapp.com/api/v2/choice_lists/my-choice-list-id.json' \
 --header 'Accept: application/json' \
