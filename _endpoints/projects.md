@@ -77,8 +77,6 @@ Example validation response if `name` is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid project response
 
 ```json

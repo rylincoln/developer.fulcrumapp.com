@@ -89,8 +89,6 @@ Example validation response if `items` array is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid classification set
 
 ```json

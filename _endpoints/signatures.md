@@ -67,7 +67,7 @@ The following properties must be included in order to create/update a photo obje
 
 Example validation response if `access_key` is not included:
 
-```
+```json
 {
   "signatures": {
     "errors": {
@@ -82,8 +82,6 @@ Example validation response if `access_key` is not included:
 * There is no `DELETE` method for signatures. Signatures can be effectively deleted by unlinking them from their associated record.
 
 ## Examples
-
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
 
 ### Valid signature
 

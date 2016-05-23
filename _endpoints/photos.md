@@ -88,8 +88,6 @@ Example validation response if `access_key` is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid photo
 
 ```json
