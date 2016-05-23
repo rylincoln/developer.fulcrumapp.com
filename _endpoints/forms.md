@@ -511,7 +511,7 @@ curl --request POST 'https://api.fulcrumapp.com/api/v2/forms.json' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'X-ApiToken: my-api-key' \
--X POST -d '{"form": {"name": "A cURL Test","description": "Inventory of fire hydrant structures.","elements": [{"type": "TextField","key": "2832","label": "ID Tag","data_name": "id_tag","description": "Enter the asset tag ID.","required": false,"disabled": false,"hidden": false,"default_value": ""},{"type": "ChoiceField","key": "8373","label": "Hydrant Type","data_name": "hydrant_type","description": "What style of hydrant is it?","required": false,"disabled": false,"hidden": false,"default_value": "","multiple": false,"allow_other": false,"choices": [{"label": "Pillar","value": "pillar"},{"label": "Pond","value": "pond"},{"label": "Standpipe","value": "standpipe"},{"label": "Underground","value": "underground"},{"label": "Wall","value": "wall"}]}]}}'
+--data '{"form": {"name": "A cURL Test","description": "Inventory of fire hydrant structures.","elements": [{"type": "TextField","key": "2832","label": "ID Tag","data_name": "id_tag","description": "Enter the asset tag ID.","required": false,"disabled": false,"hidden": false,"default_value": ""},{"type": "ChoiceField","key": "8373","label": "Hydrant Type","data_name": "hydrant_type","description": "What style of hydrant is it?","required": false,"disabled": false,"hidden": false,"default_value": "","multiple": false,"allow_other": false,"choices": [{"label": "Pillar","value": "pillar"},{"label": "Pond","value": "pond"},{"label": "Standpipe","value": "standpipe"},{"label": "Underground","value": "underground"},{"label": "Wall","value": "wall"}]}]}}'
 ```
 
 #### jQuery
@@ -585,11 +585,11 @@ $.ajax({
 
 #### cURL
 ```sh
-curl --request POST 'https://api.fulcrumapp.com/api/v2/forms/my-form-id.json' \
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/forms/my-form-id.json' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'X-ApiToken: my-api-key' \
--X PUT -d '{"form": {"name": "Fire Hydrant Inventory","description": "Inventory of fire hydrant structures.","elements": [{"type": "TextField","key": "2832","label": "ID Tag","data_name": "id_tag","description": "Enter the asset tag ID.","required": false,"disabled": false,"hidden": false,"default_value": ""},{"type": "ChoiceField","key": "8373","label": "Hydrant Type","data_name": "hydrant_type","description": "What style of hydrant is it?","required": false,"disabled": false,"hidden": false,"default_value": "","multiple": false,"allow_other": false,"choices": [{"label": "Pillar","value": "pillar"},{"label": "Pond","value": "pond"},{"label": "Standpipe","value": "standpipe"},{"label": "Underground","value": "underground"},{"label": "Wall","value": "wall"}]},{"type": "PhotoField","key": "193f","label": "Photos","data_name": "photos","required": false,"disabled": false,"hidden": false,"default_value": ""}]}}'
+--data '{"form": {"name": "Fire Hydrant Inventory","description": "Inventory of fire hydrant structures.","elements": [{"type": "TextField","key": "2832","label": "ID Tag","data_name": "id_tag","description": "Enter the asset tag ID.","required": false,"disabled": false,"hidden": false,"default_value": ""},{"type": "ChoiceField","key": "8373","label": "Hydrant Type","data_name": "hydrant_type","description": "What style of hydrant is it?","required": false,"disabled": false,"hidden": false,"default_value": "","multiple": false,"allow_other": false,"choices": [{"label": "Pillar","value": "pillar"},{"label": "Pond","value": "pond"},{"label": "Standpipe","value": "standpipe"},{"label": "Underground","value": "underground"},{"label": "Wall","value": "wall"}]},{"type": "PhotoField","key": "193f","label": "Photos","data_name": "photos","required": false,"disabled": false,"hidden": false,"default_value": ""}]}}'
 ```
 
 #### jQuery

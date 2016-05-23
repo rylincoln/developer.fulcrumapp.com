@@ -92,7 +92,7 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Valid choice list response
 
-```
+```json
 {
   "choice_list": {
     "name": "Bridge Inspection Conditions",
@@ -131,7 +131,15 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get all choice lists
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/choice_lists.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/choice_lists.json",
@@ -149,7 +157,15 @@ $.ajax({
 
 ### Get a single choice list by ID
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/choice_lists/my-choice-list-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/choice_lists/my-choice-list-id.json",
@@ -167,7 +183,17 @@ $.ajax({
 
 ### Create a new choice list
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/choice_lists.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"choice_list": {"name": "Bridge Inspection Conditions","choices": [{"label": "Excellent","value": "Excellent"},{"label": "Good","value": "Good"},{"label": "Fair","value": "Fair"},{"label": "Poor","value": "Poor"},{"label": "Unrated","value": "Unrated"},{"label": "N/A","value": "N/A"}]}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "POST",
   url: "https://api.fulcrumapp.com/api/v2/choice_lists.json",
@@ -214,7 +240,17 @@ $.ajax({
 
 ### Update a choice list
 
+#### cURL
+```sh
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/choice_lists/my-choice-list-id.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"choice_list": {"name": "Bridge Inspection Conditions","choices": [{"label": "Excellent","value": "Excellent"},{"label": "Good","value": "Good"},{"label": "Fair","value": "Fair"},{"label": "Poor","value": "Poor"},{"label": "Needs Replacing","value": "replace"},{"label": "Unrated","value": "Unrated"},{"label": "N/A","value": "N/A"}]}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/choice_lists/my-choice-list-id.json",
@@ -265,7 +301,14 @@ $.ajax({
 
 ### Delete a choice list
 
+```sh
+curl --request DELETE 'https://api.fulcrumapp.com/api/v2/choice_lists/my-choice-list-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "DELETE",
   url: "https://api.fulcrumapp.com/api/v2/choice_lists/my-record-id.json",

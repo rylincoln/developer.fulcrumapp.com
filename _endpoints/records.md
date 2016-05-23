@@ -260,7 +260,7 @@ curl --request POST 'https://api.fulcrumapp.com/api/v2/records.json' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'X-ApiToken: my-api-key' \
--X POST -d '{"record": {"form_id": "my-form-id","latitude": 27.770787,"longitude": -82.638039,"form_values": {"2832": "My string value","8373": {"choice_values": ["My choice value"]}}}}'
+--data '{"record": {"form_id": "my-form-id","latitude": 27.770787,"longitude": -82.638039,"form_values": {"2832": "My string value","8373": {"choice_values": ["My choice value"]}}}}'
 ```
 
 #### jQuery
@@ -299,11 +299,11 @@ $.ajax({
 
 #### cURL
 ```sh
-curl --request POST 'https://api.fulcrumapp.com/api/v2/records/my-record-id.json' \
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/records/my-record-id.json' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'X-ApiToken: my-api-key' \
--X POST -d '{"record": {"form_id": "my-form-id","latitude": 27.770787,"longitude": -82.638039,"form_values": {"2832": "My updated string value","8373": {"choice_values": ["My updated choice value"]}}}}'
+--data '{"record": {"form_id": "my-form-id","latitude": 27.770787,"longitude": -82.638039,"form_values": {"2832": "My updated string value","8373": {"choice_values": ["My updated choice value"]}}}}'
 ```
 
 #### jQuery
