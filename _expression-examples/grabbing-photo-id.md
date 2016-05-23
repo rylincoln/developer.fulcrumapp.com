@@ -2,7 +2,7 @@
 layout: default
 section: expressions
 title: "Grab the photo id number"
-description: "This expression grabbs the photo id number and adds it to a feature id field."
+description: "This expression grabs the photo id number and adds it to a feature id field."
 category: section
 ---
 
@@ -18,5 +18,5 @@ if ($photos.length > 0) {
   SETRESULT($feature_id + photo);
 } else {
   SETRESULT('')
-} 
+}
 ```
