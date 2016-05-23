@@ -150,8 +150,6 @@ Example validation response if the `form_id` is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid Record Response
 
 ```json
