@@ -56,7 +56,7 @@ The following properties must be included in order to create/update a webhook ob
 
 Example validation response if `url` is not included:
 
-```
+```json
 {
   "webhook": {
     "errors": {
@@ -72,11 +72,9 @@ Example validation response if `url` is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid webhook
 
-```
+```json
 {
   "webhook": {
     "name": "Fire Hydrant Inventory Emails",
@@ -91,7 +89,15 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get all webhooks
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/webhooks.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/webhooks.json",
@@ -109,7 +115,15 @@ $.ajax({
 
 ### Get a single webhook
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/webhooks/my-webhook-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/webhooks/my-webhook-id.json",
@@ -127,7 +141,17 @@ $.ajax({
 
 ### Create a new webhook
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/webhooks.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"webhook": {"name": "Fire Hydrant Inventory Emails","url": "https://my-webhook-processing-script.php"}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "POST",
   url: "https://api.fulcrumapp.com/api/v2/webhooks.json",
@@ -151,14 +175,24 @@ $.ajax({
 
 ### Update a webhook
 
+#### cURL
+```sh
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/webhooks/my-webhook-id.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"webhook": {"name": "Fire Hydrant Inventory Emails","url": "https://my-webhook-processing-script.php","active": false}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/webhooks/my-webhook-id.json",
   data: JSON.stringify({
     "webhook": {
       "name": "Fire Hydrant Inventory Emails",
-      "url": "https://my-webhook-processing-script.php"
+      "url": "https://my-webhook-processing-script.php",
       "active": false
     }
   }),
@@ -176,7 +210,15 @@ $.ajax({
 
 ### Delete a webhook
 
+#### cURL
+```sh
+curl --request DELETE 'https://api.fulcrumapp.com/api/v2/webhooks/my-webhook-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "DELETE",
   url: "https://api.fulcrumapp.com/api/v2/webhooks/my-webhook-id.json",

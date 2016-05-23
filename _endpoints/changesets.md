@@ -67,7 +67,7 @@ The following properties must be included in order to create/update a changeset 
 
 Example validation response if `form_id` is not included:
 
-```
+```json
 {
   "changeset": {
     "errors": {
@@ -83,11 +83,9 @@ Example validation response if `form_id` is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid changeset
 
-```
+```json
 {
   "changeset": {
     "metadata": {
@@ -124,7 +122,15 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get all changesets
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/changesets.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/changesets.json",
@@ -142,7 +148,15 @@ $.ajax({
 
 ### Get a single changeset by ID
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/changesets/my-changeset-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/changesets/my-changeset-id.json",
@@ -160,7 +174,17 @@ $.ajax({
 
 ### Create a new changeset
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/changesets.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"changeset": {"form_id": "ad75a315-7e0e-4ffb-a4d8-125dd7b4cf64"}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "POST",
   url: "https://api.fulcrumapp.com/api/v2/changesets.json",
@@ -183,7 +207,17 @@ $.ajax({
 
 ### Update a changeset
 
+#### cURL
+```sh
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/changesets/my-changeset-id.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"changeset": {"form_id": "my-form-id","metadata": {"comment": "Update record","app_created_by": "Bryan McBride","app_name": "My Custom Fulcrum Client"}}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/changesets/my-changeset-id.json",
@@ -211,7 +245,16 @@ $.ajax({
 
 ### Close a changeset
 
+#### cURL
+```sh
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/changesets/my-changeset-id/close.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/changesets/my-changeset-id/close.json",

@@ -85,7 +85,7 @@ Example validation response if `access_key` is not included:
 
 ### Valid signature
 
-```
+```json
 {
   "signature": {
     "access_key": "9855e3f2-85a5-4b9f-9e62-0b1bbcfef091",
@@ -112,7 +112,15 @@ Example validation response if `access_key` is not included:
 
 ### Get metadata for all signatures
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/signatures.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/signatures.json",
@@ -130,7 +138,15 @@ $.ajax({
 
 ### Get metadata for a single signature
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/signatures/my-signature-access-key.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/signatures/my-signature-access-key.json",
@@ -149,12 +165,14 @@ $.ajax({
 
 ### Upload a new signature
 
-```
+```html
 <form>
   <input type="file" name="signature" id="signature" /><br /><br />
   <input type="button" id="upload" value="upload" />
 </form>
+```
 
+```js
 $(document).ready(function(){
   /**
   * Generates a GUID string.
