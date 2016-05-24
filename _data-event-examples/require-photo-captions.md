@@ -13,7 +13,7 @@ ON('validate-record', function (event) {
   // if there are any photos, loop through the $photos objects and test the caption property for null
   if ($photos) {
     for (var i = 0; i < $photos.length; i++) {
-      // if caption is null, alert the user
+      // if caption is missing, alert the user and prevent the record from saving
       if ($photos[i].caption == null) {
         INVALID('All photos must have captions!');
       }
@@ -37,7 +37,7 @@ ON('validate-record', function (event) {
       // if there are any photos, loop through the photo objects and test the caption property for null
       if (photos) {
         for (var i = 0; i < photos.length; i++) {
-          // if caption is null, alert the user
+          // if caption is missing, alert the user and prevent the record from saving
           if (photos[i].caption == null) {
             INVALID('All photos must have captions!');
           }
