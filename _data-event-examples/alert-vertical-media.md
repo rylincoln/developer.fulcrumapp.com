@@ -12,13 +12,13 @@ Similarly with videos added to a field named `videos`, but check the `orientatio
 
 ```js
 ON('add-photo', 'photos', function(event) {
-    if (event.value.width < event.value.height) {
-        if (PLATFORM() === 'iOS') {
-            ALERT('Please delete this photo and retake it in landscape orientation. If you *did* take the photo in landscape orientation, check to ensure your device \'portrait orientation lock\' is OFF.');
-        } else {
-            ALERT('Please delete this photo and retake it in landscape orientation.');
-        }
+  if (event.value.width < event.value.height) {
+    if (PLATFORM() === 'iOS') {
+      ALERT('Please delete this photo and retake it in landscape orientation. If you *did* take the photo in landscape orientation, check to ensure your device \'portrait orientation lock\' is OFF.');
+    } else {
+      ALERT('Please delete this photo and retake it in landscape orientation.');
     }
+  }
 });
 
 ON('add-video', 'videos', function(event) {

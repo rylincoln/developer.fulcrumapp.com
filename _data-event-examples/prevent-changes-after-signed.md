@@ -15,5 +15,5 @@ ON('edit-record', function (event) {
       SETREADONLY(dataName, true);
     }
   }
-})
+});
 ```

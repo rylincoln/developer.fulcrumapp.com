@@ -14,12 +14,12 @@ ON('validate-record', function (event) {
   if ($photos) {
     for (var i = 0; i < $photos.length; i++) {
       // if caption is missing, alert the user and prevent the record from saving
-      if ($photos[i].caption == null) {
+      if ($photos[i].caption === null) {
         INVALID('All photos must have captions!');
       }
     }
   }
-})
+});
 ```
 
 This can be expanded to look through all photo fields in your app
@@ -38,12 +38,12 @@ ON('validate-record', function (event) {
       if (photos) {
         for (var i = 0; i < photos.length; i++) {
           // if caption is missing, alert the user and prevent the record from saving
-          if (photos[i].caption == null) {
+          if (photos[i].caption === null) {
             INVALID('All photos must have captions!');
           }
         }
       }
     }
   }
-})
+});
 ```

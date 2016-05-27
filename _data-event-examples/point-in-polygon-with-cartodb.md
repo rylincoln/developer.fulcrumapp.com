@@ -15,7 +15,7 @@ These examples require having data stored in CartoDB tables. If you are unsure o
 `https://denverstartup.cartodb.com/api/v2/sql?q=SELECT%20*%20FROM%20sanfran_neighborhoods%20where%20ST_Contains(the_geom,%20ST_GeomFromText(%27POINT(-122.4613380%2037.78048)%27,4326))`
 
 which returns:
-{% highlight json %}
+```json
 {
 	"rows": [{
 		"cartodb_id": 801,
@@ -32,7 +32,7 @@ which returns:
 		"total": 324
 	}]
 }
-{% endhighlight %}
+```
 
 Tip: To keep data private, you will want to use `&api={secret_api_key}` at the end of the URL
 
@@ -40,34 +40,34 @@ Tip: To keep data private, you will want to use `&api={secret_api_key}` at the e
 function nearestBrewery() {
   options = {
     url: "https://denverstartup.cartodb.com/api/v2/sql?f=geojson&q=SELECT * FROM denver_breweries ORDER BY the_geom <-> ST_Transform(CDB_LatLng(" + LONGITUDE() + "," + LATITUDE() + "),4326) LIMIT 60"
-  }
+  };
 
   REQUEST(options, function(error, response, body) {
     if (error) {
-      ALERT('Error with request: ' + error)
+      ALERT('Error with request: ' + error);
     } else {
-      data = JSON.parse(body)
-      SETVALUE('nearest_brewery', data.rows[0].name)
+      data = JSON.parse(body);
+      SETVALUE('nearest_brewery', data.rows[0].name);
     }
-  })
+  });
 }
 ON('save-record', nearestBrewery);
 ON('edit-record', nearestBrewery);
-ON('click', 'nearest_brewery', nearestBrewery)
+ON('click', 'nearest_brewery', nearestBrewery);
 
 function identifyNeighborhood() {
   options = {
     url: "https://denverstartup.cartodb.com/api/v2/sql?f=geojson&q=SELECT+*+FROM+denver_neighborhoods+WHERE+ST_Contains(the_geom, ST_GeomFromText('POINT("+ LONGITUDE() + " " + LATITUDE()+ ")', 4326))"
-  }
+  };
 
   REQUEST(options, function(error, response, body) {
     if (error) {
-      ALERT('Error with request: ' + error)
+      ALERT('Error with request: ' + error);
     } else {
       data = JSON.parse(body);
       SETVALUE('neighborhood', data.rows[0].nbhd_name);
     }
-  })
+  });
 }
 ON('save-record', identifyNeighborhood);
 ON('edit-record', identifyNeighborhood);

@@ -12,23 +12,23 @@ Here we're listening for the `'change-geometry'` event for a record, and then us
 
 ```js
 function getWeather() {
-  apiKey = 'your_api_key'
+  apiKey = 'your_api_key';
 
   options = {
     url: 'https://api.wunderground.com/api/' + apiKey + '/conditions/q/' + LATITUDE() + ',' + LONGITUDE() + '.json'
-  }
+  };
 
   REQUEST(options, function(error, response, body) {
     if (error) {
-      ALERT('Error with request: ' + error)
+      ALERT('Error with request: ' + error);
     } else {
-      var data = JSON.parse(body).current_observation
-      SETVALUE('weather_summary', data.weather + ', ' + data.wind_string)
+      var data = JSON.parse(body).current_observation;
+      SETVALUE('weather_summary', data.weather + ', ' + data.wind_string);
     }
-  })
+  });
 }
 
-ON('change-geometry', getWeather)
+ON('change-geometry', getWeather);
 ```
 
 If you only want to fetch weather when explicitly requested by the end user, you can listen for the `'click'` event for a hyperlink field. Just add a new [hyperlink field](http://www.fulcrumapp.com/help/hyperlink-fields/) to your app and give it a descriptive label, "Tap to Add Weather Data" for example. Leave the default url blank and set up your data event like so.

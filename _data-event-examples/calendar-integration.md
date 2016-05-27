@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "Integrate with your Gmail Calendar"
-description: "Simplify scheduling with Fuclrum and calendar integration."
+description: "Simplify scheduling with Fulcrum and calendar integration."
 category: section
 ---
 

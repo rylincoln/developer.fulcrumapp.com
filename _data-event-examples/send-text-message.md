@@ -26,10 +26,10 @@ ON('click', 'send_sms', function(event) {
   // Note that not all SMS apps on Android support passing the body text.
   if (PLATFORM() === 'iOS') {
     OPENURL(FORMAT('sms:%s&body=%s',
-                   $phone_number, encodeURIComponent($sms)));
+      $phone_number, encodeURIComponent($sms)));
   } else {
     OPENURL(FORMAT('sms:%s?body=%s',
-                   $phone_number, encodeURIComponent($sms)));
+      $phone_number, encodeURIComponent($sms)));
   }
 });
 ```

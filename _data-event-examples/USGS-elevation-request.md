@@ -16,7 +16,7 @@ function getElev() {
     url: 'http://nationalmap.gov/epqs/pqs.php?x=' + LONGITUDE() + '&y=' + LATITUDE() + '&units=Feet&output=json'
   };
 
-  REQUEST(options, function (error, response, body) {
+  REQUEST(options, function(error, response, body) {
     if (error) {
       ALERT('Error with request: ' + error);
     } else {
