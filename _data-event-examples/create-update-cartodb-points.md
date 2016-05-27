@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Update CartoDB points table from Fulcrum"
+title: "Update CartoDB table from Fulcrum"
 description: "Demonstrates how to POST data to the CartoDB SQL API."
 category: section
 ---
