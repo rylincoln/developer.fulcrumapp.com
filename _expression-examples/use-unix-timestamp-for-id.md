@@ -6,7 +6,7 @@ description: "Using the Unix timestamp to generate a unique record value."
 category: section
 ---
 
-While Fulcrum generates a record id for every record in Fulcrum, this id is quite long and sometimes too long to use. What you can do us use a [Unix Timestamp](https://en.wikipedia.org/wiki/Unix_time) to generate a unique record value that can be more manageable to use.
+While Fulcrum generates a record id for every record in Fulcrum, this id is quite long and sometimes too long to use. What you can do is use the [Unix Timestamp](https://en.wikipedia.org/wiki/Unix_time) to generate a unique record value that can be more manageable to use.
 
 The [ONCE()](/expressions/reference/once/) expression is used to ensure that the expression will only be run one time.
 
