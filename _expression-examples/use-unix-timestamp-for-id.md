@@ -15,7 +15,7 @@ The expression below will generate unique value with 13 characters.
 ```js
 ONCE(Date.now)
 ```
-The example below divides the unix timestamp by 1000 and drops the decimals places using the [FLOOR()](/expressions/reference/floor/) expression. This generate a unique value with 10 characters.
+The example below divides the unix timestamp by 1000 and drops the decimals places using the [FLOOR()](/expressions/reference/floor/) expression. This generates a unique value with 10 characters.
 
 ```js
 ONCE(FLOOR(Date.now()/1000))
