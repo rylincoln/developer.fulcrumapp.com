@@ -38,6 +38,7 @@ Available parameters to query the records associated with your account. All of t
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | bounding_box | string | Bounding box of the records requested. Format should be: lat,long,lat,long (bottom, left, top, right). |
+| changeset_id | string | The UUID of the [changeset](/endpoints/changesets/) associated with the record. |
 | client_created_before | integer | Return only records which were created by the client before the given time. |
 | client_created_since  | integer | Return only records which were created by the client after the given time. |
 | client_updated_before | integer | Return only records which were updated by the client before the given time. |
