@@ -38,8 +38,10 @@ Tip: To keep data private, you will want to use `&api={secret_api_key}` at the e
 
 ```js
 function nearestBrewery() {
-  options = {
-    url: "https://denverstartup.cartodb.com/api/v2/sql?f=geojson&q=SELECT * FROM denver_breweries ORDER BY the_geom <-> ST_Transform(CDB_LatLng(" + LONGITUDE() + "," + LATITUDE() + "),4326) LIMIT 60"
+	query = 'SELECT * FROM denver_breweries ORDER BY the_geom <-> ST_Transform(CDB_LatLng(' + LONGITUDE() + ',' + LATITUDE() + '),4326) LIMIT 60';
+
+	options = {
+    url: 'https://denverstartup.cartodb.com/api/v2/sql?f=geojson&q=' + encodeURIComponent(query)
   };
 
   REQUEST(options, function(error, response, body) {
@@ -56,8 +58,10 @@ ON('edit-record', nearestBrewery);
 ON('click', 'nearest_brewery', nearestBrewery);
 
 function identifyNeighborhood() {
-  options = {
-    url: "https://denverstartup.cartodb.com/api/v2/sql?f=geojson&q=SELECT+*+FROM+denver_neighborhoods+WHERE+ST_Contains(the_geom, ST_GeomFromText('POINT("+ LONGITUDE() + " " + LATITUDE()+ ")', 4326))"
+	query = "SELECT * FROM denver_neighborhoods WHERE ST_Contains(the_geom, ST_GeomFromText('POINT("+ LONGITUDE() + " " + LATITUDE()+ ")', 4326));"
+
+	options = {
+    url: 'https://denverstartup.cartodb.com/api/v2/sql?f=geojson&q=' + encodeURIComponent(query)
   };
 
   REQUEST(options, function(error, response, body) {

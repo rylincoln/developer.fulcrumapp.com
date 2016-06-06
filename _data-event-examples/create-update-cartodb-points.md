@@ -32,7 +32,7 @@ ON('save-record', function(event) {
 
 function postToCDB(query) {
   options = {
-    url: 'https://' + username + '.cartodb.com/api/v2/sql?q=' + query + '&api_key=' + api_key,
+    url: 'https://' + username + '.cartodb.com/api/v2/sql?q=' + encodeURIComponent(query) + '&api_key=' + api_key,
     method: 'POST'
   };
 
