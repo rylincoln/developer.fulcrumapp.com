@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Alternate Repeatable Requirement Validation Alerts"
+title: "Repeatable Requirement Validation Alerts"
 description: "Use this to alert the user if a field in a repeatable section does not have a value."
 category: section
 ---
