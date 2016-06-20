@@ -42,7 +42,7 @@ if ($address.country) {
 SETRESULT(address);
 ```
 
-If you need to break up the address for formatting purposes, you can create two calculation fields and divide up the address field. 
+If you need to break up the address for formatting purposes, you can create two calculation fields and divide up the address field.
 
 ```js
 var address = '';
@@ -59,16 +59,16 @@ SETRESULT(address);
 ```
 ```js
 var address = '';
-if ($address.locality && $address.locality != '') {
+if ($address.locality && $address.locality !== '') {
   address += $address.locality;
 }
-if ($address.admin_area && $address.admin_area != '') {
+if ($address.admin_area && $address.admin_area !== '') {
   address += ', ' + $address.admin_area;
 }
-if ($address.postal_code && $address.postal_code != '') {
+if ($address.postal_code && $address.postal_code !== '') {
   address += ' ' + $address.postal_code;
 }
-if ($address.sub_admin_area && $address.sub_admin_area != '') {
+if ($address.sub_admin_area && $address.sub_admin_area !== '') {
   address += ', ' + $address.sub_admin_area;
 }
 if ($address.country) {

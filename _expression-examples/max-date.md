@@ -21,6 +21,6 @@ if (dates && dates.length > 0) {
     }
   });
 
-  maxDate;
+  SETRESULT(maxDate);
 }
 ```

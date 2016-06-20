@@ -16,7 +16,7 @@ var daysOfWeek = [
   'Thursday',
   'Friday',
   'Saturday'
-]
+];
 
 // This converts a date field in the record to a JavaScript date object
 var d = DATEVALUE($the_date_field);

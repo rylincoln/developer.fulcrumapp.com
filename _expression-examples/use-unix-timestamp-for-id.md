@@ -13,15 +13,15 @@ The [ONCE()](/expressions/reference/once/) expression is used to ensure that the
 The expression below will generate unique value with 13 characters.
 
 ```js
-ONCE(Date.now)
+ONCE(Date.now);
 ```
 The example below divides the unix timestamp by 1000 and drops the decimals places using the [FLOOR()](/expressions/reference/floor/) expression. This generates a unique value with 10 characters.
 
 ```js
-ONCE(FLOOR(Date.now()/1000))
+ONCE(FLOOR(Date.now()/1000));
 ```
 The example below reduces the unique value to 8 characters.
 
 ```js
-ONCE(FLOOR((Date.now() - 1451606400000) / 1000))
+ONCE(FLOOR((Date.now() - 1451606400000) / 1000));
 ```

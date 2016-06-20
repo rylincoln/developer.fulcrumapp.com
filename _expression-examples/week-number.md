@@ -39,5 +39,5 @@ function weekNum ( d ) {
 
 // Pulls date from date field
 var date = DATEVALUE($date);
-weekNum(date);
+SETRESULT(weekNum(date));
 ```

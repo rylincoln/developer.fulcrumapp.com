@@ -14,15 +14,15 @@ var array = REPEATABLEVALUES($name_of_repeatable, 'data_name_of_choicefield_scor
 var total_score = 0;
 
 for (var i=0; i < array.length; i++){
-  var value = array[i]['choice_values'];
+  var value = array[i].choice_values;
   var score = 0;
   if (value == 'N/A'){
-    score = 0
+    score = 0;
   } else {
-    score = NUM(array[i]['choice_values']);
+    score = NUM(array[i].choice_values);
   }
 
-  total_score += score
+  total_score += score;
 }
 SETRESULT(total_score);
 ```

@@ -10,14 +10,14 @@ This example uses the [REPEATABLEVALUES()](http://developer.fulcrumapp.com/expre
 
 ```js
 function mostFrequentValue(array) {
-  if (array == null) {
+  if (array === null) {
     return null;
   }
   var frequencies = {};
   var mostFrequentCount = 0;
   var mostFrequentValue = null;
   array.forEach(function(value) {
-    if (frequencies[value] == null) {
+    if (frequencies[value] === null) {
       frequencies[value] = 1;
     } else {
       frequencies[value] += 1;

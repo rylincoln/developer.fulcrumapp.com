@@ -14,9 +14,9 @@ Note: Photo elements have two properties. They look like this: ```json {"photo_i
 var photo;
 
 if ($photos.length > 0) {
-  photo = $photos[0]['photo_id'];
+  photo = $photos[0].photo_id;
   SETRESULT($feature_id + photo);
 } else {
-  SETRESULT('')
+  SETRESULT('');
 }
 ```
