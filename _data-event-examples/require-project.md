@@ -13,5 +13,5 @@ ON('validate-record', function (event) {
   if(!PROJECTNAME()) {
     INVALID('Please select a project before saving!');
   }
-})
+});
 ```
