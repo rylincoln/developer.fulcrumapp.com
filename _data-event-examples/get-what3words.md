@@ -12,6 +12,8 @@ The example below demonstrates how to listen for a `'change-geometry'` event to 
 
 Both the `getw3w` and `setw3w` functions use the [REQUEST](/data-events/reference/request) function to make an API call to what3words to fetch the info we need. The JSON response from the API is parsed and used to update the Fulcrum record accordingly.
 
+<img src="../media/fulcrum-w3w-integration.gif" alt="what3words Example" style="float: right; margin-left: 40px;" />
+
 ```js
 var w3wApiKey = 'my_api_key';
 
