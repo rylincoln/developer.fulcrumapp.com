@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 3
+order: 4
 title: "Records"
 description: "Create, read, update, or delete data records"
 category: section

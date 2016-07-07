@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 8
+order: 9
 title: "Signatures"
 description: "Fetch and upload signatures"
 category: section

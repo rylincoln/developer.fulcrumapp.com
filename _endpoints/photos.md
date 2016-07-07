@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 7
+order: 8
 title: "Photos"
 description: "Fetch and upload photos"
 category: section

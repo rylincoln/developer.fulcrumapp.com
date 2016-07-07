@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 11
+order: 12
 title: "Webhooks"
 description: "Create, read, update, or delete webhooks"
 category: section

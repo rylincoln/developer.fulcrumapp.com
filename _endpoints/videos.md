@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 9
+order: 10
 title: "Videos"
 description: "Fetch and upload videos and their GPS tracks"
 category: section

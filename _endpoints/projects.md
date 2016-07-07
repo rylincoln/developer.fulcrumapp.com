@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 6
+order: 7
 title: "Projects"
 description: "Create, read, update, or delete projects"
 category: section
