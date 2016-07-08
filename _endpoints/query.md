@@ -386,8 +386,8 @@ SELECT FCM_Signature(signature_field[1]) AS signature_url FROM "Building Inspect
 
 Returns signature URLs in the output for multiple signature files.
 
-The following will return secure URLs directly to the raw signature file.
+The following will return secure URLs directly to the raw signature files.
 
 ```sql
-SELECT FCM_Signature(signature_field) AS signature_urls FROM "Building Inspections";
+SELECT FCM_Signature(unnest(ARRAY['19da1bbc-43e4-49b3-b70f-a63ec680268e', 'eacbcb62-2127-4027-830d-555fd0cee50e'])) AS signature_urls;
 ```
