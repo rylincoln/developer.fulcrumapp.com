@@ -17,15 +17,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 LN(5)
 
 // returns 1.6094379124341003
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 LN("Test")
 
 // returns NaN
-{% endhighlight %}
+```

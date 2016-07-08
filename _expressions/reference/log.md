@@ -19,15 +19,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 LOG(100, 5)
 
 // returns 2.8613531161467867
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 LOG(100)
 
 // returns 2
-{% endhighlight %}
+```

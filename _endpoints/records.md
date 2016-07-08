@@ -38,6 +38,7 @@ Available parameters to query the records associated with your account. All of t
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | bounding_box | string | Bounding box of the records requested. Format should be: lat,long,lat,long (bottom, left, top, right). |
+| changeset_id | string | The UUID of the [changeset](/endpoints/changesets/) associated with the record. |
 | client_created_before | integer | Return only records which were created by the client before the given time. |
 | client_created_since  | integer | Return only records which were created by the client after the given time. |
 | client_updated_before | integer | Return only records which were updated by the client before the given time. |
@@ -82,6 +83,7 @@ Records will still be ordered according to the `updated_at` column, even when fi
 | created_by_id | string | no | yes | The UUID of user who created the record. |
 | updated_by | string | no | yes | The name of user who last updated the record. |
 | updated_by_id | string | no | yes | The UUID of user who last updated the record. |
+| changeset_id | string | no | no | The UUID of the [changeset](/endpoints/changesets/) associated with the record. |
 | project_id | string | no | no | The UUID of the [project](http://www.fulcrumapp.com/help/projects/) tagged to the record. |
 | assigned_to | string | no | no | The name of the user the record is assigned to. |
 | assigned_to_id | string | no | no | The UUID of the user the record is assigned to. |
@@ -104,15 +106,15 @@ Records will still be ordered according to the `updated_at` column, even when fi
 | Barcode | string | `"123456789"` |
 | Hyperlink | string | `"http://www.fulcrumapp.com"` |
 | Calculation | string | `"6"` |
-| Single Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Red"],other_values: []}` |
-| Multiple Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Red","White"],other_values: []}` |
-| Classification | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{choice_values: ["Ford","Mustang"],other_values: []}` |
-| Address | address object | `{sub_thoroughfare: "360",thoroughfare: "Central Ave",suite: "",locality: "St. Petersburg",sub_admin_area: "",admin_area: "FL",postal_code: "33701",country: "United States"}` |
-| Photo | array of photo objects | `[{photo_id:"a8d1df96-44e5-75e9-7312-7e2c5e902496,caption: ""}]` |
-| Video | array of video objects | `[{video_id:"712850b4-4de2-4d66-a6cc-034201245b52,caption: ""}]` |
-| Audio | array of audio objects | `[{audio_id:"f81d51b5-1ce9-465b-be0b-27f1eca41e2c,caption: ""}]` |
-| Signature | signature object | `{timestamp: "2015-07-09T14:54:04Z",signature_id: "9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"}` |
-| Repeatable | array of repeatable objects | `[{id:"d67801a0-adc1-6f60-4b0d-ec3a7191b34b",geometry:{type:"Point",coordinates:[-73.123456,42.123456]},form_values: {0129: "Hello world"}}]` |
+| Single Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{"choice_values": ["Red"],"other_values": []}` |
+| Multiple Choice | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{"choice_values": ["Red","White"],"other_values": []}` |
+| Classification | object with the following keys: `choice_values` (array of selected options) `other values` (array, empty or with values) | `{"choice_values": ["Ford","Mustang"],"other_values": []}` |
+| Address | address object | `{"sub_thoroughfare": "360","thoroughfare": "Central Ave","suite": "","locality": "St. Petersburg","sub_admin_area": "","admin_area": "FL","postal_code": "33701","country": "United States"}` |
+| Photo | array of photo objects | `[{"photo_id":"a8d1df96-44e5-75e9-7312-7e2c5e902496,"caption": ""}]` |
+| Video | array of video objects | `[{"video_id":"712850b4-4de2-4d66-a6cc-034201245b52,"caption": ""}]` |
+| Audio | array of audio objects | `[{"audio_id":"f81d51b5-1ce9-465b-be0b-27f1eca41e2c,"caption": ""}]` |
+| Signature | signature object | `{"timestamp": "2015-07-09T14:54:04Z","signature_id": "9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"}` |
+| Repeatable | array of repeatable objects | `[{"id":"d67801a0-adc1-6f60-4b0d-ec3a7191b34b","geometry":{"type":"Point","coordinates":[-73.123456,42.123456]},"form_values": {"0129": "Hello world"}}]` |
 
 ## Validations
 
@@ -149,11 +151,9 @@ Example validation response if the `form_id` is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid Record Response
 
-```
+```json
 {
   "record": {
     "status": "Red",
@@ -200,11 +200,21 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get all records for a particular form
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/records.json?form_id=my-form-id' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/records.json",
-  data: {form_id: "my-form-id"},
+  data: {
+    "form_id": "my-form-id"
+  },
   contentType: "application/json",
   dataType: "json",
   headers: {
@@ -219,7 +229,15 @@ $.ajax({
 
 ### Get a single record by ID
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/records/my-record-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/records/my-record-id.json",
@@ -237,7 +255,17 @@ $.ajax({
 
 ### Create a new record
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/records.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"record": {"form_id": "my-form-id","latitude": 27.770787,"longitude": -82.638039,"form_values": {"2832": "My string value","8373": {"choice_values": ["My choice value"]}}}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "POST",
   url: "https://api.fulcrumapp.com/api/v2/records.json",
@@ -270,7 +298,17 @@ $.ajax({
 
 ### Update a record
 
+#### cURL
+```sh
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/records/my-record-id.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"record": {"form_id": "my-form-id","latitude": 27.770787,"longitude": -82.638039,"form_values": {"2832": "My updated string value","8373": {"choice_values": ["My updated choice value"]}}}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/records/my-record-id.json",
@@ -282,7 +320,7 @@ $.ajax({
       "form_values": {
         "2832": "My updated string value",
         "8373": {
-          choice_values: [
+          "choice_values": [
             "My updated choice value"
           ]
         }
@@ -303,7 +341,15 @@ $.ajax({
 
 ### Delete a record
 
+#### cURL
+```sh
+curl --request DELETE 'https://api.fulcrumapp.com/api/v2/forms/my-record-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "DELETE",
   url: "https://api.fulcrumapp.com/api/v2/records/my-record-id.json",

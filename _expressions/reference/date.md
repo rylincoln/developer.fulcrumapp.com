@@ -21,8 +21,8 @@ Date
 
 ### Examples
 
-{% highlight js %}
+```js
 DATE(2015, 12, 16)
 
 // returns 2015-12-16
-{% endhighlight %}
+```

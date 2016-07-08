@@ -19,15 +19,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 CEILING(139.85, 0.1)
 
 // returns 139.9
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 CEILING(139.001)
 
 // returns 140
-{% endhighlight %}
+```

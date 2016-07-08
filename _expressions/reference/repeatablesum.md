@@ -19,8 +19,8 @@ Number - The sum of the `dataName` field within each repeatable item
 
 ### Examples
 
-{% highlight js %}
+```js
 REPEATABLESUM($repeatable_field, 'cost')
 
 // returns 6
-{% endhighlight %}
+```

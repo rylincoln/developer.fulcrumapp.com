@@ -11,26 +11,23 @@ permalink: /data-events/reference/setrequired/
 
 `field` String (__required__) - The data name for the field
 
-`hidden` boolean,null (__required__) - Boolean value representing whether the field should be required
+`required` boolean,null (__required__) - Boolean value representing whether the field should be required, or `null` to restore the original state
 
 ### Examples
 
-{% highlight js %}
-SETREQUIRED('weather_summary', true)
-
+```js
 // Sets the weather summary field as required
-{% endhighlight %}
+SETREQUIRED('weather_summary', true)
+```
 
 
-{% highlight js %}
-SETREQUIRED('weather_summary', false)
-
+```js
 // Sets the weather summary field as not required
-{% endhighlight %}
+SETREQUIRED('weather_summary', false)
+```
 
 
-{% highlight js %}
-SETREQUIRED('weather_summary', null)
-
+```js
 // Unsets any override previously set by SETREQUIRED and uses the original setting from the form schema
-{% endhighlight %}
+SETREQUIRED('weather_summary', null)
+```

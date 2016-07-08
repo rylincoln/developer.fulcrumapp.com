@@ -17,22 +17,22 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 EXISTS(1)
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 EXISTS(null)
 
 // returns false
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 EXISTS([])
 
 // returns false
-{% endhighlight %}
+```

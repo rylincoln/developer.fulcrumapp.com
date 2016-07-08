@@ -19,15 +19,15 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 LEFT("Fulcrum", 3)
 
 // returns Ful
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 LEFT("Fulcrum")
 
 // returns F
-{% endhighlight %}
+```

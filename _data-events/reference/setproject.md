@@ -9,12 +9,11 @@ permalink: /data-events/reference/setproject/
 
 ### Parameters
 
-`project` String (__required__) - The project for the record
+`project` String (__required__) - The project name, or `null` to clear the project
 
 ### Examples
 
-{% highlight js %}
-SETPROJECT('Bells Crossing Phase 3')
-
+```js
 // Sets the project of a record
-{% endhighlight %}
+SETPROJECT('Bells Crossing Phase 3')
+```

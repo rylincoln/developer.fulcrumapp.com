@@ -164,6 +164,10 @@ Returns the first N items from an array or string
 
 Formats a number with a fixed number of decimal places.
 
+### [FLATTEN](/expressions/reference/flatten/)
+
+Flatten nested arrays into a flat array
+
 ### [FLOOR](/expressions/reference/floor/)
 
 Rounds a number down to the nearest integer multiple of specified significance.
@@ -343,6 +347,10 @@ Returns the current 'Other' value for a choice field or classification field
 ### [PI](/expressions/reference/pi/)
 
 Returns the value of Pi to 15 decimal places.
+
+### [PLUCK](/expressions/reference/pluck/)
+
+Extract property values from an object
 
 ### [POWER](/expressions/reference/power/)
 

@@ -19,29 +19,29 @@ Object
 
 ### Examples
 
-{% highlight js %}
+```js
 LAST([1, 2, 3])
 
 // returns 3
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 LAST(['a', 'b', 'c'], 2)
 
 // returns [b,c]
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 LAST('abc')
 
 // returns c
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 LAST('abc', 2)
 
 // returns [b,c]
-{% endhighlight %}
+```

@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 SQRTPI(6)
 
 // returns 4.3416075273496055
-{% endhighlight %}
+```

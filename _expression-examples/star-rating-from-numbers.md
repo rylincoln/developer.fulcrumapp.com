@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Star ratings from a numeric range"
+title: "Star Ratings From A Numeric Range"
 description: "How to generate star ratings using numeric range data as input."
 category: section
 ---
@@ -10,8 +10,8 @@ Assuming `$rating` is a numeric field with a minumum of 1 and a maximum of 5, ge
 
 This will take a numeric field value in `$rating` and convert it into actual star characters.
 
-{% highlight  js %}
-Array(FLOOR($rating + 1)).join('★') + Array(FLOOR(6 - $rating)).join('☆')
-{% endhighlight %}
+```js
+SETRESULT(Array(FLOOR($rating + 1)).join('★') + Array(FLOOR(6 - $rating)).join('☆'));
+```
 
 Entering "3" gives the output: "★★★☆☆".

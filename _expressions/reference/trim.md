@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 TRIM("  Fulcrum is cross-platform ")
 
 // returns Fulcrum is cross-platform
-{% endhighlight %}
+```

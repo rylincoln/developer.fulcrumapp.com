@@ -17,8 +17,8 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 TRUE()
 
 // returns true
-{% endhighlight %}
+```

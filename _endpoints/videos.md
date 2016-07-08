@@ -94,7 +94,7 @@ The following properties must be included in order to create/update a photo obje
 
 Example validation response if `access_key` is not included:
 
-```
+```json
 {
   "video": {
     "errors": {
@@ -110,11 +110,9 @@ Example validation response if `access_key` is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid video
 
-```
+```json
 {
   "video": {
     "access_key": "83b0dc55-82d6-459c-99d6-08c6963eaf2b",
@@ -213,7 +211,7 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Valid video track
 
-```
+```json
 {
   "tracks": [
     {
@@ -286,7 +284,15 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get the metadata for all videos
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/videos.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/videos.json",
@@ -304,7 +310,15 @@ $.ajax({
 
 ### Get the tracks for all videos as GeoJSON
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/videos/tracks.geojson' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/videos/tracks.geojson",
@@ -322,7 +336,15 @@ $.ajax({
 
 ### Get the metadata for a single video
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/videos/my-video-access-key.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/videos/my-video-access-key.json",
@@ -340,7 +362,15 @@ $.ajax({
 
 ### Get the track for a single video as GeoJSON
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/videos/my-video-access-key/track.geojson' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/videos/my-video-access-key/track.geojson",
@@ -358,12 +388,14 @@ $.ajax({
 
 ### Upload a new video
 
-```
+```html
 <form>
   <input type="file" name="video" id="video" /><br /><br />
   <input type="button" id="upload" value="upload" />
 </form>
+```
 
+```js
 $(document).ready(function(){
   /**
   * Generates a GUID string.
@@ -406,12 +438,14 @@ $(document).ready(function(){
 
 ### Upload a track for an existing video
 
-```
+```html
 <form>
   <input type="file" name="track" id="track" /><br /><br />
   <input type="button" id="upload-existing" value="upload" />
 </form>
+```
 
+```js
 $(document).ready(function(){
   $("#upload-existing").click(function(){
     var formData = new FormData();

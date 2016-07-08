@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 SUM(4, 10, 22, 183)
 
 // returns 219
-{% endhighlight %}
+```

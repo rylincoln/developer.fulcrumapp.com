@@ -17,15 +17,15 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 ISNONTEXT(4)
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ISNONTEXT("Some text")
 
 // returns false
-{% endhighlight %}
+```

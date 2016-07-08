@@ -40,7 +40,7 @@ Using Basic authentication to fetch your API Key allows you to build client-side
 
 All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
 
-{% highlight javascript %}
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/users.json",
@@ -59,13 +59,13 @@ $.ajax({
     console.log(data)
   }
 });
-{% endhighlight %}
+```
 
 **Note**: In case you were wondering,`btoa` encodes a string in base-64.
 
 ### Valid User Response
 
-{% highlight javascript %}
+```json
 {
   "user": {
     "first_name": "John",
@@ -142,4 +142,4 @@ $.ajax({
     }
   }
 }
-{% endhighlight %}
+```

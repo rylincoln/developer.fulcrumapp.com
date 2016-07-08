@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 LATITUDE()
 
 // returns 27.770756908186286
-{% endhighlight %}
+```

@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 DAY('2015-12-31')
 
 // returns 31
-{% endhighlight %}
+```

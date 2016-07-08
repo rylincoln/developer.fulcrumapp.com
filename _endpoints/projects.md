@@ -61,7 +61,7 @@ The following properties must be included in order to create/update a project ob
 
 Example validation response if `name` is not included:
 
-```
+```json
 {
   "project": {
     "errors": {
@@ -77,11 +77,9 @@ Example validation response if `name` is not included:
 
 ## Examples
 
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
 ### Valid project response
 
-```
+```json
 {
   "project": {
     "name": "Pinellas County",
@@ -95,7 +93,15 @@ All examples take advantage of [jQuery](http://jquery.com/) to perform asynchron
 
 ### Get all projects
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/projects.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/projects.json",
@@ -113,7 +119,15 @@ $.ajax({
 
 ### Get a single project by ID
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/projects/my-project-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/projects/my-project-id.json",
@@ -131,7 +145,17 @@ $.ajax({
 
 ### Create a new project
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/projects.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"project": {"name": "Pinellas County","description": "For records in Pinellas County"}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "POST",
   url: "https://api.fulcrumapp.com/api/v2/projects.json",
@@ -155,7 +179,17 @@ $.ajax({
 
 ### Update a project
 
+#### cURL
+```sh
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/projects/my-project-id.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"project": {"name": "Pinellas County, FL","description": "For records in Pinellas County, FL"}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/projects/my-project-id.json",
@@ -179,7 +213,15 @@ $.ajax({
 
 ### Delete a project
 
+#### cURL
+```sh
+curl --request DELETE 'https://api.fulcrumapp.com/api/v2/projects/my-project-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "DELETE",
   url: "https://api.fulcrumapp.com/api/v2/projects/my-project-id.json",

@@ -17,15 +17,15 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 AND(1, 0, false)
 
 // returns false
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 AND(3 + 3 == 6, 10 + 2 == 12)
 
 // returns true
-{% endhighlight %}
+```

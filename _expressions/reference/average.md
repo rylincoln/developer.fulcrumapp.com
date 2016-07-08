@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 AVERAGE(1, 2, 3)
 
 // returns 2
-{% endhighlight %}
+```

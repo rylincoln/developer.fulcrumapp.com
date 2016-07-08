@@ -17,22 +17,22 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 ISEVEN(4)
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ISEVEN(5)
 
 // returns false
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ISEVEN(4.12)
 
 // returns true
-{% endhighlight %}
+```

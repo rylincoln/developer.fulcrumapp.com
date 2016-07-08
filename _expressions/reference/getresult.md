@@ -17,9 +17,9 @@ No parameters
 
 ### Examples
 
-{% highlight js %}
+```js
 SETRESULT(1)
 GETRESULT()
 
 // returns 1
-{% endhighlight %}
+```

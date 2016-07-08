@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 PROPER("fulcrum mobile data collection")
 
 // returns Fulcrum Mobile Data Collection
-{% endhighlight %}
+```

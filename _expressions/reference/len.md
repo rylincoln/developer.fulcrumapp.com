@@ -17,8 +17,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 LEN("Fulcrum is for data collection")
 
 // returns 30
-{% endhighlight %}
+```

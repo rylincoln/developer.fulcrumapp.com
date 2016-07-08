@@ -17,15 +17,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 MEDIAN(15,2,9,67,22)
 
 // returns 15
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 MEDIAN(1,10,4)
 
 // returns 4
-{% endhighlight %}
+```

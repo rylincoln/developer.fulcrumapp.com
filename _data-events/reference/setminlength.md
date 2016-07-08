@@ -15,15 +15,14 @@ permalink: /data-events/reference/setminlength/
 
 ### Examples
 
-{% highlight js %}
+```js
 SETMINLENGTH('weather_summary', 25)
 
 // Sets the minimum length of the weather summary field to 25
-{% endhighlight %}
+```
 
 
-{% highlight js %}
-SETMINLENGTH('weather_summary', null)
-
+```js
 // Unsets any override previously set by SETMINLENGTH and uses the original setting from the form schema
-{% endhighlight %}
+SETMINLENGTH('weather_summary', null)
+```

@@ -19,15 +19,15 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 RIGHT("ABCDEFG", 4)
 
 // returns DEFG
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 RIGHT("000001")
 
 // returns 1
-{% endhighlight %}
+```

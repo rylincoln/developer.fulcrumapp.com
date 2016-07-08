@@ -19,22 +19,22 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 QUOTIENT(30, 5)
 
 // returns 6
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 QUOTIENT(0, 10)
 
 // returns 0
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 QUOTIENT(45, 0)
 
 // returns NaN
-{% endhighlight %}
+```

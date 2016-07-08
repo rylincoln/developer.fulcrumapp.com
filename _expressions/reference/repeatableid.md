@@ -17,8 +17,8 @@ String - The ID of the current repeatable item
 
 ### Examples
 
-{% highlight js %}
+```js
 REPEATABLEID()
 
 // returns 859fdb06-4e7d-4bed-b1d2-af168db71522
-{% endhighlight %}
+```

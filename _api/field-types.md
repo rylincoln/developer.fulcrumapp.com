@@ -26,7 +26,7 @@ A ChoiceField is a form element to allow a list of selectable options. There are
 
 `ChoiceField` elements *must* have either:
 
-- a `choices` array that contains a non-empty Array of Hashes of `{label:'', value:''}`
+- a `choices` array that contains a non-empty Array of Hashes of `{"label":"", "value":""}`
   - Every choice object within the `choices` array must contain at least a non-blank label
   - The `value` attribute of each choice is optional, and will default to the `label` if not given
 - a `choice_list_id` field that contains a valid `id` of an existing ChoiceList object
@@ -80,4 +80,42 @@ Condition attributes are not required. They are only required if the type fields
 
 The example below shows the structure of a field with two visibility conditions. In this case, this "yes/no" selector field for capturing whether a venue has wifi or not is only displayed if the user selects "Diner" or "Coffee Shop" from another choice field earlier in the form:
 
-<script src="https://gist.github.com/2995795.js"> </script>
+```
+{
+  "allow_other": false,
+  "choices": [
+    {
+      "label": "Yes",
+      "value": "Y"
+    },
+    {
+      "label": "No",
+      "value": "N"
+    }
+  ],
+  "data_name": "wifi",
+  "default_value": null,
+  "description": "Does the venue have wifi?",
+  "disabled": false,
+  "hidden": false,
+  "key": "key",
+  "label": "Wifi?",
+  "multiple": false,
+  "required": false,
+  "required_conditions_type": null,
+  "type": "ChoiceField",
+  "visible_conditions": [
+    {
+      "field_key": "field_key",
+      "operator": "equal_to",
+      "value": "Diner"
+    },
+    {
+      "field_key": "field_key",
+      "operator": "equal_to",
+      "value": "Coffee Shop"
+    }
+  ],
+  "visible_conditions_type": "any"
+}
+```

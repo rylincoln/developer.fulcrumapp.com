@@ -17,15 +17,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 LCM(2, 5)
 
 // returns 10
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 LCM(5, 22, 12)
 
 // returns 660
-{% endhighlight %}
+```

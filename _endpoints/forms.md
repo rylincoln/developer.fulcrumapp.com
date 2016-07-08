@@ -51,6 +51,10 @@ The Forms API gives you access to your form fields, or app schema.
 | title_field_keys | array | no | no | Array of strings, where the strings are keys for fields in the elements attribute. |
 | status_field | object | no | no | Status field object (see status field table below). |
 | auto_assign | boolean | no | no | Assigns records to the user who creates them. |
+| hidden_on_dashboard | boolean | no | no | Is the form visible in the mobile dashboard? |
+| geometry_required | boolean | no | no | Requiring the location will force a location to be saved with each record. |
+| geometry_types | array | no | no | Enables/disables record location. `['Point']` or `[]` |
+| script | string | no | no | Custom Data Events script. |
 | record_count | number | no | yes | The number of records in this form. |
 | created_at | string | no | yes | Timestamp when the form was created. |
 | updated_at | string | no | yes | Timestamp when the form was last updated. |
@@ -121,9 +125,9 @@ The Forms API gives you access to your form fields, or app schema.
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | neutral_enabled | boolean | yes | Enable N/A choice? |
-| neutral | object | if neutral_enabled | Label/Value for neutral choice (`{label: "N/A",value: "n/a"}`). |
-| positive | object | yes | Label/Value for positive choice (`{label: "Yes",value: "yes"}`). |
-| negative | object | yes | Label/Value for positive choice (`{label: "No",value: "no"}`). |
+| neutral | object | if neutral_enabled | Label/Value for neutral choice (`{"label": "N/A","value": "n/a"}`). |
+| positive | object | yes | Label/Value for positive choice (`{"label": "Yes","value": "yes"}`). |
+| negative | object | yes | Label/Value for positive choice (`{"label": "No","value": "no"}`). |
 
 ### Additional Form Element Properties (ChoiceField)
 
@@ -202,7 +206,7 @@ The Forms API gives you access to your form fields, or app schema.
 {:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| display | object | yes | Calculation display object (`{style: "number",currency: null}`). |
+| display | object | yes | Calculation display object (`{"style": "number","currency": null}`). |
 | expression | string | no | Calculation expression. |
 
 ### Conditions
@@ -246,7 +250,7 @@ Example validation response if the `name` is not included:
 
 ### Valid Form Response
 
-```
+```json
 {
   "form": {
     "name": "Fire Hydrant Inventory",
@@ -449,7 +453,15 @@ Example validation response if the `name` is not included:
 
 ### Get all forms
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/forms.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/forms.json",
@@ -467,7 +479,15 @@ $.ajax({
 
 ### Get a single form by ID
 
+#### cURL
+```sh
+curl --request GET 'https://api.fulcrumapp.com/api/v2/forms/my-form-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "GET",
   url: "https://api.fulcrumapp.com/api/v2/forms/my-form-id.json",
@@ -485,7 +505,17 @@ $.ajax({
 
 ### Create a new form
 
+#### cURL
+```sh
+curl --request POST 'https://api.fulcrumapp.com/api/v2/forms.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"form": {"name": "A cURL Test","description": "Inventory of fire hydrant structures.","elements": [{"type": "TextField","key": "2832","label": "ID Tag","data_name": "id_tag","description": "Enter the asset tag ID.","required": false,"disabled": false,"hidden": false,"default_value": ""},{"type": "ChoiceField","key": "8373","label": "Hydrant Type","data_name": "hydrant_type","description": "What style of hydrant is it?","required": false,"disabled": false,"hidden": false,"default_value": "","multiple": false,"allow_other": false,"choices": [{"label": "Pillar","value": "pillar"},{"label": "Pond","value": "pond"},{"label": "Standpipe","value": "standpipe"},{"label": "Underground","value": "underground"},{"label": "Wall","value": "wall"}]}]}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "POST",
   url: "https://api.fulcrumapp.com/api/v2/forms.json",
@@ -517,24 +547,24 @@ $.ajax({
         "multiple": false,
         "allow_other": false,
         "choices": [{
-          label: "Pillar",
-          value: "pillar"
+          "label": "Pillar",
+          "value": "pillar"
         },
         {
-          label: "Pond",
-          value: "pond"
+          "label": "Pond",
+          "value": "pond"
         },
         {
-          label: "Standpipe",
-          value: "standpipe"
+          "label": "Standpipe",
+          "value": "standpipe"
         },
         {
-          label: "Underground",
-          value: "underground"
+          "label": "Underground",
+          "value": "underground"
         },
         {
-          label: "Wall",
-          value: "wall"
+          "label": "Wall",
+          "value": "wall"
         }]
       }]
     }
@@ -553,7 +583,17 @@ $.ajax({
 
 ### Update a form
 
+#### cURL
+```sh
+curl --request PUT 'https://api.fulcrumapp.com/api/v2/forms/my-form-id.json' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'X-ApiToken: my-api-key' \
+--data '{"form": {"name": "Fire Hydrant Inventory","description": "Inventory of fire hydrant structures.","elements": [{"type": "TextField","key": "2832","label": "ID Tag","data_name": "id_tag","description": "Enter the asset tag ID.","required": false,"disabled": false,"hidden": false,"default_value": ""},{"type": "ChoiceField","key": "8373","label": "Hydrant Type","data_name": "hydrant_type","description": "What style of hydrant is it?","required": false,"disabled": false,"hidden": false,"default_value": "","multiple": false,"allow_other": false,"choices": [{"label": "Pillar","value": "pillar"},{"label": "Pond","value": "pond"},{"label": "Standpipe","value": "standpipe"},{"label": "Underground","value": "underground"},{"label": "Wall","value": "wall"}]},{"type": "PhotoField","key": "193f","label": "Photos","data_name": "photos","required": false,"disabled": false,"hidden": false,"default_value": ""}]}}'
 ```
+
+#### jQuery
+```js
 $.ajax({
   type: "PUT",
   url: "https://api.fulcrumapp.com/api/v2/forms/my-form-id.json",
@@ -585,24 +625,24 @@ $.ajax({
         "multiple": false,
         "allow_other": false,
         "choices": [{
-          label: "Pillar",
-          value: "pillar"
+          "label": "Pillar",
+          "value": "pillar"
         },
         {
-          label: "Pond",
-          value: "pond"
+          "label": "Pond",
+          "value": "pond"
         },
         {
-          label: "Standpipe",
-          value: "standpipe"
+          "label": "Standpipe",
+          "value": "standpipe"
         },
         {
-          label: "Underground",
-          value: "underground"
+          "label": "Underground",
+          "value": "underground"
         },
         {
-          label: "Wall",
-          value: "wall"
+          "label": "Wall",
+          "value": "wall"
         }]
       },
       {
@@ -631,18 +671,26 @@ $.ajax({
 
 ### Delete a form
 
-{% highlight javascript %}
+#### cURL
+```sh
+curl --request DELETE 'https://api.fulcrumapp.com/api/v2/forms/my-form-id.json' \
+--header 'Accept: application/json' \
+--header 'X-ApiToken: my-api-key'
+```
+
+#### jQuery
+```js
 $.ajax({
   type: "DELETE",
   url: "https://api.fulcrumapp.com/api/v2/forms/my-form-id.json",
   contentType: "application/json",
   dataType: "json",
   headers: {
-    "X-ApiToken": "my-record-id"
+    "X-ApiToken": "my-api-key"
   },
   success: function (data) {
     // do something!
     console.log(data);
   }
 });
-{% endhighlight %}
+```

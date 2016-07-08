@@ -15,15 +15,15 @@ permalink: /data-events/reference/off/
 
 ### Examples
 
-{% highlight js %}
+```js
 OFF('validate-record', callback)
 
 // Detaches an event handler from the validate-record event
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 OFF('validate-record')
 
 // Detaches all event handlers listening to the 'validate-record' event
-{% endhighlight %}
+```

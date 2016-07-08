@@ -1,13 +1,13 @@
 ---
 layout: default
 section: expressions
-title: "Track who has updated a record"
+title: "Track Who Has Updated A Record"
 description: "Maintain a field for tracking record updates by field technicians only."
 category: section
 ---
 
-{% highlight  js %}
+```js
 if (this.platform == 'Android' || this.platform == 'iOS') {
   SETRESULT(USERFULLNAME());
 }
-{% endhighlight %}
+```

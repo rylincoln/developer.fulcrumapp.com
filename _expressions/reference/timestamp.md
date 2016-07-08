@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 TIMESTAMP(new Date('December 16, 1982 03:24:00'))
 
 // returns 1982-12-16 03:24:00
-{% endhighlight %}
+```

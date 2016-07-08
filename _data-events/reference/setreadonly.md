@@ -11,26 +11,26 @@ permalink: /data-events/reference/setreadonly/
 
 `field` String (__required__) - The data name
 
-`readOnly` boolean,null (__required__) - Boolean value representing whether the field should be read-only
+`readOnly` boolean,null (__required__) - Boolean value representing whether the field should be read-only, or `null` to restore the original state
 
 ### Examples
 
-{% highlight js %}
+```js
 SETREADONLY('weather_summary', true)
 
 // Sets the field to read only, not editable by the user
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETREADONLY('weather_summary', false)
 
 // Sets the field to be active, editable by the user
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 SETREADONLY('weather_summary', null)
 
 // Unsets any override previously set by SETREADONLY and uses the original setting from the form schema
-{% endhighlight %}
+```

@@ -17,15 +17,15 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 CHAR(65)
 
 // returns A
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 CHAR(1337)
 
 // returns Թ
-{% endhighlight %}
+```

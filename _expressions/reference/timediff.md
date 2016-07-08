@@ -21,28 +21,28 @@ Number - The number of hours (default) or the number of minutes between the 2 sp
 
 ### Examples
 
-{% highlight js %}
+```js
 TIMEDIFF('09:00', '17:00')
 
 // returns 8
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 TIMEDIFF('09:00', '11:00', 'minutes')
 
 // returns 120
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 TIMEDIFF('02:00', '01:00')
 
 // returns 23
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 // This returns the time elapsed in the format '__ hours __ minutes'
 // (or '__ hours', '1 hour __ minutes', etc.)
 // Other tests:
@@ -86,4 +86,4 @@ else {
 }
 
 // returns 47 minutes
-{% endhighlight %}
+```

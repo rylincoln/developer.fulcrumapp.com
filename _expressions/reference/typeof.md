@@ -17,50 +17,50 @@ String - The type of the value
 
 ### Examples
 
-{% highlight js %}
+```js
 TYPEOF('test')
 
 // returns string
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 TYPEOF(1)
 
 // returns number
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 TYPEOF(true)
 
 // returns boolean
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 TYPEOF(null)
 
 // returns null
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 TYPEOF(new Date)
 
 // returns date
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 TYPEOF({ name: 'Test' })
 
 // returns object
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 TYPEOF([1, 2, 3])
 
 // returns array
-{% endhighlight %}
+```

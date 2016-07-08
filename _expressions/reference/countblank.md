@@ -17,9 +17,9 @@ Number - the number of blank items in the array
 
 ### Examples
 
-{% highlight js %}
+```js
 // since null and '' are blank values
 COUNTBLANK([null, null, '', 1])
 
 // returns 3
-{% endhighlight %}
+```

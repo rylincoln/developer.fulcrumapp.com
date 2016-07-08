@@ -21,8 +21,8 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 FIND("needle", "the needle is in the haystack")
 
 // returns 5
-{% endhighlight %}
+```

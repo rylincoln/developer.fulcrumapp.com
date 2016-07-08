@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 order: 3
-title: "Examples"
+title: "Data Event Examples"
 description: "Data event expression examples."
 category: section
 ---

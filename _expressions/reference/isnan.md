@@ -17,22 +17,22 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 ISNAN(NaN)
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ISNAN('aaa' / 7)
 
 // returns true
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ISNAN(7)
 
 // returns false
-{% endhighlight %}
+```

@@ -17,8 +17,8 @@ Boolean
 
 ### Examples
 
-{% highlight js %}
+```js
 HASOTHER($choice_field)
 
 // returns false
-{% endhighlight %}
+```

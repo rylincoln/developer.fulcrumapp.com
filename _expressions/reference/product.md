@@ -17,15 +17,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 PRODUCT(4, 18, 3)
 
 // returns 216
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 PRODUCT(23, 5, 0)
 
 // returns 0
-{% endhighlight %}
+```

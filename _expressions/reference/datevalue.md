@@ -17,8 +17,8 @@ Date
 
 ### Examples
 
-{% highlight js %}
+```js
 DATEVALUE('2015-01-01')
 
 // returns 2015-01-01
-{% endhighlight %}
+```

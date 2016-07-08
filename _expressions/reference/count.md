@@ -17,16 +17,16 @@ Number - the count of numeric values in the array
 
 ### Examples
 
-{% highlight js %}
+```js
 COUNT([11, 22, 33, 44, 55])
 
 // returns 5
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 // since it only counts numeric arguments
 COUNT(['a', 'b', 'c', 'd', 'e'])
 
 // returns 0
-{% endhighlight %}
+```

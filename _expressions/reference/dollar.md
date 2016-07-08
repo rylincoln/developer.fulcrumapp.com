@@ -23,24 +23,24 @@ String - formatted currency
 
 ### Examples
 
-{% highlight js %}
+```js
 DOLLAR(1234.567)
 
 // returns $1,234.57
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 // USD formatted in French
 DOLLAR(1234.567, 2, 'USD', 'fr-FR')
 
 // returns 1 234,57 $US
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 // Euro formatted in Portuguese
 DOLLAR(1234.567, 2, 'EUR', 'pt-BR')
 
 // returns €1.234,57
-{% endhighlight %}
+```

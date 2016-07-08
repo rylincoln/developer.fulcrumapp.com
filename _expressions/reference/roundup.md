@@ -19,15 +19,15 @@ Number
 
 ### Examples
 
-{% highlight js %}
+```js
 ROUNDUP(156.826, 2)
 
 // returns 156.83
-{% endhighlight %}
+```
 
 
-{% highlight js %}
+```js
 ROUNDUP(156.826, 0)
 
 // returns 157
-{% endhighlight %}
+```

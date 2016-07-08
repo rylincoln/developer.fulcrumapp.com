@@ -17,8 +17,8 @@ String
 
 ### Examples
 
-{% highlight js %}
+```js
 VERSIONINFO()
 
 // returns Apple iPhone6,2, iOS 8.1, Fulcrum 2.7.0 2162
-{% endhighlight %}
+```

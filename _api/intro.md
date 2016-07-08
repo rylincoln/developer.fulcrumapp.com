@@ -13,6 +13,7 @@ menu:
   - "Authentication": authentication
   - "Time Stamps": time-stamps
   - "Notes": notes
+  - "Libraries": libraries
 ---
 
 The Fulcrum JSON API uses REST endpoints for querying, creating, updating, and deleting data. The API provides users the ability to: query the URL for information using a GET request, to update the dataset by sending a PUT, or to delete the dataset by sending a DELETE.  Each operation is a URL endpoint that represents either a single object or a collection of objects.
@@ -104,3 +105,11 @@ All of the index views use pagination. The following information will be returne
 * The `/api/v2/users` endpoint is the _only one_ that supports HTTP Basic authentication. All other endpoints require the API Key as either an HTTP request header or query string parameter.
 
 * Using an HTTP header of `Accept: application/json` is required, otherwise you’ll receive a `406: Not Acceptable` response from the API.
+
+## Libraries
+
+There are several open source libraries available for working with the Fulcrum API in your language of choice.
+
+* [Fulcrum JavaScript](https://github.com/fulcrumapp/fulcrum-node)
+* [Fulcrum Python](https://github.com/fulcrumapp/fulcrum-python)
+* [Fulcrum Ruby](https://github.com/fulcrumapp/fulcrum-ruby)
