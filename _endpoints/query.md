@@ -251,7 +251,19 @@ Returns a photo URL in the output for a single photo.
 The following will return a secure URL directly to the raw file.
 
 ```sql
-SELECT FCM_Photo(photo_field[1]) AS photo_url FROM "Building Inspections";
+SELECT FCM_Photo('c515f1d6-e882-4027-9e5c-11e44b4c181c', 'thumb') AS photo_url;
+```
+
+The following will return a secure URL directly to the raw file for the second photo in a particular record.
+
+```sql
+SELECT FCM_Photo(photo_field[2], 'large') AS photo_url FROM "Fire Hydrant Inspection Survey" WHERE _record_id='69daadc7-f68c-4c7c-8b40-7d9ea9e6d6c5';
+```
+
+The following will return secure URLs directly to the raw files for the first photos of all records in a table.
+
+```sql
+SELECT FCM_Photo(photo_field[1], 'thumb') AS photo_urls FROM "Fire Hydrant Inspection Survey";
 ```
 
 #### `FCM_Photo(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
@@ -267,8 +279,9 @@ Returns an array of photos URLs in the output.
 The following will return secure URLs directly to the raw files. The consumer of the output needs to be able to handle multiple URLs.
 
 ```sql
-SELECT FCM_Photo(photo_field) AS photo_urls FROM "Building Inspections";
+SELECT FCM_Photo(unnest(ARRAY['c515f1d6-e882-4602-9e5c-11e44b4c181c', 'bf5b2afb-f6f8-4d1a-ae41-6ed3830634de']), 'thumb') AS photo_urls;
 ```
+*Here we use `unnest` to expand an array to a set of rows*
 
 <hr>
 
