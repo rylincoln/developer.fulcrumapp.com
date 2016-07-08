@@ -35,7 +35,7 @@ Available parameters to query the objects in your account. All of the parameters
 |-----------|------|-------------|----------|
 | token | string | Your Fulcrum API token. | yes |
 | q | string | The SQL query. | yes |
-| format | string | The format of the results returned by the query. Options include csv, json, geojosn. Defaults to csv. | no |
+| format | string | The format of the results returned by the query. Options include csv, json, geojson. Defaults to csv. | no |
 | page | integer | The page number requested. | no |
 | per_page | integer | Number of results per page. By default, all requests are paginated to the maximum value of 20,000 items per request. | no |
 | sort_column | string | The name of the column used to sort on. | no |
@@ -43,7 +43,7 @@ Available parameters to query the objects in your account. All of the parameters
 
 ## Formatting Calls to the Query API
 
-All Query API requests to your should follow this general pattern:
+All Query API requests should follow this general pattern:
 
 ```
 https://api.fulcrumapp.com/api/v2/query/?token={API Token}&q={SQL Statement}
@@ -54,7 +54,7 @@ If you encounter errors, double-check that you are using the correct API token, 
 **Example**
 
 ```
-https://api.fulcrumapp.com/api/v2/query/?token=abc-123&q=SELECT _status, COUNT(*) FROM "Park Inventory" GROUP BY _status ORDER BY COUNT(*) DESC;
+https://api.fulcrumapp.com/api/v2/query/?token=abc-123&q=SELECT _status, COUNT(*) FROM "Park Inventory" GROUP BY _status ORDER BY COUNT(*) DESC
 ```
 
 **Result**
@@ -108,7 +108,7 @@ https://api.fulcrumapp.com/api/v2/query/?token=abc-123&format=json&q=SELECT park
 **County Parks (GeoJSON)**
 
 ```
-https://api.fulcrumapp.com/api/v2/query/?token=abc-123&format=json&q=SELECT park_name, address, _geometry FROM "Park Inventory" WHERE _status = 'County'
+https://api.fulcrumapp.com/api/v2/query/?token=abc-123&format=geojson&q=SELECT park_name, address, _geometry FROM "Park Inventory" WHERE _status = 'County'
 ```
 
 **GeoJSON Result**
@@ -154,7 +154,7 @@ https://api.fulcrumapp.com/api/v2/query/?token=abc-123&format=json&q=SELECT park
 
 ## Fulcrum Table Types
 
-The basic `SELECT * FROM tables;` query will return all of the tables available for use with the Query API. This is a good place to start when exploring the capabilities of the Query API.
+The basic `SELECT * FROM tables;` query will return all of the tables available for use and is a good place to start when exploring the capabilities of the Query API.
 
 {:.table.table-striped}
 | Type | Description |
@@ -210,19 +210,19 @@ Every Fulcrum form contains standard system columns, in addition to your custom 
 
 In addition to the standard PostgreSQL & PostGIS functions, there are several Fulcrum-specific helper functions for formatting data and handling media attachments.
 
-### `FCM_ConvertToFloat(input_value text) RETURNS double precision`
+#### `FCM_ConvertToFloat(input_value text) RETURNS double precision`
 
 ```sql
 FCM_ConvertToFloat('1.2')   -- 1.2
-FCM_ConvertToFloat('10000') -- 1000
+FCM_ConvertToFloat('1000') -- 1000
 FCM_ConvertToFloat('a')     -- NULL
 ```
 
 Convert a textual value to a floating point value. This function is similar to a cast, except it gracefully fails to `NULL` when the input cannot be converted to a number. This is useful for text data that's mostly numbers but might have some invalid values in it.
 
-### `FCM_FormatTimestamp(ts timestamp without time zone, tz text DEFAULT 'UTC') RETURNS text`
+#### `FCM_FormatTimestamp(ts timestamp without time zone, tz text DEFAULT 'UTC') RETURNS text`
 
-Convert a timestamp to a different time zone. This is useful for localizing your timestamps to your own time zone. The `tz` argument is a string representing the time zone to use. This string can be in any format supported by the postgres `AT TIME ZONE` construct.
+Convert a timestamp to a different time zone. This is useful for localizing your timestamps to your own time zone. The `tz` argument is a string representing the time zone to use. This string can be in any format supported by the PostgreSQL `AT TIME ZONE` construct.
 
 Examples:
 
@@ -238,7 +238,7 @@ The above examples show some of the ways the function can be used. The last form
 
 <hr>
 
-### `FCM_Photo(id text, version text DEFAULT NULL) RETURNS fcm_file`
+#### `FCM_Photo(id text, version text DEFAULT NULL) RETURNS fcm_file`
 
 * `id` The photo ID
 * `version` (optional, default `NULL`) The photo version. One of:
@@ -246,7 +246,7 @@ The above examples show some of the ways the function can be used. The last form
   * `'large'` (jpg)
   * `'thumb'` (jpg)
 
-Returns photos URLs in the output for a single photo.
+Returns a photo URL in the output for a single photo.
 
 The following will return a secure URL directly to the raw file.
 
@@ -254,9 +254,9 @@ The following will return a secure URL directly to the raw file.
 SELECT FCM_Photo(photo_field[1]) AS photo_url FROM "Building Inspections";
 ```
 
-### `FCM_Photo(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
+#### `FCM_Photo(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
 
-* `ids` An array of photo ID's, this works naturally with the way photo fields are stored.
+* `ids` An array of photo IDs, this works naturally with the way photo fields are stored.
 * `version` (optional, default `NULL`) The photo version. One of:
   * `NULL` (original)
   * `'large'` (jpg)
@@ -272,7 +272,7 @@ SELECT FCM_Photo(photo_field) AS photo_urls FROM "Building Inspections";
 
 <hr>
 
-### `FCM_Video(id text, version text DEFAULT NULL) RETURNS fcm_file`
+#### `FCM_Video(id text, version text DEFAULT NULL) RETURNS fcm_file`
 
 * `id` The video ID
 * `version` (optional, default `NULL`) The video version. One of:
@@ -290,7 +290,7 @@ SELECT FCM_Photo(photo_field) AS photo_urls FROM "Building Inspections";
   * `thumbnail_large_square` (jpg)
   * `thumbnail_huge_square` (jpg)
 
-Returns video URLs in the output for a single video.
+Returns a video URL in the output for a single video.
 
 The following will return a secure URL directly to the raw file.
 
@@ -298,7 +298,7 @@ The following will return a secure URL directly to the raw file.
 SELECT FCM_Video(video_field[1]) AS video_url FROM "Building Inspections";
 ```
 
-### `FCM_Video(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
+#### `FCM_Video(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
 
 * `ids` The video IDs
 * `version` (optional, default `NULL`) The video version. One of:
@@ -318,7 +318,7 @@ SELECT FCM_Video(video_field[1]) AS video_url FROM "Building Inspections";
 
 Returns video URLs in the output for multiple videos.
 
-The following will return a secure URLs directly to the raw video files.
+The following will return secure URLs directly to the raw video files.
 
 ```sql
 SELECT FCM_Video(video_field) AS video_urls FROM "Building Inspections";
@@ -326,15 +326,15 @@ SELECT FCM_Video(video_field) AS video_urls FROM "Building Inspections";
 
 <hr>
 
-### `FCM_Audio(id text, version text DEFAULT NULL) RETURNS fcm_file`
+#### `FCM_Audio(id text, version text DEFAULT NULL) RETURNS fcm_file`
 
 * `id` The audio ID
-* `version` (optional, default `NULL`) The video version. One of:
+* `version` (optional, default `NULL`) The audio version. One of:
   * `NULL` (original)
   * `small` (m4a)
   * `medium` (m4a)
 
-Returns audio URLs in the output for a single audio file.
+Returns an audio URL in the output for a single audio file.
 
 The following will return a secure URL directly to the raw audio file.
 
@@ -342,17 +342,17 @@ The following will return a secure URL directly to the raw audio file.
 SELECT FCM_Audio(audio_field[1]) AS audio_url FROM "Building Inspections";
 ```
 
-### `FCM_Audio(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
+#### `FCM_Audio(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
 
 * `ids` The audio IDs
-* `version` (optional, default `NULL`) The video version. One of:
+* `version` (optional, default `NULL`) The audio version. One of:
   * `NULL` (original)
   * `small` (m4a)
   * `medium` (m4a)
 
 Returns audio URLs in the output for multiple audio files.
 
-The following will return a secure URLs directly to the raw audio files.
+The following will return secure URLs directly to the raw audio files.
 
 ```sql
 SELECT FCM_Audio(audio_field) AS audio_urls FROM "Building Inspections";
@@ -360,10 +360,10 @@ SELECT FCM_Audio(audio_field) AS audio_urls FROM "Building Inspections";
 
 <hr>
 
-### `FCM_Signature(id text, version text DEFAULT NULL) RETURNS fcm_file`
+#### `FCM_Signature(id text, version text DEFAULT NULL) RETURNS fcm_file`
 
 * `id` The signature ID
-* `version` (optional, default `NULL`) The photo version. One of:
+* `version` (optional, default `NULL`) The signature version. One of:
   * `NULL` (original)
   * `'large'` (png)
   * `'thumb'` (png)
@@ -373,15 +373,21 @@ Returns signature URL in the output for a single signature.
 The following will return a secure URL directly to the raw signature file.
 
 ```sql
-SELECT FCM_Signature(signature_field) AS audio_url FROM "Building Inspections";
+SELECT FCM_Signature(signature_field[1]) AS signature_url FROM "Building Inspections";
 ```
 
-### `FCM_Signature(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
+#### `FCM_Signature(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
 
 * `ids` The signature IDs
-* `version` (optional, default `NULL`) The photo version. One of:
+* `version` (optional, default `NULL`) The signature version. One of:
   * `NULL` (original)
   * `'large'` (png)
   * `'thumb'` (png)
 
 Returns signature URLs in the output for multiple signature files.
+
+The following will return secure URLs directly to the raw signature file.
+
+```sql
+SELECT FCM_Signature(signature_field) AS signature_urls FROM "Building Inspections";
+```
