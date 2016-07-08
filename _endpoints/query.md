@@ -257,13 +257,13 @@ SELECT FCM_Photo('c515f1d6-e882-4027-9e5c-11e44b4c181c', 'thumb') AS photo_url;
 The following will return a secure URL directly to the raw file for the second photo in a particular record.
 
 ```sql
-SELECT FCM_Photo(photo_field[2], 'large') AS photo_url FROM "Fire Hydrant Inspection Survey" WHERE _record_id='69daadc7-f68c-4c7c-8b40-7d9ea9e6d6c5';
+SELECT FCM_Photo(photo_field[2], 'large') AS photo_url FROM "Building Inspections" WHERE _record_id='69daadc7-f68c-4c7c-8b40-7d9ea9e6d6c5';
 ```
 
 The following will return secure URLs directly to the raw files for the first photos of all records in a table.
 
 ```sql
-SELECT FCM_Photo(photo_field[1], 'thumb') AS photo_urls FROM "Fire Hydrant Inspection Survey";
+SELECT FCM_Photo(photo_field[1], 'thumb') AS photo_urls FROM "Building Inspections";
 ```
 
 #### `FCM_Photo(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
