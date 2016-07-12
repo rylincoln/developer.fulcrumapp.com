@@ -9,7 +9,7 @@ permalink: /data-events/reference/progress/
 
 ### Description
 
-PROGRESS displays a non-dismissible message that can be used to provide feedback when performing an asynchronous function. For example, while fetching data from an API using [REQUEST](/data-events/reference/request/) it might be desirable to let the user know that the request is in progress. This is an advanced function that requires thorough testing and error checking in your logic since the message is not dismissible by the user.
+PROGRESS displays a non-dismissible message that can be used to provide feedback when performing an asynchronous function. For example, while fetching data from an API using [REQUEST](/data-events/reference/request/) it might be desirable to let the user know that the request is in progress. This is an advanced function that requires thorough testing and error checking in your logic since the message is not dismissible by the user. To dismiss the progress message, call `PROGRESS();`.
 
 ### Parameters
 
