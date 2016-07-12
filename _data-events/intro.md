@@ -144,14 +144,18 @@ The callback for repeatable events is passed an event parameter with a `name` an
 | Event | Description | Listener Function Signature |
 |--------|----------|-------------|-------------|
 | `'add-photo'` | Fires when a photo is added | `ON('add-photo', 'photo_field', callback);` |
+| `'remove-photo'` | Fires when a photo is removed | `ON('remove-photo', 'photo_field', callback);` |
 | `'add-video'` | Fires when a video is added | `ON('add-video', 'video_field', callback);` |
+| `'remove-video'` | Fires when a video is removed | `ON('remove-video', 'video_field', callback);` |
 | `'add-audio'` | Fires when an audio clip is added | `ON('add-audio', 'audio_field', callback);` |
+| `'remove-audio'` | Fires when an audio clip is removed | `ON('remove-audio', 'audio_field', callback);` |
 
 ### Example
 
 ```js
 ON('add-photo', 'photo_field', function (event) {
   // Do something with the photo metadata
+  ALERT(INSPECT(event));
 });
 ```
 
@@ -179,6 +183,20 @@ The callback for `add-photo` events is passed an event parameter with `name`, `f
 }
 ```
 
+### The `remove-photo` `event` Object
+
+The callback for `remove-photo` events is passed an event parameter with `name`, `field`, and `value` attributes. When removing a photo, the value attribute object only contains the photo id.
+
+```json
+{
+  "name": "remove-photo",
+  "field": "hydrant_photos",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071"
+  }
+}
+```
+
 ### The `add-video` `event` Object
 
 The callback for `add-video` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing video metadata.
@@ -193,7 +211,22 @@ The callback for `add-video` events is passed an event parameter with `name`, `f
     "width": 1920,
     "height": 1080,
     "duration": 20.111,
-    "orientation": 0
+    "orientation": 0,
+    "track": {}
+  }
+}
+```
+
+### The `remove-video` `event` Object
+
+The callback for `remove-video` events is passed an event parameter with `name`, `field`, and `value` attributes. When removing a video, the value attribute object only contains the video id.
+
+```json
+{
+  "name": "remove-video",
+  "field": "hydrant_videos",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071"
   }
 }
 ```
@@ -210,6 +243,20 @@ The callback for `add-audio` events is passed an event parameter with `name`, `f
     "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071",
     "size": 203246,
     "duration": 20.111
+  }
+}
+```
+
+### The `remove-audio` `event` Object
+
+The callback for `remove-audio` events is passed an event parameter with `name`, `field`, and `value` attributes. When removing an audio attachment, the value attribute object only contains the audio id.
+
+```json
+{
+  "name": "remove-audio",
+  "field": "hydrant_audio_notes",
+  "value": {
+    "id": "f1b053f6-6ed0-4803-9cf0-43f42caea071"
   }
 }
 ```
