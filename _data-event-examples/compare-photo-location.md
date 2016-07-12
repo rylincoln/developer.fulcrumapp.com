@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Compare photo location with record location"
+title: "Compare photo location to record location"
 description: "Demonstrates how to add quality control checks on photos by checking to see if they were taken in the same geographic area as the record."
 category: section
 ---
