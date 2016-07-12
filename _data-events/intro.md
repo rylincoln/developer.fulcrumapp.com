@@ -20,15 +20,15 @@ Data Events allow users to perform ​_actions_​ on the mobile device when cer
 {:.table.table-striped.event-table}
 | Event | Description | Listener Function Signature |
 |--------|----------|-------------|-------------|
-| `'load-record'` | Fires when the record editor is displayed. This event can be used to perform one-time initialization when the record editor opens. This event is fired when creating new records and editing existing records. | `ON('load-record', callback)` |
-| `'new-record'` | Fires when a new record is created, after `'load-record'`. This event is only fired for new records. It can be used to populate custom default logic or any other custom actions that only need to be performed for new records. | `ON('new-record', callback)` |
-| `'edit-record'` | Fires when a record is edited, after `'load-record'`. This event is only fired when opening existing records. It can be used to perform custom logic when an existing record is opened. | `ON('edit-record', callback)` |
-| `'save-record'` | Fires immediately before a record is saved and after it's been validated. Inside this event it's possible to make last-second updates to records right before the record is saved. You cannot perform asynchronous tasks in this event. Once the callback is finished the record will be saved and the editor will close. If you want to prevent the record from saving, you must use the `validate-record` or `validate-repeatable` events. | `ON('save-record', callback)` |
-| `'validate-record'` | Fires right before the record is saved to check any validations. Custom validations done in this callback will be displayed in the app alongside normal built-in validations. The callback function should contain custom validation logic and usage of `INVALID()` to notify the user with a message of why the record is invalid. This event is similar to `save-record` and `save-repeatable` except it gives you the option to prevent the record from being saved by using the `INVALID()` function. Asynchronous functions like `REQUEST()` are not supported in this event. The callback must perform all validations in a synchronous fashion with `INVALID()`. | `ON('validate-record', callback)` |
-| `'change-geometry'` | Fires when a record's geometry changes. For a new record, this event fires when the device gets a location from the GPS and adds it to the record. Once the record has a location, this event is only fired when the location is manually changed using the 'Set Location' screen. Calling `SETLOCATION(lat, lon)` does not fire a `change-geometry` event. If you need to handle programmatic changes to the location you must explicitly handle it in your code. | `ON('change-geometry', callback)` |
-| `'change-project'` | Fires when a record's project changes. This event does not fire on default values. If you need to handle the project being set when the record is created you can use `new-record`. Setting the project programmatically with `SETPROJECT()` does not fire a `change-project` event. If you need to respond to programmatic changes in the project you must handle it explicitly after `SETPROJECT()` is called. | `ON('change-project', callback)` |
-| `'change-status'` | Fires when a record's status changes. This event does not fire on default values. If you need to handle the status being set when the record is created you can use `new-record`. Setting the status programmatically with `SETSTATUS()` does not fire a `change-status` event. If you need to respond to programmatic changes in the status you must handle it explicitly after `SETSTATUS()` is called. | `ON('change-status', callback)` |
-| `'change-assignment'` | Fires when a record's assignment changes. The callback is passed an `email` parameter, which is either `null` or the email address of the user assigned. | `ON('change-assignment', callback)` |
+| `'load-record'` | Fires when the record editor is displayed. This event can be used to perform one-time initialization when the record editor opens. This event is fired when creating new records and editing existing records. | `ON('load-record', callback);` |
+| `'new-record'` | Fires when a new record is created, after `'load-record'`. This event is only fired for new records. It can be used to populate custom default logic or any other custom actions that only need to be performed for new records. | `ON('new-record', callback);` |
+| `'edit-record'` | Fires when a record is edited, after `'load-record'`. This event is only fired when opening existing records. It can be used to perform custom logic when an existing record is opened. | `ON('edit-record', callback);` |
+| `'save-record'` | Fires immediately before a record is saved and after it's been validated. Inside this event it's possible to make last-second updates to records right before the record is saved. You cannot perform asynchronous tasks in this event. Once the callback is finished the record will be saved and the editor will close. If you want to prevent the record from saving, you must use the `validate-record` or `validate-repeatable` events. | `ON('save-record', callback);` |
+| `'validate-record'` | Fires right before the record is saved to check any validations. Custom validations done in this callback will be displayed in the app alongside normal built-in validations. The callback function should contain custom validation logic and usage of `INVALID()` to notify the user with a message of why the record is invalid. This event is similar to `save-record` and `save-repeatable` except it gives you the option to prevent the record from being saved by using the `INVALID()` function. Asynchronous functions like `REQUEST()` are not supported in this event. The callback must perform all validations in a synchronous fashion with `INVALID()`. | `ON('validate-record', callback);` |
+| `'change-geometry'` | Fires when a record's geometry changes. For a new record, this event fires when the device gets a location from the GPS and adds it to the record. Once the record has a location, this event is only fired when the location is manually changed using the 'Set Location' screen. Calling `SETLOCATION(lat, lon);` does not fire a `change-geometry` event. If you need to handle programmatic changes to the location you must explicitly handle it in your code. | `ON('change-geometry', callback);` |
+| `'change-project'` | Fires when a record's project changes. This event does not fire on default values. If you need to handle the project being set when the record is created you can use `new-record`. Setting the project programmatically with `SETPROJECT()` does not fire a `change-project` event. If you need to respond to programmatic changes in the project you must handle it explicitly after `SETPROJECT()` is called. | `ON('change-project', callback);` |
+| `'change-status'` | Fires when a record's status changes. This event does not fire on default values. If you need to handle the status being set when the record is created you can use `new-record`. Setting the status programmatically with `SETSTATUS()` does not fire a `change-status` event. If you need to respond to programmatic changes in the status you must handle it explicitly after `SETSTATUS()` is called. | `ON('change-status', callback);` |
+| `'change-assignment'` | Fires when a record's assignment changes. The callback is passed an `email` parameter, which is either `null` or the email address of the user assigned. | `ON('change-assignment', callback);` |
 
 ### Example
 
@@ -36,8 +36,8 @@ To set up a listener for a record event, use the [ON](/data-events/reference/on)
 
 ```js
 ON('validate-record', function (event) {
-  // Do something to validate the record and call INVALID('message') if there is an error.
-})
+  // Do something to validate the record and call INVALID('message'); if there is an error.
+});
 ```
 
 ### The `event` Object
@@ -62,8 +62,8 @@ function callback(event) {
   }
 }
 
-ON('edit-record', callback)
-ON('new-record', callback)
+ON('edit-record', callback);
+ON('new-record', callback);
 ```
 
 <hr>
@@ -73,8 +73,8 @@ ON('new-record', callback)
 {:.table.table-striped.event-table}
 | Event | Description | Listener Function Signature |
 |--------|----------|-------------|-------------|
-| `'change'` | Fires when a field's value changes | `ON('change', 'field', callback)` |
-| `'click'` | Fires when a hyperlink field is tapped | `ON('click', 'my_hyperlink_field', callback)` |
+| `'change'` | Fires when a field's value changes | `ON('change', 'field', callback);` |
+| `'click'` | Fires when a hyperlink field is tapped | `ON('click', 'my_hyperlink_field', callback);` |
 
 There are some cases where the `change` event is not fired. Default values do not trigger a `change` event when
 creating a new record. Also, `change` events are not triggered after manually setting a value with `SETVALUE`.
@@ -86,7 +86,7 @@ When setting up listeners for field events, be sure to add the field as the seco
 ```js
 ON('change', 'cover_type', function (event) {
   // Do something interesting when the cover_type field changes.
-})
+});
 ```
 
 ### The `event` Object
@@ -108,12 +108,12 @@ The callback for field events is passed an event parameter with `name`, `field`,
 {:.table.table-striped.event-table}
 | Event | Description | Listener Function Signature |
 |--------|----------|-------------|-------------|
-| `'load-repeatable'` | Fires when a repeatable editor is displayed | `ON('load-repeatable', 'repeatable_field', callback)` |
-| `'new-repeatable'` | Fires when a new repeatable is created, after `'load-repeatable'` | `ON('new-repeatable', 'repeatable_field', callback)` |
-| `'edit-repeatable'` | Fires when a repeatable is edited, after `'load-repeatable'` | `ON('edit-repeatable', 'repeatable_field', callback)` |
-| `'save-repeatable'` | Fires immediately before repeatable is saved, and after it's been validated | `ON('save-repeatable', 'repeatable_field', callback)` |
-| `'validate-repeatable'` | Fires right before the repeatable is saved to check any validations | `ON('validate-repeatable', 'repeatable_field', callback)` |
-| `'change-geometry'` | Fires when a repeatable's geometry changes | `ON('change-geometry', 'repeatable_field', callback)` |
+| `'load-repeatable'` | Fires when a repeatable editor is displayed | `ON('load-repeatable', 'repeatable_field', callback);` |
+| `'new-repeatable'` | Fires when a new repeatable is created, after `'load-repeatable'` | `ON('new-repeatable', 'repeatable_field', callback);` |
+| `'edit-repeatable'` | Fires when a repeatable is edited, after `'load-repeatable'` | `ON('edit-repeatable', 'repeatable_field', callback);` |
+| `'save-repeatable'` | Fires immediately before repeatable is saved, and after it's been validated | `ON('save-repeatable', 'repeatable_field', callback);` |
+| `'validate-repeatable'` | Fires right before the repeatable is saved to check any validations | `ON('validate-repeatable', 'repeatable_field', callback);` |
+| `'change-geometry'` | Fires when a repeatable's geometry changes | `ON('change-geometry', 'repeatable_field', callback);` |
 
 ### Example
 
@@ -121,8 +121,8 @@ Setting up listeners for repeatable events looks just like those for record even
 
 ```js
 ON('validate-repeatable', 'repeatable_field', function (event) {
-  // Do something to validate the repeatable and call INVALID('message') if there is an error.
-})
+  // Do something to validate the repeatable and call INVALID('message'); if there is an error.
+});
 ```
 
 ### The `event` Object
@@ -143,16 +143,16 @@ The callback for repeatable events is passed an event parameter with a `name` an
 {:.table.table-striped.event-table}
 | Event | Description | Listener Function Signature |
 |--------|----------|-------------|-------------|
-| `'add-photo'` | Fires when a photo is added | `ON('add-photo', 'photo_field', callback)` |
-| `'add-video'` | Fires when a video is added | `ON('add-video', 'video_field', callback)` |
-| `'add-audio'` | Fires when an audio clip is added | `ON('add-audio', 'audio_field', callback)` |
+| `'add-photo'` | Fires when a photo is added | `ON('add-photo', 'photo_field', callback);` |
+| `'add-video'` | Fires when a video is added | `ON('add-video', 'video_field', callback);` |
+| `'add-audio'` | Fires when an audio clip is added | `ON('add-audio', 'audio_field', callback);` |
 
 ### Example
 
 ```js
 ON('add-photo', 'photo_field', function (event) {
   // Do something with the photo metadata
-})
+});
 ```
 
 ### The `add-photo` `event` Object
@@ -230,16 +230,16 @@ Tips: You should use the _data name_ of the field that you want to populate. You
 function doThis() {
   options = {
     url: "https://theURLyouneed.com"
-  }
+  };
 
   REQUEST(options, function(error, response, body) {
     if (error) {
-      ALERT('Error with request: ' + error)
+      ALERT('Error with request: ' + error);
     } else {
-      data = JSON.parse(body)
-      SETVALUE('field_you_want_to_populate', data.rows[0].value)
+      data = JSON.parse(body);
+      SETVALUE('field_you_want_to_populate', data.rows[0].value);
     }
-  })
+  });
 }
 ```
 
