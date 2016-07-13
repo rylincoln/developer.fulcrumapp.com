@@ -41,7 +41,10 @@ function setw3w() {
       url: 'https://api.what3words.com/v2/forward?key=' + w3wApiKey + '&addr=' + $w3w_address
     };
 
+    PROGRESS('Loading', 'Finding the location...');
+
     REQUEST(options, function(error, response, body) {
+      PROGRESS();
       if (error) {
         ALERT('Error with request: ' + INSPECT(error));
       } else {
