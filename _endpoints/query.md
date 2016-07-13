@@ -150,7 +150,7 @@ https://api.fulcrumapp.com/api/v2/query/?token=abc-123&format=geojson&q=SELECT p
 }
 ```
 
-*Note that the GeoJSON format requires the `_geometry` column in the output.*
+*Note that the GeoJSON format requires the `_geometry` column in the query.*
 
 ## Fulcrum Table Types
 
@@ -187,8 +187,8 @@ Every Fulcrum form contains standard system columns, in addition to your custom 
 | _record_id | string | The UUID of the [record](/endpoints/records/). |
 | _project_id | string | The UUID of the [project](/endpoints/projects/). Can be joined to the `project_id` column in the `projects` table. |
 | _assigned_to_id | string | The UUID of the [member](/endpoints/users/) the record is assigned to.  Can be joined to the `user_id` column in the `memberships` table. |
-| _status | string | The record [status](http://www.fulcrumapp.com/help/status-fields/)/. |
-| _version | number | The record [version](http://www.fulcrumapp.com/help/version-history/) |
+| _status | string | The record [status](http://www.fulcrumapp.com/help/status-fields/). |
+| _version | number | The record [version](http://www.fulcrumapp.com/help/version-history/). |
 | _title | string | The record [title](/help/title-fields/). |
 | _created_at | date | The timestamp when the record was created on the device. |
 | _updated_at | date | The timestamp when the record was updated on the device. |
@@ -199,10 +199,10 @@ Every Fulcrum form contains standard system columns, in addition to your custom 
 | _changeset_id | string | The UUID of the last [changeset](/endpoints/changesets/). Can be joined to the `changeset_id` column of the changesets table. |
 | _latitude | number | The record latitude. |
 | _longitude | number | The record longitude. |
-| _geometry | geometry | The record geometry in Extended Well-Known Text (EWKT) format. |
+| _geometry | geometry | The record geometry in Extended Well-Known Text ([EWKT](http://postgis.net/docs/ST_GeomFromEWKT.html)) format. |
 | _altitude | number | The GPS altitude in meters above/below (+/-) sea level. |
 | _speed | number | The GPS speed in meters per second. |
-| _course | number | The GPS course in degrees (0.0-360)- only recorded if the device is moving. |
+| _course | number | The GPS course in degrees (0.0-360), only recorded if the device is moving. |
 | _horizontal_accuracy | number | The GPS latitude and longitude accuracy in meters. |
 | _vertical_accuracy | number | The GPS altitude value in meters. |
 
@@ -214,17 +214,17 @@ In addition to the standard PostgreSQL & PostGIS functions, there are several Fu
 
 ```sql
 FCM_ConvertToFloat('1.2')   -- 1.2
-FCM_ConvertToFloat('1000') -- 1000
+FCM_ConvertToFloat('1000')  -- 1000
 FCM_ConvertToFloat('a')     -- NULL
 ```
 
 Convert a textual value to a floating point value. This function is similar to a cast, except it gracefully fails to `NULL` when the input cannot be converted to a number. This is useful for text data that's mostly numbers but might have some invalid values in it.
 
+<hr>
+
 #### `FCM_FormatTimestamp(ts timestamp without time zone, tz text DEFAULT 'UTC') RETURNS text`
 
 Convert a timestamp to a different time zone. This is useful for localizing your timestamps to your own time zone. The `tz` argument is a string representing the time zone to use. This string can be in any format supported by the PostgreSQL `AT TIME ZONE` construct.
-
-Examples:
 
 ```sql
 SELECT FCM_FormatTimestamp(current_timestamp, 'EST');               -- Eastern Standard Time
@@ -248,7 +248,7 @@ The above examples show some of the ways the function can be used. The last form
 
 Returns a photo URL in the output for a single photo.
 
-The following will return a secure URL directly to the raw file.
+The following will return a secure URL directly to the raw file, using its ID.
 
 ```sql
 SELECT FCM_Photo('c515f1d6-e882-4027-9e5c-11e44b4c181c', 'thumb') AS photo_url;
@@ -274,14 +274,15 @@ SELECT FCM_Photo(photo_field[1], 'thumb') AS photo_urls FROM "Building Inspectio
   * `'large'` (jpg)
   * `'thumb'` (jpg)
 
-Returns an array of photos URLs in the output.
+Returns an array of photo URLs in the output.
 
 The following will return secure URLs directly to the raw files. The consumer of the output needs to be able to handle multiple URLs.
 
 ```sql
-SELECT FCM_Photo(unnest(ARRAY['c515f1d6-e882-4602-9e5c-11e44b4c181c', 'bf5b2afb-f6f8-4d1a-ae41-6ed3830634de']), 'thumb') AS photo_urls;
+SELECT FCM_Photo(unnest(photo_field), 'thumb') AS photo_urls FROM "Building Inspections";
 ```
-*Here we use `unnest` to expand an array to a set of rows*
+
+*Here we use `unnest` to expand an array to a set of rows.*
 
 <hr>
 
@@ -303,7 +304,7 @@ SELECT FCM_Photo(unnest(ARRAY['c515f1d6-e882-4602-9e5c-11e44b4c181c', 'bf5b2afb-
   * `thumbnail_large_square` (jpg)
   * `thumbnail_huge_square` (jpg)
 
-Returns a video URL in the output for a single video.
+Returns video URLs in the output for a single video.
 
 The following will return a secure URL directly to the raw file.
 
@@ -347,7 +348,7 @@ SELECT FCM_Video(video_field) AS video_urls FROM "Building Inspections";
   * `small` (m4a)
   * `medium` (m4a)
 
-Returns an audio URL in the output for a single audio file.
+Returns audio URLs in the output for a single audio file.
 
 The following will return a secure URL directly to the raw audio file.
 
@@ -381,26 +382,10 @@ SELECT FCM_Audio(audio_field) AS audio_urls FROM "Building Inspections";
   * `'large'` (png)
   * `'thumb'` (png)
 
-Returns signature URL in the output for a single signature.
-
-The following will return a secure URL directly to the raw signature file.
-
-```sql
-SELECT FCM_Signature(signature_field[1]) AS signature_url FROM "Building Inspections";
-```
-
-#### `FCM_Signature(ids text[], version text DEFAULT NULL) RETURNS fcm_file[]`
-
-* `ids` The signature IDs
-* `version` (optional, default `NULL`) The signature version. One of:
-  * `NULL` (original)
-  * `'large'` (png)
-  * `'thumb'` (png)
-
-Returns signature URLs in the output for multiple signature files.
+Returns a signature URL in the output for a single signature.
 
 The following will return secure URLs directly to the raw signature files.
 
 ```sql
-SELECT FCM_Signature(unnest(ARRAY['19da1bbc-43e4-49b3-b70f-a63ec680268e', 'eacbcb62-2127-4027-830d-555fd0cee50e'])) AS signature_urls;
+SELECT FCM_Signature(signature_field) AS signature_url FROM "Building Inspections";
 ```
