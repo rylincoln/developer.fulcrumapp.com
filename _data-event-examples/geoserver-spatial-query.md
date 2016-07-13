@@ -43,9 +43,9 @@ ON('change-geometry', function(event) {
 
   // configure the http request
   REQUEST(options, function(error, response, body) {
+    PROGRESS(); // close the loading indicator
     if (error) {
       ALERT('Error with request: ' + INSPECT(error));
-      PROGRESS(null);
     } else {
       var data = JSON.parse(body); // parse the JSON response
       var features = data.features; // grab the GeoJSON features
@@ -61,9 +61,7 @@ ON('change-geometry', function(event) {
       // if we've got some streets, use them in the choice list (sorted alphabetically)
       if (streets.length > 0) {
         SETCHOICES('street_name', streets.sort());
-        PROGRESS(null);
       } else {
-        PROGRESS(null);
         ALERT('No nearby streets found... Are you sure you are in Massachusetts?');
       }
     }
