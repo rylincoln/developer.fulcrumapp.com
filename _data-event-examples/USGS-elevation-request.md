@@ -18,7 +18,7 @@ function getElev() {
 
   REQUEST(options, function(error, response, body) {
     if (error) {
-      ALERT('Error with request: ' + error);
+      ALERT('Error with request: ' + INSPECT(error));
     } else {
       elevation = JSON.parse(body);
       SETVALUE('elevation', elevation.USGS_Elevation_Point_Query_Service.Elevation_Query.Elevation);

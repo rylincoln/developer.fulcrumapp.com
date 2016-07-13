@@ -23,14 +23,14 @@ function getw3w() {
   };
 
   PROGRESS('Loading', 'Finding the right words...');
+
   REQUEST(options, function(error, response, body) {
+    PROGRESS();
     if (error) {
-      PROGRESS();
-      ALERT('Error with request: ' + error);
+      ALERT('Error with request: ' + INSPECT(error));
     } else {
       var result = JSON.parse(body);
       SETVALUE('w3w_address', result.words);
-      PROGRESS();
     }
   });
 }
@@ -43,7 +43,7 @@ function setw3w() {
 
     REQUEST(options, function(error, response, body) {
       if (error) {
-        ALERT('Error with request: ' + error);
+        ALERT('Error with request: ' + INSPECT(error));
       } else {
         var result = JSON.parse(body);
         if (result.geometry) {

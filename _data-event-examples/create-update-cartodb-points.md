@@ -38,7 +38,7 @@ function postToCDB(query) {
 
   REQUEST(options, function(error, response, body) {
     if (error) {
-      ALERT('Error with request: ' + error);
+      ALERT('Error with request: ' + INSPECT(error));
     } else {
       ALERT('This record has been successfully posted to CartoDB!');
     }
