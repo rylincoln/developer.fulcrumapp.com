@@ -43,7 +43,7 @@ ON('change-geometry', function(event) {
 
   // configure the http request
   REQUEST(options, function(error, response, body) {
-    PROGRESS(); // close the loading indicator
+    PROGRESS();  // dismiss the loading indicator
     if (error) {
       ALERT('Error with request: ' + INSPECT(error));
     } else {
