@@ -2,9 +2,11 @@
 layout: default
 section: query_api
 title: "Check if a multi choice field contains EXACTLY given values"
-description: "and not any additional values"
 category: section
+tags:
+  - jsonb
 ---
+Check if a multi choice field contains EXACTLY given values...and not any additional values.
 
 ```sql
 SELECT materials FROM Buildings
