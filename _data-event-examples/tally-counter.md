@@ -4,6 +4,9 @@ section: data_events
 title: "Add a tally counter to your form"
 description: "Use this example to add a tally counter button to increment a numeric field"
 category: section
+tags:
+  - hyperlink events
+  - calculation
 ---
 
 This example shows how to add a tally counter to your form. It displays a button on the form that increments a numeric field when tapped.

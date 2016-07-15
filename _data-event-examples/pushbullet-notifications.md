@@ -4,6 +4,10 @@ section: data_events
 title: "Send push notifications with Pushbullet"
 description: "Demonstrates how to automatically send push notifications when a record is saved."
 category: section
+tags:
+  - request
+  - pushbullet
+  - notifications
 ---
 
 This example demonstrates integrating Fulcrum with [Pushbullet](https://www.pushbullet.com/) to automatically send a push notification when a record is saved. It uses the [Pushbullet API](https://docs.pushbullet.com/#create-push) to create a push notification, which includes some record data and a link to the record location on Google Maps. This is useful when you need immediate notifications from the field without having to wait for syncing.

@@ -4,6 +4,8 @@ section: data_events
 title: "Capturing Vector Coordinates"
 description: "Demonstrates how to capture the coordinates of line and polygon features."
 category: section
+tags:
+  - current location
 ---
 
 The examples below demonstrate how to use the [`CURRENTLOCATION`](/data-events/reference/currentlocation/) function in conjunction with [`SETINTERVAL`](/data-events/reference/setinterval/) and [`CLEARINTERVAL`](/data-events/reference/clearinterval/) to capture the coordinates of simple line or polygon features. This could be used for "digitizing" pipe lengths, pavement features, wetland boundaries, etc. While Fulcrum only currently supports point geometries in the map view, this workflow allows you to capture simple vector geometries for use outside of Fulcrum in various GIS applications.

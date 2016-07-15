@@ -4,6 +4,9 @@ section: data_events
 title: "Validate record is within geographic area"
 description: "Use this to ensure a record's location is within a geographic area before saving."
 category: section
+tags:
+  - validation
+  - geofencing
 ---
 
 This example uses the [INVALID](/data-events/reference/invalid), [LATITUDE](/expressions/reference/latitude), and [LONGITUDE](/expressions/reference/longitude) functions to keep records from being saved when their geometry isn't within the state of Colorado, a conveniently rectangular state.

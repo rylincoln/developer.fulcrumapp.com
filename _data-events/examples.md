@@ -18,6 +18,11 @@ category: section
       <div class="panel-body">
         {{ node.description }}
       </div>
+      <div class="panel-footer">
+        {% for tag in node.tags %}
+          <span class="label label-primary">{{ tag }}</span>
+        {% endfor %}
+      </div>
     </div>
   </div>
   {% endfor %}

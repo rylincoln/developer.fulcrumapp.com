@@ -4,6 +4,9 @@ section: data_events
 title: "Add current weather to a record"
 description: "Use this to fetch weather data from the wunderground.com API and add it to the record."
 category: section
+tags:
+  - request
+  - set value
 ---
 
 This example assumes you've signed up for an API key from [wunderground.com](https://www.wunderground.com/weather/api) and have a text field in your app (`weather_summary` below) to store the current weather summary.

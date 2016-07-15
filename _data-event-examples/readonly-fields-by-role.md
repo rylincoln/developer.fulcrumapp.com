@@ -4,6 +4,9 @@ section: data_events
 title: "Make fields read-only based on user role"
 description: "Use this example to conditionally disable fields for certain user roles"
 category: section
+tags:
+  - set readonly
+  - roles
 ---
 
 This example shows how to conditionally disable fields depending on the user's role. Sometimes it's desirable to disable portions of the form for certain users.

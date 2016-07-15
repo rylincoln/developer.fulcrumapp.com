@@ -4,6 +4,9 @@ section: data_events
 title: "Set the status field options based on role"
 description: "Use this example to control which status field options are available based on the user role"
 category: section
+tags:
+  - set status filter
+  - roles
 ---
 
 This example shows how to conditionally control which status options are available based on the user's role. This is useful if you'd like to reserve certain status options for admins only.

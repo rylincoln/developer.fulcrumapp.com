@@ -4,6 +4,9 @@ section: data_events
 title: "Fetch data from a Socrata service"
 description: "Demonstrates how to send a spatial query to a Socrata instance and use the data returned in your form."
 category: section
+tags:
+  - request
+  - socrata
 ---
 
 [Socrata](https://www.socrata.com/) is a popular cloud-based platform for enabling government organizations to make their data available online. Sites like [NYC OpenData](https://nycopendata.socrata.com/dashboard) and [medicare.gov](https://data.medicare.gov/data) leverage Socrata to provide access to tremendously valuable public datasets. While Socrata makes it easy to visualize and export these datasets, it also provides a powerful API for programmatically accessing this data. The [Socrata Open Data API (SODA)](https://dev.socrata.com/) has an SQL-like query language called the ["Socrata Query Language"](https://dev.socrata.com/docs/queries/) or “SoQL”. Datasets with location information can be spatially queried so you can retrieve information on the features near you.

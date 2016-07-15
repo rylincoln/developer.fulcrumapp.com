@@ -4,6 +4,10 @@ section: data_events
 title: "Dynamically Translate Form Elements"
 description: "Demonstrates how to dynamically translate labels and choice list options to support multiple languages"
 category: section
+tags:
+  - set label
+  - set description
+  - set choices
 ---
 
 This example demonstrates how to use the [SETLABEL](/data-events/reference/setlabel/) and [SETCHOICES](/data-events/reference/setchoices/) functions to dynamically update the form elements when a user selects their language from a choice list. The translations are stored as simple JavaScript objects. Note that in addition to labels and choices, you can also use this method to translate field descriptions with [SETDESCRIPTION](/data-events/reference/setdescription/).

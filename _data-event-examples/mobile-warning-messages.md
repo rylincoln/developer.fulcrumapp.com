@@ -4,6 +4,10 @@ section: data_events
 title: "Repeatable Requirement Validation Alerts"
 description: "Use this to alert the user if a field in a repeatable section does not have a value."
 category: section
+tags:
+  - validation
+  - repeatables
+  - qa/qc
 ---
 
 This example will populate the warning box that is typically displayed when attempting to save a record that has empty required fields with more information about which child record has no value in a field when saving the root level record.

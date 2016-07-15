@@ -4,6 +4,10 @@ section: data_events
 title: "Require captions for a photo field"
 description: "Use this custom validation logic to ensure every photo has a caption before saving."
 category: section
+tags:
+  - media events
+  - validation
+  - qa/qc
 ---
 
 This example uses the `validate-record` event in conjunction with the [INVALID](/data-events/reference/invalid) function to prevent saving a record if any photos in the `photos` field are missing captions.

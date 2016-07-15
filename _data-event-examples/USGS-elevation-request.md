@@ -4,6 +4,9 @@ section: data_events
 title: "Get USGS elevation information"
 description: "Determine the elevation of the location you are collecting data."
 category: section
+tags:
+  - request
+  - set value
 ---
 
 Similar to automating weather collection, data events allow you to tap into any API that supports point coordinates.  This example uses the USGS National Map information to determine the elevation at the point you are collecting data. It assumes you have a numeric (decimal) field called `usgs_elevation`.

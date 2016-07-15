@@ -4,6 +4,9 @@ section: data_events
 title: "Intelligently Updating Record Locations"
 description: "Demonstrates how to intelligently update locations for imported records."
 category: section
+tags:
+  - set location
+  - distance calculation
 ---
 
 This example demonstrates how to update the location of a record when it meets the following criteria:

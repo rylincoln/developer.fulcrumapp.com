@@ -4,6 +4,9 @@ section: data_events
 title: "Query Esri REST Services"
 description: "How to query an Esri ArcGIS Server or ArcGIS Online REST Service using Data Events in Fulcrum."
 category: section
+tags:
+  - request
+  - esri
 ---
 
 This example passes your Fulcrum latitude and longitude as a point parameter in an Intersect query against data hosted on an Esri REST Service. Three text fields are required in the app, for the particular properties we're interested in here.
