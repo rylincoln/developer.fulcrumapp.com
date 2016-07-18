@@ -20,3 +20,11 @@ Check out the full documentation on required parameters, formatting calls, respo
 ## Functional Examples
 
 We have a [library of examples](/query-api/examples/) available for learning what you can do with the Query API.
+
+## SQL Reference Material
+
+ - [SQL Tutorial](http://sqlzoo.net/)
+ - [A Primer on SQL](https://leanpub.com/aprimeronsql/read)
+ - [Learn SQL the Hard Way](http://sql.learncodethehardway.org/)
+ - [A beginners guide to thinking in SQL](http://www.sohamkamani.com/blog/2016/07/07/a-beginners-guide-to-sql/)
+ - [PostgreSQL JSON Functions and Operators](https://www.postgresql.org/docs/current/static/functions-json.html)
