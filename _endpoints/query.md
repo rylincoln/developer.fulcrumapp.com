@@ -34,6 +34,7 @@ Available parameters to query the objects in your account. All of the parameters
 | token | string | Your Fulcrum API token. | yes |
 | q | string | The SQL query. | yes |
 | format | string | The format of the results returned by the query. Options include csv, json, geojosn. Defaults to csv. | no |
+| headers | string | Include headers for CSV format | no |
 | page | integer | The page number requested. | no |
 | per_page | integer | Number of results per page. By default, all requests are paginated to the maximum value of 20,000 items per request. | no |
 | sort_column | string | The name of the column used to sort on. | no |
