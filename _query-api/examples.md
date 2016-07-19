@@ -15,9 +15,9 @@ category: section
       <div class="panel-heading" style="min-height:55px">
         <h3 class="panel-title"><a href="{{ node.url }}">{{ node.title }}</a></h3>
       </div>
-      <div class="panel-body" style="min-height:55px">
+      <!-- <div class="panel-body" style="min-height:55px">
         {{ node.description }}
-      </div>
+      </div> -->
       <div class="panel-footer">
         {% for tag in node.tags %}
           <span class="label label-primary">{{ tag }}</span>
