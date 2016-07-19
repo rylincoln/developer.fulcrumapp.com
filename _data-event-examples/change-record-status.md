@@ -4,6 +4,9 @@ section: data_events
 title: "Change a record's status"
 description: "Use this to change a record's status when a user changes a specific field or when the record is saved."
 category: section
+tags:
+  - set status
+  - set choices
 ---
 
 This example listens for changes to the `inspection_date` field and updates the record status to 'inspected' if a date value was entered. If the date was cleared (no value), the status reverts to the default state, 'created'.

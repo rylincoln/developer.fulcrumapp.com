@@ -4,6 +4,10 @@ section: data_events
 title: "Point-in-polygon with CartoDB API"
 description: "Locate which neighborhood you are working in via point-in-polygon."
 category: section
+tags:
+  - request
+  - cartodb
+  - set value
 ---
 
 Data events allow you to grab information about a point's location, i.e. which polygon the point lies in.

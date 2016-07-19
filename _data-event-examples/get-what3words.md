@@ -4,6 +4,9 @@ section: data_events
 title: "Integrating Fulcrum with what3words"
 description: "Use the what3words API to populate a record with the 3 word representation of its location or update its location from a known 3 word address."
 category: section
+tags:
+  - request
+  - what3words
 ---
 
 [what3words](http://what3words.com/) is a unique combination of just 3 words that identifies a 3mx3m square, anywhere on the planet. The [what3words API](https://docs.what3words.com/api/v2/) provides programmatic access to convert a 3 word address to coordinates (forward geocoding) and to convert coordinates to a 3 word address (reverse geocoding). You can sign up for a free what3words API key at [https://map.what3words.com/register?dev=true](https://map.what3words.com/register).
@@ -23,14 +26,14 @@ function getw3w() {
   };
 
   PROGRESS('Loading', 'Finding the right words...');
+
   REQUEST(options, function(error, response, body) {
+    PROGRESS();
     if (error) {
-      PROGRESS();
-      ALERT('Error with request: ' + error);
+      ALERT('Error with request: ' + INSPECT(error));
     } else {
       var result = JSON.parse(body);
       SETVALUE('w3w_address', result.words);
-      PROGRESS();
     }
   });
 }
@@ -41,9 +44,12 @@ function setw3w() {
       url: 'https://api.what3words.com/v2/forward?key=' + w3wApiKey + '&addr=' + $w3w_address
     };
 
+    PROGRESS('Loading', 'Finding the location...');
+
     REQUEST(options, function(error, response, body) {
+      PROGRESS();
       if (error) {
-        ALERT('Error with request: ' + error);
+        ALERT('Error with request: ' + INSPECT(error));
       } else {
         var result = JSON.parse(body);
         if (result.geometry) {

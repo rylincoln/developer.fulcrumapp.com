@@ -1,9 +1,13 @@
 ---
 layout: default
 section: data_events
-title: "Compare photo location with record location"
+title: "Compare photo location to record location"
 description: "Demonstrates how to add quality control checks on photos by checking to see if they were taken in the same geographic area as the record."
 category: section
+tags:
+  - media events
+  - distance calculation
+  - qa/qc
 ---
 
 This example demonstrates how to compare the geotagged location of an attached photo with the location of the record to alert the user if there may be an issue.

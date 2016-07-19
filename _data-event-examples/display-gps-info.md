@@ -4,6 +4,9 @@ section: data_events
 title: "Display the current GPS info on the form"
 description: "Use this example to display the current GPS info on your form"
 category: section
+tags:
+  - current location
+  - gps
 ---
 
 This example shows how you can display the current GPS data within your form using the [CURRENTLOCATION](/data-events/reference/currentlocation/) and [SETLABEL](/data-events/reference/setlabel/) functions. For the below example to work, add a Label field and set its label to `GPS Info` so that we can reference it in the Data Events script as `gps_info`.
@@ -44,6 +47,3 @@ ON('load-record', function(event) {
   SETINTERVAL(updateLocationInfo, 3000);
 });
 ```
-
-
-

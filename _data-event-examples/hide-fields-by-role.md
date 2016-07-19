@@ -4,6 +4,9 @@ section: data_events
 title: "Hide fields based on user role"
 description: "Use this example to conditionally display fields for certain user roles"
 category: section
+tags:
+  - set hidden
+  - roles
 ---
 
 This example shows how to conditionally display fields depending on the user's role. Sometimes it's desirable to hide certain portions of the form for certain users because it's either irrelevant or sensitive information.

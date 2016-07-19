@@ -49,7 +49,7 @@ collections:
     output: true
     permalink: /query-api/examples/:path/    
 
-#files to exclude, array
+# files to exclude, array
 exclude:
   - CONTRIBUTING.md
   - README.md

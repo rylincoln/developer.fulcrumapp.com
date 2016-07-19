@@ -4,6 +4,9 @@ section: data_events
 title: "Update CartoDB table from Fulcrum"
 description: "Demonstrates how to POST data to the CartoDB SQL API."
 category: section
+tags:
+  - request
+  - cartodb
 ---
 
 This example demonstrates how to build a SQL statement to *create* or *update* records in [CartoDB](https://cartodb.com/). When the Fulcrum record is saved, a POST request is sent to the [CartoDB SQL API](https://docs.cartodb.com/cartodb-platform/sql-api/). While you can easily sync your Fulcrum app to CartoDB via [Data Shares](http://www.fulcrumapp.com/help/data-shares/) and [Synced Tables](https://blog.cartodb.com/synced-tables-create-real-time-maps-from-data-anywhere/), or write custom [webhooks](/general/webhooks/), this method instantly updates your CartoDB table without having to wait for a scheduled CartoDB sync or even a Fulcrum sync.
@@ -38,7 +41,7 @@ function postToCDB(query) {
 
   REQUEST(options, function(error, response, body) {
     if (error) {
-      ALERT('Error with request: ' + error);
+      ALERT('Error with request: ' + INSPECT(error));
     } else {
       ALERT('This record has been successfully posted to CartoDB!');
     }

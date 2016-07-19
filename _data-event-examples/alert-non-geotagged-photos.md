@@ -4,6 +4,9 @@ section: data_events
 title: "Alert user if photo is not geotagged"
 description: "Use this to alert the user if a photo does not contain latitude or longitude metadata."
 category: section
+tags:
+  - media events
+  - qa/qc
 ---
 
 This example loops through all the fields in the app and adds an [add-photo](/data-events/intro/#media-events) event to look for location metadata. If `latitude` and `longitude` are missing or are set to 0, it will alert the user to enable geotagging on their device.

@@ -4,6 +4,9 @@ section: data_events
 title: "Send a Text Message"
 description: "Use this to create a button on your form to send an SMS message"
 category: section
+tags:
+  - alert
+  - openurl
 ---
 
 This example creates a button on your form that sends an SMS when it's tapped. The phone number to send it to is pulled from another field on the form. It assumes you have a text field to enter the phone number with a data name of `phone_number` and a hyperlink field with a data name of `send_sms`. It also uses a text field with the data name `sms` to use as the body text of the SMS message. This is just an example, so you can also build the text dynamically using any other form fields or functions. It also includes a check for the platform since the web browser does not support sending text messages.

@@ -8,6 +8,7 @@ category: section
 
 ```js
 function weekNum ( d ) {
+
   // Create a copy of this date object
   var target  = new Date(d.valueOf());
 
