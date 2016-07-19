@@ -6,6 +6,7 @@ title: "Query API Reference"
 description: "Reference Information for the Fulcrum Query API"
 category: section
 menu:
+  - "Authentication": authentication
   - "Endpoints": endpoints
   - "Query Parameters": query-parameters
   - "Formatting Calls": formatting-calls-to-the-query-api
