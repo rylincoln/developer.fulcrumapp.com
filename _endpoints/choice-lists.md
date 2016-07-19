@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 4
+order: 5
 title: "Choice Lists"
 description: "Create, read, update, or delete choice lists"
 category: section

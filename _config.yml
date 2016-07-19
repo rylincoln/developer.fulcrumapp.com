@@ -42,6 +42,12 @@ collections:
   data-event-examples:
     output: true
     permalink: /data-events/examples/:path/
+  query-api:
+    output: true
+    permalink: /query-api/:path/
+  query-api-examples:
+    output: true
+    permalink: /query-api/examples/:path/    
 
 # files to exclude, array
 exclude:

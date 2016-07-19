@@ -31,13 +31,35 @@
             <li class="dropdown-header">Endpoints</li>
             {% assign endpoint_pages = site.endpoints | sort: "order" %}
             {% for node in endpoint_pages %}
-              <li class="{% if page.url == node.url %} active{% endif %}">
-                <a href="{{ node.url }}">{{ node.title }}</a>
-              </li>
+              {% if node.title != "Query" %}
+                <li class="{% if page.url == node.url %} active{% endif %}">
+                  <a href="{{ node.url }}">{{ node.title }}</a>
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
         </li>
         <!-- End Endpoints -->
+
+        <!-- Query API
+        <li class="dropdown{% if page.section == 'query_api' %} active{% endif %}">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-database"></i>&nbsp;&nbsp;Query
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/query-api/intro/">Introduction</a>
+            </li>
+            <li>
+              <a href="/query-api/reference/">Reference</a>
+            </li>
+            <li>
+              <a href="/query-api/examples/">Examples</a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Query API -->
 
         <!-- Expressions -->
         <li class="dropdown{% if page.section == 'expressions' %} active{% endif %}">

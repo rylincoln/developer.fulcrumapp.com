@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 5
+order: 6
 title: "Classification Sets"
 description: "Create, read, update, or delete classification sets"
 category: section
