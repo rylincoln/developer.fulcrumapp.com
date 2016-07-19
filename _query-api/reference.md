@@ -24,6 +24,12 @@ menu:
 |--------|----------|-------------|
 | GET/POST | /api/v2/query | Fetch objects. Additional parameters may be supplied (see query parameters table below). |
 
+### Authentication
+
+Fulcrum enforces secure API access that requires you to authorize your queries. In order to authorize queries, you can use an API token.
+
+The API token offers the simplest way to access private data or perform actions to your public data. Your API token protects access to your data, keep it confidential and only share it if you want others to have this access. If necessary, you can reset your API key in the admin settings.
+
 ## Query Parameters
 
 Available parameters to query the objects in your account. All of the parameters may be used together to filter your data for more accurate results.

@@ -21,6 +21,11 @@ Check out the full documentation on required parameters, formatting calls, respo
 
 We have a [library of examples](/query-api/examples/) available for learning what you can do with the Query API.
 
+## Limitations
+
+- API calls are limited to 5,000 calls an hour per user.
+- Queries cannot exceed 10 seconds of processing time to complete.
+
 ## SQL Reference Material
 
  - [SQL Tutorial](http://sqlzoo.net/)
