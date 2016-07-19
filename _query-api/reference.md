@@ -2,8 +2,8 @@
 layout: default
 section: query_api
 order: 2
-title: "Query API Introduction"
-description: "Introduction to the Fulcrum Query API"
+title: "Query API Reference"
+description: "Reference Information for the Fulcrum Query API"
 category: section
 menu:
   - "Endpoints": endpoints
@@ -15,7 +15,11 @@ menu:
   - "Helper Functions": fulcrum-sql-helper-functions
 ---
 
-# Reference
+## Authentication
+
+Fulcrum enforces secure API access that requires you to authorize your queries. In order to authorize queries, you can use an API token.
+
+The API token offers the simplest way to access private data or perform actions to your public data. Your API token protects access to your data, keep it confidential and only share it if you want others to have this access. If necessary, you can reset your API key in the Fulcrum admin settings.
 
 ## Endpoints
 
@@ -23,12 +27,6 @@ menu:
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET/POST | /api/v2/query | Fetch objects. Additional parameters may be supplied (see query parameters table below). |
-
-### Authentication
-
-Fulcrum enforces secure API access that requires you to authorize your queries. In order to authorize queries, you can use an API token.
-
-The API token offers the simplest way to access private data or perform actions to your public data. Your API token protects access to your data, keep it confidential and only share it if you want others to have this access. If necessary, you can reset your API key in the admin settings.
 
 ## Query Parameters
 
