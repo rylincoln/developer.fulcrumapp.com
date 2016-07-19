@@ -7,11 +7,12 @@ description: "Introduction to the Fulcrum Query API"
 category: section
 ---
 
-## Introduction
-
 The Query API provides read-only access to interact with your Fulcrum tables and data (records, repeatables, choice lists, members, media, etc.). This endpoint supports most standard [PostgreSQL](https://www.postgresql.org/) database functions, including many advanced spatial types supported by the [PostGIS](http://postgis.net/) extension. This enables real-time data analytics and integrating Fulcrum with a variety of Business Intelligence services and other platforms, as well as programmatically scripting custom data exports.
 
-We also have two repositories on GitHub for allowing you to query and export your data via the [command line](https://github.com/fulcrumapp/fq) and on the web through a [query utility](https://github.com/fulcrumapp/fulcrum-query-utility).
+We currently have two open source repositories on GitHub for working with the Query API:
+
+* [FQ](https://github.com/fulcrumapp/fq) is a Command Line Interface (CLI) built on Node.js. This can be used for programmatically exporting data and scripting custom workflows.
+* [Fulcrum Query Utility](https://github.com/fulcrumapp/fulcrum-query-utility) is responsive web application for writing and executing queries and viewing/exporting the returned data.  
 
 ## Reference
 
