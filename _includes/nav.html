@@ -31,9 +31,11 @@
             <li class="dropdown-header">Endpoints</li>
             {% assign endpoint_pages = site.endpoints | sort: "order" %}
             {% for node in endpoint_pages %}
-              <li class="{% if page.url == node.url %} active{% endif %}">
-                <a href="{{ node.url }}">{{ node.title }}</a>
-              </li>
+              {% if node.title != "Query" %}
+                <li class="{% if page.url == node.url %} active{% endif %}">
+                  <a href="{{ node.url }}">{{ node.title }}</a>
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
         </li>
