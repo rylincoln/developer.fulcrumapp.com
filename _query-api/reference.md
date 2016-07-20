@@ -208,7 +208,7 @@ Every Fulcrum form contains standard system columns, in addition to your custom 
 | _speed | number | The GPS speed in meters per second. |
 | _course | number | The GPS course in degrees (0.0-360), only recorded if the device is moving. |
 | _horizontal_accuracy | number | The GPS latitude and longitude accuracy in meters. |
-| _vertical_accuracy | number | The GPS altitude value in meters. |
+| _vertical_accuracy | number | The GPS altitude accuracy in meters. (Only reported on iOS devices) |
 
 ## Fulcrum SQL Helper Functions
 
