@@ -9,9 +9,12 @@ tags:
 An app named `Rooms` contains a record link field to the `Buildings` app. This query brings in the building name for each room.
 
 ```sql
-SELECT building.name, source.* FROM "Rooms" source
-INNER JOIN "Rooms/building" link ON source._record_id = link._source_record_id
-INNER JOIN "Buildings" building ON link._linked_record_id = building._record_id
+SELECT
+  building.name,
+  source.*
+FROM "Rooms" source
+INNER JOIN "Rooms/building" link ON source._record_id = link.source_record_id
+INNER JOIN "Buildings" building ON link.linked_record_id = building._record_id
 ```
 
 ```sql
