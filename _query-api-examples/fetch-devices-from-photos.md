@@ -11,9 +11,9 @@ tags:
 ---
 
 ```sql
-SELECT exif::json->>'make' AS Make, exif::json->>'model' AS Model, COUNT(1) AS Count
+SELECT make, model, COUNT(1) AS count
 FROM photos
-WHERE (exif::json->>'make') IS NOT NULL
-GROUP BY exif::json->>'make', exif::json->>'model'
+WHERE make IS NOT NULL
+GROUP BY make, model
 ORDER BY COUNT(1) DESC;
 ```
