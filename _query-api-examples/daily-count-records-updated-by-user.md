@@ -16,5 +16,5 @@ SELECT m.name, to_char(date_trunc('day', i._updated_at), 'YYYY/MM/DD') AS date
 FROM "Park Inventory" i
 INNER JOIN memberships m ON i._updated_by_id = m.user_id
 GROUP BY date_trunc('day', i._updated_at), m.name
-ORDER BY date_trunc('day', _updated_at) DESC
+ORDER BY date_trunc('day', i._updated_at) DESC
 ```
