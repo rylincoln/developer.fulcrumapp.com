@@ -188,9 +188,9 @@ Every Fulcrum form contains standard system columns, in addition to your custom 
 {:.table.table-striped}
 | Column | Type | Description |
 |--------|------|-------------|
-| _record_id | string | The UUID of the [record](/endpoints/records/). |
-| _project_id | string | The UUID of the [project](/endpoints/projects/). Can be joined to the `project_id` column in the `projects` table. |
-| _assigned_to_id | string | The UUID of the [member](/endpoints/users/) the record is assigned to.  Can be joined to the `user_id` column in the `memberships` table. |
+| _record_id | string | The ID of the [record](/endpoints/records/). |
+| _project_id | string | The ID of the [project](/endpoints/projects/). Can be joined to the `project_id` column in the `projects` table. |
+| _assigned_to_id | string | The ID of the [member](/endpoints/users/) the record is assigned to.  Can be joined to the `user_id` column in the `memberships` table. |
 | _status | string | The record [status](http://www.fulcrumapp.com/help/status-fields/). |
 | _version | number | The record [version](http://www.fulcrumapp.com/help/version-history/). |
 | _title | string | The record [title](/help/title-fields/). |
@@ -198,9 +198,9 @@ Every Fulcrum form contains standard system columns, in addition to your custom 
 | _updated_at | date | The timestamp when the record was updated on the device. |
 | _server_created_at | date | The timestamp when the record was created on the server. |
 | _server_updated_at | date | The timestamp when the record was updated on the server. |
-| _created_by_id | string | The UUID of the [member](/endpoints/users/) the record was created by.  Can be joined to the `user_id` column in the `memberships` table. |
-| _updated_by_id | string | The UUID of the [member](/endpoints/users/) the record was updated by.  Can be joined to the `user_id` column in the `memberships` table. |
-| _changeset_id | string | The UUID of the last [changeset](/endpoints/changesets/). Can be joined to the `changeset_id` column of the changesets table. |
+| _created_by_id | string | The ID of the [member](/endpoints/users/) the record was created by.  Can be joined to the `user_id` column in the `memberships` table. |
+| _updated_by_id | string | The ID of the [member](/endpoints/users/) the record was updated by.  Can be joined to the `user_id` column in the `memberships` table. |
+| _changeset_id | string | The ID of the last [changeset](/endpoints/changesets/). Can be joined to the `changeset_id` column of the changesets table. |
 | _latitude | number | The record latitude. |
 | _longitude | number | The record longitude. |
 | _geometry | geometry | The record geometry in Extended Well-Known Text ([EWKT](http://postgis.net/docs/ST_GeomFromEWKT.html)) format. |
