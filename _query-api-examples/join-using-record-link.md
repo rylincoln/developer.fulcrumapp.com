@@ -20,6 +20,9 @@ INNER JOIN "Buildings" building ON link.linked_record_id = building._record_id
 ```sql
 -- OR if it's a single choice record link you can simplify it and remove the intermediate join table
 
-SELECT building.name, source.* FROM "Rooms" source
+SELECT
+  building.name,
+  source.*
+FROM "Rooms" source
 INNER JOIN "Buildings" building ON source.building[1] = building._record_id
 ```
