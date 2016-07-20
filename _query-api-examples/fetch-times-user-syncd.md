@@ -13,7 +13,7 @@ tags:
 ```sql
 SELECT email, COUNT(1) AS total_sync_count
 FROM memberships
-INNER JOIN changesets ON memberships.user_id=changesets.closed_by_id
+INNER JOIN changesets ON memberships.user_id = changesets.closed_by_id
 GROUP BY memberships.email
 ORDER BY COUNT(1) DESC;
 ```
