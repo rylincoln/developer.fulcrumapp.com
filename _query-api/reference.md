@@ -50,7 +50,7 @@ Below are the available parameters for the query endpoint. Unless stated otherwi
 All Query API requests should follow this general pattern:
 
 ```
-https://api.fulcrumapp.com/api/v2/query/?token={API Token}&q={SQL Statement}
+https://api.fulcrumapp.com/api/v2/query?token={API Token}&q={SQL Statement}
 ```
 
 If you encounter errors, double-check that you are using the correct API token, and that your SQL statement is valid. A common use case example is to get a count of the records in a form, grouped by status:
