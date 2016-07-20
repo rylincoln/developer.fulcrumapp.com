@@ -203,7 +203,7 @@ Every Fulcrum form contains standard system columns, in addition to your custom 
 | _changeset_id | string | The ID of the last [changeset](/endpoints/changesets/). Can be joined to the `changeset_id` column of the changesets table. |
 | _latitude | number | The record latitude. |
 | _longitude | number | The record longitude. |
-| _geometry | geometry | The record geometry in Extended Well-Known Text ([EWKT](http://postgis.net/docs/ST_GeomFromEWKT.html)) format. |
+| _geometry | geometry | The record geometry as a native PostGIS geometry. When output to CSV, it's in Extended Well-Known Text ([EWKT](http://postgis.net/docs/ST_GeomFromEWKT.html)) format. |
 | _altitude | number | The GPS altitude in meters above/below (+/-) sea level. |
 | _speed | number | The GPS speed in meters per second. |
 | _course | number | The GPS course in degrees (0.0-360), only recorded if the device is moving. |
