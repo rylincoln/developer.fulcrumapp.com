@@ -31,19 +31,19 @@ The API token offers the simplest way to access private data or perform actions 
 
 ## Query Parameters
 
-Available parameters to query the objects in your account. All of the parameters may be used together to filter your data for more accurate results.
+Below are the available parameters for the query endpoint. Unless stated otherwise, the parameters can be combined to perform more complex queries.
 
 {:.table.table-striped}
 | Parameter | Type | Description | Required |
 |-----------|------|-------------|----------|
 | token | string | Your Fulcrum API token. | yes |
 | q | string | The SQL query. | yes |
-| format | string | The format of the results returned by the query. Options include csv, json, geojson. Defaults to csv. | no |
-| headers | string | Include headers for CSV format | no |
+| format | string | The format of the results returned by the query. Valid formats include `csv`, `json`, and `geojson`. Defaults to `csv`. | no |
+| headers | string | Include headers in CSV format. Defaults to yes for `csv` format. | no |
 | page | integer | The page number requested. | no |
-| per_page | integer | Number of results per page. By default, all requests are paginated to the maximum value of 20,000 items per request. | no |
+| per_page | integer | Number of results per page. | no |
 | sort_column | string | The name of the column used to sort on. | no |
-| sort_direction | string | The sort direction (asc, desc). | no |
+| sort_direction | string | The sort direction (asc, desc). Defaults to unspecified order. | no |
 
 ## Formatting Calls to the Query API
 
