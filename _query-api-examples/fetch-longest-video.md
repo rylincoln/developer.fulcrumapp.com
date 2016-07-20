@@ -10,8 +10,8 @@ tags:
 ---
 
 ```sql
-SELECT video_id, st_length(geometry::geography) AS track_length_meters
+SELECT video_id, ST_Length(geometry::geography) AS track_length_meters
 FROM videos
-WHERE geometry IS NOT NULL AND st_length(geometry) > 0
+WHERE geometry IS NOT NULL AND ST_Length(geometry) > 0
 ORDER BY ST_Length(geometry) DESC;
 ```
