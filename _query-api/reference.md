@@ -27,7 +27,7 @@ The API token offers the simplest way to access private data or perform actions 
 {:.table.table-striped}
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET/POST | /api/v2/query | Fetch objects. Additional parameters may be supplied (see query parameters table below). |
+| GET/POST | /api/v2/query | Fetch objects. Additional parameters must be supplied (see query parameters table below). |
 
 ## Query Parameters
 
