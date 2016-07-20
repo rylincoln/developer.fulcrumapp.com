@@ -10,7 +10,10 @@ tags:
 ---
 
 ```sql
-SELECT DISTINCT ON (name) name, FCM_FormatTimestamp(closed_at, 'America/New_York') AS last_sync FROM memberships
-INNER JOIN changesets ON memberships.user_id=changesets.closed_by_id
-ORDER BY name, closed_at DESC
+SELECT
+  memberships.name,
+  (SELECT FCM_FormatTimestamp(MAX(closed_at), 'America/New_York')
+   FROM changesets WHERE closed_by_id=memberships.user_id) AS last_sync
+FROM memberships
+ORDER BY name;
 ```
