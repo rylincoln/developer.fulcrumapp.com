@@ -20,7 +20,7 @@ menu:
 
 Fulcrum enforces secure API access that requires you to authorize your queries. In order to authorize queries, you can use an API token.
 
-The API token offers the simplest way to access private data or perform actions to your public data. Your API token protects access to your data, keep it confidential and only share it if you want others to have this access. If necessary, you can reset your API key in the Fulcrum admin settings.
+The API token offers the simplest way to access private data or perform actions to your public data. Your API token protects access to your data, keeps it confidential and only permits sharing if you want others to have this access. If necessary, you can reset your API key in the Fulcrum admin settings.
 
 ## Endpoints
 
