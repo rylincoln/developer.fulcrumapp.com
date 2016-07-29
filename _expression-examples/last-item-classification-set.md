@@ -7,11 +7,5 @@ category: section
 ---
 
 ```js
-if ($my_classification.other_values.length > 0) {
-  SETRESULT($my_classification.other_values);
-} else if ($my_classification.choice_values.length > 0) {
-  SETRESULT($my_classification.choice_values.slice(-1)[0]);
-} else {
-  SETRESULT(null);
-}
+SETRESULT(LAST(CHOICEVALUES($my_classification)));
 ```
