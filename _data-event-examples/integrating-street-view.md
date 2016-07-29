@@ -11,6 +11,8 @@ tags:
 
 [Google Street View](https://www.google.com/maps/streetview/) provides panoramic views from positions along many streets in the world. This example assumes you have a Hyperlink field with a data name of `show_street_view` and shows how you can script a click event to directly open Street View at your record location when the button is tapped.
 
+<img src="../media/fulcrum-street-view.gif" alt="Fulcrum + Street View Example" style="float: right; margin-left: 40px;" />
+
 ```js
 ON('click', 'show_street_view', function (event) {
   if (LATITUDE() && LONGITUDE()) {
