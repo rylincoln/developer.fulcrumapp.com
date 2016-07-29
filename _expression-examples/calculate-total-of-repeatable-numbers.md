@@ -11,18 +11,21 @@ This example grabs numeric values from a choicefield (with options N/A, 0, 1, 2,
 ```js
 var array = REPEATABLEVALUES($name_of_repeatable, 'data_name_of_choicefield_score');
 
-var total_score = 0;
+var totalScore = 0;
 
-for (var i=0; i < array.length; i++){
-  var value = array[i].choice_values;
+for (var i = 0; i < array.length; i++) {
+  var value = CHOICEVALUE(array[i]);
+
   var score = 0;
-  if (value == 'N/A'){
+
+  if (value === 'N/A'){
     score = 0;
   } else {
-    score = NUM(array[i].choice_values);
+    score = Number(value);
   }
 
-  total_score += score;
+  totalScore += score;
 }
-SETRESULT(total_score);
+
+SETRESULT(totalScore);
 ```
