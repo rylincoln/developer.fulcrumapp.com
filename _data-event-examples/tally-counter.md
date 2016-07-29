@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "Add a tally counter to your form"
-description: "Use this example to add a tally counter button to increment a numeric field"
+description: "Use this example to add a tally counter button to increment a numeric field."
 category: section
 tags:
   - hyperlink events

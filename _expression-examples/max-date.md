@@ -2,7 +2,7 @@
 layout: default
 section: expressions
 title: "Return the repeatable latest date"
-description: "Use this in a calculation field to return the latest date captured in a date field in repeatable section"
+description: "Use this in a calculation field to return the latest date captured in a date field in repeatable section."
 category: section
 ---
 

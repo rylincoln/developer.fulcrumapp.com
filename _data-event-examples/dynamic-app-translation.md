@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "Dynamically translate form elements"
-description: "Demonstrates how to dynamically translate labels and choice list options to support multiple languages"
+description: "Demonstrates how to dynamically translate labels and choice list options to support multiple languages."
 category: section
 tags:
   - set label

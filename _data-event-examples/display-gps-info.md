@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "Display the current GPS info on the form"
-description: "Use this example to display the current GPS info on your form"
+description: "Use this example to display the current GPS info on your form."
 category: section
 tags:
   - current location

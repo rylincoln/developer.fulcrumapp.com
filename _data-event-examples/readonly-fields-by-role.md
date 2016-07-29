@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "Make fields read-only based on user role"
-description: "Use this example to conditionally disable fields for certain user roles"
+description: "Use this example to conditionally disable fields for certain user roles."
 category: section
 tags:
   - set readonly
