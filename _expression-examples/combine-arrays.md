@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Combine Arrays Together"
+title: "Combine arrays together"
 description: "Use this in a calculation field to combine two arrays together."
 category: section
 ---

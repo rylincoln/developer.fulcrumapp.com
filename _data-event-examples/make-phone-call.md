@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Make a Phone Call"
+title: "Make a phone call"
 description: "Use this to create a button on your form to make a phone call to a phone number entered in a text field"
 category: section
 tags:

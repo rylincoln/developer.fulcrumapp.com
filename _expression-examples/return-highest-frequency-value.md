@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Return The Most Frequent Value"
+title: "Return the most frequent value"
 description: "Use this in a calculation field to return the most frequent value from a field in a repeatable section."
 category: section
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Compare Values"
+title: "Compare values"
 description: "Use this in a calculation field to compare multiple values and return a specific value based on the values entered."
 category: section
 ---

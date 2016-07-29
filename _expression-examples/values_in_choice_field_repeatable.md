@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Values From Choice Field in Repeatable"
+title: "Values from choice field in repeatable"
 description: "Pulls values stored in a choice field that is inside a repeatable section and stores them in an array."
 category: section
 ---

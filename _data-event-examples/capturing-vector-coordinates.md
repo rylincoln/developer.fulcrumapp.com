@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Capturing Vector Coordinates"
+title: "Capturing vector coordinates"
 description: "Demonstrates how to capture the coordinates of line and polygon features."
 category: section
 tags:

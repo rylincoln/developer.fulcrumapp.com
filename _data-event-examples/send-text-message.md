@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Send a Text Message"
+title: "Send a text message"
 description: "Use this to create a button on your form to send an SMS message"
 category: section
 tags:

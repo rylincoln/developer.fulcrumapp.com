@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Query A GeoServer Instance"
+title: "Query a GeoServer instance"
 description: "Demonstrates how to send a WFS query to GeoServer and use the results in a choice list."
 category: section
 tags:

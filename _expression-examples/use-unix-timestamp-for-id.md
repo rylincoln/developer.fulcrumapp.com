@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Unix Timestamp for unique record value"
+title: "Unix timestamp for unique record value"
 description: "Using the Unix timestamp to generate a unique record value."
 category: section
 ---

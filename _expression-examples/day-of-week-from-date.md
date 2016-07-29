@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Generate The Day Of The Week From A Date"
+title: "Generate the day of the week from a date"
 description: "Use this in a calculation field to return the day of the week from a date."
 category: section
 ---

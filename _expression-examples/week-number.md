@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Generate The Week Number"
+title: "Generate the week number"
 description: "Use this in a calculation field to return the week number from the current date or from a date field."
 category: section
 ---

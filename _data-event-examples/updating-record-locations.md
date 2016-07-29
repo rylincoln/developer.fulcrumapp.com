@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Intelligently Updating Record Locations"
+title: "Intelligently updating record locations"
 description: "Demonstrates how to intelligently update locations for imported records."
 category: section
 tags:

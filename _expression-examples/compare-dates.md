@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Time Between Two Date Fields"
+title: "Time between two date fields"
 description: "Use this in a calculation field to get the time between two date fields"
 category: section
 ---

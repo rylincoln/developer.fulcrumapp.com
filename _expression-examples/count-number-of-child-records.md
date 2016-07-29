@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Generates The Number Of Child Records"
+title: "Generates the number of child records"
 description: "Will provide you with the number of child records that have been created inside a repeatable section."
 category: section
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Query Esri REST Services"
+title: "Query Esri REST services"
 description: "How to query an Esri ArcGIS Server or ArcGIS Online REST Service using Data Events in Fulcrum."
 category: section
 tags:

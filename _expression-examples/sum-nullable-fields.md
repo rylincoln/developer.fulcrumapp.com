@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Sum Nullable Fields"
+title: "Sum nullable fields"
 description: "How to sum up fields that might be blank"
 category: section
 ---

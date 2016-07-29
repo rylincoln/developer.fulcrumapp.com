@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Get Address From Address Field (in Australia)"
+title: "Get address from address field (in Australia)"
 description: "Pulls the address from the address field in Australia."
 category: section
 ---
