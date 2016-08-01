@@ -14,10 +14,10 @@ SELECT
   form.status,
   form.description,
   users.name AS created_by,
-  FCM_FormatTimestamp(form.created_at, 'America/New_York') AS created_at,
-  FCM_FormatTimestamp(form.updated_at, 'America/New_York') AS updated_at,
+  FCM_FormatTimestamp(form.created_at, 'US/Eastern') AS created_at,
+  FCM_FormatTimestamp(form.updated_at, 'US/Eastern') AS updated_at,
   users.email,
-  FCM_FormatTimestamp(summary.last_sync, 'America/New_York') AS most_recent_record,
+  FCM_FormatTimestamp(summary.last_sync, 'US/Eastern') AS most_recent_record,
   summary.num_records AS num_records
 FROM
   forms form
