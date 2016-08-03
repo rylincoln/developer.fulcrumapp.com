@@ -12,6 +12,8 @@ tags:
 
 This example demonstrates how to compare the geotagged location of an attached photo with the location of the record to alert the user if there may be an issue.
 
+<img src="../media/compare-photo-location.gif" alt="Photo Location" style="float: right; margin-left: 40px;" />
+
 ```js
 // source: https://www.geodatasource.com/developers/javascript
 function findDistance(lat1, lon1, lat2, lon2, unit) {
