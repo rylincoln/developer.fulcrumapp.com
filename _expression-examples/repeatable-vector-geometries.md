@@ -36,3 +36,9 @@ if ($vector_vertices && $vector_vertices.length > 2) {
   SETRESULT(null);
 }
 ```
+
+To view the polygon vector geometries in [CARTO](https://carto.com/), you could use the following SQL query, where `polygon_wkt` is the name of the calculation field and `repeatable_vector_geometries` is the name of the table:
+
+```sql
+SELECT cartodb_id, ST_Transform (ST_GeomFromText(polygon_wkt, 4326), 3857) AS the_geom_webmercator FROM repeatable_vector_geometries
+```

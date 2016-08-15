@@ -68,4 +68,10 @@ ON('click', 'stop_digitizing', function(event) {
 
 In the above examples, the GPS capture interval is 1 second (1,000 milliseconds). This could be modified to emphasize greater precision (more coordinate pairs) for smaller features- or a longer interval for a more general representation of larger features.
 
+To view the polygon vector geometries in [CARTO](https://carto.com/), you could use the following SQL query, where `polygon` is the name of the geometry field and `repeatable_vector_geometries` is the name of the table:
+
+```sql
+SELECT cartodb_id, ST_Transform (ST_GeomFromText(polygon, 4326), 3857) AS the_geom_webmercator FROM repeatable_vector_geometries
+```
+
 **Note also that this workflow should be considered highly experimental and is not officially supported. Capturing lots of coordinates at a fast interval while Fulcrum is running in the background could cause memory and performance issues.**
