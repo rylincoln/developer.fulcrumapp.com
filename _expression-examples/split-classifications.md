@@ -1,7 +1,7 @@
 ---
 layout: default
 section: expressions
-title: "Split Classifications"
+title: "Split classifications"
 description: "Use this in a calculation field to split classifications into separate fields."
 category: section
 ---
