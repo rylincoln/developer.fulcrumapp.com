@@ -2,7 +2,7 @@
 layout: default
 section: expressions
 title: "GROUP"
-description: "Returns the sorted values within an array"
+description: "Returns grouped values within an array"
 category: section
 permalink: /expressions/reference/group/
 ---

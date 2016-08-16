@@ -210,7 +210,7 @@ Returns the current result value for the current expression
 
 ### [GROUP](/expressions/reference/group/)
 
-Returns the sorted values within an array
+Returns grouped values within an array
 
 ### [HASOTHER](/expressions/reference/hasother/)
 
