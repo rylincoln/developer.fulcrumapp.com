@@ -240,9 +240,17 @@ Checks whether the provided value is an even number.
 
 Checks whether a value is `true` or `false`.
 
+### [ISMOBILE](/expressions/reference/ismobile/)
+
+Returns true if the record is being edited from the mobile app
+
 ### [ISNAN](/expressions/reference/isnan/)
 
 Test whether a value is not a number
+
+### [ISNEW](/expressions/reference/isnew/)
+
+Returns a boolean indicating whether the current feature (record or repeatable item) is new. It returns false if it's being updated.
 
 ### [ISNONTEXT](/expressions/reference/isnontext/)
 
@@ -267,6 +275,10 @@ Checks whether a given choice is selected for a choice field or classification f
 ### [ISTEXT](/expressions/reference/istext/)
 
 Checks whether a value is text.
+
+### [ISUPDATE](/expressions/reference/isupdate/)
+
+Returns a boolean indicating whether the current feature (record or repeatable item) is being updated. It returns false if it's a new record.
 
 ### [LABEL](/expressions/reference/label/)
 
