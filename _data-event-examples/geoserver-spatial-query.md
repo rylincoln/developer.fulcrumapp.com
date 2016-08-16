@@ -33,7 +33,7 @@ ON('change-geometry', function(event) {
 
   // use cors/https proxy for web requests
   var mobile = ['iOS', 'Android'];
-  if (mobile.indexOf(PLATFORM()) === -1) {
+  if (!CONTAINS(mobile, PLATFORM())) {
     geoserverURL = "https://crossorigin.me/" + geoserverURL;
   }
 

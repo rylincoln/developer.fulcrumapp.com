@@ -25,7 +25,7 @@ ON('load-record', function(event) {
   var fieldUserRoles = ['Standard User', 'Custom Field User Role'];
 
   // if the current role is one of the designated field user roles...
-  if (fieldUserRoles.indexOf(ROLE()) !== -1) {
+  if (ISROLE(fieldUserRoles)) {
     // set the status field filter
     SETSTATUSFILTER(['pending', 'submitted']);
   }

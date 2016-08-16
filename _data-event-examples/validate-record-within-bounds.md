@@ -14,10 +14,10 @@ This example uses the [INVALID](/data-events/reference/invalid), [LATITUDE](/exp
 ```js
 function validateLocation() {
   // The rough bounds of Colorado
-  minLatitude = 36.985;
-  maxLatitude = 40.979;
-  minLongitude = -109.028;
-  maxLongitude = -102.063;
+  var minLatitude = 36.985;
+  var maxLatitude = 40.979;
+  var minLongitude = -109.028;
+  var maxLongitude = -102.063;
 
   // The latitude and longitude of the record
   lat = LATITUDE();

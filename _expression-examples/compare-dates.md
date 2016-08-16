@@ -16,7 +16,7 @@ var date2 = new Date($date_field2);
 var timeDiff = Math.abs(date2.getTime() - date1.getTime());
 var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
 
-SETRESULT(diffDays/365); //for years
+SETRESULT(diffDays / 365); //for years
 //OR
 // SETRESULT(diffDays); //for days
 ```

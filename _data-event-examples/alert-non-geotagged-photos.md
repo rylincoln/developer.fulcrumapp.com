@@ -13,17 +13,14 @@ This example loops through all the fields in the app and adds an [add-photo](/da
 
 ```js
 function validateGeotags(event) {
-  if (!event.value.latitude || !event.value.latitude || event.value.latitude === 0 || event.value.latitude === 0) {
-    ALERT('This photo is NOT geotagged. Please remove this photo, enable photo geotagging on your device and try again.');
+  if (!event.value.latitude || !event.value.longitude) {
+    INVALID('This photo is NOT geotagged. Enable photo geotagging on your device and try again.');
   }
 }
 
 ON('load-record', function (event) {
-  var elements = this.elementsByDataName;
-  for (var dataName in elements) {
-    if (elements[dataName].type == 'PhotoField') {
-      ON('add-photo', dataName, validateGeotags);
-    }
-  }
+  DATANAMES('PhotoField').forEach(function(dataName) {
+    ON('add-photo', dataName, validateGeotags);
+  });
 });
 ```

@@ -15,7 +15,7 @@ This example shows how to set all of your form fields to read-only once a signat
 ```js
 ON('edit-record', function (event) {
   if ($signature) {
-    for (var dataName in this.elementsByDataName) {
+    for (var dataName in DATANAMES()) {
       SETREADONLY(dataName, true);
     }
   }
