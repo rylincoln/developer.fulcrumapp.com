@@ -32,6 +32,10 @@ Returns the inverse hyperbolic cosine of a number.
 
 Returns true if all of the provided arguments are logically true, and false if any of the provided arguments are logically false.
 
+### [ARRAY](/expressions/reference/array/)
+
+Returns an array from its arguments, combining and flattening multiple arrays into a single array. It always returns an array regardless of the types and formats of the arguments.
+
 ### [AVERAGE](/expressions/reference/average/)
 
 Returns the numerical average value in a dataset, ignoring text.
@@ -76,6 +80,10 @@ Returns the concatenation of multiple values.
 
 Returns the concatenation of multiple values. Alias for CONCATENATE()
 
+### [CONTAINS](/expressions/reference/contains/)
+
+Determines whether an array or string contains a given value
+
 ### [COS](/expressions/reference/cos/)
 
 Returns the cosine of a value, in radians.
@@ -96,6 +104,10 @@ Returns a count of values in a dataset.
 
 Returns the number of blank values in a dataset.
 
+### [DATANAMES](/expressions/reference/datanames/)
+
+Returns the data names of the form fields
+
 ### [DATE](/expressions/reference/date/)
 
 Converts a provided year, month, and day into a date.
@@ -115,6 +127,10 @@ Returns the day of the month that a specific date falls on, in numeric format.
 ### [DEGREES](/expressions/reference/degrees/)
 
 Converts an angle value in radians to degrees.
+
+### [DESCRIPTION](/expressions/reference/description/)
+
+Returns the description of a given field
 
 ### [DOLLAR](/expressions/reference/dollar/)
 
@@ -152,6 +168,10 @@ Returns the double factorial of a number.
 
 Returns the boolean value `false`.
 
+### [FIELDTYPE](/expressions/reference/fieldtype/)
+
+Returns the field type of a field by its data name
+
 ### [FIND](/expressions/reference/find/)
 
 Returns the position at which a string is first found within text, case-sensitive.
@@ -187,6 +207,10 @@ Returns the greatest common divisor of one or more integers.
 ### [GETRESULT](/expressions/reference/getresult/)
 
 Returns the current result value for the current expression
+
+### [GROUP](/expressions/reference/group/)
+
+Returns the sorted values within an array
 
 ### [HASOTHER](/expressions/reference/hasother/)
 
@@ -232,6 +256,10 @@ Tests whether a value is a number.
 
 Checks whether the provided value is an odd number.
 
+### [ISROLE](/expressions/reference/isrole/)
+
+Checks whether the current user's role is one of the arguments
+
 ### [ISSELECTED](/expressions/reference/isselected/)
 
 Checks whether a given choice is selected for a choice field or classification field
@@ -239,6 +267,10 @@ Checks whether a given choice is selected for a choice field or classification f
 ### [ISTEXT](/expressions/reference/istext/)
 
 Checks whether a value is text.
+
+### [LABEL](/expressions/reference/label/)
+
+Returns the label of a given field
 
 ### [LAST](/expressions/reference/last/)
 
@@ -347,6 +379,10 @@ Returns the current 'Other' value for a choice field or classification field
 ### [PI](/expressions/reference/pi/)
 
 Returns the value of Pi to 15 decimal places.
+
+### [PLATFORM](/expressions/reference/platform/)
+
+Returns the current platform. Currently one of: `iOS`, `Android`, or `Web`.
 
 ### [PLUCK](/expressions/reference/pluck/)
 
@@ -468,6 +504,10 @@ Returns the sine of a value, in radians.
 
 Returns the hyperbolic sine of a number
 
+### [SORT](/expressions/reference/sort/)
+
+Returns the sorted values within an array
+
 ### [SQRT](/expressions/reference/sqrt/)
 
 Calculates the square root of a given number.
@@ -520,6 +560,10 @@ Returns the boolean value `true`.
 
 Returns the type of a value
 
+### [UNIQUE](/expressions/reference/unique/)
+
+Returns the unique values within an array
+
 ### [UPPER](/expressions/reference/upper/)
 
 Converts a specified string to uppercase.
@@ -527,6 +571,10 @@ Converts a specified string to uppercase.
 ### [USERFULLNAME](/expressions/reference/userfullname/)
 
 Returns the full name of the current user
+
+### [VALUE](/expressions/reference/value/)
+
+Returns the current value of a field given the field's data name
 
 ### [VERSIONINFO](/expressions/reference/versioninfo/)
 

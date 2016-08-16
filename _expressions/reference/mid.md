@@ -24,5 +24,5 @@ String
 ```js
 MID("Fulcrum for iOS", 13, 3)
 
-// returns iOS
+// returns "iOS"
 ```

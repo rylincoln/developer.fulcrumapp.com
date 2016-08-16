@@ -20,5 +20,5 @@ String
 ```js
 EMAIL()
 
-// returns test@example.com
+// returns "test@example.com"
 ```

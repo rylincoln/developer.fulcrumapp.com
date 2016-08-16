@@ -20,5 +20,5 @@ String
 ```js
 ROLE()
 
-// returns Owner
+// returns "Owner"
 ```

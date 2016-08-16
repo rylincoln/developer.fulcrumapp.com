@@ -20,47 +20,47 @@ String - The type of the value
 ```js
 TYPEOF('test')
 
-// returns string
+// returns "string"
 ```
 
 
 ```js
 TYPEOF(1)
 
-// returns number
+// returns "number"
 ```
 
 
 ```js
 TYPEOF(true)
 
-// returns boolean
+// returns "boolean"
 ```
 
 
 ```js
 TYPEOF(null)
 
-// returns null
+// returns "null"
 ```
 
 
 ```js
 TYPEOF(new Date)
 
-// returns date
+// returns "date"
 ```
 
 
 ```js
 TYPEOF({ name: 'Test' })
 
-// returns object
+// returns "object"
 ```
 
 
 ```js
 TYPEOF([1, 2, 3])
 
-// returns array
+// returns "array"
 ```

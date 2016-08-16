@@ -20,5 +20,5 @@ String - the selected value
 ```js
 CHOICEVALUE($choice_field)
 
-// returns Red
+// returns "Red"
 ```

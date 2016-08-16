@@ -24,12 +24,12 @@ String
 ```js
 FIXED(3000.141592, 2, true)
 
-// returns 3000.14
+// returns "3000.14"
 ```
 
 
 ```js
 FIXED(6276.22241, 3, false)
 
-// returns 6,276.222
+// returns "6,276.222"
 ```

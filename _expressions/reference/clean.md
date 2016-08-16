@@ -20,5 +20,5 @@ String
 ```js
 CLEAN('Test' + CHAR(31))
 
-// returns Test
+// returns "Test"
 ```

@@ -29,19 +29,19 @@ FIRST([1, 2, 3])
 ```js
 FIRST(['a', 'b', 'c'], 2)
 
-// returns [a,b]
+// returns ["a","b"]
 ```
 
 
 ```js
 FIRST('abc')
 
-// returns a
+// returns "a"
 ```
 
 
 ```js
 FIRST('abc', 2)
 
-// returns [a,b]
+// returns ["a","b"]
 ```

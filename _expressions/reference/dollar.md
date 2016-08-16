@@ -26,7 +26,7 @@ String - formatted currency
 ```js
 DOLLAR(1234.567)
 
-// returns $1,234.57
+// returns "$1,234.57"
 ```
 
 
@@ -34,7 +34,7 @@ DOLLAR(1234.567)
 // USD formatted in French
 DOLLAR(1234.567, 2, 'USD', 'fr-FR')
 
-// returns 1 234,57 $US
+// returns "1 234,57 $US"
 ```
 
 
@@ -42,5 +42,5 @@ DOLLAR(1234.567, 2, 'USD', 'fr-FR')
 // Euro formatted in Portuguese
 DOLLAR(1234.567, 2, 'EUR', 'pt-BR')
 
-// returns €1.234,57
+// returns "€1.234,57"
 ```

@@ -20,5 +20,5 @@ String
 ```js
 STATUS()
 
-// returns approved
+// returns "approved"
 ```

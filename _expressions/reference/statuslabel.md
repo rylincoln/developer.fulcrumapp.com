@@ -20,5 +20,5 @@ String
 ```js
 STATUSLABEL()
 
-// returns Approved
+// returns "Approved"
 ```

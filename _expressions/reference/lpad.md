@@ -24,12 +24,12 @@ String
 ```js
 LPAD('2', 4, '0')
 
-// returns 0002
+// returns "0002"
 ```
 
 
 ```js
 LPAD('2', 6, '0')
 
-// returns 000002
+// returns "000002"
 ```

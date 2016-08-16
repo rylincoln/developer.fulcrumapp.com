@@ -20,5 +20,5 @@ String
 ```js
 PROJECTNAME()
 
-// returns Project X
+// returns "Project X"
 ```

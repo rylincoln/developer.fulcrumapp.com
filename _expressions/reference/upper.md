@@ -20,5 +20,5 @@ String
 ```js
 UPPER("Empire State Building")
 
-// returns EMPIRE STATE BUILDING
+// returns "EMPIRE STATE BUILDING"
 ```

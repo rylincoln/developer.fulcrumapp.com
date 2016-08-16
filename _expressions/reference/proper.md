@@ -20,5 +20,5 @@ String
 ```js
 PROPER("fulcrum mobile data collection")
 
-// returns Fulcrum Mobile Data Collection
+// returns "Fulcrum Mobile Data Collection"
 ```

@@ -20,5 +20,5 @@ String - The ID of the current record
 ```js
 RECORDID()
 
-// returns 96eb35f5-13d8-4666-b188-8108019d0984
+// returns "96eb35f5-13d8-4666-b188-8108019d0984"
 ```

@@ -106,6 +106,14 @@ Set whether or not a field is required.
 
 Set the status of a record.
 
+### [SETSTATUSHIDDEN](/data-events/reference/setstatushidden/)
+
+Set the visibility of the status field.
+
+### [SETSTATUSREADONLY](/data-events/reference/setstatusreadonly/)
+
+Sets the status field to be read-only or editable.
+
 ### [SETSTATUSFILTER](/data-events/reference/setstatusfilter/)
 
 Set the allowable status values for a record.

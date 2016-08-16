@@ -22,12 +22,12 @@ String
 ```js
 RIGHT("ABCDEFG", 4)
 
-// returns DEFG
+// returns "DEFG"
 ```
 
 
 ```js
 RIGHT("000001")
 
-// returns 1
+// returns "1"
 ```
