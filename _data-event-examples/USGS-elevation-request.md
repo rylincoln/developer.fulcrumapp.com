@@ -18,8 +18,7 @@ function getElevation() {
   var usgsURL = 'http://nationalmap.gov/epqs/pqs.php?x=' + LONGITUDE() + '&y=' + LATITUDE() + '&units=Feet&output=json';
 
   // use cors/https proxy for web requests
-  var mobile = ['iOS', 'Android'];
-  if (!CONTAINS(mobile, PLATFORM()) {
+  if (!ISMOBILE()) {
     usgsURL = 'https://crossorigin.me/' + usgsURL;
   }
 
