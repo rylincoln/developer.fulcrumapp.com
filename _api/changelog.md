@@ -17,7 +17,7 @@ There are 5 new top-level attributes on `records` to support new product feature
 
 * `created_duration` - the number of seconds spent creating the record
 * `updated_duration` - the number of seconds spent updating the record
-* `edited_duration` - the total cummulative seconds spent editing the record (creating + all updates)
+* `edited_duration` - the total cumulative seconds spent editing the record (creating + all updates)
 * `created_location` - an object containing the location of where the record was created from. It has 4 attributes:
   * `latitude`
   * `longitude`
