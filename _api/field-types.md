@@ -1,7 +1,7 @@
 ---
 layout: default
 section: api
-order: 4
+order: 1
 title: "Field Types"
 description: "Field Types Overview - Sets, Choices, and Other Fields"
 category: section
