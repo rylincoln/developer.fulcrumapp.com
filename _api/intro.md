@@ -34,6 +34,8 @@ API calls are authenticated with a simple API Key (token) that is provided with 
 
 ### Obtaining your API Key
 
+[Create a new API token](https://web.fulcrumapp.com/settings/api/new)
+
 The API Key is unique for each organization you have a membership with.
 
 You can find the API key by browsing to the **Settings** page and selecting the **API** tab. You can generate separate API keys for different purposes. Keep in mind that when generating keys, you'll only get one shot at storing it somewhere, so copy and keep them in a safe place.
