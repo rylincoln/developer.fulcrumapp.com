@@ -11,7 +11,7 @@ While we are continually making improvements and updates to the Fulcrum platform
 
 ## August 2016
 
-To support disabling the project and assignment fields on apps, 2 new attributes have been added to the `forms` endpoint. You will now see `projects_enabled` and `assignment_enabled` when retrieving form definitions.
+To support disabling the project and assignment fields on apps, 2 new attributes have been added to the `forms` endpoint. You will now see `projects_enabled` and `assignment_enabled` boolean attributes when retrieving form definitions. As their name implies, these control whether the features are enabled on the form.
 
 There are 5 new top-level attributes on `records` to support new product features for capturing audit information.
 
