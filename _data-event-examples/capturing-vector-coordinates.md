@@ -54,10 +54,8 @@ ON('click', 'start_digitizing', function(event) {
   digitizePolygon = SETINTERVAL(function() {
     if (CURRENTLOCATION()) {
       polygonCoords.push(CURRENTLOCATION().longitude + ' ' + CURRENTLOCATION().latitude);
-      // note that for polygons, the last coordinate pair must be the same as the first coordinate pair
-      polygonCoords.push(polygonCoords[0]);
     }
-    SETVALUE('polygon', 'POLYGON (' + polygonCoords + ')');
+    SETVALUE('polygon', 'POLYGON (' + polygonCoords + ',' + polygonCoords[0] + ')');
   }, 1000);
 });
 
