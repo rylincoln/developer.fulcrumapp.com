@@ -80,6 +80,10 @@ Time.parse("2012-04-20T20:35:45Z")
 => 2012-04-20 20:35:45 UTC
 ```
 
+## Unique ID's
+
+Fulcrum uses unique string identifiers to refer to all system objects. The ID's are opaque strings and guaranteed to be unique across your account. They're opaque in the sense that you should not need to parse them. If you need to persist Fulcrum ID's, it's best to use a string data type and not a GUID/UUID data type. In addition to being case-sensitive for compatibility reasons, not all Fulcrum ID's are UUID's. Some older Fulcrum records might have ID's in a different format.
+
 ## Pagination
 
 All of the index views use pagination. The following information will be returned in the root object to help you determine where you are in the query:
