@@ -94,8 +94,6 @@ All of the index views use pagination. The following information will be returne
 
 * API calls are limited to 5,000 calls an hour per user.
 
-* The `/api/v2/users` endpoint is the _only one_ that supports HTTP Basic authentication. All other endpoints require the API Key as either an HTTP request header or query string parameter.
-
 * Using an HTTP header of `Accept: application/json` is required, otherwise you’ll receive a `406: Not Acceptable` response from the API.
 
 ## Libraries
