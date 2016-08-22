@@ -44,7 +44,7 @@ The Projects API gives you access to the [projects](http://www.fulcrumapp.com/he
 |----------|------|----------|----------|-------------|
 | name | string | yes | no | The name of the project. |
 | description | string | no | no | Optional project description. |
-| id | string | no | yes | The UUID of the project. |
+| id | string | no | yes | The id of the project. |
 | created_at | string | no | yes | Timestamp when the project was created. |
 | updated_at | string | no | yes | Timestamp when the project was last updated. |
 

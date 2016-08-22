@@ -34,18 +34,18 @@ The Signatures API gives you access to a record's signatures. In order to upload
 {:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
-| access_key | string | yes | no | The UUID of the signature. |
+| access_key | string | yes | no | The id of the signature. |
 | created_at | string | no | yes | Timestamp when the signature was created. |
 | updated_at | string | no | yes | Timestamp when the signature was last updated. |
 | created_by | string | no | yes | The name of user who created the signature. |
-| created_by_id | string | no | yes | The UUID of user who created the signature. |
+| created_by_id | string | no | yes | The id of user who created the signature. |
 | updated_by | string | no | yes | The name of user who last updated the signature. |
-| updated_by_id | string | no | yes | The UUID of user who last updated the signature. |
+| updated_by_id | string | no | yes | The id of user who last updated the signature. |
 | uploaded | boolean | no | yes | The file has been uploaded, but might not be fully stored on the backend yet. This is the least useful indicator unless you're writing a synchronizer |
 | stored | boolean | no | yes | The `original` attribute is available for download. |
 | processed | boolean | no | yes | The additional versions of the media are available for download. (thumbnails or small versions). |
-| record_id | string | no | yes | The UUID of the record the signature is associated with. |
-| form_id | string | no | yes | The UUID of the form the signature is associated with. |
+| record_id | string | no | yes | The id of the record the signature is associated with. |
+| form_id | string | no | yes | The id of the form the signature is associated with. |
 | file_size | number | no | yes | The size of the signature file in bytes. |
 | content_type | string | no | yes | The content type of the signature file. |
 | url | string | no | yes | The URL to access the signature. |
@@ -62,7 +62,7 @@ The following properties must be included in order to create/update a photo obje
 {:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
-| signature[access_key] | string | The UUID of the signature. | `"9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"` |
+| signature[access_key] | string | The id of the signature. | `"9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"` |
 | signature[file] | multipart/form-data | The signature file. | See [example](#upload-a-new-signature) below. |
 
 Example validation response if `access_key` is not included:

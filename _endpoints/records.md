@@ -38,18 +38,18 @@ Available parameters to query the records associated with your account. All of t
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | bounding_box | string | Bounding box of the records requested. Format should be: lat,long,lat,long (bottom, left, top, right). |
-| changeset_id | string | The UUID of the [changeset](/endpoints/changesets/) associated with the record. |
+| changeset_id | string | The id of the [changeset](/endpoints/changesets/) associated with the record. |
 | client_created_before | integer | Return only records which were created by the client before the given time. |
 | client_created_since  | integer | Return only records which were created by the client after the given time. |
 | client_updated_before | integer | Return only records which were updated by the client before the given time. |
 | client_updated_since  | integer | Return only records which were updated by the client after the given time. |
 | created_before | integer | Return only records which were created before the given time. |
 | created_since  | integer | Return only records which were created after the given time. |
-| form_id | string | The UUID of the form with which the record is associated. Leaving this blank will query against all of your records. |
+| form_id | string | The id of the form with which the record is associated. Leaving this blank will query against all of your records. |
 | newest_first | integer | If present, records will be sorted by `updated_at` date.
 | page | integer | The page number requested. |
 | per_page | integer | Number of records per page. By default, all requests are paginated to the maximum value of 20,000 items per request. |
-| project_id | string | The UUID of the project with which the record is associated. Leaving this blank will query against all of your records. |
+| project_id | string | The id of the project with which the record is associated. Leaving this blank will query against all of your records. |
 | updated_before | integer | Return only records which were updated before the given time. |
 | updated_since  | integer | Return only records which were updated after the given time. |
 
@@ -68,25 +68,25 @@ Records will still be ordered according to the `updated_at` column, even when fi
 {:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
-| form_id | string | yes | yes | The unique form ID (UUID). |
+| form_id | string | yes | yes | The form ID |
 | latitude | number | yes | no | The record latitude in WGS 84 decimal degrees. |
 | longitude | number | yes | no | The record longitude in WGS 84 decimal degrees. |
 | form_values | object | yes | no | Must be present and an object. The keys of this object must reflect the keys in the form schema. Different form types require different values (see table below). |
 | status | string | no | no | Sets the color of the marker. |
 | version | number | no | yes | Autoincremented version of the record for history tracking. |
-| id | string | no | yes | The UUID of the record. |
+| id | string | no | yes | The id of the record. |
 | created_at | string | no | yes | Timestamp when the record was synced to the cloud. |
 | updated_at | string | no | yes | Timestamp when the record was last synced to or processed while in the cloud. |
 | client_created_at | string | no | no | Timestamp when the user first created the record. |
 | client_updated_at | string | no | no | Timestamp when the record was last modified by the user. |
 | created_by | string | no | yes | The name of user who created the record. |
-| created_by_id | string | no | yes | The UUID of user who created the record. |
+| created_by_id | string | no | yes | The id of user who created the record. |
 | updated_by | string | no | yes | The name of user who last updated the record. |
-| updated_by_id | string | no | yes | The UUID of user who last updated the record. |
-| changeset_id | string | no | no | The UUID of the [changeset](/endpoints/changesets/) associated with the record. |
-| project_id | string | no | no | The UUID of the [project](http://www.fulcrumapp.com/help/projects/) tagged to the record. |
+| updated_by_id | string | no | yes | The id of user who last updated the record. |
+| changeset_id | string | no | no | The id of the [changeset](/endpoints/changesets/) associated with the record. |
+| project_id | string | no | no | The id of the [project](http://www.fulcrumapp.com/help/projects/) tagged to the record. |
 | assigned_to | string | no | no | The name of the user the record is assigned to. |
-| assigned_to_id | string | no | no | The UUID of the user the record is assigned to. |
+| assigned_to_id | string | no | no | The id of the user the record is assigned to. |
 | created_duration | number | no | no | The number of seconds spent creating the record. |
 | updated_duration | number | no | no | The number of seconds spent updating the record. |
 | edited_duration | number | no | no | The total cumulative seconds spent editing the record (creating + all updates). |
@@ -130,7 +130,7 @@ The following properties must be included in order to create/update a record obj
 {:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
-| form_id | string | The unique form ID (UUID). | `"7a0c3378-b63a-4707-b459-df499698f23c"` |
+| form_id | string | The form ID. | `"7a0c3378-b63a-4707-b459-df499698f23c"` |
 | latitude | number | The record latitude in WGS 84 decimal degrees. | `27.770787` |
 | longitude | number | The record longitude in WGS 84 decimal degrees. | `-82.638039` |
 | form_values | object | Must be present and an object. The keys of this object must reflect the keys in the form schema. Different form types require different values (see table above).| `{"2832": "My string value","8373": {"choice_values": ["My choice value"]}}`

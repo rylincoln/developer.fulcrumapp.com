@@ -38,7 +38,7 @@ For more general information about webhooks, or details of responsibilities your
 | name | string | yes | no | The name of the webhook. |
 | url | string | yes | no | The HTTP URL that will receive event requets as they occur. |
 | active | boolean | no | no | Default: true. If true, this webhook will receive event requests. If false, this webhook will not receive event requests. |
-| id | string | no | yes | The UUID of the webhook. |
+| id | string | no | yes | The id of the webhook. |
 | created_at | string | no | yes | Timestamp when the webhook was created. |
 | updated_at | string | no | yes | Timestamp when the webhook was last updated. |
 

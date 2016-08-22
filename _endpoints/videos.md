@@ -52,18 +52,18 @@ The Videos API gives you access to a record's videos, including the GPS track. I
 {:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
-| access_key | string | yes | no | The UUID of the video. |
+| access_key | string | yes | no | The id of the video. |
 | created_at | string | no | yes | Timestamp when the video was created. |
 | updated_at | string | no | yes | Timestamp when the video was last updated. |
 | created_by | string | no | yes | The name of user who created the video. |
-| created_by_id | string | no | yes | The UUID of user who created the video. |
+| created_by_id | string | no | yes | The id of user who created the video. |
 | updated_by | string | no | yes | The name of user who last updated the video. |
-| updated_by_id | string | no | yes | The UUID of user who last updated the video. |
+| updated_by_id | string | no | yes | The id of user who last updated the video. |
 | uploaded | boolean | no | yes | The file has been uploaded, but might not be fully stored on the backend yet. This is the least useful indicator unless you're writing a synchronizer. |
 | stored | boolean | no | yes | The `original` attribute is available for download. |
 | processed | boolean | no | yes | The additional versions of the media are available for download. (thumbnails or small versions). |
-| record_id | string | no | yes | The UUID of the record the photo is associated with. |
-| form_id | string | no | yes | The UUID of the form the photo is associated with. |
+| record_id | string | no | yes | The id of the record the photo is associated with. |
+| form_id | string | no | yes | The id of the form the photo is associated with. |
 | file_size | number | no | yes | The size of the video file in bytes. |
 | content_type | string | no | yes | The content type of the video file. |
 | url | string | no | yes | The URL to access the video. |
@@ -89,7 +89,7 @@ The following properties must be included in order to create/update a photo obje
 {:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
-| video[access_key] | string | The UUID of the video. | `"2d956eb0-bc2a-747f-fc56-1100936ce515"` |
+| video[access_key] | string | The id of the video. | `"2d956eb0-bc2a-747f-fc56-1100936ce515"` |
 | video[file] | multipart/form-data | The video file. | See [example](#upload-a-new-video) below. |
 
 Example validation response if `access_key` is not included:
