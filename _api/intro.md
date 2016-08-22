@@ -38,14 +38,6 @@ The API Key is unique for each organization you have a membership with.
 
 You can find the API key by browsing to the **Settings** page and selecting the **API** tab. You can generate separate API keys for different purposes. Keep in mind that when generating keys, you'll only get one shot at storing it somewhere, so copy and keep them in a safe place.
 
-Alternatively, you can retrieve the API token for any organization you are a member of by using the `/api/v2/users` endpoint and HTTP Basic authentication in your terminal.
-
-`curl -u email:password https://api.fulcrumapp.com/api/v2/users.json`
-
-If you have at least one API Key, you can use it to retrieve the keys for your other organizations.
-
-`curl -H "X-ApiToken: myapikey" https://api.fulcrumapp.com/api/v2/users.json`
-
 **Note:** The API Key can be used to access and modify all data which you have permission to access within that organization, so be sure to keep the API key private. Only share it with others if you want them to have that access. It is bad practice to put API Keys in source code, especially if it’s publicly available. If you think your API key has been compromised, you can generate a new one from your Fulcrum account API settings page.
 
 ### HTTP Request Header
