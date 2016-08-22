@@ -87,11 +87,11 @@ Records will still be ordered according to the `updated_at` column, even when fi
 | project_id | string | no | no | The UUID of the [project](http://www.fulcrumapp.com/help/projects/) tagged to the record. |
 | assigned_to | string | no | no | The name of the user the record is assigned to. |
 | assigned_to_id | string | no | no | The UUID of the user the record is assigned to. |
-| created_duration | string | no | no | The number of seconds spent creating the record. |
-| updated_duration | string | no | no | The number of seconds spent updating the record. |
-| edited_duration | string | no | no | The total cumulative seconds spent editing the record (creating + all updates). |
-| created_location | object | no | no | The location of where the record was created from. It has 4 attributes: `latitude`, `longitude`, `altitude`, `horizontal_accuracy` |
-| updated_location | object | no | no | The location of where the record was updated from. It has 4 attributes: `latitude`, `longitude`, `altitude`, `horizontal_accuracy` |
+| created_duration | number | no | no | The number of seconds spent creating the record. |
+| updated_duration | number | no | no | The number of seconds spent updating the record. |
+| edited_duration | number | no | no | The total cumulative seconds spent editing the record (creating + all updates). |
+| created_location | object | no | no | The location of where the record was created from. It has 4 `number` attributes: `latitude`, `longitude`, `altitude`, `horizontal_accuracy` |
+| updated_location | object | no | no | The location of where the record was updated from. It has 4 `number` attributes: `latitude`, `longitude`, `altitude`, `horizontal_accuracy` |
 | altitude | number | no | yes | Meters above/below (+/-) sea level. |
 | speed | number | no | yes | Meters per second. |
 | course | number | no | yes | Only recorded if the device is moving and has no relation to how the device is oriented; course is in degrees (0.0-360); if no course can be determined then 0.0 will be returned. |
