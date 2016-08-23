@@ -22,6 +22,7 @@ This example also shows an implementation of HTTP transaction basic access authe
 var accountSid = 'your_account_sid',
     authToken = 'your_auth_token';
 
+//b2a is an alternative of the btoa function and creates a base-64 encoded ASCII string from a "string" of binary data. Source: https://gist.github.com/JavaScript-Packer/6a00b61b270f387e2453
 function b2a(a) {
     var c, d, e, f, g, h, i, j, o, b = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
         k = 0,
@@ -34,6 +35,7 @@ function b2a(a) {
     return m = n.join(''), o = a.length % 3, (o ? m.slice(0, o - 3) : m) + '==='.slice(o || 3);
 }
 
+//verify_with_twilio is a hyperlink field. You may want to consider using regex validation for phone_number in a text field but a numeric field works too.
 ON('click', 'verify_with_twilio', function(event) {
     url = 'https://lookups.twilio.com/v1/PhoneNumbers/' + $phone_number + '?Type=carrier&Type=caller-name';
 
@@ -48,13 +50,15 @@ ON('click', 'verify_with_twilio', function(event) {
             ALERT('Error with request: ' + error);
         } else {
             var data = JSON.parse(body);
+            //twilio_verification is a read-only text field which begins as hidden. We unhide it with SETHIDDEN if there is data returned.
             if (data && data.caller_name && data.caller_name.caller_name) {
                 SETVALUE('twilio_verification', data.caller_name.caller_name);
                 SETHIDDEN('twilio_verification', false);
             } else if (data.caller_name.caller_name === null) {
+                //There may not be a CallerName registered for that number, but let's try returning Carrier name and type.
                 ALERT('Sorry, Twilio does not have a name associated with this number. It appears to be a ' + data.carrier.type + ' number with the ' + data.carrier.name + ' carrier however.');
-            }
-            else if (data.status == 404) {
+            } else if (data.status == 404) {
+                //Alert the user if the requested resource was not found.
                 ALERT(data.message);
             } {
 
@@ -67,6 +71,7 @@ ON('click', 'verify_with_twilio', function(event) {
 [numverify](https://numverify.com/) is another service that offers a cost-effective API (validate 250 phone numbers per month for free). It offers a REST API supporting 232 countries. Paid customers may establish a [secure connection](https://numverify.com/documentation#https). The example below demonstrates a Data Event which returns a simple: valid = `true`/`false` value.
 
 ```js
+//You may want to consider using regex validation for phone_number in a text field but a numeric field works too.
 function validateNumber() {
     apiKey = 'your_api_key';
     verifyUrl = 'http://apilayer.net/api/validate?access_key=' + apiKey + '&number=' + $phone_number + '&format=1';
@@ -86,11 +91,13 @@ function validateNumber() {
             ALERT('Error with request: ' + error);
         } else {
             var data = JSON.parse(body);
+            //valid_via_numverify is a read-only text field which begins as hidden. We unhide it with SETHIDDEN when data is returned.
             SETVALUE('valid_via_numverify', data.valid);
             SETHIDDEN('valid_via_numverify', false);
         }
     });
 
 }
+//verify_with_numverify is a hyperlink field.
 ON('click', 'verify_with_numverify', validateNumber);
 ```
