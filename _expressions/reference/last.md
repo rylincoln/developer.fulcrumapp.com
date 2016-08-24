@@ -29,19 +29,19 @@ LAST([1, 2, 3])
 ```js
 LAST(['a', 'b', 'c'], 2)
 
-// returns [b,c]
+// returns ["b","c"]
 ```
 
 
 ```js
 LAST('abc')
 
-// returns c
+// returns "c"
 ```
 
 
 ```js
 LAST('abc', 2)
 
-// returns [b,c]
+// returns ["b","c"]
 ```

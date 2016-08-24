@@ -46,7 +46,7 @@ The Classification Sets API gives you access to the [classification sets](http:/
 | items | array of classification set objects | yes | no | The classification set options. |
 | description | string | no | no | Optional classification set description. |
 | version | number | no | yes | Autoincremented version of the choice list for history tracking. |
-| id | string | no | yes | The UUID of the classification set. |
+| id | string | no | yes | The id of the classification set. |
 | created_at | string | no | yes | Timestamp when the choice list was created. |
 | updated_at | string | no | yes | Timestamp when the choice list was last updated. |
 

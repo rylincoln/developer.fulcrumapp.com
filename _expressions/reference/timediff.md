@@ -85,5 +85,5 @@ else {
     SETRESULT('');
 }
 
-// returns 47 minutes
+// returns "47 minutes"
 ```

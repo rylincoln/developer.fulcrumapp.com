@@ -34,17 +34,11 @@ API calls are authenticated with a simple API Key (token) that is provided with 
 
 ### Obtaining your API Key
 
+[Create a new API token](https://web.fulcrumapp.com/settings/api/new)
+
 The API Key is unique for each organization you have a membership with.
 
 You can find the API key by browsing to the **Settings** page and selecting the **API** tab. You can generate separate API keys for different purposes. Keep in mind that when generating keys, you'll only get one shot at storing it somewhere, so copy and keep them in a safe place.
-
-Alternatively, you can retrieve the API token for any organization you are a member of by using the `/api/v2/users` endpoint and HTTP Basic authentication in your terminal.
-
-`curl -u email:password https://api.fulcrumapp.com/api/v2/users.json`
-
-If you have at least one API Key, you can use it to retrieve the keys for your other organizations.
-
-`curl -H "X-ApiToken: myapikey" https://api.fulcrumapp.com/api/v2/users.json`
 
 **Note:** The API Key can be used to access and modify all data which you have permission to access within that organization, so be sure to keep the API key private. Only share it with others if you want them to have that access. It is bad practice to put API Keys in source code, especially if it’s publicly available. If you think your API key has been compromised, you can generate a new one from your Fulcrum account API settings page.
 
@@ -86,6 +80,10 @@ Time.parse("2012-04-20T20:35:45Z")
 => 2012-04-20 20:35:45 UTC
 ```
 
+## Unique ID's
+
+Fulcrum uses unique string identifiers to refer to all system objects. The ID's are opaque strings and guaranteed to be unique across your account. They're opaque in the sense that you should not need to parse them. If you need to persist Fulcrum ID's, it's best to use a string data type and not a GUID/UUID data type. In addition to being case-sensitive for compatibility reasons, not all Fulcrum ID's are UUID's. Some older Fulcrum records might have ID's in a different format.
+
 ## Pagination
 
 All of the index views use pagination. The following information will be returned in the root object to help you determine where you are in the query:
@@ -101,8 +99,6 @@ All of the index views use pagination. The following information will be returne
 ## Notes
 
 * API calls are limited to 5,000 calls an hour per user.
-
-* The `/api/v2/users` endpoint is the _only one_ that supports HTTP Basic authentication. All other endpoints require the API Key as either an HTTP request header or query string parameter.
 
 * Using an HTTP header of `Accept: application/json` is required, otherwise you’ll receive a `406: Not Acceptable` response from the API.
 

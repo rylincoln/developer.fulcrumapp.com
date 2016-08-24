@@ -24,12 +24,12 @@ String
 ```js
 RPAD('2', 4, '0')
 
-// returns 2000
+// returns "2000"
 ```
 
 
 ```js
 RPAD('2', 6, '0')
 
-// returns 200000
+// returns "200000"
 ```

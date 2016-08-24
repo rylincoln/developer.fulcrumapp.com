@@ -36,18 +36,18 @@ The Photos API gives you access to a record's photos, including thumbnails, and 
 {:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
-| access_key | string | yes | no | The UUID of the photo. |
+| access_key | string | yes | no | The id of the photo. |
 | created_at | string | no | yes | Timestamp when the photo was created. |
 | updated_at | string | no | yes | Timestamp when the photo was last updated. |
 | created_by | string | no | yes | The name of user who created the photo. |
-| created_by_id | string | no | yes | The UUID of user who created the photo. |
+| created_by_id | string | no | yes | The id of user who created the photo. |
 | updated_by | string | no | yes | The name of user who last updated the photo. |
-| updated_by_id | string | no | yes | The UUID of user who last updated the photo. |
+| updated_by_id | string | no | yes | The id of user who last updated the photo. |
 | uploaded | boolean | no | yes | The file has been uploaded, but might not be fully stored on the backend yet. This is the least useful indicator unless you're writing a synchronizer |
 | stored | boolean | no | yes | The `original` attribute is available for download. |
 | processed | boolean | no | yes | The additional versions of the media are available for download. (thumbnails or small versions). |
-| record_id | string | no | yes | The UUID of the record the photo is associated with. |
-| form_id | string | no | yes | The UUID of the form the photo is associated with. |
+| record_id | string | no | yes | The id of the record the photo is associated with. |
+| form_id | string | no | yes | The id of the form the photo is associated with. |
 | file_size | number | no | yes | The size of the photo file in bytes. |
 | content_type | string | no | yes | The content type of the photo file. |
 | latitude | number | no | yes | The photo latitude in WGS 84 decimal degrees. |
@@ -67,7 +67,7 @@ The following properties must be included in order to create/update a photo obje
 {:.table.table-striped}
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
-| photo[access_key] | string | The UUID of the photo. | `"7A8ABC73-A41B-4F1E-BA16-F7C03DAE1E22"` |
+| photo[access_key] | string | The id of the photo. | `"7A8ABC73-A41B-4F1E-BA16-F7C03DAE1E22"` |
 | photo[file] | multipart/form-data | The photo file. | See [example](#upload-a-new-photo) below. |
 
 Example validation response if `access_key` is not included:

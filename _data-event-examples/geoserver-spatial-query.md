@@ -32,8 +32,7 @@ ON('change-geometry', function(event) {
   var geoserverURL = "http://giswebservices.massgis.state.ma.us/geoserver/wfs?request=getfeature&version=1.0.0&service=wfs&typename=massgis:GISDATA.EOTROADS_ARC&propertyname=STREETNAME&outputformat=json&filter=" + encodeURIComponent(filter);
 
   // use cors/https proxy for web requests
-  var mobile = ['iOS', 'Android'];
-  if (mobile.indexOf(PLATFORM()) === -1) {
+  if (!ISMOBILE()) {
     geoserverURL = "https://crossorigin.me/" + geoserverURL;
   }
 

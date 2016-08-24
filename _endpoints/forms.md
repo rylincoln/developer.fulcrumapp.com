@@ -45,7 +45,7 @@ The Forms API gives you access to your form fields, or app schema.
 |----------|------|----------|-------------|
 | name | string | yes | no | The name you've given this form. |
 | elements | array | yes | no | Custom form elements (see form elements table below). |
-| id | string | no | yes | The unique ID (UUID) of the form. |
+| id | string | no | yes | The unique ID of the form. |
 | description | string | no | no | The description you've given this form. |
 | bounding_box | array | no | yes | Bounding box containing all the form's records. Format is [min_lat, min_long, max_lat, max_long] |
 | title_field_keys | array | no | no | Array of strings, where the strings are keys for fields in the elements attribute. |
@@ -53,6 +53,8 @@ The Forms API gives you access to your form fields, or app schema.
 | auto_assign | boolean | no | no | Assigns records to the user who creates them. |
 | hidden_on_dashboard | boolean | no | no | Is the form visible in the mobile dashboard? |
 | geometry_required | boolean | no | no | Requiring the location will force a location to be saved with each record. |
+| projects_enabled | boolean | no | no | Are [projects](http://www.fulcrumapp.com/help/projects/) enabled for this form? |
+| assignment_enabled | boolean | no | no | Is [record assignment](http://www.fulcrumapp.com/help/record-assignment-for-task-queueing/) enabled for this form? |
 | geometry_types | array | no | no | Enables/disables record location. `['Point']` or `[]` |
 | script | string | no | no | Custom Data Events script. |
 | record_count | number | no | yes | The number of records in this form. |
@@ -94,7 +96,7 @@ The Forms API gives you access to your form fields, or app schema.
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | type | string | yes | Must be one of the valid element types: `"TextField"`, `"YesNoField"`, `"Label"`, `"Section"`, `"ChoiceField"`, `"ClassificationField"`, `"PhotoField"`, `"VideoField"`, `"AudioField"`, `"BarcodeField"`, `"DateTimeField"`, `"TimeField"`, `"Section"`, `"Repeatable"`, `"AddressField"`, `"SignatureField"`, `"HyperlinkField"`, `"CalculatedField"`. |
-| key | string | yes | The UUID for the field. We suggest using a [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) library to generate a unique identifier. |
+| key | string | yes | The id for the field. Must be unique. The Fulcrum app builder uses system generated 4 character codes.
 | label | string | yes | The field label, visible to mobile and web users. |
 | data_name | string | yes | Can be set manually or auto generated using the label of the element. This field will be the column name on all exported files. It is recommended to use something that works easily with Esri Shapefiles that have a 10 character maximum column heading limitation. |
 | required | boolean | yes | Is this field required? |
@@ -143,7 +145,7 @@ The Forms API gives you access to your form fields, or app schema.
 {:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| classification_set_id | string | yes | The UUID of the classification set to reference. |
+| classification_set_id | string | yes | The id of the classification set to reference. |
 
 ### Additional Form Element Properties (PhotoField)
 

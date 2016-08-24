@@ -20,5 +20,5 @@ String
 ```js
 LOWER("Empire State Building")
 
-// returns empire state building
+// returns "empire state building"
 ```

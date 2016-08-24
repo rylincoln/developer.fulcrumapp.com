@@ -18,7 +18,7 @@ ON('load-record', function(event) {
   var adminRoles = ['Owner', 'Manager', 'Custom Admin Role'];
 
   // enable the fields if the current role is one of the designated admin roles...
-  if (adminRoles.indexOf(ROLE()) !== -1) {
+  if (ISROLE(adminRoles)) {
     // make some fields editable by turning off the read-only flag
     SETREADONLY('field_1', false);
     SETREADONLY('field_2', false);

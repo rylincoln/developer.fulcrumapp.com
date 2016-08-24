@@ -20,12 +20,12 @@ String
 ```js
 CHAR(65)
 
-// returns A
+// returns "A"
 ```
 
 
 ```js
 CHAR(1337)
 
-// returns Թ
+// returns "Թ"
 ```

@@ -18,9 +18,9 @@ Similarly with videos added to a field named `videos`, but check the `orientatio
 ON('add-photo', 'photos', function(event) {
   if (event.value.width < event.value.height) {
     if (PLATFORM() === 'iOS') {
-      ALERT('Please delete this photo and retake it in landscape orientation. If you *did* take the photo in landscape orientation, check to ensure your device \'portrait orientation lock\' is OFF.');
+      INVALID('Please retake this photo in landscape orientation. If you *did* take the photo in landscape orientation, check to ensure your device \'portrait orientation lock\' is OFF.');
     } else {
-      ALERT('Please delete this photo and retake it in landscape orientation.');
+      INVALID('Please retake the photo in landscape orientation.');
     }
   }
 });
@@ -28,7 +28,7 @@ ON('add-photo', 'photos', function(event) {
 ON('add-video', 'videos', function(event) {
   if (event.value.orientation == 90 || event.value.orientation == -90) {
     OPENURL('https://www.youtube.com/watch?v=Bt9zSfinwFA');
-    ALERT('Please delete the video and retake it in landscape orientation.');
+    INVALID('Please retake the video in landscape orientation.');
   }
 });
 ```

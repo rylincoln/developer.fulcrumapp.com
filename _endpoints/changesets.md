@@ -33,14 +33,14 @@ Changesets are used to group sets of changes to any number of records. Changeset
 {:.table.table-striped}
 | Property | Type | Required | Readonly | Description |
 |----------|------|----------|----------|-------------|
-| form_id | string | yes | no | The UUID of the form associated with the changeset. |
+| form_id | string | yes | no | The id of the form associated with the changeset. |
 | metadata | object | no | no | An object containing arbitrary metadata describing the changeset. Often used to log comments, apps, versions and user agents. |
 | min_lat | number | no | yes | The minimum latitude of the spatial extent of the changeset. |
 | max_lat | number | no | yes | The maximum  latitude of the spatial extent of the changeset. |
 | min_lon | number | no | yes | The minimum  longitude of the spatial extent of the changeset. |
 | max_lon | number | no | yes | The maximum  longitude of the spatial extent of the changeset. |
 | number_of_changes | number | no | yes | The number of changed records included in this changeset. |
-| id | string | no | yes | The UUID for this changeset. |
+| id | string | no | yes | The id for this changeset. |
 | created_at | string | no | yes | Timestamp when the changeset was created. |
 | updated_at | string | no | yes | Timestamp when the changeset was last updated. |
 | created_by | string | no | yes | The name of user who created the changeset. |
@@ -63,7 +63,7 @@ The following properties must be included in order to create/update a changeset 
 
 | Property | Type | Description | Example |
 |----------|------|-------------|---------|
-| form_id | string | The UUID of the form associated with the changeset. | `"8821a0d5-e767-47a9-815b-c72bdfa64043"` |
+| form_id | string | The id of the form associated with the changeset. | `"8821a0d5-e767-47a9-815b-c72bdfa64043"` |
 
 Example validation response if `form_id` is not included:
 

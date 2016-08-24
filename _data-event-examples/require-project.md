@@ -13,8 +13,8 @@ This example uses the `validate-record` event in conjunction with the [INVALID](
 
 ```js
 ON('validate-record', function (event) {
-  if(!PROJECTNAME()) {
-    INVALID('Please select a project before saving!');
+  if (!PROJECTNAME()) {
+    INVALID('Please select a project before saving.');
   }
 });
 ```

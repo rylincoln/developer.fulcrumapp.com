@@ -16,9 +16,9 @@ Here we're listening for the `'change-geometry'` event for a record, and then us
 
 ```js
 function getWeather() {
-  apiKey = 'your_api_key';
+  var apiKey = 'your_api_key';
 
-  options = {
+  var options = {
     url: 'https://api.wunderground.com/api/' + apiKey + '/conditions/q/' + LATITUDE() + ',' + LONGITUDE() + '.json'
   };
 

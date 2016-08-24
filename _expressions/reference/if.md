@@ -24,12 +24,12 @@ permalink: /expressions/reference/if/
 ```js
 IF(1 > 3, '1 is greater than 3', '1 is less than 3')
 
-// returns 1 is less than 3
+// returns "1 is less than 3"
 ```
 
 
 ```js
 IF(ISSELECTED($choice_field, 'Red'), 'Red is selected', 'Red is not selected')
 
-// returns Red is selected
+// returns "Red is selected"
 ```

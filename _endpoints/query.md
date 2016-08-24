@@ -7,7 +7,7 @@ description: "SQL read access to account tables and objects"
 category: section
 img: /assets/img/guides/
 difficulty: advanced
-menu:		
+menu:
   - "Endpoints": endpoints
   - "Query Parameters": query-parameters
   - "Notes": notes

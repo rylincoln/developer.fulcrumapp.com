@@ -18,9 +18,7 @@ ON('click', 'send_sms', function(event) {
     return;
   }
 
-  var platforms = ['iOS', 'Android'];
-
-  if (platforms.indexOf(PLATFORM()) === -1) {
+  if (!ISMOBILE()) {
     ALERT('Only mobile devices support making phone calls.');
     return;
   }

@@ -13,10 +13,8 @@ Most fields in Fulcrum will create a string from the data entered into the field
 Field types like choice fields and classification sets create arrays from the values selected. In situations where you wish to combine two arrays together use the expression below. Please refer [this example](http://developer.fulcrumapp.com/expressions/examples/combine-arrays/) for combining arrays.
 
 ```js
-var choices = [];
+var combined = ARRAY(CHOICEVALUES($first_choice_field),
+                     CHOICEVALUES($another_choice_field));
 
-choices.push(CHOICEVALUES($first_choice_field));
-choices.push(CHOICEVALUES($another_choice_field));
-
-SETRESULT(choices.join(', '));
+SETRESULT(combined.join(', '));
 ```

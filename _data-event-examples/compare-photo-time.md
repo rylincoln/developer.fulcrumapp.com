@@ -22,14 +22,9 @@ function checkTime(event) {
 }
 
 ON('load-record', function(event) {
-  var elements = this.elementsByDataName;
-  // loop through the form elements
-  for (var dataName in elements) {
-    // we only care about photo fields
-    if (elements[dataName].type == 'PhotoField') {
-      // listen for add-photo event
-      ON('add-photo', dataName, checkTime);
-    }
-  }
+  // loop through the photo fields
+  DATANAMES('PhotoField').forEach(function(dataName) {
+    ON('add-photo', dataName, checkTime);
+  });
 });
 ```

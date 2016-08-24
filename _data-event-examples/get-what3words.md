@@ -21,7 +21,7 @@ Both the `getw3w` and `setw3w` functions use the [REQUEST](/data-events/referenc
 var w3wApiKey = 'my_api_key';
 
 function getw3w() {
-  options = {
+  var options = {
     url: 'https://api.what3words.com/v2/reverse?key=' + w3wApiKey + '&coords=' + LATITUDE() + ',' + LONGITUDE()
   };
 

@@ -20,5 +20,5 @@ String
 ```js
 USERFULLNAME()
 
-// returns John Smith
+// returns "John Smith"
 ```

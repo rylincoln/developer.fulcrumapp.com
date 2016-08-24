@@ -29,9 +29,7 @@ function mostFrequentValue(array) {
   });
   return mostFrequentValue;
 }
-var values = FLATTEN([
-  RPEATABLEVALUES($repetable_section, 'field_in_repeatable'),
-]);
+var values = REPEATABLEVALUES($repeatable_section, 'field_in_repeatable');
 var value = mostFrequentValue(values);
 SETRESULT(value);
 ```

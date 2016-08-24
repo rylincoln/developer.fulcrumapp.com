@@ -27,5 +27,5 @@ String
 // replaces 'survey' with 'inspection'
 REPLACE("Data collection survey", 17, 6, "inspection")
 
-// returns Data collection inspection
+// returns "Data collection inspection"
 ```

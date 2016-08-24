@@ -57,7 +57,7 @@ var choices = {
 
 function translate(e) {
   var language = CHOICEVALUE($language);
-  for (var dataName in this.elementsByDataName) {
+  for (var dataName in DATANAMES()) {
     // Update field labels
     if (labels[dataName]) {
       SETLABEL(dataName, labels[dataName][language]);

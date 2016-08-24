@@ -9,5 +9,5 @@ category: section
 Resulting format looks like: `9.56445789337158`. Measurement is in meters.
 
 ```
-this.recordAltitude
+ALTITUDE()
 ```

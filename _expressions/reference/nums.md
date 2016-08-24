@@ -27,5 +27,5 @@ NUMS('1' ,'2', '3')
 ```js
 NUMS('1' ,'2', 'a')
 
-// returns [1,2,NaN]
+// returns [1,2,null]
 ```

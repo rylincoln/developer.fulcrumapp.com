@@ -7,7 +7,7 @@ category: section
 ---
 
 ```js
-if (this.platform == 'Android' || this.platform == 'iOS') {
+if (ISMOBILE()) {
   SETRESULT(USERFULLNAME());
 }
 ```

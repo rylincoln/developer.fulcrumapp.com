@@ -14,7 +14,7 @@ This example demonstrates integrating Fulcrum with [Pushbullet](https://www.push
 
 ```js
 ON('save-record', function (event) {
-  options = {
+  var options = {
     url: 'https://api.pushbullet.com/v2/pushes',
     method: 'POST',
     headers: {

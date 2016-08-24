@@ -20,5 +20,5 @@ String
 ```js
 TRIM("  Fulcrum is cross-platform ")
 
-// returns Fulcrum is cross-platform
+// returns "Fulcrum is cross-platform"
 ```

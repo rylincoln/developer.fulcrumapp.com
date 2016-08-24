@@ -24,40 +24,40 @@ String - the new time value
 ```js
 TIMEADD('09:00', 8)
 
-// returns 17:00
+// returns "17:00"
 ```
 
 
 ```js
 TIMEADD('17:00', -8)
 
-// returns 09:00
+// returns "09:00"
 ```
 
 
 ```js
 TIMEADD('09:00', 48)
 
-// returns 09:00
+// returns "09:00"
 ```
 
 
 ```js
 TIMEADD('16:00', 1.5)
 
-// returns 17:30
+// returns "17:30"
 ```
 
 
 ```js
 TIMEADD('16:00', 90, 'minutes')
 
-// returns 17:30
+// returns "17:30"
 ```
 
 
 ```js
 TIMEADD('16:00', -90, 'minutes')
 
-// returns 14:30
+// returns "14:30"
 ```

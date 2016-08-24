@@ -20,7 +20,7 @@ permalink: /expressions/reference/coalesce/
 ```js
 COALESCE(null, null, 'Test', 1)
 
-// returns Test
+// returns "Test"
 ```
 
 

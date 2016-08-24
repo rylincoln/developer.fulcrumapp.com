@@ -46,7 +46,7 @@ The Choice Lists API gives you access to the [choice lists](http://www.fulcrumap
 | choices | array of choice objects | yes | no | The choice list options. (`[{"label": "Excellent Condition","value": "excellent"},{"label": "Poor Condition","value": "poor"}`) |
 | description | string | no | no | Optional choice list description. |
 | version | number | no | yes | Autoincremented version of the choice list for history tracking. |
-| id | string | no | yes | The UUID of the choice list. |
+| id | string | no | yes | The id of the choice list. |
 | created_at | string | no | yes | Timestamp when the choice list was created. |
 | updated_at | string | no | yes | Timestamp when the choice list was last updated. |
 

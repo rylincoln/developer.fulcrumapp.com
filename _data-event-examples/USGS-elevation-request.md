@@ -14,17 +14,15 @@ Similar to automating weather collection, data events allow you to tap into any 
 <img src="../media/fulcrum-elev-data-event.gif" alt="USGS Elevation Query" style="float: right; margin-left: 40px;" />
 
 ``` js
-function getElev() {
-
+function getElevation() {
   var usgsURL = 'http://nationalmap.gov/epqs/pqs.php?x=' + LONGITUDE() + '&y=' + LATITUDE() + '&units=Feet&output=json';
 
   // use cors/https proxy for web requests
-  var mobile = ['iOS', 'Android'];
-  if (mobile.indexOf(PLATFORM()) === -1) {
+  if (!ISMOBILE()) {
     usgsURL = 'https://crossorigin.me/' + usgsURL;
   }
 
-  options = {
+  var options = {
     url: usgsURL
   };
 
@@ -38,7 +36,7 @@ function getElev() {
   });
 }
 
-ON('change-geometry', getElev);
+ON('change-geometry', getElevation);
 ```
 
 Alternatively, altitude can be determined (as shown in the .gif animation as 'Device Elevation') with a Calculation Expression as shown in [this example](http://developer.fulcrumapp.com/expressions/examples/altitude/).

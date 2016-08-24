@@ -22,12 +22,12 @@ String
 ```js
 LEFT("Fulcrum", 3)
 
-// returns Ful
+// returns "Ful"
 ```
 
 
 ```js
 LEFT("Fulcrum")
 
-// returns F
+// returns "F"
 ```
