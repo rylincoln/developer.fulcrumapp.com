@@ -2,15 +2,14 @@
 layout: default
 section: data_events
 title: "SETFORMATTRIBUTES"
-description: "Configure specific device functionality and behaviors at the form level"
+description: "Configure specific device functionality and behaviors at the form level."
 category: section
 permalink: /data-events/reference/setformattributes/
 ---
 
 ### Description
 
-SETFORMATTRIBUTES allows you to configure specific device functionality and behaviors at the form level. These configuration options help you control what features the user has available, improving the workflow and data quality for that particular form. You can currently control the following:
-
+Allows you to configure specific device functionality and behaviors at the form level. These configuration options help you control what features the user has available, improving the workflow and data quality for that particular form. You can currently control the following:
 * Disable adding photos from the camera roll
 * Force record to be sync’d upon save
 * Control the minimum accuracy required for the GPS location
@@ -18,9 +17,7 @@ SETFORMATTRIBUTES allows you to configure specific device functionality and beha
 * Disable the “Save as Draft” feature
 * Control photo and video quality settings
 
-### Parameters
-
-`config` Object (__required__) - A configuration object with the following optional properties:
+The following table contains the available properties that be set:
 
 {:.table.table-striped.event-table}
 | Property | Type | Description | Default |
@@ -33,6 +30,10 @@ SETFORMATTRIBUTES allows you to configure specific device functionality and beha
 | `photo_quality` | integer | maximum dimension of photos in pixels, or 'native' | user-preference |
 | `video_quality` | string | video resolution, one of: 480p, 720p, 1080p, 2160p | user-preference |
 | `drafts_enabled` | boolean | allow saving record as a draft | true |
+
+### Parameters
+
+`config` Object (__required__) - A configuration object with the following optional properties
 
 ### Examples
 

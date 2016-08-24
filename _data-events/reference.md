@@ -66,6 +66,10 @@ Set the available choices for a choice field
 
 Set the description of a field.
 
+### [SETFORMATTRIBUTES](/data-events/reference/setformattributes/)
+
+Configure specific device functionality and behaviors at the form level.
+
 ### [SETHIDDEN](/data-events/reference/sethidden/)
 
 Set the visibility of a field.
