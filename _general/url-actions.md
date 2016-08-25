@@ -9,7 +9,7 @@ category: section
 
 ## Introduction
 
-You can directly create new records and update existing records via URL parameters on both the web and mobile apps. This allows you to easily integrate Fulcrum with other applications and services to build custom workflows, such as:
+You can directly launch Fulcrum, create new records and update existing records via URL parameters on both the web and mobile apps. This allows you to easily integrate Fulcrum with other applications and services to build custom workflows, such as:
 
 - Scheduling work outside of Fulcrum and sending daily worksheets to your field crews.
 
@@ -21,14 +21,15 @@ You can directly create new records and update existing records via URL paramete
 
 ## Web Actions
 
-Records can be created and edited directly on the web using the following actions:
+Records can be viewed, created, and edited directly on the web using the following actions:
 
 {:.table.table-striped}
 | Action | Description |
 |--------|-------------|
+|`https://web.fulcrumapp.com/data/[form_id]`|Open a form to view or edit records. Optional hashes to define view mode include: `#map`, `#split`, `#table` |
 |`https://web.fulcrumapp.com/records/new`|Create a new record|
+|`https://web.fulcrumapp.com/records/[record_id]`|Open an existing record|
 |`https://web.fulcrumapp.com/records/[record_id]?mode=edit`|Edit an existing record|
-
 
 ## Mobile Actions
 
@@ -37,8 +38,16 @@ Both the Android and iOS apps support opening the app using the `fulcrumapp://` 
 {:.table.table-striped}
 | Action | Description |
 |--------|-------------|
+|`fulcrumapp://open`|Launch the Fulcrum app|
 |`fulcrumapp://new-record`|Create a new record|
 |`fulcrumapp://edit-record`|Edit an existing record|
+
+## Open Parameters
+
+{:.table.table-striped}
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `form_id` | no | The form ID to open when Fulcrum launches|
 
 ## New Record Parameters
 
