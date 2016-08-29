@@ -9,7 +9,7 @@ tags:
   - qa/qc
 ---
 
-This example loops through all the fields in the app and adds an [add-photo](/data-events/intro/#media-events) event to look for location metadata. If `latitude` and `longitude` are missing or are set to 0, it will alert the user to enable geotagging on their device.
+This example loops through all the fields in the app and adds an [add-photo](/data-events/intro/#media-events) event to look for location metadata. If `latitude` and `longitude` are missing, it will alert the user to enable geotagging on their device and prevent the photo from being attached to the record.
 
 ```js
 function validateGeotags(event) {
