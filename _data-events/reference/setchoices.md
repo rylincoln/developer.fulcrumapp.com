@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "SETCHOICES"
-description: "Set the available choices for a choice field"
+description: "Set the available choices for a choice field."
 category: section
 permalink: /data-events/reference/setchoices/
 ---

@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "CLEARTIMEOUT"
-description: "Clears a timeout that was previously started with SETTIMEOUT"
+description: "Clears a timeout that was previously started with SETTIMEOUT."
 category: section
 permalink: /data-events/reference/cleartimeout/
 ---

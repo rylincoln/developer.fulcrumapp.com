@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "CLEARINTERVAL"
-description: "Clears an interval that was previously started with SETINTERVAL"
+description: "Clears an interval that was previously started with SETINTERVAL."
 category: section
 permalink: /data-events/reference/clearinterval/
 ---

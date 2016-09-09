@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "SETINTERVAL"
-description: "Repeatedly calls a function with a fixed time delay between each call"
+description: "Repeatedly calls a function with a fixed time delay between each call."
 category: section
 permalink: /data-events/reference/setinterval/
 ---

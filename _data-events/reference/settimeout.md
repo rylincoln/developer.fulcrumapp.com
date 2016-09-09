@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "SETTIMEOUT"
-description: "Calls a function after a specified delay"
+description: "Calls a function after a specified delay."
 category: section
 permalink: /data-events/reference/settimeout/
 ---

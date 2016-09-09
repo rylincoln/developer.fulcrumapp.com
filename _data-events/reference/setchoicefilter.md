@@ -2,7 +2,7 @@
 layout: default
 section: data_events
 title: "SETCHOICEFILTER"
-description: "Filter the choices in a choice field or classification field"
+description: "Filter the choices in a choice field or classification field."
 category: section
 permalink: /data-events/reference/setchoicefilter/
 ---
