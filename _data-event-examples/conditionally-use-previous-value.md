@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Conditionally persist default values across records"
+title: "Conditionally persist values across records"
 description: "Demonstrates dynamic logic to determine how default values are persisted across records."
 category: section
 tags:
