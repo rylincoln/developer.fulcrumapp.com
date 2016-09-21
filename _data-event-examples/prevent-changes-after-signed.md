@@ -15,9 +15,9 @@ This example shows how to set all of your form fields to read-only once a signat
 ```js
 ON('edit-record', function (event) {
   if ($signature) {
-    for (var dataName in DATANAMES()) {
+    DATANAMES().forEach(function(dataName) {
       SETREADONLY(dataName, true);
-    }
+    });
   }
 });
 ```
