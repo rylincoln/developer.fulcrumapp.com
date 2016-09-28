@@ -31,7 +31,7 @@ This can be expanded to look through all photo fields in your app
 ```js
 ON('validate-record', function (event) {
   // loop through the photo fields
-  for (var dataName in DATANAMES('PhotoField')) {
+  DATANAMES('PhotoField').forEach(function(dataName) {
     // get the photo field value
     var photos = VALUE(dataName);
     // if there are any photos, loop through the photo objects and test the caption property for null
@@ -43,6 +43,6 @@ ON('validate-record', function (event) {
         }
       }
     }
-  }
+  });
 });
 ```
