@@ -10,7 +10,8 @@ tags:
 
 The examples below show how to disable requirement validation for all of your form fields, based on a list of user emails or Fulcrum roles.
 
-Email:
+**Email:**
+
 ```js
 ON('load-record', function(event) {
   var emails = ['john.doe@gmail.com', 'jane.doe@gmail.com'];
@@ -21,7 +22,9 @@ ON('load-record', function(event) {
   }
 });
 ```
-Role:
+
+**Role:**
+
 ```js
 ON('load-record', function(event) {
   if (ISROLE('Owner', 'Manager')) {
