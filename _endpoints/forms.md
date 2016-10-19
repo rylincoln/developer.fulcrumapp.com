@@ -80,6 +80,8 @@ The Forms API gives you access to your form fields, or app schema.
 | hidden | boolean | `false` | Whether status is visible on mobile. |
 | description | string | `""` | The description for this field. |
 | choices | array | `[]` | See status field choices below. |
+| required | boolean | `false` | Whether status value is required. |
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
 
 ### Status Field Choice Properties
 
@@ -95,7 +97,7 @@ The Forms API gives you access to your form fields, or app schema.
 {:.table.table-striped}
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| type | string | yes | Must be one of the valid element types: `"TextField"`, `"YesNoField"`, `"Label"`, `"Section"`, `"ChoiceField"`, `"ClassificationField"`, `"PhotoField"`, `"VideoField"`, `"AudioField"`, `"BarcodeField"`, `"DateTimeField"`, `"TimeField"`, `"Section"`, `"Repeatable"`, `"AddressField"`, `"SignatureField"`, `"HyperlinkField"`, `"CalculatedField"`. |
+| type | string | yes | Must be one of the valid element types: `"TextField"`, `"YesNoField"`, `"Label"`, `"Section"`, `"ChoiceField"`, `"ClassificationField"`, `"PhotoField"`, `"VideoField"`, `"AudioField"`, `"BarcodeField"`, `"DateTimeField"`, `"TimeField"`, `"Section"`, `"Repeatable"`, `"AddressField"`, `"SignatureField"`, `"HyperlinkField"`, `"CalculatedField"`, `"RecordLinkField"`. |
 | key | string | yes | The id for the field. Must be unique. The Fulcrum app builder uses system generated 4 character codes.
 | label | string | yes | The field label, visible to mobile and web users. |
 | data_name | string | yes | Can be set manually or auto generated using the label of the element. This field will be the column name on all exported files. It is recommended to use something that works easily with Esri Shapefiles that have a 10 character maximum column heading limitation. |
@@ -116,10 +118,29 @@ The Forms API gives you access to your form fields, or app schema.
 |----------|------|----------|-------------|
 | numeric | boolean | no | Is it a numeric field? |
 | format | string | no | If it a numeric field, what is the format (`"decimal"` or `"integer"`)? |
+| pattern | string | no | Custom validation pattern using a regular expression (regex) pattern. [More information](https://www.w3.org/TR/html5/forms.html#the-pattern-attribute). |
+| pattern_description | string | no | Description to show user on validation error. |
 | min_length | number | no | Minimum length of text string (when numeric=false). |
 | max_length | number | no | Maximum length of text string (when numeric=false). |
 | min | number | no | Minimum number (when numeric=true). |
 | max | number | no | Maximum number (when numeric=true). |
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
+
+### Additional Form Element Properties (DateTimeField)
+
+{:.table.table-striped}
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
+| default_value | string | no | The attribute to use as default value. Use `now` to default to today's date. |
+
+### Additional Form Element Properties (TimeField)
+
+{:.table.table-striped}
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
+| default_value | string | no | The attribute to use as default value. Use `now` to default to the current time. |
 
 ### Additional Form Element Properties (YesNoField)
 
@@ -127,9 +148,10 @@ The Forms API gives you access to your form fields, or app schema.
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | neutral_enabled | boolean | yes | Enable N/A choice? |
-| neutral | object | if neutral_enabled | Label/Value for neutral choice (`{"label": "N/A","value": "n/a"}`). |
+| neutral | object | if neutral_enabled | Label/Value for neutral choice (`{"label": "N/A","value": "n/a"}`).
 | positive | object | yes | Label/Value for positive choice (`{"label": "Yes","value": "yes"}`). |
 | negative | object | yes | Label/Value for positive choice (`{"label": "No","value": "no"}`). |
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
 
 ### Additional Form Element Properties (ChoiceField)
 
@@ -139,6 +161,7 @@ The Forms API gives you access to your form fields, or app schema.
 | choices | array | yes | Array of choice objects. |
 | multiple | boolean | no | Multiple choice field? |
 | allow_other | boolean | no | Allow other values? |
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
 
 ### Additional Form Element Properties (ClassificationField)
 
@@ -146,6 +169,7 @@ The Forms API gives you access to your form fields, or app schema.
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | classification_set_id | string | yes | The id of the classification set to reference. |
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
 
 ### Additional Form Element Properties (PhotoField)
 
@@ -210,6 +234,29 @@ The Forms API gives you access to your form fields, or app schema.
 |----------|------|----------|-------------|
 | display | object | yes | Calculation display object (`{"style": "number","currency": null}`). |
 | expression | string | no | Calculation expression. |
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
+
+### Additional Form Element Properties (RecordLinkField)
+
+{:.table.table-striped}
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| allow_existing_records | boolean | yes | Whether to allow the user to select existing records from the app linked in the record link field. |
+| allow_creating_records | boolean | yes | Whether to allow the user to create new records in the app that is linked to the record link field. |
+| allow_updating_records | boolean | yes | Whether to allow the user to update data in existing records in the app linked to the record link field. |
+| allow_multiple_records | boolean | yes | Whether to allow the user to select multiple records to link from the app linked to the record link field. |
+| record_conditions_type | string | no | Match all or any of the conditions to filter linked records. (`"all"` or `"any"`) |
+| record_conditions | array | no | Array of objects containing conditions to filter linked records (see conditions table below). |
+| record_defaults | array | no | Array of objects containing conditions to filter linked records (see defaults table below). |
+| default_previous_value | boolean | `false` | Whether to automatically set the previously used value. |
+
+#### Record Link Default Properties
+
+{:.table.table-striped}
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| source_field_key | string | The key of the source field. |
+| destination_field_key | string | The key of the destination field. |
 
 ### Conditions
 
