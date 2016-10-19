@@ -54,7 +54,7 @@ SETVALUE('classification_field', ['level1', 'level2', 'level3']);
 ```js
 // Sets the value of a yes/no field
 SETVALUE('yes_no_field', 'yes');
-```;
+```
 
 
 ```js
