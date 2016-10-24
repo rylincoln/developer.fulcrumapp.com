@@ -13,7 +13,7 @@ permalink: /expressions/reference/choicevalues/
 
 ### Returns
 
-String - the selected value
+Array - selected value(s)
 
 ### Examples
 
