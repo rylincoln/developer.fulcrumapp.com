@@ -1,14 +1,18 @@
 ---
 layout: default
 section: expressions
-title: "Grab the correct radius for sampling on sloped terrains."
+title: "Calculate radius for plot sampling"
 description: "Pull in data from an array of objects according to the values from a choice field and number field."
 category: section
 ---
 
 One way to conduct unbiased systematic sampling is through fixed radius plots. A fixed radius plot is great for sampling trees that are less than the specified breakpoint diameter.
 
+![](/public/img/plot-center.png)
+
 This calculation field reveals the radius that you should be working wiht. It pulls in the acre size you would like to survey and the slope value at the site to calculate the length of the radius.
+
+![](/public/img/radius.png)
 
 You can read more about the methods on the [US Forest Service](http://www.fs.fed.us/nrm/fsveg/) site.
 
