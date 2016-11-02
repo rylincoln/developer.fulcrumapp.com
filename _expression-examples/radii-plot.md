@@ -16,7 +16,7 @@ This calculation field reveals the radius that you should be working wiht. It pu
 
 You can read more about the methods on the [US Forest Service](http://www.fs.fed.us/nrm/fsveg/) site.
 
-```
+```js
 var threeHundredth = [
   {"slope": [0,17],"radius":6.8},
   {"slope": [18,30],"radius":6.9},
@@ -84,7 +84,6 @@ oneHundredth = [
 ];
 
 if (CHOICEVALUE($acre_size) == '1/300'){
-  console.log(threeHundredth.length);
   for (var i = 0; i < threeHundredth.length; i++) {
     if ($slope >= threeHundredth[i].slope[0] && $slope <= threeHundredth[i].slope[1]){
       SETRESULT(threeHundredth[i].radius);
