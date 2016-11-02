@@ -10,7 +10,7 @@ One way to conduct unbiased systematic sampling is through fixed radius plots. A
 
 ![](/public/img/plot-center.png)
 
-This calculation field reveals the radius that you should be working wiht. It pulls in the acre size you would like to survey and the slope value at the site to calculate the length of the radius.
+This calculation field reveals the radius that you should be working with. It pulls in the acre size you would like to survey and the slope value at the site to calculate the length of the radius.
 
 ![](/public/img/radius.png)
 
