@@ -1,7 +1,7 @@
 ---
 layout: default
 section: endpoints
-order: 11
+order: 12
 title: "Changesets"
 description: "Create, read, update, or close changesets"
 category: section

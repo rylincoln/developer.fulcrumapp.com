@@ -62,11 +62,12 @@ The Videos API gives you access to a record's videos, including the GPS track. I
 | uploaded | boolean | no | yes | The file has been uploaded, but might not be fully stored on the backend yet. This is the least useful indicator unless you're writing a synchronizer. |
 | stored | boolean | no | yes | The `original` attribute is available for download. |
 | processed | boolean | no | yes | The additional versions of the media are available for download. (thumbnails or small versions). |
-| record_id | string | no | yes | The id of the record the photo is associated with. |
-| form_id | string | no | yes | The id of the form the photo is associated with. |
+| record_id | string | no | yes | The id of the record the video is associated with. |
+| form_id | string | no | yes | The id of the form the video is associated with. |
 | file_size | number | no | yes | The size of the video file in bytes. |
 | content_type | string | no | yes | The content type of the video file. |
 | url | string | no | yes | The URL to access the video. |
+| track | string | no | yes | The URL to access the video GPS track. |
 | thumbnail_small | string | no | yes | The URL to access the small thumbnail version of the video. |
 | thumbnail_medium | string | no | yes | The URL to access the medium thumbnail version of the video. |
 | thumbnail_large | string | no | yes | The URL to access the large thumbnail version of the video. |
@@ -82,7 +83,7 @@ The Videos API gives you access to a record's videos, including the GPS track. I
 
 ## Validations
 
-The following properties must be included in order to create/update a photo object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
+The following properties must be included in order to create/update a video object in our system. Any validation errors will return a `422` and an object with a list of validation errors.
 
 ### Required Properties
 
