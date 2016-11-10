@@ -159,6 +159,22 @@ ON('add-photo', 'photo_field', function (event) {
 });
 ```
 
+Note: media-add events can be combined with the [`INVALID`](/data-events/reference/invalid/) function to prevent attaching media objects. This can be useful if you want to reject media that does not meet your criteria. The example below loops through all the fields in the app and adds an `add-photo` event to look for location metadata. If `latitude` or `longitude` are missing, it will alert the user to enable geotagging on their device and prevent the photo from being attached to the record.
+
+```js
+function validateGeotags(event) {
+  if (!event.value.latitude || !event.value.longitude) {
+    INVALID('This photo is NOT geotagged. Enable photo geotagging on your device and try again.');
+  }
+}
+
+ON('load-record', function (event) {
+  DATANAMES('PhotoField').forEach(function(dataName) {
+    ON('add-photo', dataName, validateGeotags);
+  });
+});
+```
+
 ### The `add-photo` `event` Object
 
 The callback for `add-photo` events is passed an event parameter with `name`, `field`, and `value` attributes. The value attribute is an object containing photo metadata.
