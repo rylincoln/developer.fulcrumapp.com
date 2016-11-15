@@ -36,3 +36,13 @@ OPENURL('mailto:clark.griswold@gmail.com?subject=turn+those+lights+off!&body=jk,
 
 // Opens an email client with a predefined subject and body
 ```
+
+```js
+if (PLATFORM() === 'iOS') {
+OPENURL('mailto:'+$field_1 + '?subject=' + encodeURIComponent($field_2) + '&body=' + encodeURIComponent($field_3))
+} else {
+OPENURL('mailto:'+$field_1 + '?subject=' + $field_2 + '&body=' + $field_3)
+}
+
+// Opens an email client with dynamic to address, subject, and body.
+```
