@@ -1,7 +1,7 @@
 ---
 layout: default
 section: data_events
-title: "Working with inline GeoJSON Feature Collections"
+title: "Working with inline GeoJSON"
 description: "Populate a choice list from GeoJSON and set other values from the selected feature properties."
 category: section
 tags:
