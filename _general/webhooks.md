@@ -90,12 +90,14 @@ The relevant HTTP headers in the request are:
 
 The event data is delivered as a JSON-encoded string in the POST request. This is indicated by the Content-Type header. And after parsing the payload as JSON, it will look something like:
 
-    {
-      "id":       "<event id>",
-      "type":     "<event type>",
-      "owner_id": "<id of the owning organization>",
-      "data":     <JSON representation of the resource>
-    }
+```json
+{
+  "id":       "<event id>",
+  "type":     "<event type>",
+  "owner_id": "<id of the owning organization>",
+  "data":     "<JSON representation of the resource>"
+}
+```
 
 See the above example payloads for details of what each event will look like.
 
