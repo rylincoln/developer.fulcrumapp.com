@@ -101,6 +101,10 @@ The event data is delivered as a JSON-encoded string in the POST request. This i
 
 See the above example payloads for details of what each event will look like.
 
+### Inspecting The Payload
+
+It can be helpful to use a service such as [RequestBin](https://requestb.in/) for inspecting the actual webhook payloads sent by Fulcrum, while developing your endpoints.
+
 ### Active/Inactive
 
 A webhook can be either active or inactive. By default, a webhook is active.
