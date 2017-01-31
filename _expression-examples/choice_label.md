@@ -11,14 +11,14 @@ This example can be used to pull in a selected choice option's label. This will 
 ```
 function findChoiceLabel(dataName) {
   var selectedChoiceValue = CHOICEVALUE(VALUE(dataName));
-​
+
   var choice = FIELD(dataName).choices.find(function(choice) {
     return choice.value === selectedChoiceValue;
   });
 
   return choice ? choice.label : null;
 }
-​
+
 SETRESULT(findChoiceLabel('choicefield'));
 ```
 
