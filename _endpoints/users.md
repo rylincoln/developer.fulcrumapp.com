@@ -3,17 +3,16 @@ layout: default
 section: endpoints
 order: 1
 title: "Users"
-description: "Access the metadata for a user account, including API Keys"
+description: "Access the metadata for a user account"
 category: section
 img: /assets/img/guides/
 difficulty: advanced
 menu:
   - "Endpoints": endpoints
   - "Notes": notes
-  - "Examples": examples
 ---
 
-The Users API provides access to user metadata (including API Keys) and can be conveniently accessed via HTTP Basic authentication using your Fulcrum username and password. You will need a valid API Key in order to work with any of the other API endpoints.
+The Users API provides access to user metadata, including organizations the user is a member of, and can be accessed via HTTP Basic authentication using your Fulcrum username and password. You can use this endpoint in conjunction with the [Authorizations API](/endpoints/authorizations) to create API keys.
 
 ## Endpoints
 
@@ -24,44 +23,8 @@ The Users API provides access to user metadata (including API Keys) and can be c
 
 ## Notes
 
-* The Users API is the _only one_ that supports HTTP Basic authentication. All other endpoints require the API Key as either an HTTP request header or query string parameter.
-
+* The Users API supports HTTP Basic authentication while most other endpoints require the API Key as either an HTTP request header or query string parameter.
 * The Users API only allows GET requests. You must create new users or modify existing users via the web admin console.
-
-## Examples
-
-Using Basic authentication to fetch your API Key allows you to build client-side applications that do not expose your API Key in the source code. Once retrieved, the API Key can be stored in `sessionStorage` or `localStorage` for additional API calls.
-
-### cURL
-
-`curl -u email:password https://api.fulcrumapp.com/api/v2/users`
-
-### jQuery
-
-All examples take advantage of [jQuery](http://jquery.com/) to perform asynchronous HTTP (Ajax) requests.
-
-```js
-$.ajax({
-  type: "GET",
-  url: "https://api.fulcrumapp.com/api/v2/users.json",
-  contentType: "application/json",
-  dataType: "json",
-  headers: {
-    "Authorization": "Basic " + btoa("email:password")
-  },
-  statusCode: {
-    401: function() {
-      alert("Incorrect credentials, please try again.");
-    }
-  },
-  success: function (data) {
-    // do something!
-    console.log(data)
-  }
-});
-```
-
-**Note**: In case you were wondering,`btoa` encodes a string in base-64.
 
 ### Valid User Response
 
@@ -75,7 +38,6 @@ $.ajax({
     "contexts": [{
       "name": "John Doe",
       "id": "5tbk714i-0aia-uwxk-n3i9-e67ivvmt8qyn",
-      "api_token": "j9fd9fw9fgk2x1ckg8vha9rgs71qlry0fyhueu70mcay1bxz564g5hiotxkrl1uq",
       "type": "organization",
       "role": {
         "name": "Owner",
