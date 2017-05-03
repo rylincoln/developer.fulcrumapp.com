@@ -46,3 +46,14 @@ OPENURL('mailto:'+$field_1 + '?subject=' + $field_2 + '&body=' + $field_3)
 
 // Opens an email client with dynamic to address, subject, and body.
 ```
+
+```js
+
+ON('click', 'driving_directions', function(event) {
+
+OPENURL(encodeURI('https://maps.google.com/maps?daddr=' + $address.sub_thoroughfare + '+' + $address.thoroughfare + '+' + $address.locality + '+' + $address.admin_area + '+' + $address.postal_code));
+
+});
+
+//opens Google Maps app and provides driving directions to address when the 'driving_directions' hyperlink field is clicked.
+```
