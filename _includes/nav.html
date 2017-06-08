@@ -101,6 +101,26 @@
         </li>
         <!-- End Data Events -->
 
+        <!-- Desktop -->
+        <li class="dropdown{% if page.section == 'desktop' %} active{% endif %}">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-desktop"></i>&nbsp;&nbsp;Desktop
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/desktop/intro/">Introduction</a>
+            </li>
+            <li>
+              <a href="/desktop/reference/">Reference</a>
+            </li>
+            <li>
+              <a href="/desktop/examples/">Examples</a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Desktop -->
+
         <li class="{% if page.section == 'general' and page.title == 'Webhooks Overview'  %} active{% endif %}">
           <a href="/general/webhooks/"><i class="fa fa-code"></i>&nbsp;&nbsp;Webhooks</a>
         </li>

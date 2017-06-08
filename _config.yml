@@ -48,6 +48,12 @@ collections:
   query-api-examples:
     output: true
     permalink: /query-api/examples/:path/
+  desktop:
+    output: true
+    permalink: /desktop/:path/
+  desktop-examples:
+    output: true
+    permalink: /desktop/examples/:path/
 
 # files to exclude, array
 exclude:
