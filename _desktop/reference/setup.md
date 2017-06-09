@@ -15,15 +15,15 @@ Setup the local Fulcrum database.
 
 Note: `setup` can be run interactively (via prompts, without passing email/password as parameters) on Linux/macOS.
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | Option | Description | Required | Default |
 | - | - | - | - |
-| `--email` | emailed associated with your Fulcrum account | true | na|
+| `--email` | email associated with your Fulcrum account | true | na|
 | `--password` | password for your Fulcrum account | true | na |
 
 ### Examples
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum setup`  |

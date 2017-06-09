@@ -13,7 +13,7 @@ Reset an organization.
 
 ### Examples
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum reset --org 'Organization Name'`  |

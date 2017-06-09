@@ -13,14 +13,14 @@ Create a new plugin.
 
 ### Parameters
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | Option | Description | Required | Default |
 | - | - | - | - |
 | `--name` | the new plugin name | true | na|
 
 ### Examples
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum create-plugin --name 'MyPlugin'`  |

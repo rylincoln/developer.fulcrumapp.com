@@ -13,14 +13,14 @@ Run a query in the local database.
 
 ### Parameters
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | Option | Description | Required | Default |
 | - | - | - | - |
 | `--sql` | sql query | true | na|
 
 ### Examples
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum query --sql 'SELECT COUNT(*) FROM memberships'`  |

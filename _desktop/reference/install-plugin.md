@@ -13,7 +13,7 @@ Install a plugin.
 
 ### Parameters
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | Option | Description | Required | Default |
 | - | - | - | - |
 | `--name` | the plugin name | false | na|
@@ -21,7 +21,7 @@ Install a plugin.
 
 ### Examples
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-postgres`  |

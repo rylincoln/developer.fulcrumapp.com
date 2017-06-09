@@ -8,13 +8,10 @@ category: section
 search: true
 ---
 
-{: .desktop}
-|Usage: | `fulcrum <cmd> [args]` |
-| - | - |
-|||
+Usage: `fulcrum <cmd> [args]`
 
-{: .desktop}
-|Commands: | |
+{:.table.table-striped.event-table}
+|Command | Description |
 | - | - |
 | [`setup`](/desktop/reference/setup/) |setup the local fulcrum database
 | [`sync`](/desktop/reference/sync/) |sync an organization
@@ -27,7 +24,7 @@ search: true
 | [`query`](/desktop/reference/query/) |run a query in the local database
 |||
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | Options:| | |
 | - | - | - |
 | `--version` |Show version number |[boolean]

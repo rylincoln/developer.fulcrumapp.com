@@ -13,7 +13,7 @@ Build all plugins.
 
 ### Examples
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum build-plugins`  |

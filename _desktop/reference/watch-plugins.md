@@ -13,14 +13,14 @@ Watch and recompile all plugins.
 
 ### Parameters
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | Option | Description | Required | Default |
 | - | - | - | - |
 | `--name` | plugin name to watch | false | na|
 
 ### Examples
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum build-plugins`  |

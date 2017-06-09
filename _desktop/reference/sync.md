@@ -13,7 +13,7 @@ Sync an organization to the local database. Defaults to a one-time sync, but can
 
 ### Parameters
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | Option | Description | Required | Default |
 | - | - | - | - |
 | `--org` | organization name | true | na|
@@ -22,7 +22,7 @@ Sync an organization to the local database. Defaults to a one-time sync, but can
 
 ### Examples
 
-{: .desktop}
+{:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum sync --org 'Organization Name'`  |
