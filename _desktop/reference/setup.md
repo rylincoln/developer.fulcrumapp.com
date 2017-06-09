@@ -9,17 +9,22 @@ permalink: /desktop/reference/setup/
 
 ### Description
 
-Setup the local Fulcrum database
+Setup the local Fulcrum database.
 
 ### Parameters
 
-`email` String (__required__) - emailed associated with your Fulcrum account
+Note: `setup` can be run interactively (via prompts, without passing email/password as parameters) on Linux/macOS.
 
-`password` String (__required__) - password for your Fulcrum account
+{: .desktop}
+| Option | Description | Required | Default |
+| - | - | - | - |
+| `--email` | emailed associated with your Fulcrum account | true | na|
+| `--password` | password for your Fulcrum account | true | na |
 
 ### Examples
 
+{: .desktop}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum setup --email EMAIL --password SECRET`  |
+| macOS / Linux  | `fulcrum setup`  |
 | Windows | `.\fulcrum.cmd setup --email EMAIL --password SECRET` |

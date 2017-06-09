@@ -161,3 +161,7 @@ body {
 .event-table tbody tr td:first-child, .event-table thead tr th:first-child {
   width: 240px;
 }
+
+.desktop thead tr th, .desktop td {
+  padding: 0 10px 0 0;
+}
