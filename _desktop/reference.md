@@ -28,7 +28,7 @@ search: true
 
 ### setup
 
-Setup the local fulcrum database.
+Setup the local Fulcrum database.
 
 Note: `setup` can be run interactively (via prompts, without passing email/password as parameters) on Linux/macOS.
 
@@ -59,7 +59,9 @@ Sync an organization to the local database. Defaults to a one-time sync, but can
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum sync --org 'Organization Name'`  |
-| Windows | `.\fulcrum.cmd sync --org 'Organization Name'` |
+| Windows | `.\fulcrum.cmd sync --org "Organization Name"` |
+
+_Windows seems to prefer double quotes with command parameters._
 
 ### reset
 
