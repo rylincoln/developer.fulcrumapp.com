@@ -9,15 +9,15 @@ menu:
 
 ---
 
-Fulcrum Desktop is a command line tool for intelligently syncing your Fulcrum Organization data to an on-site database. The local database is a complete API representation with search indexes and query tables, making it ideal for integrating Fulcrum with data driven applications, such as Business Intelligence (BI) and Geographic Information Systems (GIS).
+Fulcrum Desktop is an experimental command line tool for intelligently syncing your Fulcrum Organization data to an on-site database. The local database is a complete API representation with search indexes and query tables, making it ideal for integrating Fulcrum with data driven applications, such as Business Intelligence (BI) and Geographic Information Systems (GIS).
 
-This application is still very much under active development and has been designed to support extensibility and customization via plugins, so expect changes, improvements, and additional functionality in the coming weeks and months.
+_**This application is still very much under active development and has been designed to support extensibility and customization via plugins, so expect changes, improvements, and additional functionality in the coming weeks and months. While we encourage developers to test out this experimental tool and provide feedback, it is not a first-class Fulcrum product and official support should not be expected.**_
 
 ## How it works
 
 You first run the `setup` command to authenticate to your Fulcrum account and setup the local fulcrum SQLite database. Next you can run the `sync` command to sync with your Fulcrum organization. This will build all the necessary database tables, indexes, views, etc. and sync down all of your Fulcrum resources, including forms, records, choice lists, classification sets, projects, members, and roles.
 
-The internal _fulcrum.db_ SQLite database is not very user friendly, so you will likely want to install one of the database plugins.
+The internal _fulcrum.db_ SQLite database is not very user-friendly, so you will likely want to install one of the database plugins.
 
 ## Installation
 
@@ -37,7 +37,7 @@ Internal SQLite database: _/Users/user/Library/Application Support/Fulcrum/data/
 Open the .dmg, drag the icon to _Applications_. That's it! While running, the program will auto-update if there's a new release available.
 
 Installation directory: _/Users/username/.fulcrum_
-Internal SQLite database: _/Users/user/Library/Application Support/Fulcrum/data/fulcrum.db_
+Internal SQLite database: _/Users/username/Library/Application Support/Fulcrum/data/fulcrum.db_
 
 ### Windows
 
