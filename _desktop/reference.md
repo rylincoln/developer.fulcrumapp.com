@@ -71,7 +71,7 @@ Reset an organization.
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum reset --org 'Organization Name'`  |
-| Windows | `.\fulcrum.cmd reset --org 'Organization Name'` |
+| Windows | `.\fulcrum.cmd reset --org "Organization Name"` |
 
 ### install-plugin
 
@@ -102,7 +102,7 @@ Create a new plugin.
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum create-plugin --name 'MyPlugin'`  |
-| Windows | `.\fulcrum.cmd create-plugin --name 'MyPlugin'` |
+| Windows | `.\fulcrum.cmd create-plugin --name "MyPlugin"` |
 
 ### update-plugins
 
@@ -152,4 +152,4 @@ Run a query in the local database.
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum query --sql 'SELECT COUNT(*) FROM memberships'`  |
-| Windows | `.\fulcrum.cmd query --sql 'SELECT COUNT(*) FROM memberships'` |
+| Windows | `.\fulcrum.cmd query --sql "SELECT COUNT(*) FROM memberships"` |
