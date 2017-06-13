@@ -30,7 +30,9 @@ curl -o- -L https://raw.githubusercontent.com/fulcrumapp/fulcrum-desktop/master/
 ```
 
 Command installation location: _/opt/Fulcrum/scripts/fulcrum_
+
 Plugin installation directory: _/home/username/.fulcrum/plugins_
+
 Internal SQLite database: _/home/username/.config/Fulcrum/data/fulcrum.db_
 
 ### macOS
@@ -38,7 +40,9 @@ Internal SQLite database: _/home/username/.config/Fulcrum/data/fulcrum.db_
 Open the .dmg, drag the icon to _Applications_. That's it! While running, the program will auto-update if there's a new release available.
 
 Command installation location: _/usr/local/bin/fulcrum -> /Applications/Fulcrum.app/Contents/scripts/fulcrum_
+
 Plugin installation directory: _/Users/username/.fulcrum/plugins_
+
 Internal SQLite database: _/Users/username/Library/Application Support/Fulcrum/data/fulcrum.db_
 
 ### Windows
@@ -46,7 +50,9 @@ Internal SQLite database: _/Users/username/Library/Application Support/Fulcrum/d
 Install from the Setup .exe and follow the instructions. This will create a shortcut icon on your desktop (and open up a GUI window - _which is not currently functional_ - you can close this window). Double-clicking the shortcut icon will open the GUI again; doing this also triggers the auto-updater. If there is an updated release available, it will be downloaded and installed.
 
 Command installation location: _\Users\username\AppData\Local\Programs\Fulcrum\scripts\fulcrum.cmd_
-Plugin installation directory: _\Users\username\.fulcrum\plugins
+
+Plugin installation directory: _\Users\username\.fulcrum\plugins_
+
 Internal SQLite database: _\Users\username\AppData\Local\Fulcrum\data\fulcrum.db_
 
 ## Getting started
