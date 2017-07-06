@@ -15,11 +15,11 @@ Similar to automating weather collection, data events allow you to tap into any 
 
 ``` js
 function getElevation() {
-  var usgsURL = 'http://nationalmap.gov/epqs/pqs.php?x=' + LONGITUDE() + '&y=' + LATITUDE() + '&units=Feet&output=json';
+  var usgsURL = 'https://nationalmap.gov/epqs/pqs.php?x=' + LONGITUDE() + '&y=' + LATITUDE() + '&units=Feet&output=json';
 
   // use cors/https proxy for web requests
   if (!ISMOBILE()) {
-    usgsURL = 'https://crossorigin.me/' + usgsURL;
+    usgsURL = 'https://cors-light.herokuapp.com/' + usgsURL;
   }
 
   var options = {
