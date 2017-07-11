@@ -83,14 +83,20 @@ Once this plugin is installed, the `sync` command will keep your GeoPackage data
 | `--version` | Show version number | false | na |
 | `--help` | Show help | false | na |
 | `--org` | organization name | true | na |
+| `--gpkg-name` | the name of the .gpkg file (not a full file path, just the name) | (org name) | na |
+| `--gpkg-path` | the path to the directory to create the .gpkg file | (depends on OS) | na |
+| `--gpkg-drop` | drop and re-create the tables | true | na |
+| `--gpkg-underscore-names` / `--no-gpkg-underscore-names` | create the views with underscored names instead of the app name | false | na |
+| `--gpkg-user-info` / `--no-gpkg-user-info` | add user info to the app views (updated_by_email and created_by_email), incurs a significant performance penalty for large accounts. This data can still be joined via SQL if it's omitted. | true | na |
+| `--gpkg-joined-names` / `--no-gpkg-joined-names` | add the project name and assigned to email to the app views (_assigned_to_email and _project_name), incurs a significant performance penalty for large accounts. This data can stil be joined via SQL if it's omitted. | true | na |
 
 ### Install the plugin:
 
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-geopackage`  |
-| Windows | `.\fulcrum.cmd install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-geopackage` |
+| macOS / Linux  | `fulcrum install-plugin --name geopackage`  |
+| Windows | `.\fulcrum.cmd install-plugin --name geopackage` |
 
 ### Setup the database:
 
