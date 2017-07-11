@@ -292,8 +292,8 @@ Generate custom PDF reports from Fulcrum data. To customize reports, edit `templ
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum reports --org 'Organization Name' --form 'GeoBooze' --where "beer_type_value = 'Amber Ale'" --template custom.ejs`  |
-| Windows | `.\fulcrum.cmd reports --org 'Organization Name' --form 'GeoBooze' --where "beer_type_value = 'Amber Ale'" --template custom.ejs` |
+| macOS / Linux  | `fulcrum reports --org 'Organization Name' --form 'GeoBooze' --template custom.ejs`  |
+| Windows | `.\fulcrum.cmd reports --org 'Organization Name' --form 'GeoBooze' --template custom.ejs` |
 
 ### Keep reports in sync
 
