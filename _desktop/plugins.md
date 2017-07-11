@@ -39,7 +39,7 @@ Once this plugin is installed, the `sync` command will keep your PostgreSQL data
 | `--pg-schema` | postgresql schema to create the friendly views in | false | `public` |
 | `--pg-before-function` | postgresql function to call before the sync starts. It's called with no parameters. | false | na |
 | `--pg-after-function` | postgresql function to call after the sync finishes. It's called with no parameters. | false | na |
-| `--pg-underscore-names` | `--no-pg-underscore-names` | create the views with underscored names instead of the app name | false | na |
+| `--pg-underscore-names` / `--no-pg-underscore-names` | create the views with underscored names instead of the app name | false | na |
 
 ### Install the plugin:
 
