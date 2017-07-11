@@ -139,20 +139,20 @@ Once this plugin is installed, the `sync` command will keep your MS SQL Server d
 | `--help` | Show help | false | na |
 | `--org` | organization name | true | na |
 | `--setup` | setup the database | false | na |
-| `--msdatabase` | mssql database name | false | "fulcrumapp"|
-| `--mshost` | mssql server host | false | "localhost" |
-| `--msport` | mssql server port | false | 1433 |
-| `--msuser` | mssql user | false | na |
-| `--mspassword` | mssql password | false | na |
-| `--msschema` | mssql schema | false | na |
+| `--ms-database` | mssql database name | false | `fulcrumapp` |
+| `--ms-host` | mssql server host | false | `localhost` |
+| `--ms-port` | mssql server port | false | `1433` |
+| `--ms-user` | mssql user | false | na |
+| `--ms-password` | mssql password | false | na |
+| `--ms-schema` | mssql schema | false | na |
 
 ### Install the plugin:
 
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-mssql`  |
-| Windows | `.\fulcrum.cmd install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-mssql` |
+| macOS / Linux  | `fulcrum install-plugin --name mssql`  |
+| Windows | `.\fulcrum.cmd install-plugin --name mssql` |
 
 ### Setup the database:
 
@@ -161,16 +161,16 @@ The `--setup` option allows you to create the database from the fulcrum CLI.
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum mssql --setup --org 'Organization Name' --msuser USERNAME --mspassword PASSWORD --mshost 'localhost'`  |
-| Windows | `.\fulcrum.cmd mssql --setup --org 'Organization Name' --msuser USERNAME --mspassword PASSWORD --mshost 'localhost'` |
+| macOS / Linux  | `fulcrum mssql --setup --org 'Organization Name' --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'`  |
+| Windows | `.\fulcrum.cmd mssql --setup --org 'Organization Name' --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'` |
 
 ### Keep the database in sync with your Organization:
 
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum sync --org 'Organization Name' --forever`  |
-| Windows | `.\fulcrum.cmd sync --org 'Organization Name' --forever` |
+| macOS / Linux  | `fulcrum sync --org 'Organization Name' --forever --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'`  |
+| Windows | `.\fulcrum.cmd sync --org 'Organization Name' --forever --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'` |
 
 ---
 
@@ -199,8 +199,8 @@ Concurrent file downloads and automatic retries for Fulcrum media files (photos,
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-media`  |
-| Windows | `.\fulcrum.cmd install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-media` |
+| macOS / Linux  | `fulcrum install-plugin --name media`  |
+| Windows | `.\fulcrum.cmd install-plugin --name media` |
 
 ### Download all media files for your Organization:
 
@@ -272,9 +272,9 @@ Generate custom PDF reports from Fulcrum data. To customize reports, edit `templ
 | `--template` | path to ejs template file | false | na |
 | `--header` | path to header ejs template file | false | na |
 | `--footer` | path to footer ejs template file | false | na |
-| `--reportPath` | report storage directory | false | na |
-| `--mediaPath` | media storage directory | false | na |
-| `--fileName` | file name | false | na |
+| `--report-path` | report storage directory | false | na |
+| `--media-path` | media storage directory | false | na |
+| `--file-name` | file name | false | na |
 | `--concurrency` | concurrent reports (between 1 and 10) | false | 5 |
 | `--repeatables` | generate a PDF for each repeatable child record | false | false |
 | `--recurse` | recursively print all child items in each PDF | false | true |
@@ -284,8 +284,8 @@ Generate custom PDF reports from Fulcrum data. To customize reports, edit `templ
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-reports`  |
-| Windows | `.\fulcrum.cmd install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-reports` |
+| macOS / Linux  | `fulcrum install-plugin --name reports`  |
+| Windows | `.\fulcrum.cmd install-plugin --name reports` |
 
 ### Run reports
 
