@@ -31,12 +31,15 @@ Once this plugin is installed, the `sync` command will keep your PostgreSQL data
 | `--version` | Show version number | false | na |
 | `--help` | Show help | false | na |
 | `--org` | organization name | true | na |
-| `--pgdatabase` | postgresql database name | false | "fulcrumapp"|
-| `--pghost` | postgresql server host | false | "localhost" |
-| `--pgport` | postgresql server port | false | 5432 |
-| `--pguser` | postgresql user | false | na |
-| `--pgpassword` | postgresql password | false | na |
-| `--pgschema` | postgresql schema | false | na |
+| `--pg-host` | postgresql server host | false | `localhost` |
+| `--pg-port` | postgresql server port | false | `5432` |
+| `--pg-user` | postgresql user | false | na |
+| `--pg-password` | postgresql password | false | na |
+| `--pg-database` | postgresql database name | false | `fulcrumapp` |
+| `--pg-schema` | postgresql schema to create the friendly views in | false | `public` |
+| `--pg-before-function` | postgresql function to call before the sync starts. It's called with no parameters. | false | na |
+| `--pg-after-function` | postgresql function to call after the sync finishes. It's called with no parameters. | false | na |
+| `--pg-underscore-names` | `--no-pg-underscore-names` | create the views with underscored names instead of the app name | false | na |
 
 ### Install the plugin:
 
