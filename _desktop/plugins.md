@@ -190,7 +190,7 @@ Concurrent file downloads and automatic retries for Fulcrum media files (photos,
 | `--version` | Show version number | false | na |
 | `--help` | Show help | false | na |
 | `--org` | organization name | true | na |
-| `--media-path` | media storage directory  | false | ~/.fulcrum/media |
+| `--media-path` | media storage directory  | false | `~/.fulcrum/media` |
 | `--concurrency` | concurrent downloads (between 1 and 10) | false | na |
 
 
@@ -230,8 +230,8 @@ Sync media to your own [Amazon Simple Storage Service (Amazon S3)](https://aws.a
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-s3`  |
-| Windows | `.\fulcrum.cmd install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-s3` |
+| macOS / Linux  | `fulcrum install-plugin --name s3`  |
+| Windows | `.\fulcrum.cmd install-plugin --name s3` |
 
 ### Configuration
 
@@ -268,7 +268,7 @@ Generate custom PDF reports from Fulcrum data. To customize reports, edit `templ
 | `--help` | Show help | false | na |
 | `--org` | organization name | true | na |
 | `--form` | form name | false | na |
-| `--skip` | skip form name | false | na |
+| `--skip` | skip form name, can be specified multiple times to skip multiple forms | false | na |
 | `--template` | path to ejs template file | false | na |
 | `--header` | path to header ejs template file | false | na |
 | `--footer` | path to footer ejs template file | false | na |
