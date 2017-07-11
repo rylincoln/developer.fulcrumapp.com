@@ -46,8 +46,8 @@ Once this plugin is installed, the `sync` command will keep your PostgreSQL data
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-postgres`  |
-| Windows | `.\fulcrum.cmd install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-postgres` |
+| macOS / Linux  | `fulcrum install-plugin --name postgres`  |
+| Windows | `.\fulcrum.cmd install-plugin --name postgres` |
 
 ### Setup the database:
 
@@ -64,8 +64,8 @@ Be sure you have a database already created with the PostGIS extension installed
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum sync --org 'Organization Name' --pgdatabase 'mydatabase' --forever`  |
-| Windows | `.\fulcrum.cmd sync --org 'Organization Name' --pgdatabase 'mydatabase' --forever` |
+| macOS / Linux  | `fulcrum sync --org 'Organization Name' --pg-database 'mydatabase' --forever`  |
+| Windows | `.\fulcrum.cmd sync --org 'Organization Name' --pg-database 'mydatabase' --forever` |
 
 ---
 
