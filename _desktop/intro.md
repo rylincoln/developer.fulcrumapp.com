@@ -74,7 +74,8 @@ By default, the PostgreSQL plugin expects a database named _fulcrumapp_ with the
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum setup --email EMAIL --password SECRET`  |
+| macOS / Linux (prompt) | `fulcrum setup` |
+| macOS / Linux  | `fulcrum setup --email EMAIL --password SECRET` |
 | Windows | `.\fulcrum.cmd setup --email EMAIL --password SECRET` |
 
 ### Sync your Organization

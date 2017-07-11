@@ -264,16 +264,16 @@ Generate custom PDF reports from Fulcrum data. To customize reports, edit `templ
 {:.table.table-striped.event-table}
 | Option | Description | Required | Default |
 | - | - | - | - |
-| `--version` | Show version number | false | na |
-| `--help` | Show help | false | na |
+| `--version` | show version number | false | na |
+| `--help` | show help | false | na |
 | `--org` | organization name | true | na |
 | `--form` | form name | false | na |
 | `--skip` | skip form name, can be specified multiple times to skip multiple forms | false | na |
-| `--template` | path to ejs template file | false | na |
+| `--template` | path to ejs template file | false | `~/.fulcrum/plugins/fulcrum-desktop-reports/dist/template.ejs` |
 | `--header` | path to header ejs template file | false | na |
 | `--footer` | path to footer ejs template file | false | na |
-| `--report-path` | report storage directory | false | na |
-| `--media-path` | media storage directory | false | na |
+| `--report-path` | report storage directory | false | `~/.fulcrum/reports` |
+| `--media-path` | media storage directory | false | `~/.fulcrum/media` |
 | `--file-name` | file name | false | na |
 | `--concurrency` | concurrent reports (between 1 and 10) | false | 5 |
 | `--repeatables` | generate a PDF for each repeatable child record | false | false |
