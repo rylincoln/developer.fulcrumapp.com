@@ -40,6 +40,7 @@ Once this plugin is installed, the `sync` command will keep your PostgreSQL data
 | `--pg-before-function` | postgresql function to call before the sync starts. It's invoked as `SELECT function_name();` | false | na |
 | `--pg-after-function` | postgresql function to call after the sync finishes. It's invoked as `SELECT function_name();` | false | na |
 | `--pg-underscore-names` / `--no-pg-underscore-names` | create the views with underscored names instead of the app name | false | na |
+| `--pg-custom-module` | the path to a custom JavaScript module to load, see [example](https://github.com/fulcrumapp/fulcrum-desktop-postgres/blob/master/example/custom-module.js) | false | na |
 
 ### Install the plugin:
 
