@@ -66,8 +66,8 @@ By default, the PostgreSQL plugin expects a database named _fulcrumapp_ with the
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-postgres`  |
-| Windows | `.\fulcrum.cmd install-plugin --url https://github.com/fulcrumapp/fulcrum-desktop-postgres` |
+| macOS / Linux  | `fulcrum install-plugin --name postgres`  |
+| Windows | `.\fulcrum.cmd install-plugin --name postgres` |
 
 ### Setup the local Fulcrum database
 
