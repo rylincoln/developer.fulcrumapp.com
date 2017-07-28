@@ -57,17 +57,7 @@ Internal SQLite database: _\Users\username\AppData\Local\Fulcrum\data\fulcrum.db
 
 ## Getting started
 
-After installing the core command line tools, you should install one of the database plugins, authenticate with your Fulcrum account to setup your local database, and sync your Organization's data down.
-
-### Install the PostgreSQL database plugin
-
-By default, the PostgreSQL plugin expects a database named _fulcrumapp_ with the [PostGIS extension](http://www.postgis.net/) installed.
-
-{:.table.table-striped.event-table}
-| OS | Command |
-| - | - |
-| macOS / Linux  | `fulcrum install-plugin --name postgres`  |
-| Windows | `.\fulcrum.cmd install-plugin --name postgres` |
+After installing the core command line tools, you should authenticate with your Fulcrum account to setup your local database, sync your Organization's data down, install one of the [database plugins](/desktop/plugins/#database-plugins), and then setup auto-syncing.
 
 ### Setup the local Fulcrum database
 
@@ -85,6 +75,36 @@ By default, the PostgreSQL plugin expects a database named _fulcrumapp_ with the
 | - | - |
 | macOS / Linux  | `fulcrum sync --org 'Organization Name'`  |
 | Windows | `.\fulcrum.cmd sync --org "Organization Name"` |
+
+### Install the PostgreSQL database plugin
+
+By default, the PostgreSQL plugin expects a database named _fulcrumapp_ with the [PostGIS extension](http://www.postgis.net/) installed.
+
+{:.table.table-striped.event-table}
+| OS | Command |
+| - | - |
+| macOS / Linux  | `fulcrum install-plugin --name postgres`  |
+| Windows | `.\fulcrum.cmd install-plugin --name postgres` |
+
+### Setup the PostgreSQL database
+
+This will build and populate the system and app tables.
+
+{:.table.table-striped.event-table}
+| OS | Command |
+| - | - |
+| macOS / Linux  | `fulcrum postgres --org 'Organization Name' --pg-database 'fulcrumapp'`  |
+| Windows | `.\fulcrum.cmd postgres --org "Organization Name" --pg-database "fulcrumapp"` |
+
+### Setup continuous sync
+
+Continually sync the database to pull down changes from Fulcrum.
+
+{:.table.table-striped.event-table}
+| OS | Command |
+| - | - |
+| macOS / Linux  | `fulcrum sync --org 'Organization Name' --forever`  |
+| Windows | `.\fulcrum.cmd sync --org "Organization Name" --forever` |
 
 _Windows seems to prefer double quotes with command parameters._
 
