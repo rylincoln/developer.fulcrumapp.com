@@ -85,8 +85,8 @@ Records will still be ordered according to the `updated_at` column, even when fi
 | updated_by_id | string | no | yes | The id of user who last updated the record. |
 | changeset_id | string | no | no | The id of the [changeset](/endpoints/changesets/) associated with the record. |
 | project_id | string | no | no | The id of the [project](http://www.fulcrumapp.com/help/projects/) tagged to the record. |
-| assigned_to | string | no | no | The name of the user the record is assigned to. |
-| assigned_to_id | string | no | no | The id of the user the record is assigned to. |
+| assigned_to | string | no | yes | The name of the user the record is assigned to. |
+| assigned_to_id | string | no | no | The id of the user the record is assigned to (`user_id`). |
 | created_duration | number | no | no | The number of seconds spent creating the record. |
 | updated_duration | number | no | no | The number of seconds spent updating the record. |
 | edited_duration | number | no | no | The total cumulative seconds spent editing the record (creating + all updates). |
