@@ -119,6 +119,7 @@ Records will still be ordered according to the `updated_at` column, even when fi
 | Video | array of video objects | `[{"video_id":"712850b4-4de2-4d66-a6cc-034201245b52,"caption": ""}]` |
 | Audio | array of audio objects | `[{"audio_id":"f81d51b5-1ce9-465b-be0b-27f1eca41e2c,"caption": ""}]` |
 | Signature | signature object | `{"timestamp": "2015-07-09T14:54:04Z","signature_id": "9855e3f2-85a5-4b9f-9e62-0b1bbcfef091"}` |
+| Record Link | array of record objects | `[{"record_id": "988b963c-896c-4f50-be7b-5b5d151f2ed7"},{"record_id": "8a91ba6c-f99e-47a1-8246-807b4a44b28a"}]` |
 | Repeatable | array of repeatable objects | `[{"id":"d67801a0-adc1-6f60-4b0d-ec3a7191b34b","geometry":{"type":"Point","coordinates":[-73.123456,42.123456]},"form_values": {"0129": "Hello world"}}]` |
 
 ## Validations
