@@ -51,7 +51,7 @@ Install from the Setup .exe and follow the instructions. This will create a shor
 
 Command installation location: _\Users\username\AppData\Local\Programs\Fulcrum\scripts\fulcrum.cmd_
 
-Plugin installation directory: _\Users\username\.fulcrum\plugins_
+Plugin installation directory: _\Users\username\\.fulcrum\plugins_
 
 Internal SQLite database: _\Users\username\AppData\Local\Fulcrum\data\fulcrum.db_
 
