@@ -129,7 +129,7 @@ This will create the following GeoPackage file:
 
 [MS SQL Server](https://www.microsoft.com/en-us/sql-server/) is a popular relational database management system (RDBMS) developed by Microsoft.
 
-Once this plugin is installed, the `sync` command will keep your MS SQL Server database in sync with your Fulcrum Organization. [Source code on GitHub](https://github.com/fulcrumapp/fulcrum-desktop-postgres).
+Once this plugin is installed, the `sync` command will keep your MS SQL Server database in sync with your Fulcrum Organization. [Source code on GitHub](https://github.com/fulcrumapp/fulcrum-desktop-mssql).
 
 #### Options:
 
