@@ -58,7 +58,7 @@ Be sure you have a database already created with the PostGIS extension installed
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum postgres --org 'Organization Name'`  |
-| Windows | `.\fulcrum.cmd postgres --org 'Organization Name'` |
+| Windows | `.\fulcrum.cmd postgres --org "Organization Name"` |
 
 ### Keep the database in sync with your Organization:
 
@@ -66,7 +66,7 @@ Be sure you have a database already created with the PostGIS extension installed
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum sync --org 'Organization Name' --pg-database 'mydatabase' --forever`  |
-| Windows | `.\fulcrum.cmd sync --org 'Organization Name' --pg-database 'mydatabase' --forever` |
+| Windows | `.\fulcrum.cmd sync --org "Organization Name" --pg-database "mydatabase" --forever` |
 
 ---
 
@@ -105,7 +105,7 @@ Once this plugin is installed, the `sync` command will keep your GeoPackage data
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum geopackage --org 'Organization Name'`  |
-| Windows | `.\fulcrum.cmd geopackage --org 'Organization Name'` |
+| Windows | `.\fulcrum.cmd geopackage --org "Organization Name"` |
 
 This will create the following GeoPackage file:
 
@@ -121,7 +121,7 @@ This will create the following GeoPackage file:
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum sync --org 'Organization Name' --forever`  |
-| Windows | `.\fulcrum.cmd sync --org 'Organization Name' --forever` |
+| Windows | `.\fulcrum.cmd sync --org "Organization Name" --forever` |
 
 ---
 
@@ -163,7 +163,7 @@ The `--setup` option allows you to create the database from the fulcrum CLI.
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum mssql --setup --org 'Organization Name' --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'`  |
-| Windows | `.\fulcrum.cmd mssql --setup --org 'Organization Name' --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'` |
+| Windows | `.\fulcrum.cmd mssql --setup --org "Organization Name" --ms-user "USERNAME" --ms-password "PASSWORD" --ms-host "localhost"` |
 
 ### Keep the database in sync with your Organization:
 
@@ -171,7 +171,7 @@ The `--setup` option allows you to create the database from the fulcrum CLI.
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum sync --org 'Organization Name' --forever --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'`  |
-| Windows | `.\fulcrum.cmd sync --org 'Organization Name' --forever --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'` |
+| Windows | `.\fulcrum.cmd sync --org "Organization Name" --forever --ms-user "USERNAME" --ms-password "PASSWORD" --ms-host "localhost"` |
 
 ---
 
