@@ -209,7 +209,7 @@ Concurrent file downloads and automatic retries for Fulcrum media files (photos,
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum media --org 'Organization Name' --media-path /path/to/media/storage`  |
-| Windows | `.\fulcrum.cmd media --org 'Organization Name' --media-path /path/to/media/storage` |
+| Windows | `.\fulcrum.cmd media --org "Organization Name" --media-path \path\to\media\storage` |
 
 ---
 
@@ -247,8 +247,8 @@ export S3_BUCKET="mybucket"
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum sync --org 'Organization Name'`  |
-| Windows | `.\fulcrum.cmd sync --org 'Organization Name'` |
+| macOS / Linux  | `fulcrum s3 --org 'Organization Name'`  |
+| Windows | `.\fulcrum.cmd s3 --org "Organization Name"` |
 
 ---
 
@@ -294,7 +294,7 @@ Generate custom PDF reports from Fulcrum data. To customize reports, edit `templ
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum reports --org 'Organization Name' --form 'GeoBooze' --template custom.ejs`  |
-| Windows | `.\fulcrum.cmd reports --org 'Organization Name' --form 'GeoBooze' --template custom.ejs` |
+| Windows | `.\fulcrum.cmd reports --org "Organization Name" --form "GeoBooze" --template custom.ejs` |
 
 ### Keep reports in sync
 
@@ -302,4 +302,4 @@ Generate custom PDF reports from Fulcrum data. To customize reports, edit `templ
 | OS | Command |
 | - | - |
 | macOS / Linux  | `fulcrum sync --org 'Organization Name'`  |
-| Windows | `.\fulcrum.cmd sync --org 'Organization Name'` |
+| Windows | `.\fulcrum.cmd sync --org "Organization Name"` |
