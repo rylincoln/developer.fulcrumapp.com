@@ -24,3 +24,11 @@ REPEATABLEVALUES($repeatable_field, 'cost')
 
 // returns [1,2,3]
 ```
+
+To get the value(s) from a choice list:
+
+```js
+REPEATABLEVALUES($repeatable_field, 'items').map(CHOICEVALUE)
+
+// returns [widget,spinner,gizmo]
+```
