@@ -112,8 +112,8 @@ This will create the following GeoPackage file:
 {:.table.table-striped.event-table}
 | OS | Path |
 | - | - |
-| macOS / Linux  | /Users/username/.fulcrum/geopackage/Organization Name.gpkg |
-| Windows | \Users\username\AppData\Local\Programs\Fulcrum\geopackage\Organization Name.gpkg |
+| macOS / Linux  | `/Users/username/.fulcrum/geopackage/Organization Name.gpkg` |
+| Windows | `\Users\username\AppData\Local\Programs\Fulcrum\geopackage\Organization Name.gpkg` |
 
 ### Keep the database in sync with your Organization:
 
