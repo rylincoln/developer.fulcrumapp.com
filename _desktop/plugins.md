@@ -140,12 +140,12 @@ Once this plugin is installed, the `sync` command will keep your MS SQL Server d
 | `--help` | Show help | false | na |
 | `--org` | organization name | true | na |
 | `--setup` | setup the database | false | na |
-| `--ms-database` | mssql database name | false | `fulcrumapp` |
-| `--ms-host` | mssql server host | false | `localhost` |
-| `--ms-port` | mssql server port | false | `1433` |
-| `--ms-user` | mssql user | false | na |
-| `--ms-password` | mssql password | false | na |
-| `--ms-schema` | mssql schema | false | na |
+| `--msDatabase` | mssql database name | false | `fulcrumapp` |
+| `--msHost` | mssql server host | false | `localhost` |
+| `--msPort` | mssql server port | false | `1433` |
+| `--msUser` | mssql user | false | na |
+| `--msPassword` | mssql password | false | na |
+| `--msSchema` | mssql schema | false | na |
 
 ### Install the plugin:
 
@@ -162,16 +162,16 @@ The `--setup` option allows you to create the database from the fulcrum CLI.
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum mssql --setup --org 'Organization Name' --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'`  |
-| Windows | `.\fulcrum.cmd mssql --setup --org "Organization Name" --ms-user "USERNAME" --ms-password "PASSWORD" --ms-host "localhost"` |
+| macOS / Linux  | `fulcrum mssql --setup --org 'Organization Name' --msUser USERNAME --msPassword PASSWORD --msHost 'localhost'`  |
+| Windows | `.\fulcrum.cmd mssql --setup --org "Organization Name" --msUser "USERNAME" --msPassword "PASSWORD" --msHost "localhost"` |
 
 ### Keep the database in sync with your Organization:
 
 {:.table.table-striped.event-table}
 | OS | Command |
 | - | - |
-| macOS / Linux  | `fulcrum sync --org 'Organization Name' --forever --ms-user USERNAME --ms-password PASSWORD --ms-host 'localhost'`  |
-| Windows | `.\fulcrum.cmd sync --org "Organization Name" --forever --ms-user "USERNAME" --ms-password "PASSWORD" --ms-host "localhost"` |
+| macOS / Linux  | `fulcrum sync --org 'Organization Name' --forever --msUser USERNAME --msPassword PASSWORD --msHost 'localhost'`  |
+| Windows | `.\fulcrum.cmd sync --org "Organization Name" --forever --msUser "USERNAME" --msPassword "PASSWORD" --msHost "localhost"` |
 
 ---
 
