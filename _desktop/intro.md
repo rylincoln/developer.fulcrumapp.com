@@ -65,8 +65,8 @@ After installing the core command line tools, you should authenticate with your 
 | OS | Command |
 | - | - |
 | macOS / Linux (prompt) | `fulcrum setup` |
-| macOS / Linux  | `fulcrum setup --email EMAIL --password SECRET` |
-| Windows | `.\fulcrum.cmd setup --email EMAIL --password SECRET` |
+| macOS / Linux  | `fulcrum setup --email 'EMAIL' --password 'SECRET'` |
+| Windows | `.\fulcrum.cmd setup --email "EMAIL" --password "SECRET"` |
 
 ### Sync your Organization
 
