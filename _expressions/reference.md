@@ -560,6 +560,10 @@ Returns the difference between 2 time fields
 
 Returns a formatted timestamp
 
+### [TIMEZONE](/expressions/reference/timezone/)
+
+Returns the timezone according to the current device settings
+
 ### [TRIM](/expressions/reference/trim/)
 
 Strips the leading and trailing spaces from a string.

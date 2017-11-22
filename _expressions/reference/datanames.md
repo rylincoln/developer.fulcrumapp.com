@@ -20,7 +20,7 @@ Array
 ```js
 DATANAMES()
 
-// returns ["name","items","cost"]
+// returns ["name","items","cost","choice_field"]
 ```
 
 
