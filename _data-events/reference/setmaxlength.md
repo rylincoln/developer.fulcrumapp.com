@@ -7,6 +7,10 @@ category: section
 permalink: /data-events/reference/setmaxlength/
 ---
 
+### Description
+
+The SETMAXLENGTH function can be used to set the maximum number of characters for a text field or the maximum count of repeatables, photos, videos, or audio files.
+
 ### Parameters
 
 `field` String (__required__) - The data name for the field
