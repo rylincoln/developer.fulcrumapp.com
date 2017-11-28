@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'github-pages', '~> 47'
+gem 'github-pages', '~> 170'
 
 group :test, :development do
   gem 'html-proofer'
