@@ -15,7 +15,7 @@ menu:
   - "Examples": examples
 ---
 
-The Photos API gives you access to a record's photos, including thumbnails, and captions. In order to upload a record with photos, you must first upload each photo individually. By default, fetching the records will generate the URLs for the photo and the thumbnail, if a photo exists for that record.
+The Photos API gives you access to a record's photos, including thumbnails. In order to upload a record with photos, you must first upload each photo individually. By default, fetching the records will generate the URLs for the photo and the thumbnail, if a photo exists for that record.
 
 ## Endpoints
 
