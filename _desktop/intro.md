@@ -76,6 +76,9 @@ After installing the core command line tools, you should authenticate with your 
 | macOS / Linux  | `fulcrum sync --org 'Organization Name'`  |
 | Windows | `.\fulcrum.cmd sync --org "Organization Name"` |
 
+_Note: if you have already installed the PostgreSQL plugin (below), you will also need to pass any parameters that your connection requires._  
+_Example:_ `fulcrum sync --org 'Organization Name' --pg-user 'myuser' --pg-password 'mypassword' --pg-database 'mydatabase'`
+
 ### Install the PostgreSQL database plugin
 
 By default, the PostgreSQL plugin expects a database named _fulcrumapp_ with the [PostGIS extension](http://www.postgis.net/) installed.
